@@ -157,17 +157,28 @@ export class ShareCardService {
     drawnTexts.push({ text: titleText, x: width / 2, y: titleY, font: titleFont, fillStyle: ZINC_900, textAlign: 'center' });
     recordFill(ZINC_900);
 
-    // --- Party scores (text-only, no logos, no party colors) ---
+    // --- Party score — only top-matched party (text-only, no logos, no party colors) ---
     const parties = config.parties.parties.filter(p => p.active);
     const barAreaTop = 110;
     const barHeight = 36;
     const barGap = 18;
     const barMaxWidth = width - 120;
 
+    // Find top party
+    let topPartyIdx = 0;
+    let topScore = -1;
     for (let i = 0; i < parties.length; i++) {
-      const party = parties[i];
+      const s = result.partyScores[parties[i].id] ?? 0;
+      if (s > topScore) {
+        topScore = s;
+        topPartyIdx = i;
+      }
+    }
+
+    {
+      const party = parties[topPartyIdx];
       const score = result.partyScores[party.id] ?? 0;
-      const y = barAreaTop + i * (barHeight + barGap);
+      const y = barAreaTop;
 
       // Party label (text-only)
       const partyName = party.names[lang] ?? party.names['en'] ?? party.id;
@@ -191,7 +202,7 @@ export class ShareCardService {
     }
 
     // --- Archetype ---
-    const archetypeY = barAreaTop + parties.length * (barHeight + barGap) + 30;
+    const archetypeY = barAreaTop + (barHeight + barGap) + 30;
     const archetypeEntry = config.archetypes.archetypes.find(a => a.id === archetype.primary);
     const archetypeName = archetypeEntry
       ? (archetypeEntry.names[lang] ?? archetypeEntry.names['en'] ?? archetype.primary)

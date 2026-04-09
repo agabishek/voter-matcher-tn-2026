@@ -142,25 +142,23 @@ function drawReceiptCard(
   ctx.setLineDash([]);
   y += 20;
 
-  // === Party score rows — only top party gets symbol, others text-only ===
+  // === Party score row — only the top-matched party ===
   const LX = 44; // left margin
   const RX = W - 44; // right margin
   const barW = RX - LX;
   const barH = 22;
   const symbolSize = 24;
 
-  for (const [partyId, score] of sorted) {
+  {
+    const partyId = topPartyId;
+    const score = sorted[0]?.[1] ?? 0;
     const roundedScore = Math.round(score);
     const name = partyNames[partyId] ?? partyId;
-    const isTop = partyId === topPartyId;
     const color = PARTY_COLORS[partyId] ?? '#a78bfa';
-    const dimColor = PARTY_COLORS_DIM[partyId] ?? 'rgba(124,58,237,0.5)';
-
-    // Row: [symbol if top] name .................. score%
-    const img = isTop ? partyImages[partyId] : undefined;
+    const img = partyImages[partyId];
     const textX = img ? LX + symbolSize + 8 : LX;
 
-    // Draw party symbol only for top party
+    // Draw party symbol
     if (img) {
       ctx.save();
       ctx.beginPath();
@@ -174,13 +172,13 @@ function drawReceiptCard(
 
     // Party name
     ctx.textAlign = 'left';
-    ctx.fillStyle = isTop ? '#e4e4e7' : '#a1a1aa';
-    setFont(14, isTop ? '600' : '400');
+    ctx.fillStyle = '#e4e4e7';
+    setFont(14, '600');
     ctx.fillText(name, textX, y + 17);
 
     // Score (right-aligned)
     ctx.textAlign = 'right';
-    ctx.fillStyle = isTop ? color : '#a1a1aa';
+    ctx.fillStyle = color;
     setFont(14, '600');
     ctx.fillText(`${roundedScore}%`, RX, y + 17);
     ctx.textAlign = 'left';
@@ -193,7 +191,7 @@ function drawReceiptCard(
 
     // Bar fill with party color
     const fillW = Math.max(4, (score / 100) * barW);
-    ctx.fillStyle = isTop ? color : dimColor;
+    ctx.fillStyle = color;
     ctx.beginPath(); ctx.roundRect(LX, y, fillW, barH, 5); ctx.fill();
 
     y += barH + 16;

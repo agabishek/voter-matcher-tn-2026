@@ -418,10 +418,10 @@ describe('ScoringEngine Property-Based Tests', () => {
             { minLength: 2, maxLength: 10 }
           ).map(pairs => {
             // Ensure unique party IDs
-            const uniquePairs = Array.from(
-              new Map(pairs.map(([id, score]) => [id, score])).entries()
+            const uniquePairs: [string, number][] = Array.from(
+              new Map(pairs.map(([id, score]) => [id, score] as [string, number])).entries()
             );
-            return uniquePairs.length >= 2 ? uniquePairs : [['PARTY_A', 10], ['PARTY_B', 20]];
+            return uniquePairs.length >= 2 ? uniquePairs : ([['PARTY_A', 10], ['PARTY_B', 20]] as [string, number][]);
           }),
           (partyPairs) => {
             const rawScores: Record<string, number> = {};

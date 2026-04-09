@@ -31,18 +31,11 @@ type ShareState = 'idle' | 'generating' | 'ready' | 'shared' | 'copied' | 'error
 
 const SITE_URL = 'https://voter-matcher-tn-2026.vercel.app';
 
-/** Party brand colors for the share card bars */
+/** Party brand colors for the share card */
 const PARTY_COLORS: Record<string, string> = {
   DMK: '#E63946',
   AIADMK: '#F4A261',
   TVK: '#457B9D',
-};
-
-/** Dimmed party colors for non-top parties */
-const PARTY_COLORS_DIM: Record<string, string> = {
-  DMK: 'rgba(230,57,70,0.5)',
-  AIADMK: 'rgba(244,162,97,0.5)',
-  TVK: 'rgba(69,123,157,0.5)',
 };
 
 /** Draw the receipt-style share card on a canvas and return it */
@@ -66,7 +59,6 @@ function drawReceiptCard(
 
   const sorted = Object.entries(partyScores).sort(([, a], [, b]) => b - a);
   const topPartyId = sorted[0]?.[0] ?? '';
-  const topScore = Math.round(sorted[0]?.[1] ?? 0);
 
   const fontMain = lang === 'ta' ? '"Noto Sans Tamil", sans-serif' : '"Inter", Arial, sans-serif';
   const setFont = (size: number, weight: string): void => {
@@ -129,11 +121,8 @@ function drawReceiptCard(
   ctx.fillText(partyNames[topPartyId] ?? topPartyId, W / 2, y);
   y += 32;
 
-  // Big score with party color
-  ctx.fillStyle = PARTY_COLORS[topPartyId] ?? '#a78bfa';
-  setFont(40, '700');
-  ctx.fillText(`${topScore}%`, W / 2, y);
-  y += 18;
+  // Big score removed — only party name + symbol shown
+  y += 8;
 
   // === Separator ===
   ctx.strokeStyle = '#2e2e3e';
@@ -141,61 +130,6 @@ function drawReceiptCard(
   ctx.beginPath(); ctx.moveTo(44, y); ctx.lineTo(W - 44, y); ctx.stroke();
   ctx.setLineDash([]);
   y += 20;
-
-  // === Party score row — only the top-matched party ===
-  const LX = 44; // left margin
-  const RX = W - 44; // right margin
-  const barW = RX - LX;
-  const barH = 22;
-  const symbolSize = 24;
-
-  {
-    const partyId = topPartyId;
-    const score = sorted[0]?.[1] ?? 0;
-    const roundedScore = Math.round(score);
-    const name = partyNames[partyId] ?? partyId;
-    const color = PARTY_COLORS[partyId] ?? '#a78bfa';
-    const img = partyImages[partyId];
-    const textX = img ? LX + symbolSize + 8 : LX;
-
-    // Draw party symbol
-    if (img) {
-      ctx.save();
-      ctx.beginPath();
-      ctx.roundRect(LX, y, symbolSize, symbolSize, 4);
-      ctx.clip();
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(LX, y, symbolSize, symbolSize);
-      ctx.drawImage(img, LX + 1, y + 1, symbolSize - 2, symbolSize - 2);
-      ctx.restore();
-    }
-
-    // Party name
-    ctx.textAlign = 'left';
-    ctx.fillStyle = '#e4e4e7';
-    setFont(14, '600');
-    ctx.fillText(name, textX, y + 17);
-
-    // Score (right-aligned)
-    ctx.textAlign = 'right';
-    ctx.fillStyle = color;
-    setFont(14, '600');
-    ctx.fillText(`${roundedScore}%`, RX, y + 17);
-    ctx.textAlign = 'left';
-
-    y += 28;
-
-    // Bar background
-    ctx.fillStyle = '#1e1e28';
-    ctx.beginPath(); ctx.roundRect(LX, y, barW, barH, 5); ctx.fill();
-
-    // Bar fill with party color
-    const fillW = Math.max(4, (score / 100) * barW);
-    ctx.fillStyle = color;
-    ctx.beginPath(); ctx.roundRect(LX, y, fillW, barH, 5); ctx.fill();
-
-    y += barH + 16;
-  }
 
   // === Archetype ===
   y += 2;
@@ -358,15 +292,12 @@ export default function SharePanel({
   const handleWhatsAppText = useCallback((): void => {
     const sorted = Object.entries(partyScores).sort(([, a], [, b]) => b - a);
     const topPartyId = sorted[0]?.[0] ?? '';
-    const topScore = Math.round(sorted[0]?.[1] ?? 0);
     const partyName = getPartyNames()[topPartyId] ?? topPartyId;
     const archName = getArchetypeName();
 
-    const msg = t('result.share.message')
-      .replace('{party}', partyName)
-      .replace('{score}', String(topScore))
-      .replace('{archetype}', archName)
-      .replace('{url}', SITE_URL);
+    const msg = lang === 'ta'
+      ? `🗳️ நான் TN 2026 வாக்காளர் பொருத்தம் வினாடி வினா எடுத்தேன்! நீங்களும் முயற்சியுங்கள் 👇\n${SITE_URL}`
+      : `🗳️ I took the TN 2026 Voter Matcher quiz! Try it yourself 👇\n${SITE_URL}`;
 
     window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
     setState('shared');
@@ -383,9 +314,13 @@ export default function SharePanel({
 
       if (typeof navigator !== 'undefined' && navigator.share && navigator.canShare?.({ files: [file] })) {
         await navigator.share({
+          title: lang === 'ta'
+            ? 'TN 2026 வாக்காளர் பொருத்தம்'
+            : 'TN 2026 Voter Matcher',
           text: lang === 'ta'
-            ? `🗳️ நான் TN 2026 வாக்காளர் பொருத்தம் வினாடி வினா எடுத்தேன்! நீங்களும் முயற்சியுங்கள் 👇 ${SITE_URL}`
-            : `🗳️ I took the TN 2026 Voter Matcher! Try it yourself 👇 ${SITE_URL}`,
+            ? `🗳️ நான் TN 2026 வாக்காளர் பொருத்தம் வினாடி வினா எடுத்தேன்! நீங்களும் முயற்சியுங்கள் 👇\n${SITE_URL}`
+            : `🗳️ I took the TN 2026 Voter Matcher quiz! Try it yourself 👇\n${SITE_URL}`,
+          url: SITE_URL,
           files: [file],
         });
         setState('shared');

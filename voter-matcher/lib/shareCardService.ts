@@ -157,12 +157,9 @@ export class ShareCardService {
     drawnTexts.push({ text: titleText, x: width / 2, y: titleY, font: titleFont, fillStyle: ZINC_900, textAlign: 'center' });
     recordFill(ZINC_900);
 
-    // --- Party score — only top-matched party (text-only, no logos, no party colors) ---
+    // --- Top-matched party name only (no percentage, no bar) ---
     const parties = config.parties.parties.filter(p => p.active);
-    const barAreaTop = 110;
-    const barHeight = 36;
-    const barGap = 18;
-    const barMaxWidth = width - 120;
+    const partyAreaTop = 110;
 
     // Find top party
     let topPartyIdx = 0;
@@ -177,32 +174,14 @@ export class ShareCardService {
 
     {
       const party = parties[topPartyIdx];
-      const score = result.partyScores[party.id] ?? 0;
-      const y = barAreaTop;
-
-      // Party label (text-only)
       const partyName = party.names[lang] ?? party.names['en'] ?? party.id;
-      const labelFont = lang === 'ta' ? '18px "Noto Sans Tamil", sans-serif' : '18px "Inter", sans-serif';
-      drawnTexts.push({ text: partyName, x: 30, y: y + 24, font: labelFont, fillStyle: ZINC_800, textAlign: 'left' });
+      const labelFont = lang === 'ta' ? 'bold 22px "Noto Sans Tamil", sans-serif' : 'bold 22px "Inter", sans-serif';
+      drawnTexts.push({ text: partyName, x: width / 2, y: partyAreaTop + 24, font: labelFont, fillStyle: ZINC_800, textAlign: 'center' });
       recordFill(ZINC_800);
-
-      // Score bar background (monochrome)
-      const barX = 120;
-      drawnRects.push({ x: barX, y, width: barMaxWidth, height: barHeight, fillStyle: ZINC_100 });
-      recordFill(ZINC_100);
-
-      // Score bar fill (monochrome)
-      const fillWidth = Math.max(0, (score / 100) * barMaxWidth);
-      drawnRects.push({ x: barX, y, width: fillWidth, height: barHeight, fillStyle: ZINC_700 });
-      recordFill(ZINC_700);
-
-      // Score percentage text
-      const scoreText = `${Math.round(score)}%`;
-      drawnTexts.push({ text: scoreText, x: barX + barMaxWidth + 10, y: y + 24, font: labelFont, fillStyle: ZINC_800, textAlign: 'left' });
     }
 
     // --- Archetype ---
-    const archetypeY = barAreaTop + (barHeight + barGap) + 30;
+    const archetypeY = partyAreaTop + 60 + 30;
     const archetypeEntry = config.archetypes.archetypes.find(a => a.id === archetype.primary);
     const archetypeName = archetypeEntry
       ? (archetypeEntry.names[lang] ?? archetypeEntry.names['en'] ?? archetype.primary)

@@ -285,19 +285,20 @@ p, span, li, label, button {
   }
 
   /* Expert #9: Prevent horizontal overflow on small screens */
-  h1 { font-size: 1.6rem !important; }
+  /* Scope heading overrides to main content — exclude nav-blur titles */
+  h1:not(.nav-blur h1) { font-size: 1.6rem !important; }
   h2 { font-size: 1.15rem !important; }
   h3 { font-size: 1rem !important; }
 
   /* Expert #10: Tamil text needs more room */
-  [lang="ta"] h1 { font-size: 1.4rem !important; }
+  [lang="ta"] h1:not(.nav-blur h1) { font-size: 1.4rem !important; }
   [lang="ta"] h2 { font-size: 1.1rem !important; }
   [lang="ta"] p, [lang="ta"] span { line-height: 1.6; }
 }
 
 /* Very small screens (320px) — Expert #9: ₹5000 Android phones */
 @media (max-width: 360px) {
-  h1 { font-size: 1.35rem !important; }
+  h1:not(.nav-blur h1) { font-size: 1.35rem !important; }
   h2 { font-size: 1.05rem !important; }
 
   .lang-btn {

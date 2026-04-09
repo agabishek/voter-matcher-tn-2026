@@ -18,6 +18,7 @@ import AxisBreakdown from '@/components/AxisBreakdown';
 import ExplanationPanel from '@/components/ExplanationPanel';
 import ConsistencyNotice from '@/components/ConsistencyNotice';
 import TrackRecordNotice from '@/components/TrackRecordNotice';
+import NonPrimaryExplainer from '@/components/NonPrimaryExplainer';
 import SharePanel from '@/components/SharePanel';
 import LanguageToggle from '@/components/LanguageToggle';
 import { QuestionnaireEngine } from '@/engines/questionnaireEngine';
@@ -79,12 +80,17 @@ function NavBar({ onBack, backLabel, onHome }: { readonly onBack?: () => void; r
         )}
         {onBack && backLabel && <BackButton onClick={onBack} label={backLabel} />}
         {!onBack && !onHome && (
-          <div className="font-bold text-lg gradient-text">
+          <div
+            className="font-bold text-sm sm:text-lg gradient-text min-w-0 flex-1"
+            style={{ overflowWrap: 'break-word', wordBreak: 'break-word', lineHeight: '1.4' }}
+          >
             {t('app.title')}
           </div>
         )}
       </div>
-      <LanguageToggle />
+      <div className="shrink-0">
+        <LanguageToggle />
+      </div>
     </nav>
   );
 }
@@ -280,7 +286,7 @@ export default function Home(): React.JSX.Element {
 
   if (screen === SCREEN.Processing) {
     return (
-      <div className="flex flex-col h-screen overflow-hidden" style={{ background: 'var(--background)' }}>
+      <div className="flex flex-col overflow-hidden" style={{ background: 'var(--background)', height: '100dvh' }}>
         <NavBar onHome={goToLanding} />
         <ProcessingScreen />
       </div>
@@ -290,7 +296,7 @@ export default function Home(): React.JSX.Element {
   if (screen === SCREEN.Results && scoreResult && archetype && explanation) {
     const lang = activeLang as 'en' | 'ta';
     return (
-      <div className="flex flex-col h-screen" style={{ background: 'var(--background)' }}>
+      <div className="flex flex-col" style={{ background: 'var(--background)', height: '100dvh' }}>
         <NavBar onHome={goToLanding} />
         <div className="flex-1 overflow-y-auto">
           <div className="flex flex-col items-center gap-4 sm:gap-6 px-3 sm:px-4 py-6 sm:py-8 max-w-2xl mx-auto w-full">
@@ -299,6 +305,9 @@ export default function Home(): React.JSX.Element {
             <ArchetypeCard archetypeId={archetype.primary} secondaryArchetypeId={archetype.secondary} />
             <AxisBreakdown axisScores={scoreResult.axisScores} />
             <ExplanationPanel explanation={explanation} />
+            {explanation.nonPrimaryInsights && explanation.nonPrimaryInsights.length > 0 && (
+              <NonPrimaryExplainer insights={explanation.nonPrimaryInsights} />
+            )}
             <ConsistencyNotice contradictions={contradictions} />
             {topParty?.weightBasis === 'promise' && (
               <TrackRecordNotice partyName={topParty.names[lang] ?? topParty.names.en} />
@@ -332,7 +341,7 @@ export default function Home(): React.JSX.Element {
     const selectedOptionId = session.answers.get(currentQuestion.id);
 
     return (
-      <div className="flex flex-col h-screen overflow-hidden" style={{ background: 'var(--background)' }}>
+      <div className="flex flex-col overflow-hidden" style={{ background: 'var(--background)', height: '100dvh' }}>
         <NavBar
           onHome={goToLanding}
           onBack={questionIndex > 0 ? handleQuestionBack : goToOnboarding}

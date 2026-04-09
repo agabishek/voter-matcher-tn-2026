@@ -14,6 +14,17 @@
 import type { ConfigBundle } from '@/lib/configLoader';
 import type { ArchetypeResult, Contradiction } from './profilingEngine';
 
+/** Insight explaining why a non-primary party didn't rank first */
+export interface NonPrimaryInsight {
+  partyId: string;
+  partyName: string;
+  score: number;
+  /** Top 2 axes where user's priorities diverge from this party's strengths */
+  divergenceAxes: readonly { axisLabel: string; explanation: string }[];
+  /** Brief summary sentence */
+  summary: string;
+}
+
 export interface Explanation {
   primaryParagraph: string;
   secondaryInsight: string;
@@ -21,6 +32,7 @@ export interface Explanation {
   archetypeDescription: string;
   trackRecordNotice?: string;   // shown if matched party is promise-based only
   demographicHighlights?: string[];  // 1-2 policy highlights relevant to age group
+  nonPrimaryInsights?: NonPrimaryInsight[];  // why other parties didn't match
 }
 
 /**
@@ -172,13 +184,22 @@ export class ExplanationEngine {
       ? this.generateDemographicHighlights(topPartyId, ageGroup, lang, manifestoData)
       : undefined;
 
+    // Generate non-primary party insights
+    const nonPrimaryInsights = this.generateNonPrimaryInsights(
+      result,
+      topPartyId,
+      config,
+      lang
+    );
+
     return {
       primaryParagraph,
       secondaryInsight,
       beliefStatements,
       archetypeDescription,
       trackRecordNotice,
-      demographicHighlights
+      demographicHighlights,
+      nonPrimaryInsights
     };
   }
 
@@ -447,5 +468,121 @@ export class ExplanationEngine {
     } else {
       return `குறிப்பு: ${partyName} இன் ஒத்திசைவு ஆட்சி சாதனை பதிவை விட அறிக்கை வாக்குறுதிகளை அடிப்படையாகக் கொண்டது, ஏனெனில் இந்த கட்சி மாநில அளவிலான அதிகாரத்தை வகிக்கவில்லை.`;
     }
+  }
+
+  /**
+   * Generate insights explaining why non-primary parties didn't rank first.
+   *
+   * Expert Panel Review:
+   * - #5 Neutrality Auditor: Framed as "where your priorities differ", not "why they're wrong"
+   * - #8 Cognitive Psychologist: Comparative framing avoids negative anchoring
+   * - #4 Fairness Researcher: Axis-based divergence, not score-based judgment
+   * - #19 Youth Advocate: Educational tone — "different priorities" not "disagreement"
+   * - #18 Misinformation: Personal framing ("your priorities") prevents screenshot misuse
+   *
+   * For each non-primary party, identifies the top 2 axes where the user's
+   * answer-driven axis scores diverge most from that party's weight profile.
+   */
+  private generateNonPrimaryInsights(
+    result: ScoreResult,
+    topPartyId: string,
+    config: ConfigBundle,
+    lang: 'en' | 'ta'
+  ): NonPrimaryInsight[] {
+    const activeParties = config.parties.parties.filter(p => p.active);
+    const nonPrimary = activeParties.filter(p => p.id !== topPartyId);
+
+    // Build per-party axis weight totals from the question bank
+    const partyAxisTotals = this.computePartyAxisTotals(config);
+
+    // User's axis scores — normalize to relative ranking
+    const userAxes = result.axisScores;
+    const userAxisEntries = Object.entries(userAxes).sort(([, a], [, b]) => b - a);
+    const userTopAxisIds = userAxisEntries.slice(0, 3).map(([id]) => id);
+
+    const insights: NonPrimaryInsight[] = [];
+
+    for (const party of nonPrimary) {
+      const partyName = party.names[lang] ?? party.names.en;
+      const score = Math.round(result.partyScores[party.id] ?? 0);
+
+      // Find axes where this party is strongest
+      const partyAxes = partyAxisTotals[party.id] ?? {};
+      const partyAxisEntries = Object.entries(partyAxes).sort(([, a], [, b]) => b - a);
+      const partyTopAxisIds = partyAxisEntries.slice(0, 3).map(([id]) => id);
+
+      // Divergence = party's top axes that are NOT in user's top axes
+      const divergentAxes = partyTopAxisIds
+        .filter(axisId => !userTopAxisIds.includes(axisId))
+        .slice(0, 2);
+
+      const divergenceAxes: { axisLabel: string; explanation: string }[] = [];
+
+      for (const axisId of divergentAxes) {
+        const axis = config.axes.axes.find(a => a.id === axisId);
+        if (!axis) continue;
+
+        const axisLabel = axis.labels[lang] ?? axis.labels.en;
+
+        const explanation = lang === 'en'
+          ? `${partyName} emphasizes ${axisLabel.toLowerCase()}, which wasn't among your top priorities.`
+          : `${partyName} ${axisLabel} என்பதை வலியுறுத்துகிறது, ஆனால் இது உங்கள் முதன்மை முன்னுரிமைகளில் இல்லை.`;
+
+        divergenceAxes.push({ axisLabel, explanation });
+      }
+
+      // If no divergent axes found (user and party agree on top axes),
+      // the difference is in degree — explain that
+      if (divergenceAxes.length === 0 && userAxisEntries.length > 0) {
+        const topUserAxis = config.axes.axes.find(a => a.id === userAxisEntries[0][0]);
+        if (topUserAxis) {
+          const axisLabel = topUserAxis.labels[lang] ?? topUserAxis.labels.en;
+          const explanation = lang === 'en'
+            ? `While ${partyName} shares some of your priorities, your strongest emphasis on ${axisLabel.toLowerCase()} aligns more closely with another party.`
+            : `${partyName} உங்கள் சில முன்னுரிமைகளைப் பகிர்ந்தாலும், ${axisLabel} மீதான உங்கள் வலுவான முக்கியத்துவம் மற்றொரு கட்சியுடன் அதிகம் ஒத்துப்போகிறது.`;
+          divergenceAxes.push({ axisLabel, explanation });
+        }
+      }
+
+      const summary = lang === 'en'
+        ? `Your policy priorities differ from ${partyName}'s key focus areas.`
+        : `உங்கள் கொள்கை முன்னுரிமைகள் ${partyName} இன் முக்கிய கவனம் செலுத்தும் பகுதிகளிலிருந்து வேறுபடுகின்றன.`;
+
+      insights.push({
+        partyId: party.id,
+        partyName,
+        score,
+        divergenceAxes,
+        summary,
+      });
+    }
+
+    return insights;
+  }
+
+  /**
+   * Compute total axis weights per party across all questions.
+   * This tells us which axes each party is strongest on.
+   */
+  private computePartyAxisTotals(
+    config: ConfigBundle
+  ): Record<string, Record<string, number>> {
+    const totals: Record<string, Record<string, number>> = {};
+
+    for (const question of config.questions.questions) {
+      for (const option of question.options) {
+        for (const [partyId, partyWeight] of Object.entries(option.partyWeights)) {
+          if (!totals[partyId]) {
+            totals[partyId] = {};
+          }
+          for (const [axisId, axisWeight] of Object.entries(option.axisWeights)) {
+            // Weight the axis contribution by how much this party benefits from this option
+            totals[partyId][axisId] = (totals[partyId][axisId] ?? 0) + (partyWeight * axisWeight);
+          }
+        }
+      }
+    }
+
+    return totals;
   }
 }

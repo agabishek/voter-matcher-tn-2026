@@ -37,15 +37,21 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
   return (
     <div className="flex flex-col overflow-hidden" lang={activeLang} style={{ height: '100dvh' }}>
       {/* Nav */}
-      <nav className="nav-blur flex justify-between items-center px-4 sm:px-6 py-3 shrink-0 gap-2">
-        <h1 className="font-bold text-sm sm:text-lg gradient-text" style={{ overflowWrap: 'break-word', lineHeight: '1.3' }}>
+      <nav className="nav-blur flex justify-between items-start px-4 sm:px-6 py-3 shrink-0 gap-2">
+        <h1
+          className="font-bold text-sm sm:text-lg gradient-text min-w-0 flex-1"
+          style={{ overflowWrap: 'break-word', wordBreak: 'break-word', lineHeight: '1.4' }}
+        >
           {t('app.title')}
         </h1>
-        <LanguageToggle />
+        <div className="shrink-0">
+          <LanguageToggle />
+        </div>
       </nav>
 
       {/* Hero */}
-      <main className="landing-glow flex flex-1 flex-col items-center justify-center text-center px-4 sm:px-6 py-4 overflow-y-auto">
+      <main className="landing-glow flex flex-1 flex-col items-center text-center px-4 sm:px-6 py-6 overflow-y-auto">
+        <div className="flex flex-col items-center my-auto gap-0">
         <span className="accent-badge mb-4">
           🗳️ {t('app.subtitle')}
         </span>
@@ -107,6 +113,7 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
         <p className="mt-4 max-w-md text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
           {t('disclaimer.text')}
         </p>
+        </div>
       </main>
     </div>
   );

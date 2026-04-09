@@ -8,5 +8,8 @@
   "explanation.trackRecord.label": "About this alignment",
   "explanation.section.title": "Your alignment explained",
   "explanation.beliefs.title": "What you believe in",
-  "explanation.secondary.title": "Secondary alignment"
+  "explanation.secondary.title": "Secondary alignment",
+  "explanation.nonPrimary.title": "Why other parties scored lower",
+  "explanation.nonPrimary.divergence": "Where your views differ",
+  "explanation.nonPrimary.score": "{score}% match"
 }

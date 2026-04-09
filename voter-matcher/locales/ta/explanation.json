@@ -8,5 +8,8 @@
   "explanation.trackRecord.label": "இந்தப் பொருத்தத்தைப் பற்றி ஒரு குறிப்பு",
   "explanation.section.title": "உங்கள் பொருத்தம் — விரிவான விளக்கம்",
   "explanation.beliefs.title": "நீங்கள் முன்னுரிமை அளிப்பவை",
-  "explanation.secondary.title": "இரண்டாவது நெருக்கமான கட்சி"
+  "explanation.secondary.title": "இரண்டாவது நெருக்கமான கட்சி",
+  "explanation.nonPrimary.title": "மற்ற கட்சிகள் ஏன் குறைவான பொருத்தம் பெற்றன",
+  "explanation.nonPrimary.divergence": "உங்கள் கருத்துகள் எங்கே வேறுபடுகின்றன",
+  "explanation.nonPrimary.score": "{score}% பொருத்தம்"
 }

@@ -27,166 +27,16 @@ interface SharePanelProps {
   readonly configVersion: string;
 }
 
-type ShareState = 'idle' | 'generating' | 'ready' | 'shared' | 'copied' | 'error';
+type ShareState = 'generating' | 'ready' | 'shared' | 'copied' | 'error';
 
 const SITE_URL = 'https://voter-matcher-tn-2026.vercel.app';
 
-/** Party brand colors for the share card */
-const PARTY_COLORS: Record<string, string> = {
-  DMK: '#E63946',
-  AIADMK: '#F4A261',
-  TVK: '#457B9D',
+/** Party symbol paths */
+const SYMBOL_PATHS: Record<string, string> = {
+  DMK: '/flags/dmk.svg',
+  AIADMK: '/flags/aiadmk.svg',
+  TVK: '/flags/tvk.png',
 };
-
-/** Draw the receipt-style share card on a canvas and return it */
-function drawReceiptCard(
-  partyScores: Record<string, number>,
-  archetypeId: string,
-  confidenceLevel: string,
-  partyNames: Record<string, string>,
-  archetypeName: string,
-  lang: 'en' | 'ta',
-  disclaimerText: string,
-  partyImages: Record<string, HTMLImageElement>,
-): HTMLCanvasElement {
-  const W = 540;
-  const H = 740;
-  const canvas = document.createElement('canvas');
-  canvas.width = W;
-  canvas.height = H;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('Canvas not supported');
-
-  const sorted = Object.entries(partyScores).sort(([, a], [, b]) => b - a);
-  const topPartyId = sorted[0]?.[0] ?? '';
-
-  const fontMain = lang === 'ta' ? '"Noto Sans Tamil", sans-serif' : '"Inter", Arial, sans-serif';
-  const setFont = (size: number, weight: string): void => {
-    ctx.font = `${weight} ${size}px ${fontMain}`;
-  };
-
-  // === Background ===
-  ctx.fillStyle = '#0f0f14';
-  ctx.fillRect(0, 0, W, H);
-
-  // === Dotted receipt border ===
-  ctx.strokeStyle = '#2e2e3e';
-  ctx.lineWidth = 1.5;
-  ctx.setLineDash([5, 4]);
-  ctx.strokeRect(18, 18, W - 36, H - 36);
-  ctx.setLineDash([]);
-
-  // === Header ===
-  let y = 52;
-  ctx.textAlign = 'center';
-  setFont(28, 'normal');
-  ctx.fillText('🗳️', W / 2, y);
-  y += 34;
-
-  ctx.fillStyle = '#e4e4e7';
-  setFont(17, '600');
-  ctx.fillText(lang === 'ta' ? 'உங்கள் கொள்கை பொருத்தம்' : 'Your Policy Match', W / 2, y);
-  y += 14;
-
-  // === Dashed separator ===
-  ctx.strokeStyle = '#2e2e3e';
-  ctx.setLineDash([3, 3]);
-  ctx.beginPath(); ctx.moveTo(44, y); ctx.lineTo(W - 44, y); ctx.stroke();
-  ctx.setLineDash([]);
-  y += 22;
-
-  // === Top match: symbol + name + score ===
-  ctx.fillStyle = '#a78bfa';
-  setFont(12, '500');
-  ctx.fillText(lang === 'ta' ? 'முதன்மை பொருத்தம்' : 'TOP MATCH', W / 2, y);
-  y += 20;
-
-  // Draw top party symbol if available
-  const topImg = partyImages[topPartyId];
-  if (topImg) {
-    const imgSize = 40;
-    ctx.save();
-    ctx.beginPath();
-    ctx.roundRect(W / 2 - imgSize / 2, y - 4, imgSize, imgSize, 8);
-    ctx.clip();
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(W / 2 - imgSize / 2, y - 4, imgSize, imgSize);
-    ctx.drawImage(topImg, W / 2 - imgSize / 2 + 2, y - 2, imgSize - 4, imgSize - 4);
-    ctx.restore();
-    y += imgSize + 8;
-  }
-
-  ctx.fillStyle = '#ffffff';
-  setFont(26, '700');
-  ctx.fillText(partyNames[topPartyId] ?? topPartyId, W / 2, y);
-  y += 32;
-
-  // Big score removed — only party name + symbol shown
-  y += 8;
-
-  // === Separator ===
-  ctx.strokeStyle = '#2e2e3e';
-  ctx.setLineDash([3, 3]);
-  ctx.beginPath(); ctx.moveTo(44, y); ctx.lineTo(W - 44, y); ctx.stroke();
-  ctx.setLineDash([]);
-  y += 20;
-
-  // === Archetype ===
-  y += 2;
-  ctx.textAlign = 'center';
-  ctx.fillStyle = '#71717a';
-  setFont(11, '500');
-  ctx.fillText(lang === 'ta' ? 'உங்கள் அரசியல் சிந்தனை வகை' : 'YOUR POLITICAL PROFILE', W / 2, y);
-  y += 20;
-
-  ctx.fillStyle = '#e4e4e7';
-  setFont(15, '600');
-  ctx.fillText(archetypeName, W / 2, y);
-  y += 14;
-
-  // Confidence
-  const confLabels: Record<string, Record<string, string>> = {
-    High: { en: 'High Confidence', ta: 'உயர் நம்பிக்கை' },
-    Medium: { en: 'Medium Confidence', ta: 'நடுத்தர நம்பிக்கை' },
-    Low: { en: 'Broad Match', ta: 'பரவலான பொருத்தம்' },
-  };
-  ctx.fillStyle = '#52525b';
-  setFont(11, '400');
-  ctx.fillText(confLabels[confidenceLevel]?.[lang] ?? confidenceLevel, W / 2, y + 14);
-  y += 26;
-
-  // === CTA separator ===
-  ctx.strokeStyle = '#2e2e3e';
-  ctx.setLineDash([3, 3]);
-  ctx.beginPath(); ctx.moveTo(44, y); ctx.lineTo(W - 44, y); ctx.stroke();
-  ctx.setLineDash([]);
-  y += 20;
-
-  // CTA
-  ctx.fillStyle = '#a78bfa';
-  setFont(12, '600');
-  ctx.fillText(
-    lang === 'ta' ? 'உங்களுக்கு எந்த கட்சி பொருந்தும்? கண்டறியுங்கள் 👇' : 'Which party matches YOU? Find out 👇',
-    W / 2, y,
-  );
-  y += 20;
-
-  ctx.fillStyle = '#e4e4e7';
-  setFont(13, '700');
-  ctx.fillText(SITE_URL.replace('https://', ''), W / 2, y);
-  y += 22;
-
-  // === Disclaimer ===
-  ctx.fillStyle = '#3f3f46';
-  setFont(9, '400');
-  const lines = wrapText(ctx, disclaimerText, W - 96);
-  for (const line of lines) {
-    ctx.fillText(line, W / 2, y);
-    y += 12;
-  }
-
-  return canvas;
-}
 
 function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
   const words = text.split(' ');
@@ -205,6 +55,170 @@ function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number)
   return lines;
 }
 
+/** Draw a dashed separator line */
+function drawSeparator(ctx: CanvasRenderingContext2D, y: number, w: number): void {
+  ctx.strokeStyle = '#2e2e3e';
+  ctx.setLineDash([3, 3]);
+  ctx.beginPath();
+  ctx.moveTo(44, y);
+  ctx.lineTo(w - 44, y);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+/** Draw the receipt-style share card on a canvas — compact layout, no dead space */
+function drawReceiptCard(
+  partyScores: Record<string, number>,
+  archetypeId: string,
+  confidenceLevel: string,
+  partyNames: Record<string, string>,
+  archetypeName: string,
+  lang: 'en' | 'ta',
+  disclaimerText: string,
+  partyImages: Record<string, HTMLImageElement>,
+): HTMLCanvasElement {
+  const W = 540;
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) throw new Error('Canvas not supported');
+
+  // We'll draw to a temp large canvas first, then crop to actual content height
+  canvas.width = W;
+  canvas.height = 900; // temp max, will crop
+
+  const sorted = Object.entries(partyScores).sort(([, a], [, b]) => b - a);
+  const topPartyId = sorted[0]?.[0] ?? '';
+
+  const fontMain = lang === 'ta' ? '"Noto Sans Tamil", sans-serif' : '"Inter", Arial, sans-serif';
+  const setFont = (size: number, weight: string): void => {
+    ctx.font = `${weight} ${size}px ${fontMain}`;
+  };
+
+  // === Background (will be redrawn after crop) ===
+  ctx.fillStyle = '#0f0f14';
+  ctx.fillRect(0, 0, W, 900);
+
+  // === Header ===
+  let y = 44;
+  ctx.textAlign = 'center';
+
+  ctx.fillStyle = '#e4e4e7';
+  setFont(16, '600');
+  ctx.fillText(lang === 'ta' ? '🗳️ உங்கள் கொள்கை பொருத்தம்' : '🗳️ Your Policy Match', W / 2, y);
+  y += 18;
+
+  drawSeparator(ctx, y, W);
+  y += 18;
+
+  // === Top match label ===
+  ctx.fillStyle = '#a78bfa';
+  setFont(11, '500');
+  ctx.fillText(lang === 'ta' ? 'முதன்மை பொருத்தம்' : 'TOP MATCH', W / 2, y);
+  y += 22;
+
+  // === Party symbol — centered, with clear gap before name ===
+  const topImg = partyImages[topPartyId];
+  if (topImg) {
+    const imgSize = 48;
+    const imgX = W / 2 - imgSize / 2;
+    const imgY = y;
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(imgX, imgY, imgSize, imgSize, 8);
+    ctx.clip();
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(imgX, imgY, imgSize, imgSize);
+    ctx.drawImage(topImg, imgX + 3, imgY + 3, imgSize - 6, imgSize - 6);
+    ctx.restore();
+    y += imgSize + 14; // clear gap after symbol
+  }
+
+  // === Party name ===
+  ctx.fillStyle = '#ffffff';
+  setFont(24, '700');
+  ctx.fillText(partyNames[topPartyId] ?? topPartyId, W / 2, y);
+  y += 20;
+
+  drawSeparator(ctx, y, W);
+  y += 18;
+
+  // === Archetype section ===
+  ctx.fillStyle = '#71717a';
+  setFont(10, '500');
+  ctx.fillText(lang === 'ta' ? 'உங்கள் அரசியல் சிந்தனை வகை' : 'YOUR POLITICAL PROFILE', W / 2, y);
+  y += 18;
+
+  ctx.fillStyle = '#e4e4e7';
+  setFont(14, '600');
+  ctx.fillText(archetypeName, W / 2, y);
+  y += 16;
+
+  // Confidence
+  const confLabels: Record<string, Record<string, string>> = {
+    High: { en: 'High Confidence', ta: 'உயர் நம்பிக்கை' },
+    Medium: { en: 'Medium Confidence', ta: 'நடுத்தர நம்பிக்கை' },
+    Low: { en: 'Broad Match', ta: 'பரவலான பொருத்தம்' },
+  };
+  ctx.fillStyle = '#52525b';
+  setFont(10, '400');
+  ctx.fillText(confLabels[confidenceLevel]?.[lang] ?? confidenceLevel, W / 2, y);
+  y += 16;
+
+  drawSeparator(ctx, y, W);
+  y += 18;
+
+  // === CTA ===
+  ctx.fillStyle = '#a78bfa';
+  setFont(11, '600');
+  ctx.fillText(
+    lang === 'ta' ? 'உங்களுக்கு எந்த கட்சி பொருந்தும்? கண்டறியுங்கள் 👇' : 'Which party matches YOU? Find out 👇',
+    W / 2, y,
+  );
+  y += 18;
+
+  ctx.fillStyle = '#e4e4e7';
+  setFont(12, '700');
+  ctx.fillText(SITE_URL.replace('https://', ''), W / 2, y);
+  y += 18;
+
+  drawSeparator(ctx, y, W);
+  y += 14;
+
+  // === Disclaimer ===
+  ctx.fillStyle = '#3f3f46';
+  setFont(9, '400');
+  const lines = wrapText(ctx, disclaimerText, W - 96);
+  for (const line of lines) {
+    ctx.fillText(line, W / 2, y);
+    y += 12;
+  }
+  y += 10; // bottom padding
+
+  // === Crop canvas to actual content height ===
+  const finalH = y;
+  const croppedCanvas = document.createElement('canvas');
+  croppedCanvas.width = W;
+  croppedCanvas.height = finalH;
+  const croppedCtx = croppedCanvas.getContext('2d');
+  if (!croppedCtx) return canvas;
+
+  // Redraw background + border on cropped canvas
+  croppedCtx.fillStyle = '#0f0f14';
+  croppedCtx.fillRect(0, 0, W, finalH);
+
+  // Copy content
+  croppedCtx.drawImage(canvas, 0, 0, W, finalH, 0, 0, W, finalH);
+
+  // Dotted receipt border
+  croppedCtx.strokeStyle = '#2e2e3e';
+  croppedCtx.lineWidth = 1.5;
+  croppedCtx.setLineDash([5, 4]);
+  croppedCtx.strokeRect(14, 14, W - 28, finalH - 28);
+  croppedCtx.setLineDash([]);
+
+  return croppedCanvas;
+}
+
 export default function SharePanel({
   partyScores,
   archetypeId,
@@ -212,7 +226,7 @@ export default function SharePanel({
 }: SharePanelProps): React.JSX.Element {
   const { activeLang, t } = useLanguage();
   const config = useConfig();
-  const [state, setState] = useState<ShareState>('idle');
+  const [state, setState] = useState<ShareState>('generating');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -248,16 +262,8 @@ export default function SharePanel({
     });
   }, []);
 
-  /** Party symbol paths */
-  const SYMBOL_PATHS: Record<string, string> = {
-    DMK: '/flags/dmk.svg',
-    AIADMK: '/flags/aiadmk.svg',
-    TVK: '/flags/tvk.png',
-  };
-
   /** Generate the receipt card image (loads symbols first) */
   const generateCard = useCallback(async (): Promise<HTMLCanvasElement> => {
-    // Load all party symbol images in parallel
     const partyImages: Record<string, HTMLImageElement> = {};
     const loadPromises = Object.entries(SYMBOL_PATHS).map(async ([pid, src]) => {
       try {
@@ -290,33 +296,24 @@ export default function SharePanel({
 
   /** Fallback: WhatsApp text-only share */
   const handleWhatsAppText = useCallback((): void => {
-    const sorted = Object.entries(partyScores).sort(([, a], [, b]) => b - a);
-    const topPartyId = sorted[0]?.[0] ?? '';
-    const partyName = getPartyNames()[topPartyId] ?? topPartyId;
-    const archName = getArchetypeName();
-
     const msg = lang === 'ta'
       ? `🗳️ நான் TN 2026 வாக்காளர் பொருத்தம் வினாடி வினா எடுத்தேன்! நீங்களும் முயற்சியுங்கள் 👇\n${SITE_URL}`
       : `🗳️ I took the TN 2026 Voter Matcher quiz! Try it yourself 👇\n${SITE_URL}`;
-
     window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
     setState('shared');
-  }, [partyScores, getPartyNames, getArchetypeName, t]);
+  }, [lang]);
 
-  /** Share as image via Web Share API (WhatsApp picks this up as image) */
+  /** Share as image via Web Share API */
   const handleShareImage = useCallback(async (): Promise<void> => {
-    setState('generating');
     setErrorMessage('');
     try {
-      const canvas = await generateCard();
+      const canvas = canvasRef.current ?? await generateCard();
       const blob = await canvasToBlob(canvas);
       const file = new File([blob], 'voter-match-result.png', { type: 'image/png' });
 
       if (typeof navigator !== 'undefined' && navigator.share && navigator.canShare?.({ files: [file] })) {
         await navigator.share({
-          title: lang === 'ta'
-            ? 'TN 2026 வாக்காளர் பொருத்தம்'
-            : 'TN 2026 Voter Matcher',
+          title: lang === 'ta' ? 'TN 2026 வாக்காளர் பொருத்தம்' : 'TN 2026 Voter Matcher',
           text: lang === 'ta'
             ? `🗳️ நான் TN 2026 வாக்காளர் பொருத்தம் வினாடி வினா எடுத்தேன்! நீங்களும் முயற்சியுங்கள் 👇\n${SITE_URL}`
             : `🗳️ I took the TN 2026 Voter Matcher quiz! Try it yourself 👇\n${SITE_URL}`,
@@ -356,20 +353,13 @@ export default function SharePanel({
     }
   }, [t]);
 
-  /** Generate preview on first render interaction */
-  const handleGeneratePreview = useCallback(async (): Promise<void> => {
-    setState('generating');
-    await generateCard();
-    setState('ready');
-  }, [generateCard]);
-
-  /** Regenerate card when language changes (if card was already generated) */
+  /** Auto-generate card on mount and regenerate when language changes */
   useEffect(() => {
-    if (state !== 'idle' && state !== 'generating') {
-      generateCard().catch(() => { /* ignore regeneration errors */ });
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
+    setState('generating');
+    generateCard()
+      .then(() => setState('ready'))
+      .catch(() => setState('ready'));
+  }, [generateCard]);
 
   return (
     <section
@@ -379,18 +369,6 @@ export default function SharePanel({
       style={tamilMinStyle}
     >
       <div className="flex flex-col items-center gap-3">
-
-        {/* Before generation: show "Generate Share Card" button */}
-        {(state === 'idle') && (
-          <button
-            type="button"
-            onClick={handleGeneratePreview}
-            className="btn-glow w-full max-w-xs px-6 py-3 rounded-lg font-medium"
-            style={tamilMinStyle}
-          >
-            {lang === 'ta' ? '📋 பகிர்வு அட்டை உருவாக்கு' : '📋 Generate Share Card'}
-          </button>
-        )}
 
         {/* Card preview */}
         {previewUrl && (
@@ -404,10 +382,16 @@ export default function SharePanel({
           </div>
         )}
 
-        {/* Action buttons after card is generated */}
-        {state !== 'idle' && state !== 'generating' && (
+        {/* Loading state */}
+        {state === 'generating' && (
+          <p style={{ color: 'var(--muted)', ...tamilMinStyle }}>
+            {lang === 'ta' ? 'உருவாக்குகிறது...' : 'Generating...'}
+          </p>
+        )}
+
+        {/* Action buttons — always visible once ready */}
+        {state !== 'generating' && (
           <>
-            {/* Primary: Share image via WhatsApp / native share */}
             <button
               type="button"
               onClick={handleShareImage}
@@ -420,7 +404,6 @@ export default function SharePanel({
               {t('result.share.button')}
             </button>
 
-            {/* Download image */}
             <button
               type="button"
               onClick={handleDownload}
@@ -430,7 +413,6 @@ export default function SharePanel({
               {lang === 'ta' ? '⬇️ படத்தை பதிவிறக்கு' : '⬇️ Download Image'}
             </button>
 
-            {/* Copy link */}
             <button
               type="button"
               onClick={handleCopyLink}
@@ -440,13 +422,6 @@ export default function SharePanel({
               {t('result.share.copyLink')}
             </button>
           </>
-        )}
-
-        {/* Loading state */}
-        {state === 'generating' && (
-          <p style={{ color: 'var(--muted)', ...tamilMinStyle }}>
-            {lang === 'ta' ? 'உருவாக்குகிறது...' : 'Generating...'}
-          </p>
         )}
 
         {/* Feedback */}

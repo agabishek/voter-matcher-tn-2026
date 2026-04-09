@@ -97,24 +97,29 @@ export default function OnboardingScreen({ onBegin, onHome }: OnboardingScreenPr
   return (
     <div className="flex flex-col" lang={activeLang} style={{ background: 'var(--background)', height: '100dvh' }}>
       {/* Nav bar */}
-      <nav className="nav-blur flex justify-between items-center px-6 py-3 shrink-0">
-        <div className="flex items-center gap-2">
+      <nav className="nav-blur flex justify-between items-start px-4 sm:px-6 py-3 shrink-0 gap-2">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           {onHome && (
             <button
               type="button"
               onClick={onHome}
               aria-label={t('nav.home')}
-              className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 shrink-0"
               style={{ color: 'var(--accent2)', background: 'transparent' }}
             >
               🏠
             </button>
           )}
-          <div className="font-bold text-sm sm:text-lg gradient-text" style={{ overflowWrap: 'break-word', lineHeight: '1.3' }}>
+          <div
+            className="font-bold text-sm sm:text-lg gradient-text min-w-0"
+            style={{ overflowWrap: 'break-word', wordBreak: 'break-word', lineHeight: '1.4' }}
+          >
             {t('app.title')}
           </div>
         </div>
-        <LanguageToggle />
+        <div className="shrink-0">
+          <LanguageToggle />
+        </div>
       </nav>
 
       <div className="flex-1 overflow-y-auto">

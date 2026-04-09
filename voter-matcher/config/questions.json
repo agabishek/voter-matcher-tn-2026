@@ -1,25 +1,25 @@
 {
   "version": "1.0.0",
-  "hash": "PENDING_RECOMPUTE",
+  "hash": "0664ce8d2064d6624259a65c602fdf1cac6057c7b3d3ac23b75308adfcbd8fa0",
   "questions": [
     {
       "id": "q001",
       "cluster": "welfare",
       "text": {
-        "en": "If the state has limited funds, which type of welfare approach should be the priority?",
-        "ta": "மாநிலத்திடம் குறைந்த நிதி இருந்தால், எந்த வகையான நலத்திட்ட அணுகுமுறைக்கு முன்னுரிமை அளிக்க வேண்டும்?"
+        "en": "If the government has a limited budget, what should be the priority?",
+        "ta": "α«àα«░α«Üα«╛α«Öα»ìα«òα«ñα»ìα«ñα«┐α«ƒα««α»ì α«╡α«░α»êα«»α«▒α»üα«òα»ìα«òα«¬α»ìα«¬α«ƒα»ìα«ƒ α«¿α«┐α«ñα«┐ α«çα«░α»üα«¿α»ìα«ñα«╛α«▓α»ì, α««α»üα«⌐α»ìα«⌐α»üα«░α«┐α««α»ê α«Äα«⌐α»ìα«⌐α«╡α«╛α«ò α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q001_a",
           "text": {
-            "en": "Direct cash and free goods to families — like AIADMK's Kula Vilakku (₹2,000/month) and free refrigerators for ration cardholders",
-            "ta": "குடும்பங்களுக்கு நேரடி பணம் மற்றும் இலவசப் பொருட்கள் — அதிமுகவின் குல விளக்கு (மாதம் ₹2,000) மற்றும் ரேஷன் அட்டைதாரர்களுக்கு இலவச குளிர்சாதனப் பெட்டி போன்றவை"
+            "en": "Give cash directly to families in need",
+            "ta": "α«ñα»çα«╡α»êα«¬α»ìα«¬α«ƒα»üα««α»ì α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α«¿α»çα«░α«ƒα«┐α«»α«╛α«ò α«¬α«úα««α»ì α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 4
           },
           "axisWeights": {
             "welfare": 4,
@@ -29,13 +29,13 @@
         {
           "id": "q001_b",
           "text": {
-            "en": "Invest in public services — like DMK's free breakfast scheme expansion to Class 8 and Anbu Sathukkadu free meals for the elderly",
-            "ta": "பொது சேவைகளில் முதலீடு — திமுகவின் காலை உணவு திட்டம் 8ஆம் வகுப்பு வரை விரிவாக்கம் மற்றும் முதியோருக்கு அன்பு சத்துக்காடு இலவச உணவு போன்றவை"
+            "en": "Invest in public services like hospitals and schools",
+            "ta": "α««α«░α»üα«ñα»ìα«ñα»üα«╡α««α«⌐α»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α«│α»ìα«│α«┐α«òα«│α»ì α«¬α»ïα«⌐α»ìα«▒ α«¬α»èα«ñα»ü α«Üα»çα«╡α»êα«òα«│α«┐α«▓α»ì α««α»üα«ñα«▓α»Çα«ƒα»ü α«Üα»åα«»α»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 2,
-            "TVK": 2
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 3,
@@ -45,12 +45,12 @@
         {
           "id": "q001_c",
           "text": {
-            "en": "Empower youth through entrepreneurship — like TVK's Creatorpreneur Scheme (₹25 lakh interest-free loans, 500 schools)",
-            "ta": "தொழில்முனைவு மூலம் இளைஞர்களை மேம்படுத்துதல் — தவெகவின் படைப்பாற்றல் தொழில்முனைவோர் திட்டம் (₹25 லட்சம் வட்டியில்லா கடன், 500 பள்ளிகள்) போன்றவை"
+            "en": "Create jobs through private sector investment",
+            "ta": "α«ñα«⌐α«┐α«»α«╛α«░α»ì α«ñα»üα«▒α»ê α««α»üα«ñα«▓α»Çα«ƒα»ìα«ƒα«┐α«⌐α»ì α««α»éα«▓α««α»ì α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ü α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 1,
+            "DMK": 2,
+            "AIADMK": 2,
             "TVK": 4
           },
           "axisWeights": {
@@ -64,20 +64,20 @@
       "id": "q002",
       "cluster": "welfare",
       "text": {
-        "en": "All three major parties promise monthly cash to women heads of households. Which approach do you prefer?",
-        "ta": "மூன்று முக்கிய கட்சிகளும் குடும்பத் தலைவிகளுக்கு மாதாந்திர பணம் வாக்குறுதி அளிக்கின்றன. எந்த அணுகுமுறையை நீங்கள் விரும்புகிறீர்கள்?"
+        "en": "Should the government provide a monthly cash allowance to women who are heads of their households?",
+        "ta": "α«òα»üα«ƒα»üα««α»ìα«¬α«ñα»ì α«ñα«▓α»êα«╡α«┐α«òα«│α«╛α«ò α«çα«░α»üα«òα»ìα«òα»üα««α»ì α«¬α»åα«úα»ìα«òα«│α»üα«òα»ìα«òα»ü α«àα«░α«Üα»ü α««α«╛α«ñα«╛α«¿α»ìα«ñα«┐α«░ α«¬α«ú α«ëα«ñα«╡α«┐ α«╡α«┤α«Öα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q002_a",
           "text": {
-            "en": "Highest possible amount with extras — like AIADMK's Kula Vilakku ₹2,000/month plus ₹10,000 family assistance for price rise",
-            "ta": "அதிகபட்ச தொகையுடன் கூடுதல் நலன்கள் — அதிமுகவின் குல விளக்கு மாதம் ₹2,000 மற்றும் விலைவாசி நிவாரணமாக ₹10,000 குடும்ப உதவி"
+            "en": "Yes, and the amount should be increased over time",
+            "ta": "α«åα««α»ì, α««α»çα«▓α»üα««α»ì α«òα«╛α«▓α«¬α»ìα«¬α»ïα«òα»ìα«òα«┐α«▓α»ì α«ñα»èα«òα»ê α«ëα«»α«░α»ìα«ñα»ìα«ñα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 5
           },
           "axisWeights": {
             "welfare": 5,
@@ -87,13 +87,13 @@
         {
           "id": "q002_b",
           "text": {
-            "en": "Targeted cash with public services — like DMK's Kalaignar Magalir Urimai Thittam ₹3,000/month combined with free bus travel for women",
-            "ta": "பொது சேவைகளுடன் இலக்கு நிர்ணயிக்கப்பட்ட பணம் — திமுகவின் கலைஞர் மகளிர் உரிமைத் திட்டம் மாதம் ₹3,000 மற்றும் பெண்களுக்கு இலவச பேருந்து பயணம்"
+            "en": "Yes, but only for families below the poverty line",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«╡α«▒α»üα««α»ê α«╡α«░α««α»ìα«¬α»üα«òα»ìα«òα»ü α«òα»Çα«┤α»ì α«ëα«│α»ìα«│ α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α««α«ƒα»ìα«ƒα»üα««α»ç"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 1
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 3,
@@ -103,13 +103,13 @@
         {
           "id": "q002_c",
           "text": {
-            "en": "Cash support plus skill training — like TVK's ₹2,500/month for women combined with 5 lakh internships at ₹10,000 stipend",
-            "ta": "பண உதவியுடன் திறன் பயிற்சி — தவெகவின் பெண்களுக்கு மாதம் ₹2,500 மற்றும் ₹10,000 உதவித்தொகையுடன் 5 லட்சம் பயிற்சி வாய்ப்புகள்"
+            "en": "No, the money is better spent on skill training and employment",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«àα«¿α»ìα«ñ α«¬α«úα«ñα»ìα«ñα»ê α«ñα«┐α«▒α«⌐α»ì α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α«▒α»ìα«▒α»üα««α»ì α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α«┐α«▒α»ìα«òα«╛α«ò α«Üα»åα«▓α«╡α«┐α«ƒα»üα«╡α«ñα»ü α«Üα«┐α«▒α«¿α»ìα«ñα«ñα»ü"
           },
           "partyWeights": {
             "DMK": 1,
-            "AIADMK": 0,
-            "TVK": 3
+            "AIADMK": 1,
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 3,
@@ -122,20 +122,20 @@
       "id": "q003",
       "cluster": "welfare",
       "text": {
-        "en": "Which package of free benefits for families do you think is most useful?",
-        "ta": "குடும்பங்களுக்கான எந்த இலவச நலன்கள் தொகுப்பு மிகவும் பயனுள்ளது என்று நீங்கள் நினைக்கிறீர்கள்?"
+        "en": "Should free meals, free bus travel, and free household goods be provided by the government?",
+        "ta": "α«çα«▓α«╡α«Ü α«ëα«úα«╡α»ü, α«çα«▓α«╡α«Ü α«¬α»çα«░α»üα«¿α»ìα«ñα»ü α«¬α«»α«úα««α»ì α««α«▒α»ìα«▒α»üα««α»ì α«çα«▓α«╡α«Ü α«╡α»Çα«ƒα»ìα«ƒα»ü α«¬α»èα«░α»üα«ƒα»ìα«òα«│α»ì α«àα«░α«Üα«╛α«▓α»ì α«╡α«┤α«Öα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q003_a",
           "text": {
-            "en": "Maximum free goods — like AIADMK's free refrigerator, 3 LPG cylinders/year, free sarees and dhotis, free dal and oil with ration rice",
-            "ta": "அதிகபட்ச இலவசப் பொருட்கள் — அதிமுகவின் இலவச குளிர்சாதனப் பெட்டி, ஆண்டுக்கு 3 LPG சிலிண்டர், இலவச புடவை மற்றும் வேட்டி, ரேஷன் அரிசியுடன் இலவச பருப்பு மற்றும் எண்ணெய்"
+            "en": "Yes, these are essential for the dignity of every citizen",
+            "ta": "α«åα««α»ì, α«çα«╡α»ê α«Æα«╡α»ìα«╡α»èα«░α»ü α«òα»üα«ƒα«┐α««α«òα«⌐α«┐α«⌐α»ì α«òα«úα»ìα«úα«┐α«»α«ñα»ìα«ñα«┐α«▒α»ìα«òα»ü α«çα«⌐α»ìα«▒α«┐α«»α««α»êα«»α«╛α«ñα«╡α»ê"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 4
           },
           "axisWeights": {
             "welfare": 5,
@@ -145,13 +145,13 @@
         {
           "id": "q003_b",
           "text": {
-            "en": "Nutrition-focused services — like DMK's free breakfast scheme (expanded to Class 8) and Kalaignar Kaividaa Thittam subsidised essentials",
-            "ta": "ஊட்டச்சத்து மையமான சேவைகள் — திமுகவின் காலை உணவு திட்டம் (8ஆம் வகுப்பு வரை விரிவாக்கம்) மற்றும் கலைஞர் கைவிடா திட்டம் மானிய அத்தியாவசியப் பொருட்கள்"
+            "en": "Some are essential, but others create dependency",
+            "ta": "α«Üα«┐α«▓ α«çα«⌐α»ìα«▒α«┐α«»α««α»êα«»α«╛α«ñα«╡α»ê, α«åα«⌐α«╛α«▓α»ì α««α«▒α»ìα«▒α«╡α»ê α«Üα«╛α«░α»ìα«¬α»üα«¿α«┐α«▓α»êα«»α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«òα«┐α«⌐α»ìα«▒α«⌐"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 3,
-            "TVK": 2
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 2,
@@ -161,13 +161,13 @@
         {
           "id": "q003_c",
           "text": {
-            "en": "Community support with self-reliance — like TVK's 6 LPG cylinders/year, Annapoorani Kitchen for community meals, and entrepreneurship training",
-            "ta": "சுயசார்புடன் சமூக ஆதரவு — தவெகவின் ஆண்டுக்கு 6 LPG சிலிண்டர், அன்னபூரணி குப்பர் கிச்சன் சமூக உணவு, மற்றும் தொழில்முனைவு பயிற்சி"
+            "en": "No, the government should focus on building long-term economic capacity",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«àα«░α«Üα»ü α«¿α»Çα«úα»ìα«ƒα«òα«╛α«▓ α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«ñα«┐α«▒α«⌐α»ê α«òα«ƒα»ìα«ƒα«┐α«»α»åα«┤α»üα«¬α»ìα«¬α»üα«╡α«ñα«┐α«▓α»ì α«òα«╡α«⌐α««α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 0,
-            "AIADMK": 0,
-            "TVK": 4
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 4,
@@ -181,19 +181,19 @@
       "cluster": "welfare",
       "text": {
         "en": "How should the government support elderly citizens who have no income?",
-        "ta": "வருமானம் இல்லாத முதியோரை அரசு எவ்வாறு ஆதரிக்க வேண்டும்?"
+        "ta": "α«╡α«░α»üα««α«╛α«⌐α««α»ì α«çα«▓α»ìα«▓α«╛α«ñ α««α»üα«ñα«┐α«»α»ïα«░α»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«åα«ñα«░α«┐α«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q004_a",
           "text": {
-            "en": "Direct pension — like AIADMK's promise to increase elderly/widow/disabled pension to ₹2,000/month plus Pongal gift with ₹1,000 cash",
-            "ta": "நேரடி ஓய்வூதியம் — அதிமுகவின் முதியோர்/விதவை/மாற்றுத்திறனாளி ஓய்வூதியத்தை மாதம் ₹2,000 ஆக உயர்த்தும் வாக்குறுதி மற்றும் ₹1,000 பணத்துடன் பொங்கல் பரிசு"
+            "en": "Provide a monthly pension of at least Γé╣2,000",
+            "ta": "α«òα»üα«▒α»êα«¿α»ìα«ñα«ñα»ü Γé╣2,000 α««α«╛α«ñα«╛α«¿α»ìα«ñα«┐α«░ α«ôα«»α»ìα«╡α»éα«ñα«┐α«»α««α»ì α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 4
           },
           "axisWeights": {
             "welfare": 5,
@@ -203,13 +203,13 @@
         {
           "id": "q004_b",
           "text": {
-            "en": "Free meals and healthcare — like DMK's Anbu Sathukkadu free meals for elderly and Amma Mini Clinics for healthcare access",
-            "ta": "இலவச உணவு மற்றும் சுகாதாரம் — திமுகவின் முதியோருக்கு அன்பு சத்துக்காடு இலவச உணவு மற்றும் அம்மா மினி கிளினிக் சுகாதார அணுகல்"
+            "en": "Provide free healthcare and subsidised food",
+            "ta": "α«çα«▓α«╡α«Ü α«Üα»üα«òα«╛α«ñα«╛α«░α««α»ì α««α«▒α»ìα«▒α»üα««α»ì α««α«╛α«⌐α«┐α«» α«ëα«úα«╡α»ü α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 2,
-            "TVK": 2
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 4,
@@ -219,12 +219,12 @@
         {
           "id": "q004_c",
           "text": {
-            "en": "Community-based care with family support — encourage joint families and local community networks to care for the elderly",
-            "ta": "குடும்ப ஆதரவுடன் சமூக அடிப்படையிலான பராமரிப்பு — கூட்டுக் குடும்பங்கள் மற்றும் உள்ளூர் சமூக வலைப்பின்னல்கள் முதியோரை கவனிக்க ஊக்குவிக்க வேண்டும்"
+            "en": "Encourage families and communities to take care of their elderly",
+            "ta": "α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«Üα««α»éα«òα«Öα»ìα«òα«│α»ì α«ñα«Öα»ìα«òα«│α»ì α««α»üα«ñα«┐α«»α»ïα«░α»ê α«òα«╡α«⌐α«┐α«òα»ìα«ò α«èα«òα»ìα«òα»üα«╡α«┐α«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 0,
-            "AIADMK": 1,
+            "DMK": 1,
+            "AIADMK": 2,
             "TVK": 2
           },
           "axisWeights": {
@@ -238,20 +238,20 @@
       "id": "q005",
       "cluster": "governance",
       "text": {
-        "en": "Which governance model do you think Tamil Nadu needs most?",
-        "ta": "தமிழ்நாட்டிற்கு எந்த ஆட்சி மாதிரி மிகவும் தேவை என்று நீங்கள் நினைக்கிறீர்கள்?"
+        "en": "What is the most important quality in a state government?",
+        "ta": "α««α«╛α«¿α«┐α«▓ α«àα«░α«Üα«╛α«Öα»ìα«òα«ñα»ìα«ñα«┐α«▓α»ì α««α«┐α«ò α««α»üα«òα»ìα«òα«┐α«»α««α«╛α«⌐ α«ñα«░α««α»ì α«Äα«⌐α»ìα«⌐?"
       },
       "options": [
         {
           "id": "q005_a",
           "text": {
-            "en": "Welfare-first governance — like AIADMK's Manu Neethi Naal grievance redressal and direct delivery of schemes through local offices",
-            "ta": "நலன்புரி முதன்மை ஆட்சி — அதிமுகவின் மனு நீதி நாள் புகார் தீர்வு மற்றும் உள்ளூர் அலுவலகங்கள் மூலம் திட்டங்களை நேரடியாக வழங்குதல்"
+            "en": "Delivering welfare schemes efficiently to those who need them",
+            "ta": "α«ñα»çα«╡α»êα«¬α»ìα«¬α«ƒα»üα«╡α»ïα«░α»üα«òα»ìα«òα»ü α«¿α«▓α«ñα»ì α«ñα«┐α«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ê α«ñα«┐α«▒α««α»êα«»α«╛α«ò α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 2
+            "TVK": 3
           },
           "axisWeights": {
             "governance": 3,
@@ -261,12 +261,12 @@
         {
           "id": "q005_b",
           "text": {
-            "en": "System reform and transparency — like TVK's Recruitment Accountability & Transparency Act for TNPSC and Youth Advisory Council",
-            "ta": "அமைப்பு சீர்திருத்தம் மற்றும் வெளிப்படைத்தன்மை — தவெகவின் TNPSC-க்கு ஆட்சேர்ப்பு பொறுப்புணர்வு மற்றும் வெளிப்படைத்தன்மை சட்டம் மற்றும் இளைஞர் ஆலோசனை குழு"
+            "en": "Being transparent and free from corruption",
+            "ta": "α«╡α»åα«│α«┐α«¬α»ìα«¬α«ƒα»êα«»α«╛α«òα«╡α»üα««α»ì α«èα«┤α«▓α»ì α«çα«▓α»ìα«▓α«╛α««α«▓α»üα««α»ì α«çα«░α»üα«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 1,
+            "DMK": 3,
+            "AIADMK": 2,
             "TVK": 5
           },
           "axisWeights": {
@@ -277,13 +277,13 @@
         {
           "id": "q005_c",
           "text": {
-            "en": "Growth-oriented governance — like DMK's Dravidian Model 2.0 with 11.19% GDP growth, IT parks in tier-2 cities, and AI Mission 2.0",
-            "ta": "வளர்ச்சி சார்ந்த ஆட்சி — திமுகவின் திராவிட மாடல் 2.0 உடன் 11.19% GDP வளர்ச்சி, இரண்டாம் நிலை நகரங்களில் IT பூங்காக்கள், மற்றும் AI Mission 2.0"
+            "en": "Attracting investment and creating jobs",
+            "ta": "α««α»üα«ñα«▓α»Çα«ƒα»ìα«ƒα»ê α«êα«░α»ìα«ñα»ìα«ñα»ü α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ü α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 2,
-            "TVK": 5
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -296,19 +296,19 @@
       "id": "q006",
       "cluster": "governance",
       "text": {
-        "en": "How should government services like ration cards and certificates be delivered to citizens?",
-        "ta": "ரேஷன் அட்டைகள் மற்றும் சான்றிதழ்கள் போன்ற அரசு சேவைகள் குடிமக்களுக்கு எவ்வாறு வழங்கப்பட வேண்டும்?"
+        "en": "How should government services like ration cards and certificates be delivered?",
+        "ta": "α«░α»çα«╖α«⌐α»ì α«àα«ƒα»ìα«ƒα»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«Üα«╛α«⌐α»ìα«▒α«┐α«ñα«┤α»ìα«òα«│α»ì α«¬α»ïα«⌐α»ìα«▒ α«àα«░α«Üα»ü α«Üα»çα«╡α»êα«òα«│α»ì α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«╡α«┤α«Öα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q006_a",
           "text": {
-            "en": "Single digital window — like DMK's e-governance expansion and single window clearance to reduce middlemen and bribery",
-            "ta": "ஒற்றை டிஜிட்டல் சாளரம் — திமுகவின் மின்-ஆட்சி விரிவாக்கம் மற்றும் இடைத்தரகர்கள் மற்றும் லஞ்சத்தை குறைக்க ஒற்றைச் சாளர அனுமதி"
+            "en": "Through a single digital window with no middlemen",
+            "ta": "α«çα«ƒα»êα«ñα»ìα«ñα«░α«òα«░α»ìα«òα«│α»ì α«çα«▓α»ìα«▓α«╛α««α«▓α»ì α«Æα«░α»ç α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α«Üα«╛α«│α«░α««α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 2,
+            "AIADMK": 3,
             "TVK": 5
           },
           "axisWeights": {
@@ -319,13 +319,13 @@
         {
           "id": "q006_b",
           "text": {
-            "en": "In-person local offices — like AIADMK's E-Seva centres for quick document delivery and Amma Mini Clinics for healthcare",
-            "ta": "நேரடி உள்ளூர் அலுவலகங்கள் — அதிமுகவின் E-Seva மையங்கள் விரைவான ஆவண வழங்கல் மற்றும் அம்மா மினி கிளினிக் சுகாதாரத்திற்கு"
+            "en": "Through local government offices that people can visit in person",
+            "ta": "α««α«òα»ìα«òα«│α»ì α«¿α»çα«░α«┐α«▓α»ì α«Üα»åα«⌐α»ìα«▒α»ü α«Üα«¿α»ìα«ñα«┐α«òα»ìα«òα«òα»ìα«òα»éα«ƒα«┐α«» α«ëα«│α»ìα«│α«╛α«ƒα»ìα«Üα«┐ α«àα«▓α»üα«╡α«▓α«òα«Öα»ìα«òα«│α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 5,
-            "TVK": 1
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "governance": 3,
@@ -335,13 +335,13 @@
         {
           "id": "q006_c",
           "text": {
-            "en": "Through elected representatives and community volunteers who know local needs",
-            "ta": "உள்ளூர் தேவைகளை அறிந்த தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகள் மற்றும் சமூக தன்னார்வலர்கள் மூலம்"
+            "en": "Through community volunteers and elected representatives",
+            "ta": "α«Üα««α»éα«ò α«ñα«⌐α»ìα«⌐α«╛α«░α»ìα«╡α«▓α«░α»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«ñα»çα«░α»ìα«¿α»ìα«ñα»åα«ƒα»üα«òα»ìα«òα«¬α»ìα«¬α«ƒα»ìα«ƒ α«¬α«┐α«░α«ñα«┐α«¿α«┐α«ñα«┐α«òα«│α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 4,
-            "TVK": 1
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "governance": 2,
@@ -354,19 +354,19 @@
       "id": "q007",
       "cluster": "governance",
       "text": {
-        "en": "How should citizens' complaints about government officials be handled?",
-        "ta": "அரசு அதிகாரிகள் பற்றிய குடிமக்களின் புகார்கள் எவ்வாறு கையாளப்பட வேண்டும்?"
+        "en": "How should the government handle complaints from citizens about public officials?",
+        "ta": "α«¬α»èα«ñα»ü α«àα«ñα«┐α«òα«╛α«░α«┐α«òα«│α»êα«¬α»ì α«¬α«▒α»ìα«▒α«┐α«» α«òα»üα«ƒα«┐α««α«òα»ìα«òα«│α«┐α«⌐α»ì α«¬α»üα«òα«╛α«░α»ìα«òα«│α»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«òα»êα«»α«╛α«│ α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q007_a",
           "text": {
-            "en": "Independent accountability body — like TVK's proposed Recruitment Accountability Act with Youth Advisory Council oversight",
-            "ta": "சுயாதீன பொறுப்புணர்வு அமைப்பு — தவெகவின் முன்மொழியப்பட்ட ஆட்சேர்ப்பு பொறுப்புணர்வு சட்டம் மற்றும் இளைஞர் ஆலோசனை குழு மேற்பார்வை"
+            "en": "Through an independent ombudsman with power to take action",
+            "ta": "α«¿α«ƒα«╡α«ƒα«┐α«òα»ìα«òα»ê α«Äα«ƒα»üα«òα»ìα«òα»üα««α»ì α«àα«ñα«┐α«òα«╛α«░α««α»ì α«òα»èα«úα»ìα«ƒ α«Üα»üα«»α«╛α«ñα»Çα«⌐ α«ôα««α»ìα«¬α»üα«ƒα»ìα«╕α»ìα««α»çα«⌐α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 1,
+            "DMK": 3,
+            "AIADMK": 2,
             "TVK": 5
           },
           "axisWeights": {
@@ -377,13 +377,13 @@
         {
           "id": "q007_b",
           "text": {
-            "en": "Digital grievance portal — like DMK's e-governance platform with time-bound resolution and service digitisation",
-            "ta": "டிஜிட்டல் புகார் தளம் — திமுகவின் மின்-ஆட்சி தளம் காலக்கெடு தீர்வு மற்றும் சேவை டிஜிட்டல் மயமாக்கல்"
+            "en": "Through a dedicated grievance portal with time-bound resolution",
+            "ta": "α«òα«╛α«▓α«òα»ìα«òα»åα«ƒα»ü α«ñα»Çα«░α»ìα«╡α»üα«ƒα«⌐α»ì α«òα»éα«ƒα«┐α«» α«àα«░α»ìα«¬α»ìα«¬α«úα«┐α«¬α»ìα«¬α«╛α«⌐ α«¬α»üα«òα«╛α«░α»ì α«ñα«│α««α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 2,
-            "TVK": 3
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "governance": 4,
@@ -393,13 +393,13 @@
         {
           "id": "q007_c",
           "text": {
-            "en": "Direct grievance days — like AIADMK's Manu Neethi Naal where citizens meet officials and elected representatives in person",
-            "ta": "நேரடி புகார் நாட்கள் — அதிமுகவின் மனு நீதி நாள் போல குடிமக்கள் அதிகாரிகள் மற்றும் தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகளை நேரில் சந்திப்பது"
+            "en": "Through elected representatives who can escalate issues",
+            "ta": "α«¬α«┐α«░α«Üα»ìα«Üα«┐α«⌐α»êα«òα«│α»ê α««α»çα«▓α»ç α«òα»èα«úα»ìα«ƒα»ü α«Üα»åα«▓α»ìα«▓α«òα»ìα«òα»éα«ƒα«┐α«» α«ñα»çα«░α»ìα«¿α»ìα«ñα»åα«ƒα»üα«òα»ìα«òα«¬α»ìα«¬α«ƒα»ìα«ƒ α«¬α«┐α«░α«ñα«┐α«¿α«┐α«ñα«┐α«òα«│α»ì α««α»éα«▓α««α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 5,
-            "TVK": 1
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "governance": 2,
@@ -412,19 +412,19 @@
       "id": "q008",
       "cluster": "economy",
       "text": {
-        "en": "What is the best way to create jobs for Tamil Nadu's youth?",
-        "ta": "தமிழ்நாட்டு இளைஞர்களுக்கு வேலைவாய்ப்பு உருவாக்க சிறந்த வழி என்ன?"
+        "en": "What is the best way to create jobs in Tamil Nadu?",
+        "ta": "α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▓α»ì α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ü α«ëα«░α»üα«╡α«╛α«òα»ìα«ò α«Üα«┐α«▒α«¿α»ìα«ñ α«╡α«┤α«┐ α«Äα«⌐α»ìα«⌐?"
       },
       "options": [
         {
           "id": "q008_a",
           "text": {
-            "en": "Entrepreneurship and private sector — like TVK's Creatorpreneur Scheme (₹25 lakh interest-free loans) with 75% local hiring and GST/electricity subsidies for companies",
-            "ta": "தொழில்முனைவு மற்றும் தனியார் துறை — தவெகவின் படைப்பாற்றல் தொழில்முனைவோர் திட்டம் (₹25 லட்சம் வட்டியில்லா கடன்) 75% உள்ளூர் வேலைவாய்ப்பு மற்றும் நிறுவனங்களுக்கு GST/மின்சார மானியம்"
+            "en": "Attract large private companies with tax breaks and incentives",
+            "ta": "α«╡α«░α«┐ α«╡α«┐α«▓α«òα»ìα«òα»üα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«èα«òα»ìα«òα«ñα»ìα«ñα»èα«òα»êα«òα«│α»üα«ƒα«⌐α»ì α«¬α»åα«░α«┐α«» α«ñα«⌐α«┐α«»α«╛α«░α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»ê α«êα«░α»ìα«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 1,
+            "DMK": 3,
+            "AIADMK": 3,
             "TVK": 5
           },
           "axisWeights": {
@@ -435,13 +435,13 @@
         {
           "id": "q008_b",
           "text": {
-            "en": "Government employment expansion — like AIADMK's 100-day work scheme raised to 150 days and Global Investors Meet every 2 years",
-            "ta": "அரசு வேலைவாய்ப்பு விரிவாக்கம் — அதிமுகவின் 100 நாள் வேலைவாய்ப்பு 150 நாட்களாக உயர்வு மற்றும் ஒவ்வொரு 2 ஆண்டுகளுக்கும் உலக முதலீட்டாளர் கூட்டம்"
+            "en": "Expand government employment in public services",
+            "ta": "α«¬α»èα«ñα»ü α«Üα»çα«╡α»êα«òα«│α«┐α«▓α»ì α«àα«░α«Üα»ü α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ê α«╡α«┐α«░α«┐α«╡α»üα«¬α«ƒα»üα«ñα»ìα«ñα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 1
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 3,
@@ -451,13 +451,13 @@
         {
           "id": "q008_c",
           "text": {
-            "en": "Skill development and IT growth — like DMK's IT parks in tier-2 cities, AI Mission 2.0, and skill training for 50 lakh people",
-            "ta": "திறன் மேம்பாடு மற்றும் IT வளர்ச்சி — திமுகவின் இரண்டாம் நிலை நகரங்களில் IT பூங்காக்கள், AI Mission 2.0, மற்றும் 50 லட்சம் பேருக்கு திறன் பயிற்சி"
+            "en": "Support small businesses and local entrepreneurs",
+            "ta": "α«Üα«┐α«▒α»ü α«╡α«úα«┐α«òα«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«ëα«│α»ìα«│α»éα«░α»ì α«ñα»èα«┤α«┐α«▓α»ìα««α»üα«⌐α»êα«╡α»ïα«░α»ê α«åα«ñα«░α«┐α«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 5,
+            "DMK": 4,
             "AIADMK": 3,
-            "TVK": 4
+            "TVK": 5
           },
           "axisWeights": {
             "economy": 4,
@@ -470,20 +470,20 @@
       "id": "q009",
       "cluster": "economy",
       "text": {
-        "en": "For Tamil Nadu's economic growth, should the focus be on agriculture-based industry or technology?",
-        "ta": "தமிழ்நாட்டின் பொருளாதார வளர்ச்சிக்கு, விவசாய அடிப்படையிலான தொழில் அல்லது தொழில்நுட்பத்தில் கவனம் செலுத்த வேண்டுமா?"
+        "en": "Should the government prioritize agriculture or industry for economic growth?",
+        "ta": "α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐α«òα»ìα«òα»ü α«àα«░α«Üα»ü α«╡α«┐α«╡α«Üα«╛α«»α««α»ì α«àα«▓α»ìα«▓α«ñα»ü α«ñα»èα«┤α«┐α«▓α»ìα«ñα»üα«▒α»êα«òα»ìα«òα»ü α««α»üα«⌐α»ìα«⌐α»üα«░α«┐α««α»ê α«àα«│α«┐α«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q009_a",
           "text": {
-            "en": "Agriculture and food processing — like AIADMK's food processing parks in every district, agricultural loan waivers, and landless labourer support",
-            "ta": "விவசாயம் மற்றும் உணவு பதப்படுத்தல் — அதிமுகவின் ஒவ்வொரு மாவட்டத்திலும் உணவு பதப்படுத்தல் பூங்காக்கள், விவசாயக் கடன் தள்ளுபடி, மற்றும் நிலமற்ற தொழிலாளர் ஆதரவு"
+            "en": "Agriculture - support farmers with subsidies and loan waivers",
+            "ta": "α«╡α«┐α«╡α«Üα«╛α«»α««α»ì - α««α«╛α«⌐α«┐α«»α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«òα«ƒα«⌐α»ì α«ñα«│α»ìα«│α»üα«¬α«ƒα«┐α«òα«│α»üα«ƒα«⌐α»ì α«╡α«┐α«╡α«Üα«╛α«»α«┐α«òα«│α»ê α«åα«ñα«░α«┐α«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 2
+            "TVK": 3
           },
           "axisWeights": {
             "economy": 3,
@@ -494,12 +494,12 @@
         {
           "id": "q009_b",
           "text": {
-            "en": "Technology and manufacturing — like TVK's 75% local jobs reservation with GST subsidy for companies and defence corridor development",
-            "ta": "தொழில்நுட்பம் மற்றும் உற்பத்தி — தவெகவின் 75% உள்ளூர் வேலைவாய்ப்பு இட ஒதுக்கீடு நிறுவனங்களுக்கு GST மானியம் மற்றும் பாதுகாப்பு தொழில் வளையம் வளர்ச்சி"
+            "en": "Industry - build factories and attract manufacturing",
+            "ta": "α«ñα»èα«┤α«┐α«▓α»ìα«ñα»üα«▒α»ê - α«ñα»èα«┤α«┐α«▒α»ìα«Üα«╛α«▓α»êα«òα«│α»ê α«òα«ƒα»ìα«ƒα«┐ α«ëα«▒α»ìα«¬α«ñα»ìα«ñα«┐α«»α»ê α«êα«░α»ìα«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 1,
+            "DMK": 3,
+            "AIADMK": 3,
             "TVK": 5
           },
           "axisWeights": {
@@ -510,13 +510,13 @@
         {
           "id": "q009_c",
           "text": {
-            "en": "Balanced rural-urban investment — like DMK's approach combining MSME support, Global Talent Gateway in 5 cities, and startup ecosystem",
-            "ta": "சமநிலையான கிராம-நகர முதலீடு — திமுகவின் MSME ஆதரவு, 5 நகரங்களில் Global Talent Gateway, மற்றும் தொடக்க நிறுவன சூழல் ஆகியவற்றை இணைக்கும் அணுகுமுறை"
+            "en": "Both equally - balanced investment in rural and urban sectors",
+            "ta": "α«çα«░α«úα»ìα«ƒα»üα««α»ì α«Üα««α««α«╛α«ò - α«òα«┐α«░α«╛α««α«¬α»ìα«¬α»üα«▒ α««α«▒α»ìα«▒α»üα««α»ì α«¿α«òα«░α»ìα«¬α»ìα«¬α»üα«▒ α«ñα»üα«▒α»êα«òα«│α«┐α«▓α»ì α«Üα««α«¿α«┐α«▓α»ê α««α»üα«ñα«▓α»Çα«ƒα»ü"
           },
           "partyWeights": {
-            "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 2
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "economy": 4,
@@ -530,19 +530,19 @@
       "cluster": "economy",
       "text": {
         "en": "How should the government handle public sector companies that are losing money?",
-        "ta": "நஷ்டத்தில் இயங்கும் பொதுத்துறை நிறுவனங்களை அரசு எவ்வாறு கையாள வேண்டும்?"
+        "ta": "α«¿α«╖α»ìα«ƒα«ñα»ìα«ñα«┐α«▓α»ì α«çα«»α«Öα»ìα«òα»üα««α»ì α«¬α»èα«ñα»üα«ñα»ìα«ñα»üα«▒α»ê α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«òα»êα«»α«╛α«│ α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q010_a",
           "text": {
-            "en": "Partner with private sector — like TVK's approach of private company partnerships with accountability and 75% local hiring requirements",
-            "ta": "தனியார் துறையுடன் கூட்டு — தவெகவின் பொறுப்புணர்வு மற்றும் 75% உள்ளூர் வேலைவாய்ப்பு தேவையுடன் தனியார் நிறுவன கூட்டாண்மை அணுகுமுறை"
+            "en": "Privatize them to improve efficiency",
+            "ta": "α«ñα«┐α«▒α«⌐α»ê α««α»çα««α»ìα«¬α«ƒα»üα«ñα»ìα«ñ α«àα«╡α«▒α»ìα«▒α»ê α«ñα«⌐α«┐α«»α«╛α«░α»ìα««α«»α««α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 0,
-            "AIADMK": 1,
-            "TVK": 5
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -552,13 +552,13 @@
         {
           "id": "q010_b",
           "text": {
-            "en": "Reform management — like DMK's Dravidian Model 2.0 approach of keeping public ownership with e-governance reforms and anti-corruption measures",
-            "ta": "நிர்வாகத்தை சீர்திருத்துதல் — திமுகவின் திராவிட மாடல் 2.0 அணுகுமுறை பொது உரிமையை தக்கவைத்து மின்-ஆட்சி சீர்திருத்தங்கள் மற்றும் ஊழல் எதிர்ப்பு நடவடிக்கைகள்"
+            "en": "Keep them public but reform management and reduce corruption",
+            "ta": "α«àα«╡α«▒α»ìα«▒α»ê α«¬α»èα«ñα»üα«╡α»üα«ƒα»êα««α»êα«»α«╛α«ò α«╡α»êα«ñα»ìα«ñα»ü α«¿α«┐α«░α»ìα«╡α«╛α«òα«ñα»ìα«ñα»ê α«Üα»Çα«░α»ìα«ñα«┐α«░α»üα«ñα»ìα«ñα«┐ α«èα«┤α«▓α»ê α«òα»üα«▒α»êα«ñα»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 5,
-            "AIADMK": 2,
-            "TVK": 3
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 3,
@@ -569,13 +569,13 @@
         {
           "id": "q010_c",
           "text": {
-            "en": "Continue funding — like AIADMK's approach of maintaining essential public services and expanding government employment",
-            "ta": "நிதியளிப்பை தொடர்தல் — அதிமுகவின் அத்தியாவசிய பொது சேவைகளை பராமரிக்கும் மற்றும் அரசு வேலைவாய்ப்பை விரிவுபடுத்தும் அணுகுமுறை"
+            "en": "Continue funding them because they provide essential services",
+            "ta": "α«àα«ñα»ìα«ñα«┐α«»α«╛α«╡α«Üα«┐α«» α«Üα»çα«╡α»êα«òα«│α»ê α«╡α«┤α«Öα»ìα«òα»üα«╡α«ñα«╛α«▓α»ì α«àα«╡α«▒α»ìα«▒α»üα«òα»ìα«òα»ü α«¿α«┐α«ñα«┐α«»α«│α«┐α«¬α»ìα«¬α«ñα»ê α«ñα»èα«ƒα«░α»ìα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 5,
-            "TVK": 0
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 2,
@@ -588,20 +588,20 @@
       "id": "q011",
       "cluster": "poverty",
       "text": {
-        "en": "Which approach to reducing poverty in Tamil Nadu do you think works best?",
-        "ta": "தமிழ்நாட்டில் வறுமையை குறைக்க எந்த அணுகுமுறை சிறப்பாக செயல்படும் என்று நீங்கள் நினைக்கிறீர்கள்?"
+        "en": "What is the most effective way to reduce poverty?",
+        "ta": "α«╡α«▒α»üα««α»êα«»α»ê α«òα»üα«▒α»êα«òα»ìα«ò α««α«┐α«òα«╡α»üα««α»ì α«¬α«»α«⌐α»üα«│α»ìα«│ α«╡α«┤α«┐ α«Äα«⌐α»ìα«⌐?"
       },
       "options": [
         {
           "id": "q011_a",
           "text": {
-            "en": "Direct cash and material support — like AIADMK's ₹10,000 family assistance, ₹2,000 pension, and Pongal gift with cash for every family",
-            "ta": "நேரடி பண மற்றும் பொருள் உதவி — அதிமுகவின் ₹10,000 குடும்ப உதவி, ₹2,000 ஓய்வூதியம், மற்றும் ஒவ்வொரு குடும்பத்திற்கும் பணத்துடன் பொங்கல் பரிசு"
+            "en": "Provide direct cash transfers to poor families",
+            "ta": "α«Åα«┤α»ê α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α«¿α»çα«░α«ƒα«┐ α«¬α«ú α«¬α«░α«┐α««α«╛α«▒α»ìα«▒α««α»ì α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 4
           },
           "axisWeights": {
             "poverty": 5,
@@ -611,13 +611,13 @@
         {
           "id": "q011_b",
           "text": {
-            "en": "Skill training and employment — like TVK's ₹4,000/month unemployment allowance for graduates, 5 lakh internships, and interest-free education loans up to ₹20 lakh",
-            "ta": "திறன் பயிற்சி மற்றும் வேலைவாய்ப்பு — தவெகவின் பட்டதாரிகளுக்கு மாதம் ₹4,000 வேலையின்மை உதவி, 5 லட்சம் பயிற்சி வாய்ப்புகள், மற்றும் ₹20 லட்சம் வரை வட்டியில்லா கல்விக் கடன்"
+            "en": "Create employment opportunities through skill training",
+            "ta": "α«ñα«┐α«▒α«⌐α»ì α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α»éα«▓α««α»ì α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ü α«╡α«╛α«»α»ìα«¬α»ìα«¬α»üα«òα«│α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 2,
-            "TVK": 5
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "poverty": 4,
@@ -628,13 +628,13 @@
         {
           "id": "q011_c",
           "text": {
-            "en": "Education and healthcare access — like DMK's free laptops for 35 lakh students, free breakfast expansion, and ₹2,000 crore Ambedkar housing scheme",
-            "ta": "கல்வி மற்றும் சுகாதார அணுகல் — திமுகவின் 35 லட்சம் மாணவர்களுக்கு இலவச மடிக்கணினி, காலை உணவு விரிவாக்கம், மற்றும் ₹2,000 கோடி அம்பேத்கர் வீட்டுத் திட்டம்"
+            "en": "Improve access to education and healthcare",
+            "ta": "α«òα«▓α»ìα«╡α«┐ α««α«▒α»ìα«▒α»üα««α»ì α«Üα»üα«òα«╛α«ñα«╛α«░α«ñα»ìα«ñα«┐α«▒α»ìα«òα«╛α«⌐ α«àα«úα»üα«òα«▓α»ê α««α»çα««α»ìα«¬α«ƒα»üα«ñα»ìα«ñα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 2
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "poverty": 4,
@@ -647,20 +647,20 @@
       "id": "q012",
       "cluster": "poverty",
       "text": {
-        "en": "How should the government provide housing for families who cannot afford it?",
-        "ta": "வீடு வாங்க இயலாத குடும்பங்களுக்கு அரசு எவ்வாறு வீடு வழங்க வேண்டும்?"
+        "en": "Should the government provide free housing to families living in slums?",
+        "ta": "α«Üα»çα«░α«┐α«òα«│α«┐α«▓α»ì α«╡α«╛α«┤α»üα««α»ì α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α«àα«░α«Üα»ü α«çα«▓α«╡α«Ü α«╡α»Çα«ƒα»ü α«╡α«┤α«Öα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q012_a",
           "text": {
-            "en": "Government builds directly — like AIADMK's Amma Illam scheme where the government constructs and gives free houses to homeless families",
-            "ta": "அரசே நேரடியாக கட்டுதல் — அதிமுகவின் அம்மா இல்லம் திட்டம் போல அரசு வீடற்ற குடும்பங்களுக்கு வீடுகளை கட்டி இலவசமாக வழங்குதல்"
+            "en": "Yes, housing is a basic right and the government must provide it",
+            "ta": "α«åα««α»ì, α«╡α»Çα«ƒα»ü α«Æα«░α»ü α«àα«ƒα«┐α«¬α»ìα«¬α«ƒα»ê α«ëα«░α«┐α««α»ê α««α«▒α»ìα«▒α»üα««α»ì α«àα«░α«Üα»ü α«àα«ñα»ê α«╡α«┤α«Öα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 4,
             "AIADMK": 5,
-            "TVK": 1
+            "TVK": 3
           },
           "axisWeights": {
             "poverty": 5,
@@ -670,12 +670,12 @@
         {
           "id": "q012_b",
           "text": {
-            "en": "Targeted housing schemes — like DMK's ₹2,000 crore Ambedkar housing scheme for Adi Dravidar families with goal of housing for all by 2030",
-            "ta": "இலக்கு நிர்ணயிக்கப்பட்ட வீட்டுத் திட்டங்கள் — திமுகவின் ₹2,000 கோடி அம்பேத்கர் வீட்டுத் திட்டம் ஆதிதிராவிட குடும்பங்களுக்கு 2030க்குள் அனைவருக்கும் வீடு இலக்கு"
+            "en": "Yes, but with subsidized loans that families can repay over time",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»ì α«òα«╛α«▓α«¬α»ìα«¬α»ïα«òα»ìα«òα«┐α«▓α»ì α«ñα«┐α«░α»üα«¬α»ìα«¬α«┐α«Üα»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα«òα»ìα«òα»éα«ƒα«┐α«» α««α«╛α«⌐α«┐α«» α«òα«ƒα«⌐α»ìα«òα«│α»üα«ƒα«⌐α»ì"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 2,
+            "DMK": 3,
+            "AIADMK": 3,
             "TVK": 3
           },
           "axisWeights": {
@@ -686,13 +686,13 @@
         {
           "id": "q012_c",
           "text": {
-            "en": "Employment-based approach — create jobs so families can afford housing, like TVK's entrepreneurship focus and ₹4,000/month unemployment allowance",
-            "ta": "வேலைவாய்ப்பு அடிப்படையிலான அணுகுமுறை — குடும்பங்கள் வீடு வாங்க முடியும் வகையில் வேலை உருவாக்குதல், தவெகவின் தொழில்முனைவு கவனம் மற்றும் மாதம் ₹4,000 வேலையின்மை உதவி"
+            "en": "No, focus on creating jobs so families can afford their own housing",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»ì α«ñα«Öα»ìα«òα«│α»ì α«Üα»èα«¿α»ìα«ñ α«╡α»Çα«ƒα»ìα«ƒα»ê α«╡α«╛α«Öα»ìα«ò α««α»üα«ƒα«┐α«»α»üα««α»ì α«╡α«òα»êα«»α«┐α«▓α»ì α«╡α»çα«▓α»êα«╡α«╛α«»α»ìα«¬α»ìα«¬α»ü α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«╡α«ñα«┐α«▓α»ì α«òα«╡α«⌐α««α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 0,
-            "TVK": 4
+            "DMK": 2,
+            "AIADMK": 1,
+            "TVK": 3
           },
           "axisWeights": {
             "economy": 4,
@@ -705,20 +705,20 @@
       "id": "q013",
       "cluster": "poverty",
       "text": {
-        "en": "How should the government support children from poor families to stay in school?",
-        "ta": "ஏழை குடும்பங்களின் குழந்தைகள் பள்ளியில் தொடர அரசு எவ்வாறு ஆதரிக்க வேண்டும்?"
+        "en": "How should the government support children from poor families?",
+        "ta": "α«Åα«┤α»ê α«òα»üα«ƒα»üα««α»ìα«¬α«Öα»ìα«òα«│α»êα«Üα»ì α«Üα»çα«░α»ìα«¿α»ìα«ñ α«òα»üα«┤α«¿α»ìα«ñα»êα«òα«│α»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«åα«ñα«░α«┐α«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q013_a",
           "text": {
-            "en": "Free education with meals and devices — like DMK's free breakfast expansion to Class 8, free laptops for 35 lakh students, and Ambedkar foreign education scheme",
-            "ta": "உணவு மற்றும் சாதனங்களுடன் இலவச கல்வி — திமுகவின் காலை உணவு 8ஆம் வகுப்பு வரை விரிவாக்கம், 35 லட்சம் மாணவர்களுக்கு இலவச மடிக்கணினி, மற்றும் அம்பேத்கர் வெளிநாட்டு கல்வித் திட்டம்"
+            "en": "Provide free education, meals, and school supplies",
+            "ta": "α«çα«▓α«╡α«Ü α«òα«▓α»ìα«╡α«┐, α«ëα«úα«╡α»ü α««α«▒α»ìα«▒α»üα««α»ì α«¬α«│α»ìα«│α«┐ α«¬α»èα«░α»üα«ƒα»ìα«òα«│α»ê α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 2
+            "AIADMK": 5,
+            "TVK": 4
           },
           "axisWeights": {
             "poverty": 5,
@@ -729,13 +729,13 @@
         {
           "id": "q013_b",
           "text": {
-            "en": "Cash incentives to families — like AIADMK's education loan waiver, ₹10,000 Pongal gift, and free school supplies to keep children enrolled",
-            "ta": "குடும்பங்களுக்கு பண ஊக்கத்தொகை — அதிமுகவின் கல்விக் கடன் தள்ளுபடி, ₹10,000 பொங்கல் பரிசு, மற்றும் குழந்தைகளை பள்ளியில் வைக்க இலவச பள்ளி பொருட்கள்"
+            "en": "Give cash incentives to parents to keep children in school",
+            "ta": "α«òα»üα«┤α«¿α»ìα«ñα»êα«òα«│α»ê α«¬α«│α»ìα«│α«┐α«»α«┐α«▓α»ì α«╡α»êα«ñα»ìα«ñα«┐α«░α»üα«òα»ìα«ò α«¬α»åα«▒α»ìα«▒α»ïα«░α»üα«òα»ìα«òα»ü α«¬α«ú α«èα«òα»ìα«òα«ñα»ìα«ñα»èα«òα»ê α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 5,
-            "TVK": 2
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "poverty": 4,
@@ -745,12 +745,12 @@
         {
           "id": "q013_c",
           "text": {
-            "en": "Quality education and skills — like TVK's free higher education for small farmers' children, ₹15,000 education assistance, and interest-free education loans up to ₹20 lakh",
-            "ta": "தரமான கல்வி மற்றும் திறன்கள் — தவெகவின் சிறு விவசாயிகளின் குழந்தைகளுக்கு இலவச உயர்கல்வி, ₹15,000 கல்வி உதவி, மற்றும் ₹20 லட்சம் வரை வட்டியில்லா கல்விக் கடன்"
+            "en": "Focus on improving school quality so education leads to better jobs",
+            "ta": "α«òα«▓α»ìα«╡α«┐ α«Üα«┐α«▒α«¿α»ìα«ñ α«╡α»çα«▓α»êα«òα«│α»üα«òα»ìα«òα»ü α«╡α«┤α«┐α«╡α«òα»üα«òα»ìα«òα»üα««α»ì α«╡α«òα»êα«»α«┐α«▓α»ì α«¬α«│α»ìα«│α«┐ α«ñα«░α«ñα»ìα«ñα»ê α««α»çα««α»ìα«¬α«ƒα»üα«ñα»ìα«ñα»üα«╡α«ñα«┐α«▓α»ì α«òα«╡α«⌐α««α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 2,
+            "DMK": 4,
+            "AIADMK": 3,
             "TVK": 4
           },
           "axisWeights": {
@@ -765,20 +765,20 @@
       "id": "q014",
       "cluster": "social_justice",
       "text": {
-        "en": "Tamil Nadu has 69% reservation. How should the reservation system be handled going forward?",
-        "ta": "தமிழ்நாட்டில் 69% இட ஒதுக்கீடு உள்ளது. இட ஒதுக்கீடு முறை இனி எவ்வாறு கையாளப்பட வேண்டும்?"
+        "en": "Should reservation in government jobs and education be continued?",
+        "ta": "α«àα«░α«Üα»ü α«╡α»çα«▓α»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«òα«▓α»ìα«╡α«┐α«»α«┐α«▓α»ì α«çα«ƒ α«Æα«ñα»üα«òα»ìα«òα»Çα«ƒα»ü α«ñα»èα«ƒα«░ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q014_a",
           "text": {
-            "en": "Protect 69% and expand — like DMK's constitutional protection of 69%, caste census for proportional representation, and demand for reservation in High Court appointments",
-            "ta": "69% பாதுகாத்து விரிவாக்கம் — திமுகவின் 69% அரசியலமைப்பு பாதுகாப்பு, விகிதாசார பிரதிநிதித்துவத்திற்கு சாதி வாரி கணக்கெடுப்பு, மற்றும் உயர்நீதிமன்ற நியமனங்களில் இட ஒதுக்கீடு கோரிக்கை"
+            "en": "Yes, and it should be expanded to include more communities",
+            "ta": "α«åα««α»ì, α««α»çα«▓α»üα««α»ì α«àα«ñα«┐α«ò α«Üα««α»éα«òα«Öα»ìα«òα«│α»ê α«ëα«│α»ìα«│α«ƒα«òα»ìα«òα»üα««α»ì α«╡α«òα»êα«»α«┐α«▓α»ì α«╡α«┐α«░α«┐α«╡α»üα«¬α«ƒα»üα«ñα»ìα«ñα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 3
+            "AIADMK": 5,
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 5,
@@ -788,13 +788,13 @@
         {
           "id": "q014_b",
           "text": {
-            "en": "Protect 69% and increase medical seats — like AIADMK's plan to raise 7.5% government school medical reservation to 10% and TAHDCO loan waiver for Adi Dravidar",
-            "ta": "69% பாதுகாத்து மருத்துவ இடங்களை அதிகரிக்க — அதிமுகவின் அரசுப் பள்ளி மருத்துவ இட ஒதுக்கீடு 7.5% இலிருந்து 10% ஆக உயர்த்தும் திட்டம் மற்றும் ஆதிதிராவிடருக்கு TAHDCO கடன் தள்ளுபடி"
+            "en": "Yes, but only for economically backward communities",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«░α»Çα«ñα«┐α«»α«╛α«ò α«¬α«┐α«⌐α»ìα«ñα«Öα»ìα«òα«┐α«» α«Üα««α»éα«òα«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α««α«ƒα»ìα«ƒα»üα««α»ç"
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "social_justice": 3,
@@ -804,13 +804,13 @@
         {
           "id": "q014_c",
           "text": {
-            "en": "Focus on local jobs — like TVK's 75% local jobs reservation for Tamil people with transparent TNPSC exams to ensure merit-based selection",
-            "ta": "உள்ளூர் வேலைவாய்ப்பில் கவனம் — தவெகவின் தமிழர்களுக்கு 75% உள்ளூர் வேலைவாய்ப்பு இட ஒதுக்கீடு மற்றும் தகுதி அடிப்படையிலான தேர்வை உறுதிசெய்ய வெளிப்படையான TNPSC தேர்வுகள்"
+            "en": "No, merit should be the only criterion for jobs and education",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«╡α»çα«▓α»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«òα«▓α»ìα«╡α«┐α«òα»ìα«òα»ü α«ñα«òα»üα«ñα«┐ α««α«ƒα»ìα«ƒα»üα««α»ç α«àα«│α«╡α»üα«òα»ïα«▓α«╛α«ò α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 0,
-            "AIADMK": 0,
-            "TVK": 3
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
           },
           "axisWeights": {
             "social_justice": 1,
@@ -823,20 +823,20 @@
       "id": "q015",
       "cluster": "social_justice",
       "text": {
-        "en": "How should the government address caste-based discrimination in Tamil Nadu?",
-        "ta": "தமிழ்நாட்டில் சாதி அடிப்படையிலான பாகுபாட்டை அரசு எவ்வாறு நிவர்த்தி செய்ய வேண்டும்?"
+        "en": "How should the government address caste-based discrimination?",
+        "ta": "α«Üα«╛α«ñα«┐ α«àα«ƒα«┐α«¬α»ìα«¬α«ƒα»êα«»α«┐α«▓α«╛α«⌐ α«¬α«╛α«òα»üα«¬α«╛α«ƒα»ìα«ƒα»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«¿α«┐α«╡α«░α»ìα«ñα»ìα«ñα«┐ α«Üα»åα«»α»ìα«» α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
       },
       "options": [
         {
           "id": "q015_a",
           "text": {
-            "en": "Structural reform — like DMK's caste census, 69% reservation monitoring commission, and SC/ST/OBC scholarship enhancement",
-            "ta": "கட்டமைப்பு சீர்திருத்தம் — திமுகவின் சாதி வாரி கணக்கெடுப்பு, 69% இட ஒதுக்கீடு கண்காணிப்பு ஆணையம், மற்றும் SC/ST/OBC உதவித்தொகை உயர்வு"
+            "en": "Strict laws with severe punishment for discrimination",
+            "ta": "α«¬α«╛α«òα»üα«¬α«╛α«ƒα»ìα«ƒα«┐α«▒α»ìα«òα»ü α«òα«ƒα»üα««α»êα«»α«╛α«⌐ α«ñα«úα»ìα«ƒα«⌐α»êα«»α»üα«ƒα«⌐α»ì α«òα»éα«ƒα«┐α«» α«òα«ƒα»üα««α»êα«»α«╛α«⌐ α«Üα«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 4,
+            "TVK": 5
           },
           "axisWeights": {
             "social_justice": 5,
@@ -846,13 +846,13 @@
         {
           "id": "q015_b",
           "text": {
-            "en": "Welfare and education — like AIADMK's TAHDCO loan waiver for Adi Dravidar, SC/ST housing priority in Amma Illam, and increased medical reservation",
-            "ta": "நலன்புரி மற்றும் கல்வி — அதிமுகவின் ஆதிதிராவிடருக்கு TAHDCO கடன் தள்ளுபடி, அம்மா இல்லத்தில் SC/ST வீட்டு முன்னுரிமை, மற்றும் அதிகரிக்கப்பட்ட மருத்துவ இட ஒதுக்கீடு"
+            "en": "Education and awareness programs to change mindsets",
+            "ta": "α««α«⌐α«¿α«┐α«▓α»êα«»α»ê α««α«╛α«▒α»ìα«▒ α«òα«▓α»ìα«╡α«┐ α««α«▒α»ìα«▒α»üα««α»ì α«╡α«┐α«┤α«┐α«¬α»ìα«¬α»üα«úα«░α»ìα«╡α»ü α«ñα«┐α«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ì"
           },
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 2
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 4,
@@ -862,13 +862,13 @@
         {
           "id": "q015_c",
           "text": {
-            "en": "Zero tolerance enforcement — like TVK's anti-caste discrimination with zero tolerance policy and inclusive development for marginalised communities",
-            "ta": "சகிப்புத்தன்மையற்ற அமலாக்கம் — தவெகவின் சாதி பாகுபாடு எதிர்ப்பு சகிப்புத்தன்மை இல்லா கொள்கை மற்றும் விளிம்புநிலை சமூகங்களுக்கு உள்ளடக்கிய வளர்ச்சி"
+            "en": "Economic development will naturally reduce caste divisions",
+            "ta": "α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐ α«çα«»α«▒α»ìα«òα»êα«»α«╛α«òα«╡α»ç α«Üα«╛α«ñα«┐ α«¬α«┐α«░α«┐α«╡α»üα«òα«│α»ê α«òα»üα«▒α»êα«òα»ìα«òα»üα««α»ì"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 1,
-            "TVK": 4
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "social_justice": 2,
@@ -881,20 +881,20 @@
       "id": "q016",
       "cluster": "social_justice",
       "text": {
-        "en": "How should the government protect women's safety and rights in Tamil Nadu?",
-        "ta": "தமிழ்நாட்டில் பெண்களின் பாதுகாப்பு மற்றும் உரிமைகளை அரசு எவ்வாறு பாதுகாக்க வேண்டும்?"
+        "en": "Should there be separate laws to protect women's rights in the workplace?",
+        "ta": "α«¬α«úα«┐α«»α«┐α«ƒα«ñα»ìα«ñα«┐α«▓α»ì α«¬α»åα«úα»ìα«òα«│α«┐α«⌐α»ì α«ëα«░α«┐α««α»êα«òα«│α»ê α«¬α«╛α«ñα»üα«òα«╛α«òα»ìα«ò α«ñα«⌐α«┐ α«Üα«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ì α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
       },
       "options": [
         {
           "id": "q016_a",
           "text": {
-            "en": "Women's empowerment schemes — like DMK's Kalaignar Magalir Urimai Thittam (₹3,000/month) and free bus travel giving women financial independence",
-            "ta": "பெண்கள் மேம்பாட்டுத் திட்டங்கள் — திமுகவின் கலைஞர் மகளிர் உரிமைத் திட்டம் (மாதம் ₹3,000) மற்றும் பெண்களுக்கு நிதி சுதந்திரம் அளிக்கும் இலவச பேருந்து பயணம்"
+            "en": "Yes, with strict enforcement and fast-track courts",
+            "ta": "α«åα««α»ì, α«òα«ƒα»üα««α»êα«»α«╛α«⌐ α«àα««α«▓α«╛α«òα»ìα«òα««α»ì α««α«▒α»ìα«▒α»üα««α»ì α«╡α«┐α«░α»êα«╡α»ü α«¿α»Çα«ñα«┐α««α«⌐α»ìα«▒α«Öα»ìα«òα«│α»üα«ƒα«⌐α»ì"
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 4,
+            "TVK": 5
           },
           "axisWeights": {
             "social_justice": 5,
@@ -904,13 +904,13 @@
         {
           "id": "q016_b",
           "text": {
-            "en": "Direct material support — like AIADMK's Kula Vilakku (₹2,000/month), free sarees, gold for brides, and free bus travel for both men and women",
-            "ta": "நேரடி பொருள் உதவி — அதிமுகவின் குல விளக்கு (மாதம் ₹2,000), இலவச புடவை, மணப்பெண்களுக்கு தங்கம், மற்றும் ஆண் பெண் இருவருக்கும் இலவச பேருந்து பயணம்"
+            "en": "Yes, but focus on prevention through workplace training",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«¬α«úα«┐α«»α«┐α«ƒ α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α»éα«▓α««α»ì α«ñα«ƒα»üα«¬α»ìα«¬α«┐α«▓α»ì α«òα«╡α«⌐α««α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα»üα«ñα«▓α»ì"
           },
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 2
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 4,
@@ -920,13 +920,13 @@
         {
           "id": "q016_c",
           "text": {
-            "en": "Safety and support — like TVK's ₹2,500/month for women, newborn welcome kit with gold ring, 1 sovereign gold for poor brides, and drug-free zones near schools",
-            "ta": "பாதுகாப்பு மற்றும் ஆதரவு — தவெகவின் பெண்களுக்கு மாதம் ₹2,500, தங்க மோதிரத்துடன் புதிதாகப் பிறந்த குழந்தை வரவேற்பு கிட், ஏழை மணப்பெண்களுக்கு 1 சவரன் தங்கம், மற்றும் பள்ளிகள் அருகே போதைப்பொருள் இல்லா மண்டலங்கள்"
+            "en": "Existing laws are sufficient, just need better implementation",
+            "ta": "α«ñα«▒α»ìα«¬α»ïα«ñα»üα«│α»ìα«│ α«Üα«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ì α«¬α»ïα«ñα»üα««α«╛α«⌐α«╡α»ê, α«Üα«┐α«▒α«¿α»ìα«ñ α«Üα»åα«»α«▓α»ìα«¬α«ƒα»üα«ñα»ìα«ñα«▓α»ì α««α«ƒα»ìα«ƒα»üα««α»ç α«ñα»çα«╡α»ê"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 4,
-            "TVK": 1
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "social_justice": 3,
@@ -935,3 +935,816 @@
         }
       ]
     },
+    {
+      "id": "q017",
+      "cluster": "corruption",
+      "text": {
+        "en": "What is the best way to reduce corruption in government?",
+        "ta": "α«àα«░α«Üα«╛α«Öα»ìα«òα«ñα»ìα«ñα«┐α«▓α»ì α«èα«┤α«▓α»ê α«òα»üα«▒α»êα«òα»ìα«ò α«Üα«┐α«▒α«¿α»ìα«ñ α«╡α«┤α«┐ α«Äα«⌐α»ìα«⌐?"
+      },
+      "options": [
+        {
+          "id": "q017_a",
+          "text": {
+            "en": "Create an independent anti-corruption agency with prosecution powers",
+            "ta": "α«╡α«┤α«òα»ìα«òα»üα«ñα»ì α«ñα»èα«ƒα«░α»üα««α»ì α«àα«ñα«┐α«òα«╛α«░α«Öα»ìα«òα«│α»üα«ƒα«⌐α»ì α«Üα»üα«»α«╛α«ñα»Çα«⌐ α«èα«┤α«▓α»ì α«Äα«ñα«┐α«░α»ìα«¬α»ìα«¬α»ü α«¿α«┐α«▒α»üα«╡α«⌐α«ñα»ìα«ñα»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q017_b",
+          "text": {
+            "en": "Digitize all government services to reduce human contact",
+            "ta": "α««α«⌐α«┐α«ñ α«ñα»èα«ƒα«░α»ìα«¬α»ê α«òα»üα«▒α»êα«òα»ìα«ò α«àα«⌐α»êα«ñα»ìα«ñα»ü α«àα«░α«Üα»ü α«Üα»çα«╡α»êα«òα«│α»êα«»α»üα««α»ì α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«»α««α«╛α«òα»ìα«òα»üα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q017_c",
+          "text": {
+            "en": "Increase salaries of government employees to reduce temptation",
+            "ta": "α«Üα»ïα«ñα«⌐α»êα«»α»ê α«òα»üα«▒α»êα«òα»ìα«ò α«àα«░α«Üα»ü α«èα«┤α«┐α«»α«░α»ìα«òα«│α«┐α«⌐α»ì α«Üα««α»ìα«¬α«│α«ñα»ìα«ñα»ê α«ëα«»α«░α»ìα«ñα»ìα«ñα»üα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "corruption": 2,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q018",
+      "cluster": "corruption",
+      "text": {
+        "en": "Should politicians be required to declare their assets publicly every year?",
+        "ta": "α«àα«░α«Üα«┐α«»α«▓α»ìα«╡α«╛α«ñα«┐α«òα«│α»ì α«Æα«╡α»ìα«╡α»èα«░α»ü α«åα«úα»ìα«ƒα»üα««α»ì α«ñα«Öα»ìα«òα«│α»ì α«Üα»èα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ê α«¬α«òα«┐α«░α«Öα»ìα«òα««α«╛α«ò α«àα«▒α«┐α«╡α«┐α«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q018_a",
+          "text": {
+            "en": "Yes, and their family members' assets too",
+            "ta": "α«åα««α»ì, α««α»çα«▓α»üα««α»ì α«àα«╡α«░α»ìα«òα«│α«ñα»ü α«òα»üα«ƒα»üα««α»ìα«¬ α«ëα«▒α»üα«¬α»ìα«¬α«┐α«⌐α«░α»ìα«òα«│α«┐α«⌐α»ì α«Üα»èα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»üα««α»ì α«òα»éα«ƒ"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q018_b",
+          "text": {
+            "en": "Yes, but only their own assets, not family members",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«àα«╡α«░α»ìα«òα«│α«ñα»ü α«Üα»èα«¿α»ìα«ñ α«Üα»èα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì α««α«ƒα»ìα«ƒα»üα««α»ì, α«òα»üα«ƒα»üα««α»ìα«¬ α«ëα«▒α»üα«¬α»ìα«¬α«┐α«⌐α«░α»ìα«òα«│α»ì α«àα«▓α»ìα«▓"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q018_c",
+          "text": {
+            "en": "No, this violates their right to privacy",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«çα«ñα»ü α«àα«╡α«░α»ìα«òα«│α«┐α«⌐α»ì α«ñα«⌐α«┐α«»α»üα«░α«┐α««α»ê α«ëα«░α«┐α««α»êα«»α»ê α««α»Çα«▒α»üα«òα«┐α«▒α«ñα»ü"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "corruption": 1,
+            "responsibility": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q019",
+      "cluster": "corruption",
+      "text": {
+        "en": "How should the government handle contracts for large infrastructure projects?",
+        "ta": "α«¬α»åα«░α«┐α«» α«ëα«│α»ìα«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»ü α«ñα«┐α«ƒα»ìα«ƒα«Öα»ìα«òα«│α»üα«òα»ìα«òα«╛α«⌐ α«Æα«¬α»ìα«¬α«¿α»ìα«ñα«Öα»ìα«òα«│α»ê α«àα«░α«Üα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«òα»êα«»α«╛α«│ α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
+      },
+      "options": [
+        {
+          "id": "q019_a",
+          "text": {
+            "en": "Open competitive bidding with full transparency",
+            "ta": "α««α»üα«┤α»ü α«╡α»åα«│α«┐α«¬α»ìα«¬α«ƒα»êα«ñα»ìα«ñα«⌐α»ìα««α»êα«»α»üα«ƒα«⌐α»ì α«ñα«┐α«▒α«¿α»ìα«ñ α«¬α»ïα«ƒα»ìα«ƒα«┐ α«Åα«▓α««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q019_b",
+          "text": {
+            "en": "Give preference to local companies to support state economy",
+            "ta": "α««α«╛α«¿α«┐α«▓ α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░α«ñα»ìα«ñα»ê α«åα«ñα«░α«┐α«òα»ìα«ò α«ëα«│α»ìα«│α»éα«░α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α««α»üα«⌐α»ìα«⌐α»üα«░α«┐α««α»ê α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "corruption": 3,
+            "economy": 4
+          }
+        },
+        {
+          "id": "q019_c",
+          "text": {
+            "en": "Government should build projects directly without private contractors",
+            "ta": "α«ñα«⌐α«┐α«»α«╛α«░α»ì α«Æα«¬α»ìα«¬α«¿α»ìα«ñα«ñα«╛α«░α«░α»ìα«òα«│α»ì α«çα«▓α»ìα«▓α«╛α««α«▓α»ì α«àα«░α«Üα»ü α«¿α»çα«░α«ƒα«┐α«»α«╛α«ò α«ñα«┐α«ƒα»ìα«ƒα«Öα»ìα«òα«│α»ê α«òα«ƒα»ìα«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q020",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Who should be primarily responsible for a person's economic well-being?",
+        "ta": "α«Æα«░α»ü α«¿α«¬α«░α«┐α«⌐α»ì α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«¿α«▓α»ìα«╡α«╛α«┤α»ìα«╡α»üα«òα»ìα«òα»ü α««α»üα«ñα«⌐α»ìα««α»êα«»α«╛α«ò α«»α«╛α«░α»ì α«¬α»èα«▒α»üα«¬α»ìα«¬α«╛α«ò α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
+      },
+      "options": [
+        {
+          "id": "q020_a",
+          "text": {
+            "en": "The government - it should ensure everyone has basic needs met",
+            "ta": "α«àα«░α«Üα«╛α«Öα»ìα«òα««α»ì - α«àα«⌐α»êα«╡α«░α»üα«òα»ìα«òα»üα««α»ì α«àα«ƒα«┐α«¬α»ìα«¬α«ƒα»ê α«ñα»çα«╡α»êα«òα«│α»ì α«¬α»éα«░α»ìα«ñα»ìα«ñα«┐ α«Üα»åα«»α»ìα«»α«¬α»ìα«¬α«ƒα»üα«╡α«ñα»ê α«ëα«▒α»üα«ñα«┐ α«Üα»åα«»α»ìα«» α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 1,
+            "welfare": 5
+          }
+        },
+        {
+          "id": "q020_b",
+          "text": {
+            "en": "The individual - government should only provide opportunities",
+            "ta": "α«ñα«⌐α«┐α«¿α«¬α«░α»ì - α«àα«░α«Üα»ü α«╡α«╛α«»α»ìα«¬α»ìα«¬α»üα«òα«│α»ê α««α«ƒα»ìα«ƒα»üα««α»ç α«╡α«┤α«Öα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 5,
+            "economy": 3
+          }
+        },
+        {
+          "id": "q020_c",
+          "text": {
+            "en": "Both - government provides support, individuals work hard",
+            "ta": "α«çα«░α»üα«╡α«░α»üα««α»ì - α«àα«░α«Üα»ü α«åα«ñα«░α«╡α»ü α«╡α«┤α«Öα»ìα«òα»üα«òα«┐α«▒α«ñα»ü, α«ñα«⌐α«┐α«¿α«¬α«░α»ìα«òα«│α»ì α«òα«ƒα«┐α«⌐α««α«╛α«ò α«ëα«┤α»êα«òα»ìα«òα«┐α«▒α«╛α«░α»ìα«òα«│α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "welfare": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q021",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Should the government regulate how much profit private companies can make?",
+        "ta": "α«ñα«⌐α«┐α«»α«╛α«░α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»ì α«Äα«╡α»ìα«╡α«│α«╡α»ü α«▓α«╛α«¬α««α»ì α«êα«ƒα»ìα«ƒ α««α»üα«ƒα«┐α«»α»üα««α»ì α«Äα«⌐α»ìα«¬α«ñα»ê α«àα«░α«Üα»ü α«Æα«┤α»üα«Öα»ìα«òα»üα«¬α«ƒα»üα«ñα»ìα«ñ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q021_a",
+          "text": {
+            "en": "Yes, especially for essential goods and services",
+            "ta": "α«åα««α»ì, α«òα»üα«▒α«┐α«¬α»ìα«¬α«╛α«ò α«àα«ñα»ìα«ñα«┐α«»α«╛α«╡α«Üα«┐α«» α«¬α»èα«░α»üα«ƒα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«Üα»çα«╡α»êα«òα«│α»üα«òα»ìα«òα»ü"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 2,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q021_b",
+          "text": {
+            "en": "No, market competition will naturally control prices",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«Üα«¿α»ìα«ñα»ê α«¬α»ïα«ƒα»ìα«ƒα«┐ α«çα«»α«▒α»ìα«òα»êα«»α«╛α«òα«╡α»ç α«╡α«┐α«▓α»êα«òα«│α»ê α«òα«ƒα»ìα«ƒα»üα«¬α»ìα«¬α«ƒα»üα«ñα»ìα«ñα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 5,
+            "economy": 4
+          }
+        },
+        {
+          "id": "q021_c",
+          "text": {
+            "en": "Only in emergencies or when there is price gouging",
+            "ta": "α«àα«╡α«Üα«░α«¿α«┐α«▓α»êα«òα«│α«┐α«▓α»ì α«àα«▓α»ìα«▓α«ñα»ü α«╡α«┐α«▓α»ê α«ëα«»α«░α»ìα«╡α»ü α«çα«░α»üα«òα»ìα«òα»üα««α»ìα«¬α»ïα«ñα»ü α««α«ƒα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q022",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Should parents be penalized if their children do not attend school?",
+        "ta": "α«òα»üα«┤α«¿α»ìα«ñα»êα«òα«│α»ì α«¬α«│α»ìα«│α«┐α«òα»ìα«òα»ü α«Üα»åα«▓α»ìα«▓α«╡α«┐α«▓α»ìα«▓α»ê α«Äα«⌐α»ìα«▒α«╛α«▓α»ì α«¬α»åα«▒α»ìα«▒α»ïα«░α»ì α«ñα«úα»ìα«ƒα«┐α«òα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q022_a",
+          "text": {
+            "en": "Yes, education is mandatory and parents must be held accountable",
+            "ta": "α«åα««α»ì, α«òα«▓α»ìα«╡α«┐ α«òα«ƒα»ìα«ƒα«╛α«»α««α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α»åα«▒α»ìα«▒α»ïα«░α»ì α«¬α»èα«▒α»üα«¬α»ìα«¬α»üα«òα»ìα«òα»éα«▒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q022_b",
+          "text": {
+            "en": "No, instead provide incentives to encourage school attendance",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α««α«╛α«▒α«╛α«ò α«¬α«│α»ìα«│α«┐ α«╡α«░α»üα«òα»êα«»α»ê α«èα«òα»ìα«òα»üα«╡α«┐α«òα»ìα«ò α«èα«òα»ìα«òα«ñα»ìα«ñα»èα«òα»êα«òα«│α»ê α«╡α«┤α«Öα»ìα«òα»üα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 2,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q022_c",
+          "text": {
+            "en": "It depends on the family's economic situation",
+            "ta": "α«çα«ñα»ü α«òα»üα«ƒα»üα««α»ìα«¬α«ñα»ìα«ñα«┐α«⌐α»ì α«¬α»èα«░α»üα«│α«╛α«ñα«╛α«░ α«¿α«┐α«▓α»êα««α»êα«»α»êα«¬α»ì α«¬α»èα«▒α»üα«ñα»ìα«ñα«ñα»ü"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "poverty": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q023",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should Tamil be made mandatory in all schools in Tamil Nadu?",
+        "ta": "α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▓α»ì α«ëα«│α»ìα«│ α«àα«⌐α»êα«ñα»ìα«ñα»ü α«¬α«│α»ìα«│α«┐α«òα«│α«┐α«▓α»üα««α»ì α«ñα««α«┐α«┤α»ì α«òα«ƒα»ìα«ƒα«╛α«»α««α«╛α«òα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q023_a",
+          "text": {
+            "en": "Yes, Tamil is our identity and must be protected",
+            "ta": "α«åα««α»ì, α«ñα««α«┐α«┤α»ì α«¿α««α«ñα»ü α«àα«ƒα»êα«»α«╛α«│α««α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α«╛α«ñα»üα«òα«╛α«òα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5
+          }
+        },
+        {
+          "id": "q023_b",
+          "text": {
+            "en": "Yes, but parents should have the option to choose other languages too",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«¬α»åα«▒α»ìα«▒α»ïα«░α»ìα«òα«│α»ì α««α«▒α»ìα«▒ α««α»èα«┤α«┐α«òα«│α»êα«»α»üα««α»ì α«ñα»çα«░α»ìα«╡α»ü α«Üα»åα«»α»ìα«»α»üα««α»ì α«╡α«┐α«░α»üα«¬α»ìα«¬α««α»ì α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "responsibility": 2
+          }
+        },
+        {
+          "id": "q023_c",
+          "text": {
+            "en": "No, language choice should be left to individual schools and parents",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α««α»èα«┤α«┐ α«ñα»çα«░α»ìα«╡α»ü α«ñα«⌐α«┐α«¬α»ìα«¬α«ƒα»ìα«ƒ α«¬α«│α»ìα«│α«┐α«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α»åα«▒α»ìα«▒α»ïα«░α»üα«òα»ìα«òα»ü α«╡α«┐α«ƒα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q024",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should the central government be allowed to impose Hindi in Tamil Nadu?",
+        "ta": "α««α«ñα»ìα«ñα«┐α«» α«àα«░α«Üα»ü α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▓α»ì α«çα«¿α»ìα«ñα«┐α«»α»ê α«ñα«┐α«úα«┐α«òα»ìα«ò α«àα«⌐α»üα««α«ñα«┐α«òα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q024_a",
+          "text": {
+            "en": "No, this is an attack on Tamil identity and must be resisted",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«çα«ñα»ü α«ñα««α«┐α«┤α»ì α«àα«ƒα»êα«»α«╛α«│α«ñα»ìα«ñα«┐α«⌐α»ì α««α»Çα«ñα«╛α«⌐ α«ñα«╛α«òα»ìα«òα»üα«ñα«▓α»ì α««α«▒α»ìα«▒α»üα««α»ì α«Äα«ñα«┐α«░α»ìα«òα»ìα«òα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5,
+            "federalism": 4
+          }
+        },
+        {
+          "id": "q024_b",
+          "text": {
+            "en": "Hindi can be optional, but not mandatory",
+            "ta": "α«çα«¿α»ìα«ñα«┐ α«╡α«┐α«░α»üα«¬α»ìα«¬α««α«╛α«ò α«çα«░α»üα«òα»ìα«òα«▓α«╛α««α»ì, α«åα«⌐α«╛α«▓α»ì α«òα«ƒα»ìα«ƒα«╛α«»α««α«╛α«ò α«çα«░α»üα«òα»ìα«òα«òα»ìα«òα»éα«ƒα«╛α«ñα»ü"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "federalism": 3
+          }
+        },
+        {
+          "id": "q024_c",
+          "text": {
+            "en": "Learning Hindi is useful for national integration",
+            "ta": "α«ñα»çα«Üα«┐α«» α«Æα«░α»üα«Öα»ìα«òα«┐α«úα»êα«¬α»ìα«¬α»üα«òα»ìα«òα»ü α«çα«¿α»ìα«ñα«┐ α«òα«▒α»ìα«▒α«▓α»ì α«¬α«»α«⌐α»üα«│α»ìα«│α«ñα«╛α«ò α«çα«░α»üα«òα»ìα«òα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "federalism": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q025",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should government jobs in Tamil Nadu require knowledge of Tamil?",
+        "ta": "α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▓α»ì α«àα«░α«Üα»ü α«╡α»çα«▓α»êα«òα«│α»üα«òα»ìα«òα»ü α«ñα««α«┐α«┤α»ì α«àα«▒α«┐α«╡α»ü α«ñα»çα«╡α»êα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q025_a",
+          "text": {
+            "en": "Yes, all government employees must know Tamil to serve the people",
+            "ta": "α«åα««α»ì, α««α«òα»ìα«òα«│α»üα«òα»ìα«òα»ü α«Üα»çα«╡α»ê α«Üα»åα«»α»ìα«» α«àα«⌐α»êα«ñα»ìα«ñα»ü α«àα«░α«Üα»ü α«èα«┤α«┐α«»α«░α»ìα«òα«│α»üα««α»ì α«ñα««α«┐α«┤α»ì α«ñα»åα«░α«┐α«¿α»ìα«ñα«┐α«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q025_b",
+          "text": {
+            "en": "Yes, but only for public-facing positions",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«¬α»èα«ñα»ü α««α»üα«òα««α»üα«│α»ìα«│ α«¬α«ñα«╡α«┐α«òα«│α»üα«òα»ìα«òα»ü α««α«ƒα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q025_c",
+          "text": {
+            "en": "No, competence should be the only requirement",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«ñα«┐α«▒α««α»ê α««α«ƒα»ìα«ƒα»üα««α»ç α«ñα»çα«╡α»êα«»α«╛α«ò α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q026",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have more autonomy from the central government?",
+        "ta": "α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ü α««α«ñα»ìα«ñα«┐α«» α«àα«░α«Üα«┐α«ƒα««α«┐α«░α»üα«¿α»ìα«ñα»ü α«àα«ñα«┐α«ò α«Üα»üα«»α«╛α«ƒα»ìα«Üα«┐ α«¬α»åα«▒ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q026_a",
+          "text": {
+            "en": "Yes, states should have full control over their own affairs",
+            "ta": "α«åα««α»ì, α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»ì α«ñα«Öα»ìα«òα«│α»ì α«Üα»èα«¿α»ìα«ñ α«╡α«┐α«╡α«òα«╛α«░α«Öα»ìα«òα«│α«┐α«▓α»ì α««α»üα«┤α»ü α«òα«ƒα»ìα«ƒα»üα«¬α»ìα«¬α«╛α«ƒα»ìα«ƒα»ê α«òα»èα«úα»ìα«ƒα«┐α«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "language_identity": 3
+          }
+        },
+        {
+          "id": "q026_b",
+          "text": {
+            "en": "Yes, but maintain cooperation with the centre on national issues",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α«ñα»çα«Üα«┐α«» α«¬α«┐α«░α«Üα»ìα«Üα«┐α«⌐α»êα«òα«│α«┐α«▓α»ì α««α»êα«»α«ñα»ìα«ñα»üα«ƒα«⌐α»ì α«Æα«ñα»ìα«ñα»üα«┤α»êα«¬α»ìα«¬α»ê α«¬α«░α«╛α««α«░α«┐α«ñα»ìα«ñα«▓α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 2
+          }
+        },
+        {
+          "id": "q026_c",
+          "text": {
+            "en": "No, a strong central government is needed for national unity",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«ñα»çα«Üα«┐α«» α«Æα«▒α»ìα«▒α»üα««α»êα«òα»ìα«òα»ü α«╡α«▓α»üα«╡α«╛α«⌐ α««α«ñα»ìα«ñα«┐α«» α«àα«░α«Üα»ü α«ñα»çα«╡α»ê"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q027",
+      "cluster": "federalism",
+      "text": {
+        "en": "How should tax revenue be shared between the central and state governments?",
+        "ta": "α««α«ñα»ìα«ñα«┐α«» α««α«▒α»ìα«▒α»üα««α»ì α««α«╛α«¿α«┐α«▓ α«àα«░α«Üα»üα«òα«│α»üα«òα»ìα«òα»ü α«çα«ƒα»êα«»α»ç α«╡α«░α«┐ α«╡α«░α»üα«╡α«╛α«»α»ì α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«¬α«òα«┐α«░α«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì?"
+      },
+      "options": [
+        {
+          "id": "q027_a",
+          "text": {
+            "en": "States should get a much larger share since they provide most services",
+            "ta": "α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»ì α«¬α»åα«░α»üα««α»ìα«¬α«╛α«▓α«╛α«⌐ α«Üα»çα«╡α»êα«òα«│α»ê α«╡α«┤α«Öα»ìα«òα»üα«╡α«ñα«╛α«▓α»ì α«àα«ñα«┐α«ò α«¬α«Öα»ìα«òα»ü α«¬α»åα«▒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q027_b",
+          "text": {
+            "en": "Current sharing is fair, but implementation needs improvement",
+            "ta": "α«ñα«▒α»ìα«¬α»ïα«ñα»êα«» α«¬α«òα«┐α«░α»ìα«╡α»ü α«¿α«┐α«»α«╛α«»α««α«╛α«⌐α«ñα»ü, α«åα«⌐α«╛α«▓α»ì α«Üα»åα«»α«▓α»ìα«¬α«ƒα»üα«ñα»ìα«ñα«▓α»ì α««α»çα««α»ìα«¬α«╛α«ƒα»ü α«ñα»çα«╡α»ê"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q027_c",
+          "text": {
+            "en": "Centre needs more funds for national defense and infrastructure",
+            "ta": "α«ñα»çα«Üα«┐α«» α«¬α«╛α«ñα»üα«òα«╛α«¬α»ìα«¬α»ü α««α«▒α»ìα«▒α»üα««α»ì α«ëα«│α»ìα«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»üα«òα»ìα«òα»ü α««α»êα«»α«ñα»ìα«ñα«┐α«▒α»ìα«òα»ü α«àα«ñα«┐α«ò α«¿α«┐α«ñα«┐ α«ñα»çα«╡α»ê"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q028",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have the right to oppose central government policies?",
+        "ta": "α««α«ñα»ìα«ñα«┐α«» α«àα«░α«Üα»ü α«òα»èα«│α»ìα«òα»êα«òα«│α»ê α«Äα«ñα«┐α«░α»ìα«òα»ìα«òα»üα««α»ì α«ëα«░α«┐α««α»ê α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▒α»ìα«òα»ü α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q028_a",
+          "text": {
+            "en": "Yes, states must be able to protect their interests",
+            "ta": "α«åα««α»ì, α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»ì α«ñα«Öα»ìα«òα«│α»ì α«¿α«▓α«⌐α»ìα«òα«│α»ê α«¬α«╛α«ñα»üα«òα«╛α«òα»ìα«ò α««α»üα«ƒα«┐α«» α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q028_b",
+          "text": {
+            "en": "Yes, but through dialogue and negotiation, not confrontation",
+            "ta": "α«åα««α»ì, α«åα«⌐α«╛α«▓α»ì α««α»ïα«ñα«▓α»ì α«àα«▓α»ìα«▓, α«ëα«░α»êα«»α«╛α«ƒα«▓α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α»çα«Üα»ìα«Üα»üα«╡α«╛α«░α»ìα«ñα»ìα«ñα»ê α««α»éα«▓α««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q028_c",
+          "text": {
+            "en": "No, states must follow central government decisions",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»ì α««α«ñα»ìα«ñα«┐α«» α«àα«░α«Üα»ü α««α»üα«ƒα«┐α«╡α»üα«òα«│α»ê α«¬α«┐α«⌐α»ìα«¬α«▒α»ìα«▒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q029",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu control its own water resources without central interference?",
+        "ta": "α««α«ñα»ìα«ñα«┐α«» α«ñα«▓α»êα«»α»Çα«ƒα»ü α«çα«▓α»ìα«▓α«╛α««α«▓α»ì α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ü α«ñα«⌐α«ñα»ü α«Üα»èα«¿α»ìα«ñ α«¿α»Çα«░α»ì α«╡α«│α«Öα»ìα«òα«│α»ê α«òα«ƒα»ìα«ƒα»üα«¬α»ìα«¬α«ƒα»üα«ñα»ìα«ñ α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q029_a",
+          "text": {
+            "en": "Yes, water is a state subject and centre should not interfere",
+            "ta": "α«åα««α»ì, α«¿α»Çα«░α»ì α«Æα«░α»ü α««α«╛α«¿α«┐α«▓ α«¬α»èα«░α»üα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α««α»êα«»α««α»ì α«ñα«▓α»êα«»α«┐α«ƒα«òα»ìα«òα»éα«ƒα«╛α«ñα»ü"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q029_b",
+          "text": {
+            "en": "Centre should mediate disputes between states fairly",
+            "ta": "α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α«çα«ƒα»êα«»α«┐α«▓α«╛α«⌐ α«ñα«òα«░α«╛α«▒α»üα«òα«│α»ê α««α»êα«»α««α»ì α«¿α«┐α«»α«╛α«»α««α«╛α«ò α««α«ñα»ìα«ñα«┐α«»α«╕α»ìα«ñα««α»ì α«Üα»åα«»α»ìα«» α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q029_c",
+          "text": {
+            "en": "Centre should have final authority on inter-state water issues",
+            "ta": "α««α«╛α«¿α«┐α«▓α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü α«çα«ƒα»êα«»α«┐α«▓α«╛α«⌐ α«¿α»Çα«░α»ì α«¬α«┐α«░α«Üα»ìα«Üα«┐α«⌐α»êα«òα«│α«┐α«▓α»ì α««α»êα«»α«ñα»ìα«ñα«┐α«▒α»ìα«òα»ü α«çα«▒α»üα«ñα«┐ α«àα«ñα«┐α«òα«╛α«░α««α»ì α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q030",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have its own flag alongside the national flag?",
+        "ta": "α«ñα»çα«Üα«┐α«»α«òα»ì α«òα»èα«ƒα«┐α«»α»üα«ƒα«⌐α»ì α«ñα««α«┐α«┤α»ìα«¿α«╛α«ƒα»ìα«ƒα«┐α«▒α»ìα«òα»ü α«ñα«⌐α«ñα»ü α«Üα»èα«¿α»ìα«ñ α«òα»èα«ƒα«┐ α«çα«░α»üα«òα»ìα«ò α«╡α»çα«úα»ìα«ƒα»üα««α«╛?"
+      },
+      "options": [
+        {
+          "id": "q030_a",
+          "text": {
+            "en": "Yes, it represents our distinct identity and pride",
+            "ta": "α«åα««α»ì, α«çα«ñα»ü α«¿α««α«ñα»ü α«ñα«⌐α«┐α«ñα»ìα«ñα»üα«╡α««α«╛α«⌐ α«àα«ƒα»êα«»α«╛α«│α««α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α»åα«░α»üα««α»êα«»α»ê α«¬α«┐α«░α«ñα«┐α«¿α«┐α«ñα«┐α«ñα»ìα«ñα»üα«╡α«¬α»ìα«¬α«ƒα»üα«ñα»ìα«ñα»üα«òα«┐α«▒α«ñα»ü"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 4,
+            "language_identity": 5
+          }
+        },
+        {
+          "id": "q030_b",
+          "text": {
+            "en": "It's acceptable as a cultural symbol, not a political one",
+            "ta": "α«çα«ñα»ü α«Æα«░α»ü α«òα«▓α«╛α«Üα»ìα«Üα«╛α«░ α«Üα«┐α«⌐α»ìα«⌐α««α«╛α«ò α«Åα«▒α»ìα«▒α»üα«òα»ìα«òα»èα«│α»ìα«│α«ñα»ìα«ñα«òα»ìα«òα«ñα»ü, α«àα«░α«Üα«┐α«»α«▓α»ì α«Üα«┐α«⌐α»ìα«⌐α««α»ì α«àα«▓α»ìα«▓"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 2,
+            "language_identity": 3
+          }
+        },
+        {
+          "id": "q030_c",
+          "text": {
+            "en": "No, only the national flag should be used",
+            "ta": "α«çα«▓α»ìα«▓α»ê, α«ñα»çα«Üα«┐α«»α«òα»ì α«òα»èα«ƒα«┐ α««α«ƒα»ìα«ƒα»üα««α»ç α«¬α«»α«⌐α»ìα«¬α«ƒα»üα«ñα»ìα«ñα«¬α»ìα«¬α«ƒ α«╡α»çα«úα»ìα«ƒα»üα««α»ì"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "language_identity": 1
+          }
+        }
+      ]
+    }
+  ]
+}

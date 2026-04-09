@@ -13,7 +13,7 @@ describe('IdeologyMappingEngine', () => {
       parties: [
         { id: 'DMK', names: { en: 'DMK', ta: 'திமுக' }, fullNames: { en: 'DMK', ta: 'திமுக' }, governanceStatus: 'incumbent', weightBasis: 'track-record', manifestoVersion: 'v1', active: true },
         { id: 'AIADMK', names: { en: 'AIADMK', ta: 'அதிமுக' }, fullNames: { en: 'AIADMK', ta: 'அதிமுக' }, governanceStatus: 'incumbent', weightBasis: 'track-record', manifestoVersion: 'v1', active: true },
-        { id: 'TVK', names: { en: 'TVK', ta: 'தவக' }, fullNames: { en: 'TVK', ta: 'தவக' }, governanceStatus: 'new', weightBasis: 'promise', manifestoVersion: 'v1', active: true },
+        { id: 'TVK', names: { en: 'TVK', ta: 'தவெக' }, fullNames: { en: 'TVK', ta: 'தவெக' }, governanceStatus: 'new', weightBasis: 'promise', manifestoVersion: 'v1', active: true },
         { id: 'INACTIVE', names: { en: 'Inactive', ta: 'செயலற்ற' }, fullNames: { en: 'Inactive', ta: 'செயலற்ற' }, governanceStatus: 'new', weightBasis: 'promise', manifestoVersion: 'v1', active: false }
       ]
     },

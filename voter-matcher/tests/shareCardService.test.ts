@@ -47,7 +47,7 @@ function makeConfig(): ConfigBundle {
         },
         {
           id: 'TVK',
-          names: { en: 'TVK', ta: 'தவக' },
+          names: { en: 'TVK', ta: 'தவெக' },
           fullNames: { en: 'Tamilaga Vettri Kazhagam', ta: 'தமிழக வெற்றி கழகம்' },
           governanceStatus: 'new',
           weightBasis: 'promise',
@@ -214,7 +214,7 @@ describe('ShareCardService — Canvas generation', () => {
     const texts = canvas.drawnTexts.map(t => t.text);
     expect(texts.some(t => t.includes('திமுக'))).toBe(true);
     expect(texts.some(t => t.includes('அதிமுக'))).toBe(true);
-    expect(texts.some(t => t.includes('தவக'))).toBe(true);
+    expect(texts.some(t => t.includes('தவெக'))).toBe(true);
   });
 
   it('renders score percentages for each party', () => {

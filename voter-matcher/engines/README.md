@@ -672,7 +672,7 @@ The engine reads from three registries:
 ```json
 {
   "id": "TVK",
-  "names": { "en": "TVK", "ta": "தவக" },
+  "names": { "en": "TVK", "ta": "தவெக" },
   "fullNames": { "en": "Tamilaga Vettri Kazhagam", "ta": "தமிழக வெற்றி கழகம்" },
   "weightBasis": "promise"  // Triggers track record notice
 }

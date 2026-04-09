@@ -21,7 +21,7 @@ const mockConfig: ConfigBundle = {
     parties: [
       {
         id: 'TVK',
-        names: { en: 'TVK', ta: 'தவக' },
+        names: { en: 'TVK', ta: 'தவெக' },
         fullNames: { en: 'Tamilaga Vettri Kazhagam', ta: 'தமிழக வெற்றி கழகம்' },
         governanceStatus: 'new',
         weightBasis: 'promise',

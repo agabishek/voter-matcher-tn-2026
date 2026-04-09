@@ -63,11 +63,17 @@ export default function PartyMatchCards({
     }));
   }, [config.parties.parties, partyScores, langKey]);
 
+  const topParty = rankedParties.length > 0 ? rankedParties[0] : undefined;
+
+  if (topParty === undefined) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col gap-4 w-full" role="list" aria-label={t('result.match.label')}>
-      {rankedParties.map((party) => {
-        const isPrimary = party.rank === 1;
-        const isSecondary = party.rank === 2;
+      {[topParty].map((party) => {
+        const isPrimary = true;
+        const isSecondary = false;
         const roundedScore = Math.round(party.score);
         const rankLabel = isPrimary
           ? t('result.party.primary')
@@ -86,7 +92,7 @@ export default function PartyMatchCards({
               party: party.name,
               score: roundedScore,
             })}
-            className="rounded-xl px-5 py-4 transition-colors"
+            className="rounded-xl px-4 py-3 sm:px-5 sm:py-4 transition-colors"
             lang={activeLang}
             style={{
               border: isPrimary
@@ -108,16 +114,16 @@ export default function PartyMatchCards({
                   {party.name}
                 </span>
                 <span
-                  className="text-sm truncate"
-                  style={{ color: 'var(--muted)' }}
+                  className="text-xs sm:text-sm leading-tight"
+                  style={{ color: 'var(--muted)', wordBreak: 'break-word' }}
                 >
                   {party.fullName}
                 </span>
               </div>
-              <div className="flex flex-col items-end gap-1 shrink-0">
+              <div className="flex flex-col items-end gap-1 shrink-0 text-right">
                 <span
                   className={`font-bold tabular-nums ${
-                    isPrimary ? 'text-2xl' : 'text-xl'
+                    isPrimary ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
                   }`}
                   style={{ color: isPrimary ? 'var(--foreground)' : 'var(--muted)' }}
                 >

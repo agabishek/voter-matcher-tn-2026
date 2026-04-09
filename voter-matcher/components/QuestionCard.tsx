@@ -70,13 +70,13 @@ export default function QuestionCard({
 
   return (
     <div
-      className="flex flex-col gap-4 w-full max-w-2xl mx-auto px-4 sm:px-6"
+      className="flex flex-col gap-3 sm:gap-4 w-full max-w-2xl mx-auto px-3 sm:px-6"
       lang={activeLang}
       style={activeLang === 'ta' ? { fontSize: '16px' } : undefined}
     >
       {/* Question text — uses theme foreground color */}
       <h2
-        className="text-xl sm:text-2xl font-semibold leading-relaxed"
+        className="text-lg sm:text-2xl font-semibold leading-relaxed"
         style={{ color: 'var(--foreground)' }}
         aria-label={t('questionnaire.question.accessibilityLabel', { text: questionText })}
       >

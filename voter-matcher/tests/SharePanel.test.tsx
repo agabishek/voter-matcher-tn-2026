@@ -1,8 +1,5 @@
 /**
- * Unit tests for SharePanel component
- *
- * Tests component structure, translation keys, accessibility attributes,
- * bilingual support, API interaction, and clipboard copy behavior.
+ * Unit tests for SharePanel component (receipt-style share card)
  *
  * @vitest-environment jsdom
  */
@@ -19,67 +16,36 @@ import taResult from '../locales/ta/result.json';
 
 const mockConfig: ConfigBundle = {
   parties: {
-    version: '1.0.0',
-    hash: 'test-hash',
+    version: '1.0.0', hash: 'test-hash',
     parties: [
-      {
-        id: 'DMK',
-        names: { en: 'DMK', ta: 'திமுக' },
-        fullNames: { en: 'Dravida Munnetra Kazhagam', ta: 'திராவிட முன்னேற்றக் கழகம்' },
-        governanceStatus: 'incumbent',
-        weightBasis: 'track-record',
-        manifestoVersion: 'dmk-2026-v1',
-        active: true,
-      },
+      { id: 'DMK', names: { en: 'DMK', ta: 'திமுக' }, fullNames: { en: 'DMK', ta: 'திமுக' }, governanceStatus: 'incumbent', weightBasis: 'track-record', manifestoVersion: 'v1', active: true },
+      { id: 'AIADMK', names: { en: 'AIADMK', ta: 'அதிமுக' }, fullNames: { en: 'AIADMK', ta: 'அதிமுக' }, governanceStatus: 'incumbent', weightBasis: 'track-record', manifestoVersion: 'v1', active: true },
+      { id: 'TVK', names: { en: 'TVK', ta: 'தவெக' }, fullNames: { en: 'TVK', ta: 'தவெக' }, governanceStatus: 'new', weightBasis: 'promise', manifestoVersion: 'v1', active: true },
     ],
   },
   axes: { version: '1.0.0', hash: 'test-hash', axes: [] },
-  archetypes: { version: '1.0.0', hash: 'test-hash', archetypes: [] },
+  archetypes: {
+    version: '1.0.0', hash: 'test-hash',
+    archetypes: [
+      { id: 'security_seeker', names: { en: 'Security Seeker', ta: 'பாதுகாப்பு தேடுபவர்' }, dominantAxes: [], ambiguityThreshold: 0.1, descriptions: { en: '', ta: '' } },
+    ],
+  },
   languages: {
-    version: '1.0.0',
-    hash: 'test-hash',
-    defaultLanguage: 'en',
+    version: '1.0.0', hash: 'test-hash', defaultLanguage: 'en',
     languages: [
-      {
-        code: 'en',
-        name: 'English',
-        fontStack: "'Inter', sans-serif",
-        minFontSize: 14,
-        direction: 'ltr',
-        translationPath: '/locales/en',
-      },
-      {
-        code: 'ta',
-        name: 'தமிழ்',
-        fontStack: "'Noto Sans Tamil', sans-serif",
-        minFontSize: 16,
-        direction: 'ltr',
-        translationPath: '/locales/ta',
-      },
+      { code: 'en', name: 'English', fontStack: "'Inter', sans-serif", minFontSize: 14, direction: 'ltr', translationPath: '/locales/en' },
+      { code: 'ta', name: 'தமிழ்', fontStack: "'Noto Sans Tamil', sans-serif", minFontSize: 16, direction: 'ltr', translationPath: '/locales/ta' },
     ],
   },
   questions: { version: '1.0.0', hash: 'test-hash', questions: [] },
   scoringParams: {
-    version: '1.0.0',
-    hash: 'test-hash',
-    questionCount: 30,
-    optionsPerQuestion: 3,
-    weightRange: { min: 0, max: 5 },
-    minAnsweredThreshold: 0.5,
-    collinearityThreshold: 0.7,
-    discriminatingPowerThreshold: 1.0,
-    confidenceFormula: 'dynamic',
-    estimatedCompletionMinutes: 3,
-    performanceTargets: {
-      loadTime4G: 1000,
-      loadTime2G: 3000,
-      scoringTime: 200,
-      concurrentUsers: 100000,
-    },
-    disclaimerText: { en: 'Test disclaimer', ta: 'சோதனை மறுப்பு' },
+    version: '1.0.0', hash: 'test-hash', questionCount: 30, optionsPerQuestion: 3,
+    weightRange: { min: 0, max: 5 }, minAnsweredThreshold: 0.5, collinearityThreshold: 0.7,
+    discriminatingPowerThreshold: 1.0, confidenceFormula: 'dynamic', estimatedCompletionMinutes: 3,
+    performanceTargets: { loadTime4G: 1000, loadTime2G: 3000, scoringTime: 200, concurrentUsers: 100000 },
+    disclaimerText: { en: 'Test disclaimer text', ta: 'சோதனை மறுப்பு' },
   },
-  version: 'test-version',
-  loadedAt: new Date().toISOString(),
+  version: 'test-version', loadedAt: new Date().toISOString(),
 };
 
 const defaultProps = {
@@ -91,309 +57,114 @@ const defaultProps = {
 
 function renderSharePanel(props = defaultProps): ReturnType<typeof render> {
   return render(
-    React.createElement(
-      ConfigProvider,
-      { config: mockConfig },
-      React.createElement(
-        LanguageProvider,
-        null,
-        React.createElement(SharePanel, props),
-      ),
-    ),
+    React.createElement(ConfigProvider, { config: mockConfig },
+      React.createElement(LanguageProvider, null,
+        React.createElement(SharePanel, props)
+      )
+    )
   );
 }
 
-// Mock fetch and clipboard globally
-const mockFetch = vi.fn();
 const mockClipboardWriteText = vi.fn();
 
 beforeEach(() => {
-  vi.stubGlobal('fetch', mockFetch);
-  Object.assign(navigator, {
-    clipboard: { writeText: mockClipboardWriteText },
+  Object.assign(navigator, { clipboard: { writeText: mockClipboardWriteText } });
+  mockClipboardWriteText.mockReset().mockResolvedValue(undefined);
+  // Mock canvas getContext for jsdom
+  HTMLCanvasElement.prototype.getContext = vi.fn().mockReturnValue({
+    fillStyle: '', strokeStyle: '', lineWidth: 1, font: '', textAlign: 'left',
+    fillRect: vi.fn(), strokeRect: vi.fn(), fillText: vi.fn(),
+    beginPath: vi.fn(), moveTo: vi.fn(), lineTo: vi.fn(), stroke: vi.fn(),
+    setLineDash: vi.fn(), roundRect: vi.fn(), fill: vi.fn(), save: vi.fn(),
+    restore: vi.fn(), clip: vi.fn(), drawImage: vi.fn(),
+    measureText: vi.fn().mockReturnValue({ width: 50 }),
+  }) as unknown as typeof HTMLCanvasElement.prototype.getContext;
+  HTMLCanvasElement.prototype.toDataURL = vi.fn().mockReturnValue('data:image/png;base64,TEST');
+  HTMLCanvasElement.prototype.toBlob = vi.fn().mockImplementation(function(this: HTMLCanvasElement, cb: BlobCallback) { cb(new Blob(['test'], { type: 'image/png' })); });
+
+  // Mock Image so onload fires immediately (jsdom doesn't load images)
+  const OrigImage = globalThis.Image;
+  vi.stubGlobal('Image', class MockImage {
+    crossOrigin = '';
+    src = '';
+    width = 24;
+    height = 24;
+    onload: (() => void) | null = null;
+    onerror: (() => void) | null = null;
+    constructor() {
+      setTimeout(() => { if (this.onload) this.onload(); }, 0);
+    }
   });
-  mockFetch.mockReset();
-  mockClipboardWriteText.mockReset();
-  mockClipboardWriteText.mockResolvedValue(undefined);
 });
 
-afterEach(() => {
-  vi.restoreAllMocks();
-});
+afterEach(() => { vi.restoreAllMocks(); });
 
 describe('SharePanel', () => {
-  it('should be a client component (default export function)', () => {
-    expect(typeof SharePanel).toBe('function');
-  });
-
-  it('should render the share button with translated text', () => {
+  it('renders the generate button initially', () => {
     renderSharePanel();
-    const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-    expect(button).toBeDefined();
+    expect(screen.getByRole('button', { name: /generate share card/i })).toBeDefined();
   });
 
-  it('should render within ConfigProvider and LanguageProvider without throwing', () => {
-    expect(() => renderSharePanel()).not.toThrow();
+  it('shows card preview after clicking generate', async () => {
+    renderSharePanel();
+    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
+    await waitFor(() => {
+      const img = screen.getByRole('img');
+      expect(img).toBeDefined();
+      expect(img.getAttribute('src')).toContain('data:image/png');
+    });
+  });
+
+  it('shows WhatsApp, download, and copy buttons after generating', async () => {
+    renderSharePanel();
+    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: enResult['result.share.button'] })).toBeDefined();
+      expect(screen.getByRole('button', { name: /download/i })).toBeDefined();
+      expect(screen.getByRole('button', { name: enResult['result.share.copyLink'] })).toBeDefined();
+    });
+  });
+
+  it('copies website URL when copy link is clicked', async () => {
+    renderSharePanel();
+    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: enResult['result.share.copyLink'] })).toBeDefined();
+    });
+    fireEvent.click(screen.getByRole('button', { name: enResult['result.share.copyLink'] }));
+    await waitFor(() => {
+      expect(mockClipboardWriteText).toHaveBeenCalledWith('https://voter-matcher-tn-2026.vercel.app');
+    });
   });
 
   describe('Translation keys', () => {
     const requiredKeys = [
-      'result.share.button',
-      'result.share.copied',
-      'result.share.copyLink',
-      'result.share.error',
+      'result.share.button', 'result.share.copied', 'result.share.copyLink',
+      'result.share.error', 'result.share.message',
     ];
 
-    it('should have all required keys in English translations', () => {
-      const enKeys = Object.keys(enResult);
+    it('all required keys exist in English and Tamil', () => {
       for (const key of requiredKeys) {
-        expect(enKeys).toContain(key);
+        expect(Object.keys(enResult)).toContain(key);
+        expect(Object.keys(taResult)).toContain(key);
       }
     });
 
-    it('should have all required keys in Tamil translations', () => {
-      const taKeys = Object.keys(taResult);
+    it('English and Tamil translations differ', () => {
+      const en = enResult as Record<string, string>;
+      const ta = taResult as Record<string, string>;
       for (const key of requiredKeys) {
-        expect(taKeys).toContain(key);
+        expect(en[key]).not.toBe(ta[key]);
       }
-    });
-
-    it('should have non-empty values for all keys in English', () => {
-      const enMap = enResult as Record<string, string>;
-      for (const key of requiredKeys) {
-        expect(enMap[key]?.length).toBeGreaterThan(0);
-      }
-    });
-
-    it('should have non-empty values for all keys in Tamil', () => {
-      const taMap = taResult as Record<string, string>;
-      for (const key of requiredKeys) {
-        expect(taMap[key]?.length).toBeGreaterThan(0);
-      }
-    });
-
-    it('should have different translations for English and Tamil', () => {
-      const enMap = enResult as Record<string, string>;
-      const taMap = taResult as Record<string, string>;
-      for (const key of requiredKeys) {
-        expect(enMap[key]).not.toBe(taMap[key]);
-      }
-    });
-  });
-
-  describe('API interaction', () => {
-    it('should call POST /api/share when share button is clicked', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        expect(mockFetch).toHaveBeenCalledWith('/api/share', expect.objectContaining({
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-        }));
-      });
-    });
-
-    it('should send correct payload in the request body', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const callArgs = mockFetch.mock.calls[0];
-        const body = JSON.parse(callArgs[1].body as string);
-        expect(body).toHaveProperty('payload');
-        const payload = JSON.parse(body.payload);
-        expect(payload).toEqual({
-          partyScores: defaultProps.partyScores,
-          archetypeId: defaultProps.archetypeId,
-          confidenceLevel: defaultProps.confidenceLevel,
-          configVersion: defaultProps.configVersion,
-        });
-      });
-    });
-
-    it('should copy URL to clipboard after successful share', async () => {
-      const shareUrl = 'https://example.com/result?p=test&sig=abc';
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: shareUrl, signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        expect(mockClipboardWriteText).toHaveBeenCalledWith(shareUrl);
-      });
-    });
-
-    it('should show "Link copied!" feedback after successful share', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const status = screen.getByRole('status');
-        expect(status.textContent).toBe(enResult['result.share.copied']);
-      });
-    });
-
-    it('should show copy link button after successful share', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const shareButton = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(shareButton);
-
-      await waitFor(() => {
-        const copyButton = screen.getByRole('button', { name: enResult['result.share.copyLink'] });
-        expect(copyButton).toBeDefined();
-      });
-    });
-
-    it('should show error message when API returns non-ok response', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: false,
-        json: async () => ({ error: 'Rate limited' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const alert = screen.getByRole('alert');
-        expect(alert.textContent).toBe('Rate limited');
-      });
-    });
-
-    it('should show generic error when fetch throws', async () => {
-      mockFetch.mockRejectedValueOnce(new Error('Network error'));
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const alert = screen.getByRole('alert');
-        expect(alert.textContent).toBe(enResult['result.share.error']);
-      });
-    });
-
-    it('should disable share button while loading', async () => {
-      let resolvePromise: (value: unknown) => void;
-      const pendingPromise = new Promise((resolve) => { resolvePromise = resolve; });
-      mockFetch.mockReturnValueOnce(pendingPromise);
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      // Button should be disabled while loading
-      await waitFor(() => {
-        const buttons = screen.getAllByRole('button');
-        const shareBtn = buttons[0];
-        expect(shareBtn.getAttribute('disabled')).not.toBeNull();
-        expect(shareBtn.getAttribute('aria-busy')).toBe('true');
-      });
-
-      // Clean up
-      resolvePromise!({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
     });
   });
 
   describe('Accessibility', () => {
-    it('should use section element with aria-label', () => {
+    it('uses section with aria-label and lang', () => {
       const { container } = renderSharePanel();
       const section = container.querySelector('section');
-      expect(section).not.toBeNull();
       expect(section?.getAttribute('aria-label')).toBe(enResult['result.share.button']);
-    });
-
-    it('should set lang attribute on container', () => {
-      const { container } = renderSharePanel();
-      const section = container.querySelector('section');
       expect(section?.getAttribute('lang')).toBe('en');
-    });
-
-    it('should use role="status" with aria-live="polite" for copied feedback', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ url: 'https://example.com/result?p=test&sig=abc', signature: 'abc' }),
-      });
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const status = screen.getByRole('status');
-        expect(status.getAttribute('aria-live')).toBe('polite');
-      });
-    });
-
-    it('should use role="alert" for error messages', async () => {
-      mockFetch.mockRejectedValueOnce(new Error('fail'));
-
-      renderSharePanel();
-      const button = screen.getByRole('button', { name: enResult['result.share.button'] });
-      fireEvent.click(button);
-
-      await waitFor(() => {
-        const alert = screen.getByRole('alert');
-        expect(alert).toBeDefined();
-      });
-    });
-  });
-
-  describe('Tamil language support', () => {
-    it('should enforce minimum 16px font size for Tamil', () => {
-      const taLang = mockConfig.languages.languages.find((l) => l.code === 'ta');
-      expect(taLang?.minFontSize).toBeGreaterThanOrEqual(16);
-    });
-
-    it('should have Tamil translations for all share keys', () => {
-      const taMap = taResult as Record<string, string>;
-      expect(taMap['result.share.button']?.length).toBeGreaterThan(0);
-      expect(taMap['result.share.copied']?.length).toBeGreaterThan(0);
-      expect(taMap['result.share.copyLink']?.length).toBeGreaterThan(0);
-      expect(taMap['result.share.error']?.length).toBeGreaterThan(0);
-    });
-  });
-
-  describe('Locale key parity', () => {
-    it('should have matching share keys in both locale files', () => {
-      const shareKeys = ['result.share.button', 'result.share.copied', 'result.share.copyLink', 'result.share.error'];
-      const enKeys = Object.keys(enResult);
-      const taKeys = Object.keys(taResult);
-      for (const key of shareKeys) {
-        expect(enKeys).toContain(key);
-        expect(taKeys).toContain(key);
-      }
     });
   });
 });

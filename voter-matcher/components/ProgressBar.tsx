@@ -22,7 +22,7 @@ export default function ProgressBar({ current, total, cluster }: ProgressBarProp
   }, [activeLang, config.axes.axes, cluster]);
 
   return (
-    <div className="w-full" style={{ background: 'var(--card)', padding: '12px 20px', borderBottom: '1px solid var(--border)' }}>
+    <div className="w-full" style={{ background: 'var(--card)', padding: '10px 16px', borderBottom: '1px solid var(--border)' }}>
       <div className="rounded overflow-hidden h-1.5 mb-3" style={{ background: 'var(--border)' }}>
         <div className="progress-gradient h-full rounded transition-all duration-400" style={{ width: `${pct}%` }} />
       </div>

@@ -140,7 +140,7 @@ describe('ShareCardService — HMAC-SHA256', () => {
     const payload = JSON.stringify({ partyScores: { DMK: 45, AIADMK: 30, TVK: 25 } });
     const sig = svc.sign(payload, SECRET);
 
-    const url = `https://votematch.tn/result?p=${encodeURIComponent(payload)}&sig=${sig}`;
+    const url = `https://voter-matcher-tn-2026.vercel.app/result?p=${encodeURIComponent(payload)}&sig=${sig}`;
     expect(svc.verify(url, SECRET)).toBe(true);
   });
 
@@ -150,20 +150,20 @@ describe('ShareCardService — HMAC-SHA256', () => {
 
     // Tamper with the payload
     const tampered = JSON.stringify({ partyScores: { DMK: 99, AIADMK: 1, TVK: 0 } });
-    const url = `https://votematch.tn/result?p=${encodeURIComponent(tampered)}&sig=${sig}`;
+    const url = `https://voter-matcher-tn-2026.vercel.app/result?p=${encodeURIComponent(tampered)}&sig=${sig}`;
     expect(svc.verify(url, SECRET)).toBe(false);
   });
 
   it('tampered signature fails verification', () => {
     const payload = JSON.stringify({ partyScores: { DMK: 45 } });
-    const url = `https://votematch.tn/result?p=${encodeURIComponent(payload)}&sig=deadbeef`;
+    const url = `https://voter-matcher-tn-2026.vercel.app/result?p=${encodeURIComponent(payload)}&sig=deadbeef`;
     expect(svc.verify(url, SECRET)).toBe(false);
   });
 
   it('missing query params returns false', () => {
-    expect(svc.verify('https://votematch.tn/result', SECRET)).toBe(false);
-    expect(svc.verify('https://votematch.tn/result?p=hello', SECRET)).toBe(false);
-    expect(svc.verify('https://votematch.tn/result?sig=abc', SECRET)).toBe(false);
+    expect(svc.verify('https://voter-matcher-tn-2026.vercel.app/result', SECRET)).toBe(false);
+    expect(svc.verify('https://voter-matcher-tn-2026.vercel.app/result?p=hello', SECRET)).toBe(false);
+    expect(svc.verify('https://voter-matcher-tn-2026.vercel.app/result?sig=abc', SECRET)).toBe(false);
   });
 
   it('invalid URL returns false', () => {
@@ -294,7 +294,7 @@ describe('ShareCardService — Anti-misinformation rules', () => {
     const canvas = svc.generateCanvas(result, archetype, 'en', config);
     const texts = canvas.drawnTexts.map(t => t.text);
     expect(texts.some(t => t.includes('Verify at:'))).toBe(true);
-    expect(texts.some(t => t.includes('votematch.tn/methodology'))).toBe(true);
+    expect(texts.some(t => t.includes('voter-matcher-tn-2026.vercel.app/methodology'))).toBe(true);
   });
 
   it('verify URL and disclaimer share the same bottom band (anti-crop)', () => {

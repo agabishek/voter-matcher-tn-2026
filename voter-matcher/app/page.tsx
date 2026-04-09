@@ -293,7 +293,7 @@ export default function Home(): React.JSX.Element {
       <div className="flex flex-col h-screen" style={{ background: 'var(--background)' }}>
         <NavBar onHome={goToLanding} />
         <div className="flex-1 overflow-y-auto">
-          <div className="flex flex-col items-center gap-6 px-4 py-8 max-w-2xl mx-auto w-full">
+          <div className="flex flex-col items-center gap-4 sm:gap-6 px-3 sm:px-4 py-6 sm:py-8 max-w-2xl mx-auto w-full">
             <PartyMatchCards partyScores={scoreResult.partyScores} />
             <ConfidencePanel confidenceLevel={scoreResult.confidenceScore} />
             <ArchetypeCard archetypeId={archetype.primary} secondaryArchetypeId={archetype.secondary} />

@@ -106,7 +106,7 @@ function isGrayscale(color: string): boolean {
 const DEFAULT_CARD_CONFIG: ShareCardConfig = {
   width: 600,
   height: 800,
-  verifyBaseUrl: 'https://votematch.tn/methodology',
+  verifyBaseUrl: 'https://voter-matcher-tn-2026.vercel.app/methodology',
 };
 
 export class ShareCardService {

@@ -37,15 +37,15 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
   return (
     <div className="flex flex-col h-screen overflow-hidden" lang={activeLang}>
       {/* Nav */}
-      <nav className="nav-blur flex justify-between items-center px-6 py-3 shrink-0">
-        <h1 className="font-bold text-lg gradient-text">
+      <nav className="nav-blur flex justify-between items-center px-4 sm:px-6 py-3 shrink-0 gap-2">
+        <h1 className="font-bold text-base sm:text-lg gradient-text truncate">
           {t('app.title')}
         </h1>
         <LanguageToggle />
       </nav>
 
       {/* Hero */}
-      <main className="landing-glow flex flex-1 flex-col items-center justify-center text-center px-6 py-4">
+      <main className="landing-glow flex flex-1 flex-col items-center justify-center text-center px-4 sm:px-6 py-4 overflow-y-auto">
         <span className="accent-badge mb-4">
           🗳️ {t('app.subtitle')}
         </span>
@@ -55,7 +55,7 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
         </p>
 
         {/* Stats */}
-        <div className="flex gap-6 sm:gap-10 mb-6 flex-wrap justify-center">
+        <div className="grid grid-cols-2 sm:flex sm:gap-10 gap-4 mb-6 w-full max-w-sm sm:max-w-none sm:w-auto justify-items-center">
           {[
             { num: String(config.scoringParams.questionCount), label: t('landing.statsQuestions') },
             { num: `~${config.scoringParams.estimatedCompletionMinutes}`, label: t('landing.statsTime') },
@@ -63,7 +63,7 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
             { num: '100%', label: t('landing.statsAnonymous') },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-xl font-bold" style={{ color: 'var(--accent2)' }}>{stat.num}</div>
+              <div className="text-lg sm:text-xl font-bold" style={{ color: 'var(--accent2)' }}>{stat.num}</div>
               <div className="text-xs mt-1" style={{ color: 'var(--muted)' }}>{stat.label}</div>
             </div>
           ))}

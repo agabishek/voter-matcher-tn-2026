@@ -41,7 +41,7 @@ export default function ExplanationPanel({
     <section
       aria-labelledby="explanation-section-title"
       lang={activeLang}
-      className="w-full max-w-2xl mx-auto px-4 sm:px-6 py-6 space-y-6"
+      className="w-full max-w-2xl mx-auto py-4 sm:py-6 space-y-4 sm:space-y-6"
     >
       {/* Section heading */}
       <h2

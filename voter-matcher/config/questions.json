@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "hash": "97ca949a29b3e7c2b810daf332e01b897a44eba234f8c027bc1570a06eac12d6",
+  "hash": "7fba2c99f3a35e219cc11c8b1df1a99422d5313873973aee4e1f55050d186369",
   "questions": [
     {
       "id": "q001",
@@ -17,9 +17,9 @@
             "ta": "தேவைப்படும் குடும்பங்களுக்கு நேரடியாக பணம் வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 2,
             "AIADMK": 5,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 4,
@@ -34,8 +34,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 3
+            "AIADMK": 2,
+            "TVK": 2
           },
           "axisWeights": {
             "welfare": 3,
@@ -49,8 +49,8 @@
             "ta": "தனியார் துறை முதலீட்டின் மூலம் வேலைவாய்ப்பு உருவாக்குதல்"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 2,
+            "DMK": 1,
+            "AIADMK": 1,
             "TVK": 4
           },
           "axisWeights": {
@@ -75,9 +75,9 @@
             "ta": "ஆம், மேலும் காலப்போக்கில் தொகை உயர்த்தப்பட வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 5
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 5,
@@ -91,9 +91,9 @@
             "ta": "ஆம், ஆனால் வறுமை வரம்புக்கு கீழ் உள்ள குடும்பங்களுக்கு மட்டுமே"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 3
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 1
           },
           "axisWeights": {
             "welfare": 3,
@@ -108,8 +108,8 @@
           },
           "partyWeights": {
             "DMK": 1,
-            "AIADMK": 1,
-            "TVK": 2
+            "AIADMK": 0,
+            "TVK": 3
           },
           "axisWeights": {
             "economy": 3,
@@ -133,9 +133,9 @@
             "ta": "ஆம், இவை ஒவ்வொரு குடிமகனின் கண்ணியத்திற்கு இன்றியமையாதவை"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 5,
@@ -149,9 +149,9 @@
             "ta": "சில இன்றியமையாதவை, ஆனால் மற்றவை சார்புநிலையை உருவாக்குகின்றன"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 2,
-            "TVK": 3
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "welfare": 2,
@@ -165,9 +165,9 @@
             "ta": "இல்லை, அரசு நீண்டகால பொருளாதார திறனை கட்டியெழுப்புவதில் கவனம் செலுத்த வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 1,
-            "TVK": 2
+            "DMK": 0,
+            "AIADMK": 0,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -191,9 +191,9 @@
             "ta": "குறைந்தது ₹2,000 மாதாந்திர ஓய்வூதியம் வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 2,
             "AIADMK": 5,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "welfare": 5,
@@ -208,8 +208,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 3
+            "AIADMK": 2,
+            "TVK": 2
           },
           "axisWeights": {
             "welfare": 4,
@@ -223,8 +223,8 @@
             "ta": "குடும்பங்கள் மற்றும் சமூகங்கள் தங்கள் முதியோரை கவனிக்க ஊக்குவிக்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 2,
+            "DMK": 0,
+            "AIADMK": 1,
             "TVK": 2
           },
           "axisWeights": {
@@ -249,9 +249,9 @@
             "ta": "தேவைப்படுவோருக்கு நலத் திட்டங்களை திறமையாக வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 2
           },
           "axisWeights": {
             "governance": 3,
@@ -265,8 +265,8 @@
             "ta": "வெளிப்படையாகவும் ஊழல் இல்லாமலும் இருத்தல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 2,
+            "DMK": 2,
+            "AIADMK": 1,
             "TVK": 5
           },
           "axisWeights": {
@@ -282,8 +282,8 @@
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 2,
+            "TVK": 5
           },
           "axisWeights": {
             "economy": 4,
@@ -308,7 +308,7 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
+            "AIADMK": 2,
             "TVK": 5
           },
           "axisWeights": {
@@ -323,9 +323,9 @@
             "ta": "மக்கள் நேரில் சென்று சந்திக்கக்கூடிய உள்ளாட்சி அலுவலகங்கள் மூலம்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 1
           },
           "axisWeights": {
             "governance": 3,
@@ -339,9 +339,9 @@
             "ta": "சமூக தன்னார்வலர்கள் மற்றும் தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகள் மூலம்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 4,
+            "TVK": 1
           },
           "axisWeights": {
             "governance": 2,
@@ -365,8 +365,8 @@
             "ta": "நடவடிக்கை எடுக்கும் அதிகாரம் கொண்ட சுயாதீன ஓம்புட்ஸ்மேன் மூலம்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 2,
+            "DMK": 2,
+            "AIADMK": 1,
             "TVK": 5
           },
           "axisWeights": {
@@ -382,8 +382,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "governance": 4,
@@ -397,9 +397,9 @@
             "ta": "பிரச்சினைகளை மேலே கொண்டு செல்லக்கூடிய தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகள் மூலம்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 1
           },
           "axisWeights": {
             "governance": 2,
@@ -423,8 +423,8 @@
             "ta": "வரி விலக்குகள் மற்றும் ஊக்கத்தொகைகளுடன் பெரிய தனியார் நிறுவனங்களை ஈர்த்தல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 2,
+            "AIADMK": 1,
             "TVK": 5
           },
           "axisWeights": {
@@ -439,9 +439,9 @@
             "ta": "பொது சேவைகளில் அரசு வேலைவாய்ப்பை விரிவுபடுத்துதல்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 2
+            "TVK": 1
           },
           "axisWeights": {
             "economy": 3,
@@ -455,8 +455,8 @@
             "ta": "சிறு வணிகங்கள் மற்றும் உள்ளூர் தொழில்முனைவோரை ஆதரித்தல்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 4,
+            "DMK": 5,
+            "AIADMK": 3,
             "TVK": 4
           },
           "axisWeights": {
@@ -481,9 +481,9 @@
             "ta": "விவசாயம் - மானியங்கள் மற்றும் கடன் தள்ளுபடிகளுடன் விவசாயிகளை ஆதரித்தல்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 3,
@@ -498,8 +498,8 @@
             "ta": "தொழில்துறை - தொழிற்சாலைகளை கட்டி உற்பத்தியை ஈர்த்தல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 2,
+            "AIADMK": 1,
             "TVK": 5
           },
           "axisWeights": {
@@ -514,9 +514,9 @@
             "ta": "இரண்டும் சமமாக - கிராமப்புற மற்றும் நகர்ப்புற துறைகளில் சமநிலை முதலீடு"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 3
+            "DMK": 5,
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "economy": 4,
@@ -540,9 +540,9 @@
             "ta": "திறனை மேம்படுத்த அவற்றை தனியார்மயமாக்குதல்"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 2,
-            "TVK": 4
+            "DMK": 0,
+            "AIADMK": 1,
+            "TVK": 5
           },
           "axisWeights": {
             "economy": 4,
@@ -556,9 +556,9 @@
             "ta": "அவற்றை பொதுவுடைமையாக வைத்து நிர்வாகத்தை சீர்திருத்தி ஊழலை குறைத்தல்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 3,
-            "TVK": 4
+            "DMK": 5,
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "economy": 3,
@@ -573,9 +573,9 @@
             "ta": "அத்தியாவசிய சேவைகளை வழங்குவதால் அவற்றுக்கு நிதியளிப்பதை தொடர்தல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 0
           },
           "axisWeights": {
             "economy": 2,
@@ -599,9 +599,9 @@
             "ta": "ஏழை குடும்பங்களுக்கு நேரடி பண பரிமாற்றம் வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 3,
+            "DMK": 2,
             "AIADMK": 5,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "poverty": 5,
@@ -615,9 +615,9 @@
             "ta": "திறன் பயிற்சி மூலம் வேலைவாய்ப்பு வாய்ப்புகளை உருவாக்குதல்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 3,
-            "TVK": 4
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
           },
           "axisWeights": {
             "poverty": 4,
@@ -633,8 +633,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 3
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "poverty": 4,
@@ -658,9 +658,9 @@
             "ta": "ஆம், வீடு ஒரு அடிப்படை உரிமை மற்றும் அரசு அதை வழங்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 3,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 1
           },
           "axisWeights": {
             "poverty": 5,
@@ -674,8 +674,8 @@
             "ta": "ஆம், ஆனால் குடும்பங்கள் காலப்போக்கில் திருப்பிச் செலுத்தக்கூடிய மானிய கடன்களுடன்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 4,
+            "AIADMK": 2,
             "TVK": 3
           },
           "axisWeights": {
@@ -690,9 +690,9 @@
             "ta": "இல்லை, குடும்பங்கள் தங்கள் சொந்த வீட்டை வாங்க முடியும் வகையில் வேலைவாய்ப்பு உருவாக்குவதில் கவனம் செலுத்துதல்"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 1,
-            "TVK": 3
+            "DMK": 1,
+            "AIADMK": 0,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -717,8 +717,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 4
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "poverty": 5,
@@ -733,9 +733,9 @@
             "ta": "குழந்தைகளை பள்ளியில் வைத்திருக்க பெற்றோருக்கு பண ஊக்கத்தொகை வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 3
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 2
           },
           "axisWeights": {
             "poverty": 4,
@@ -749,8 +749,8 @@
             "ta": "கல்வி சிறந்த வேலைகளுக்கு வழிவகுக்கும் வகையில் பள்ளி தரத்தை மேம்படுத்துவதில் கவனம் செலுத்துதல்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 3,
+            "DMK": 3,
+            "AIADMK": 2,
             "TVK": 4
           },
           "axisWeights": {
@@ -777,8 +777,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 4
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "social_justice": 5,
@@ -793,8 +793,8 @@
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 3
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "social_justice": 3,
@@ -808,9 +808,9 @@
             "ta": "இல்லை, வேலைகள் மற்றும் கல்விக்கு தகுதி மட்டுமே அளவுகோலாக இருக்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 1,
-            "TVK": 2
+            "DMK": 0,
+            "AIADMK": 0,
+            "TVK": 3
           },
           "axisWeights": {
             "social_justice": 1,
@@ -835,8 +835,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 5
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 5,
@@ -852,7 +852,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 2
           },
           "axisWeights": {
             "social_justice": 4,
@@ -866,9 +866,9 @@
             "ta": "பொருளாதார வளர்ச்சி இயற்கையாகவே சாதி பிரிவுகளை குறைக்கும்"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 2,
-            "TVK": 3
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 2,
@@ -893,8 +893,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 5
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "social_justice": 5,
@@ -910,7 +910,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 2
           },
           "axisWeights": {
             "social_justice": 4,
@@ -924,9 +924,9 @@
             "ta": "தற்போதுள்ள சட்டங்கள் போதுமானவை, சிறந்த செயல்படுத்தல் மட்டுமே தேவை"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 3
+            "DMK": 2,
+            "AIADMK": 4,
+            "TVK": 1
           },
           "axisWeights": {
             "social_justice": 3,
@@ -950,8 +950,8 @@
             "ta": "வழக்குத் தொடரும் அதிகாரங்களுடன் சுயாதீன ஊழல் எதிர்ப்பு நிறுவனத்தை உருவாக்குதல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 2,
+            "AIADMK": 2,
             "TVK": 5
           },
           "axisWeights": {
@@ -967,7 +967,7 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 3,
+            "AIADMK": 2,
             "TVK": 4
           },
           "axisWeights": {
@@ -982,9 +982,9 @@
             "ta": "சோதனையை குறைக்க அரசு ஊழியர்களின் சம்பளத்தை உயர்த்துதல்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 1
           },
           "axisWeights": {
             "corruption": 2,
@@ -1008,8 +1008,8 @@
             "ta": "ஆம், மேலும் அவர்களது குடும்ப உறுப்பினர்களின் சொத்துக்களும் கூட"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 2,
+            "AIADMK": 2,
             "TVK": 5
           },
           "axisWeights": {
@@ -1024,8 +1024,8 @@
             "ta": "ஆம், ஆனால் அவர்களது சொந்த சொத்துக்கள் மட்டும், குடும்ப உறுப்பினர்கள் அல்ல"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 4,
+            "DMK": 3,
+            "AIADMK": 2,
             "TVK": 4
           },
           "axisWeights": {
@@ -1041,8 +1041,8 @@
           },
           "partyWeights": {
             "DMK": 1,
-            "AIADMK": 2,
-            "TVK": 1
+            "AIADMK": 3,
+            "TVK": 0
           },
           "axisWeights": {
             "corruption": 1,
@@ -1066,8 +1066,8 @@
             "ta": "முழு வெளிப்படைத்தன்மையுடன் திறந்த போட்டி ஏலம்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 3,
+            "DMK": 3,
+            "AIADMK": 1,
             "TVK": 5
           },
           "axisWeights": {
@@ -1083,7 +1083,7 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
+            "AIADMK": 2,
             "TVK": 3
           },
           "axisWeights": {
@@ -1098,9 +1098,9 @@
             "ta": "தனியார் ஒப்பந்ததாரர்கள் இல்லாமல் அரசு நேரடியாக திட்டங்களை கட்ட வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 4,
-            "TVK": 2
+            "DMK": 2,
+            "AIADMK": 5,
+            "TVK": 1
           },
           "axisWeights": {
             "corruption": 4,
@@ -1126,7 +1126,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 1
           },
           "axisWeights": {
             "responsibility": 1,
@@ -1140,9 +1140,9 @@
             "ta": "தனிநபர் - அரசு வாய்ப்புகளை மட்டுமே வழங்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 2,
-            "TVK": 4
+            "DMK": 1,
+            "AIADMK": 0,
+            "TVK": 5
           },
           "axisWeights": {
             "responsibility": 5,
@@ -1158,7 +1158,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 2
           },
           "axisWeights": {
             "responsibility": 3,
@@ -1182,9 +1182,9 @@
             "ta": "ஆம், குறிப்பாக அத்தியாவசிய பொருட்கள் மற்றும் சேவைகளுக்கு"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 4,
-            "TVK": 3
+            "TVK": 2
           },
           "axisWeights": {
             "responsibility": 2,
@@ -1198,9 +1198,9 @@
             "ta": "இல்லை, சந்தை போட்டி இயற்கையாகவே விலைகளை கட்டுப்படுத்தும்"
           },
           "partyWeights": {
-            "DMK": 2,
-            "AIADMK": 3,
-            "TVK": 3
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 5
           },
           "axisWeights": {
             "responsibility": 5,
@@ -1214,8 +1214,8 @@
             "ta": "அவசரநிலைகளில் அல்லது விலை உயர்வு இருக்கும்போது மட்டும்"
           },
           "partyWeights": {
-            "DMK": 3,
-            "AIADMK": 3,
+            "DMK": 2,
+            "AIADMK": 2,
             "TVK": 4
           },
           "axisWeights": {
@@ -1240,9 +1240,9 @@
             "ta": "ஆம், கல்வி கட்டாயம் மற்றும் பெற்றோர் பொறுப்புக்கூற வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 4
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
           },
           "axisWeights": {
             "responsibility": 4,
@@ -1258,7 +1258,7 @@
           "partyWeights": {
             "DMK": 5,
             "AIADMK": 5,
-            "TVK": 3
+            "TVK": 2
           },
           "axisWeights": {
             "responsibility": 2,
@@ -1273,8 +1273,8 @@
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 3,
-            "TVK": 3
+            "AIADMK": 4,
+            "TVK": 2
           },
           "axisWeights": {
             "responsibility": 3,
@@ -1299,8 +1299,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 5
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 5
@@ -1314,8 +1314,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 3
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "language_identity": 3,
@@ -1329,7 +1329,7 @@
             "ta": "இல்லை, மொழி தேர்வு தனிப்பட்ட பள்ளிகள் மற்றும் பெற்றோருக்கு விடப்பட வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 1,
             "TVK": 2
           },
@@ -1356,8 +1356,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 5
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 5,
@@ -1372,7 +1372,7 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 3,
+            "AIADMK": 2,
             "TVK": 3
           },
           "axisWeights": {
@@ -1387,8 +1387,8 @@
             "ta": "தேசிய ஒருங்கிணைப்புக்கு இந்தி கற்றல் பயனுள்ளதாக இருக்கும்"
           },
           "partyWeights": {
-            "DMK": 1,
-            "AIADMK": 1,
+            "DMK": 0,
+            "AIADMK": 2,
             "TVK": 1
           },
           "axisWeights": {
@@ -1414,8 +1414,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 5
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 5,
@@ -1430,7 +1430,7 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 3,
+            "AIADMK": 2,
             "TVK": 3
           },
           "axisWeights": {
@@ -1445,7 +1445,7 @@
             "ta": "இல்லை, திறமை மட்டுமே தேவையாக இருக்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 1,
             "TVK": 2
           },
@@ -1472,8 +1472,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 5,
@@ -1488,8 +1488,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 3
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "federalism": 3,
@@ -1503,7 +1503,7 @@
             "ta": "இல்லை, தேசிய ஒற்றுமைக்கு வலுவான மத்திய அரசு தேவை"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 2,
             "TVK": 1
           },
@@ -1530,8 +1530,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 4
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 5,
@@ -1547,7 +1547,7 @@
           "partyWeights": {
             "DMK": 3,
             "AIADMK": 3,
-            "TVK": 3
+            "TVK": 1
           },
           "axisWeights": {
             "federalism": 3,
@@ -1561,7 +1561,7 @@
             "ta": "தேசிய பாதுகாப்பு மற்றும் உள்கட்டமைப்புக்கு மையத்திற்கு அதிக நிதி தேவை"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 2,
             "TVK": 1
           },
@@ -1588,8 +1588,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 4
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 5,
@@ -1604,8 +1604,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 3
+            "AIADMK": 3,
+            "TVK": 2
           },
           "axisWeights": {
             "federalism": 3,
@@ -1619,9 +1619,9 @@
             "ta": "இல்லை, மாநிலங்கள் மத்திய அரசு முடிவுகளை பின்பற்ற வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 2,
-            "TVK": 1
+            "TVK": 0
           },
           "axisWeights": {
             "federalism": 1,
@@ -1646,8 +1646,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 5,
-            "TVK": 5
+            "AIADMK": 4,
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 5,
@@ -1663,7 +1663,7 @@
           "partyWeights": {
             "DMK": 3,
             "AIADMK": 3,
-            "TVK": 3
+            "TVK": 1
           },
           "axisWeights": {
             "federalism": 3,
@@ -1677,9 +1677,9 @@
             "ta": "மாநிலங்களுக்கு இடையிலான நீர் பிரச்சினைகளில் மையத்திற்கு இறுதி அதிகாரம் இருக்க வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 2,
-            "TVK": 1
+            "TVK": 0
           },
           "axisWeights": {
             "federalism": 1,
@@ -1704,8 +1704,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 3,
-            "TVK": 4
+            "AIADMK": 2,
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 4,
@@ -1721,7 +1721,7 @@
           "partyWeights": {
             "DMK": 3,
             "AIADMK": 3,
-            "TVK": 3
+            "TVK": 1
           },
           "axisWeights": {
             "federalism": 2,
@@ -1735,9 +1735,9 @@
             "ta": "இல்லை, தேசியக் கொடி மட்டுமே பயன்படுத்தப்பட வேண்டும்"
           },
           "partyWeights": {
-            "DMK": 1,
+            "DMK": 0,
             "AIADMK": 2,
-            "TVK": 1
+            "TVK": 0
           },
           "axisWeights": {
             "federalism": 1,

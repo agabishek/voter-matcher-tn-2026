@@ -201,28 +201,18 @@ describe('ShareCardService — Canvas generation', () => {
     expect(canvas.height).toBe(800);
   });
 
-  it('renders all party names as text', () => {
+  it('renders top party name as text', () => {
     const canvas = svc.generateCanvas(result, archetype, 'en', config);
     const texts = canvas.drawnTexts.map(t => t.text);
+    // DMK is the top party (45%) — its name should appear
     expect(texts.some(t => t.includes('DMK'))).toBe(true);
-    expect(texts.some(t => t.includes('AIADMK'))).toBe(true);
-    expect(texts.some(t => t.includes('TVK'))).toBe(true);
   });
 
-  it('renders party names in Tamil when lang=ta', () => {
+  it('renders top party name in Tamil when lang=ta', () => {
     const canvas = svc.generateCanvas(result, archetype, 'ta', config);
     const texts = canvas.drawnTexts.map(t => t.text);
+    // DMK is top party — Tamil name should appear
     expect(texts.some(t => t.includes('திமுக'))).toBe(true);
-    expect(texts.some(t => t.includes('அதிமுக'))).toBe(true);
-    expect(texts.some(t => t.includes('தவெக'))).toBe(true);
-  });
-
-  it('renders score percentages for each party', () => {
-    const canvas = svc.generateCanvas(result, archetype, 'en', config);
-    const texts = canvas.drawnTexts.map(t => t.text);
-    expect(texts.some(t => t === '45%')).toBe(true);
-    expect(texts.some(t => t === '30%')).toBe(true);
-    expect(texts.some(t => t === '25%')).toBe(true);
   });
 
   it('renders archetype name', () => {

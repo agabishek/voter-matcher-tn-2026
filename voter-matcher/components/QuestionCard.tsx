@@ -106,7 +106,9 @@ export default function QuestionCard({
                   ? t('questionnaire.option.accessibilitySelected', { text: optionText })
                   : optionText
               }
-              className="w-full text-left px-4 py-3 rounded-xl border-2 transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              className={`w-full text-left px-4 py-3 rounded-xl border-2 transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
+                isSelected ? 'option-selected' : 'option-hover'
+              }`}
               style={isSelected ? {
                 borderColor: 'var(--accent)',
                 background: 'rgba(124,58,237,0.15)',
@@ -116,20 +118,6 @@ export default function QuestionCard({
                 borderColor: 'var(--border)',
                 background: 'var(--card)',
                 color: '#ccc',
-              }}
-              onMouseEnter={(e): void => {
-                if (!isSelected) {
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                  e.currentTarget.style.background = 'rgba(124,58,237,0.08)';
-                  e.currentTarget.style.transform = 'translateX(4px)';
-                }
-              }}
-              onMouseLeave={(e): void => {
-                if (!isSelected) {
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                  e.currentTarget.style.background = 'var(--card)';
-                  e.currentTarget.style.transform = 'translateX(0)';
-                }
               }}
             >
               {optionText}

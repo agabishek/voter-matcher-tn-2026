@@ -33,13 +33,13 @@ interface PublicQuestionBank {
   questions: PublicQuestion[];
 }
 
-/** Public-safe ConfigBundle subset */
+/** Public-safe ConfigBundle subset — hashes stripped for security */
 interface PublicConfigBundle {
-  parties: ConfigBundle['parties'];
-  axes: ConfigBundle['axes'];
-  archetypes: ConfigBundle['archetypes'];
-  languages: ConfigBundle['languages'];
-  scoringParams: ConfigBundle['scoringParams'];
+  parties: Omit<ConfigBundle['parties'], 'hash'>;
+  axes: Omit<ConfigBundle['axes'], 'hash'>;
+  archetypes: Omit<ConfigBundle['archetypes'], 'hash'>;
+  languages: Omit<ConfigBundle['languages'], 'hash'>;
+  scoringParams: Omit<ConfigBundle['scoringParams'], 'hash'>;
   questions: PublicQuestionBank;
   version: string;
 }
@@ -64,12 +64,18 @@ export async function GET(): Promise<NextResponse<PublicConfigBundle | { error: 
     const loader = new ConfigLoader();
     const config = loader.load();
 
+    const { hash: _ph, ...publicParties } = config.parties;
+    const { hash: _ah, ...publicAxes } = config.axes;
+    const { hash: _arch, ...publicArchetypes } = config.archetypes;
+    const { hash: _lh, ...publicLanguages } = config.languages;
+    const { hash: _sh, ...publicScoringParams } = config.scoringParams;
+
     const publicConfig: PublicConfigBundle = {
-      parties: config.parties,
-      axes: config.axes,
-      archetypes: config.archetypes,
-      languages: config.languages,
-      scoringParams: config.scoringParams,
+      parties: publicParties,
+      axes: publicAxes,
+      archetypes: publicArchetypes,
+      languages: publicLanguages,
+      scoringParams: publicScoringParams,
       questions: stripWeights(config.questions),
       version: config.version,
     };

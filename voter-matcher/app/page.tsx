@@ -28,6 +28,7 @@ import { ProfilingEngine } from '@/engines/profilingEngine';
 import type { ArchetypeResult, Contradiction } from '@/engines/profilingEngine';
 import { ExplanationEngine } from '@/engines/explanationEngine';
 import type { Explanation, ScoreResult } from '@/engines/explanationEngine';
+import AnalyticsDisclosure from '@/components/AnalyticsDisclosure';
 import { saveSession, loadSession, clearSession } from '@/lib/sessionStorage';
 
 const SCREEN = {
@@ -277,7 +278,12 @@ export default function Home(): React.JSX.Element {
   // ── Render ──
 
   if (screen === SCREEN.Landing) {
-    return <LandingScreen onStart={handleStart} />;
+    return (
+      <>
+        <AnalyticsDisclosure />
+        <LandingScreen onStart={handleStart} />
+      </>
+    );
   }
 
   if (screen === SCREEN.Onboarding) {
@@ -355,7 +361,11 @@ export default function Home(): React.JSX.Element {
           />
           {warnings.map((w) =>
             w.type === 'axis_skip' && w.axisId ? (
-              <AxisWarning key={w.axisId} axisLabel={w.axisId} />
+              <AxisWarning key={w.axisId} axisLabel={
+                config.axes.axes.find(a => a.id === w.axisId)?.labels[activeLang as 'en' | 'ta']
+                ?? config.axes.axes.find(a => a.id === w.axisId)?.labels.en
+                ?? w.axisId
+              } />
             ) : w.type === 'total_skip' ? (
               <SkipWarning key="total-skip" />
             ) : null,

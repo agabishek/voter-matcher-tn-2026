@@ -83,7 +83,6 @@ beforeEach(() => {
   HTMLCanvasElement.prototype.toBlob = vi.fn().mockImplementation(function(this: HTMLCanvasElement, cb: BlobCallback) { cb(new Blob(['test'], { type: 'image/png' })); });
 
   // Mock Image so onload fires immediately (jsdom doesn't load images)
-  const OrigImage = globalThis.Image;
   vi.stubGlobal('Image', class MockImage {
     crossOrigin = '';
     src = '';
@@ -100,14 +99,9 @@ beforeEach(() => {
 afterEach(() => { vi.restoreAllMocks(); });
 
 describe('SharePanel', () => {
-  it('renders the generate button initially', () => {
+  it('auto-generates card and shows preview image', async () => {
     renderSharePanel();
-    expect(screen.getByRole('button', { name: /generate share card/i })).toBeDefined();
-  });
-
-  it('shows card preview after clicking generate', async () => {
-    renderSharePanel();
-    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
+    // Component auto-generates on mount — wait for the preview image
     await waitFor(() => {
       const img = screen.getByRole('img');
       expect(img).toBeDefined();
@@ -115,9 +109,8 @@ describe('SharePanel', () => {
     });
   });
 
-  it('shows WhatsApp, download, and copy buttons after generating', async () => {
+  it('shows WhatsApp, download, and copy buttons after auto-generation', async () => {
     renderSharePanel();
-    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
     await waitFor(() => {
       expect(screen.getByRole('button', { name: enResult['result.share.button'] })).toBeDefined();
       expect(screen.getByRole('button', { name: /download/i })).toBeDefined();
@@ -125,9 +118,14 @@ describe('SharePanel', () => {
     });
   });
 
+  it('shows generating state initially', () => {
+    renderSharePanel();
+    // The component shows "Generating..." text before the card is ready
+    expect(screen.getByText('Generating...')).toBeDefined();
+  });
+
   it('copies website URL when copy link is clicked', async () => {
     renderSharePanel();
-    fireEvent.click(screen.getByRole('button', { name: /generate share card/i }));
     await waitFor(() => {
       expect(screen.getByRole('button', { name: enResult['result.share.copyLink'] })).toBeDefined();
     });

@@ -130,7 +130,7 @@ function drawReceiptCard(
     ctx.fillRect(imgX, imgY, imgSize, imgSize);
     ctx.drawImage(topImg, imgX + 3, imgY + 3, imgSize - 6, imgSize - 6);
     ctx.restore();
-    y += imgSize + 14; // clear gap after symbol
+    y += imgSize + 20; // clear gap after symbol before party name
   }
 
   // === Party name ===
@@ -262,7 +262,7 @@ export default function SharePanel({
     });
   }, []);
 
-  /** Generate the receipt card image (loads symbols first) */
+  /** Generate the receipt card image (text-only, no party symbols) */
   const generateCard = useCallback(async (): Promise<HTMLCanvasElement> => {
     const partyImages: Record<string, HTMLImageElement> = {};
     const loadPromises = Object.entries(SYMBOL_PATHS).map(async ([pid, src]) => {

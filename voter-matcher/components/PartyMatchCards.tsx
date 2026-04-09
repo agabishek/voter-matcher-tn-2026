@@ -102,49 +102,47 @@ export default function PartyMatchCards({
               ...(activeLang === 'ta' ? { fontSize: '16px' } : {}),
             }}
           >
-            {/* Header: party name + rank badge + score */}
-            <div className="flex items-start justify-between gap-3 mb-3">
-              <div className="flex flex-col gap-1 min-w-0">
+            {/* Header: score + badge on top, party name below */}
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <span
+                className={`font-bold tabular-nums ${
+                  isPrimary ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
+                }`}
+                style={{ color: isPrimary ? 'var(--foreground)' : 'var(--muted)' }}
+              >
+                {t('result.party.match', { score: roundedScore })}
+              </span>
+              {rankLabel !== undefined && (
                 <span
-                  className={`font-semibold leading-tight ${
-                    isPrimary ? 'text-lg' : 'text-base'
-                  }`}
-                  style={{ color: 'var(--foreground)' }}
+                  className="accent-badge text-xs font-medium px-2 py-0.5 rounded-full"
+                  style={isPrimary ? {
+                    background: 'rgba(124,58,237,0.2)',
+                    border: '1px solid rgba(124,58,237,0.4)',
+                    color: 'var(--accent2)',
+                  } : {
+                    background: 'var(--card2)',
+                    color: 'var(--muted)',
+                  }}
                 >
-                  {party.name}
+                  {rankLabel}
                 </span>
-                <span
-                  className="text-xs sm:text-sm leading-tight"
-                  style={{ color: 'var(--muted)', wordBreak: 'break-word' }}
-                >
-                  {party.fullName}
-                </span>
-              </div>
-              <div className="flex flex-col items-end gap-1 shrink-0 text-right">
-                <span
-                  className={`font-bold tabular-nums ${
-                    isPrimary ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
-                  }`}
-                  style={{ color: isPrimary ? 'var(--foreground)' : 'var(--muted)' }}
-                >
-                  {t('result.party.match', { score: roundedScore })}
-                </span>
-                {rankLabel !== undefined && (
-                  <span
-                    className="accent-badge text-xs font-medium px-2 py-0.5 rounded-full"
-                    style={isPrimary ? {
-                      background: 'rgba(124,58,237,0.2)',
-                      border: '1px solid rgba(124,58,237,0.4)',
-                      color: 'var(--accent2)',
-                    } : {
-                      background: 'var(--card2)',
-                      color: 'var(--muted)',
-                    }}
-                  >
-                    {rankLabel}
-                  </span>
-                )}
-              </div>
+              )}
+            </div>
+            <div className="flex flex-col gap-1 mb-3">
+              <span
+                className={`font-semibold leading-tight ${
+                  isPrimary ? 'text-lg' : 'text-base'
+                }`}
+                style={{ color: 'var(--foreground)', overflowWrap: 'break-word' }}
+              >
+                {party.name}
+              </span>
+              <span
+                className="text-xs sm:text-sm leading-relaxed"
+                style={{ color: 'var(--muted)', overflowWrap: 'break-word' }}
+              >
+                {party.fullName}
+              </span>
             </div>
 
             {/* Visual bar */}

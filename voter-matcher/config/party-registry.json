@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "hash": "8c524587d843837d09e9db8ae806e85460bb3a49fc120ac38a926d32f1665037",
+  "hash": "b542b1d9b956e43825758cfd30022bc8202900b1f42f897a61343da5e9f39af5",
   "parties": [
     {
       "id": "DMK",
@@ -40,7 +40,7 @@
       },
       "fullNames": {
         "en": "Tamilaga Vettri Kazhagam",
-        "ta": "தமிழக வெற்றி கழகம்"
+        "ta": "தமிழக வெற்றிக் கழகம்"
       },
       "governanceStatus": "new",
       "weightBasis": "promise",

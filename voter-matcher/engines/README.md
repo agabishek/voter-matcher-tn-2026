@@ -673,7 +673,7 @@ The engine reads from three registries:
 {
   "id": "TVK",
   "names": { "en": "TVK", "ta": "தவெக" },
-  "fullNames": { "en": "Tamilaga Vettri Kazhagam", "ta": "தமிழக வெற்றி கழகம்" },
+  "fullNames": { "en": "Tamilaga Vettri Kazhagam", "ta": "தமிழக வெற்றிக் கழகம்" },
   "weightBasis": "promise"  // Triggers track record notice
 }
 ```

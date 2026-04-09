@@ -36,7 +36,7 @@ const mockConfig: ConfigBundle = {
       {
         id: 'TVK',
         names: { en: 'TVK', ta: 'தவெக' },
-        fullNames: { en: 'Tamilaga Vettri Kazhagam', ta: 'தமிழக வெற்றி கழகம்' },
+        fullNames: { en: 'Tamilaga Vettri Kazhagam', ta: 'தமிழக வெற்றிக் கழகம்' },
         governanceStatus: 'new',
         weightBasis: 'promise',
         manifestoVersion: 'tvk-2026-v1',

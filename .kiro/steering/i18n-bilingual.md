@@ -47,7 +47,7 @@ Every requirement, design decision, and implementation task must account for bot
 - Party full names in Tamil:
   - DMK → திராவிட முன்னேற்றக் கழகம்
   - AIADMK → அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்
-  - TVK → தமிழக வெற்றி கழகம்
+  - TVK → தமிழக வெற்றிக் கழகம்
 
 ---
 

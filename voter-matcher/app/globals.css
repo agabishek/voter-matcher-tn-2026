@@ -30,6 +30,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), 'Inter', 'Noto Sans Tamil', Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 [lang="ta"] {

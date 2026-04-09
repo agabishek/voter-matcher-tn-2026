@@ -95,7 +95,7 @@ export default function OnboardingScreen({ onBegin, onHome }: OnboardingScreenPr
   const langKey = activeLang === 'ta' ? 'ta' : 'en';
 
   return (
-    <div className="flex flex-col h-screen" lang={activeLang} style={{ background: 'var(--background)' }}>
+    <div className="flex flex-col" lang={activeLang} style={{ background: 'var(--background)', height: '100dvh' }}>
       {/* Nav bar */}
       <nav className="nav-blur flex justify-between items-center px-6 py-3 shrink-0">
         <div className="flex items-center gap-2">
@@ -213,10 +213,14 @@ export default function OnboardingScreen({ onBegin, onHome }: OnboardingScreenPr
           </div>
         )}
 
+        </div>
+      </div>
+
+      {/* Sticky bottom button — always visible */}
+      <div className="shrink-0 px-6 py-4" style={{ background: 'var(--background)', borderTop: '1px solid var(--border)' }}>
         <button type="button" onClick={handleBegin} className="btn-glow w-full text-base">
           {t('onboarding.beginButton')} →
         </button>
-        </div>
       </div>
     </div>
   );

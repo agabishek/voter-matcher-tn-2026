@@ -18,7 +18,7 @@ const notoSansTamil = Noto_Sans_Tamil({
 });
 
 export const metadata: Metadata = {
-  title: "உங்கள் அரசியல் பொருத்தம் | Voter Matcher – TN 2026",
+  title: "உங்கள் அரசியல் பொருத்தம் | Voter Matcher – Tamil Nadu 2026",
   description: "Find which party aligns with your policy preferences",
   viewport: {
     width: 'device-width',

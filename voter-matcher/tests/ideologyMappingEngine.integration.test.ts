@@ -110,7 +110,7 @@ describe('IdeologyMappingEngine - Integration Tests', () => {
       const weights = engine.getWeights('q001_a', config.questions);
       
       // Based on the actual questions.json file (updated weights)
-      expect(weights.partyWeights).toEqual({ DMK: 3, AIADMK: 5, TVK: 4 });
+      expect(weights.partyWeights).toEqual({ DMK: 2, AIADMK: 5, TVK: 3 });
       expect(weights.axisWeights).toEqual({ welfare: 4, poverty: 3 });
     });
     
@@ -120,7 +120,7 @@ describe('IdeologyMappingEngine - Integration Tests', () => {
       const weights = engine.getWeights('q001_b', config.questions);
       
       // Based on the actual questions.json file (updated weights)
-      expect(weights.partyWeights).toEqual({ DMK: 5, AIADMK: 3, TVK: 3 });
+      expect(weights.partyWeights).toEqual({ DMK: 5, AIADMK: 2, TVK: 2 });
       expect(weights.axisWeights).toEqual({ welfare: 3, governance: 4 });
     });
   });

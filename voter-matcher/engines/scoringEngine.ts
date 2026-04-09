@@ -121,8 +121,10 @@ export class ScoringEngine {
     const gap = sortedScores[0] - sortedScores[1];
 
     // Dynamic thresholds based on party count
-    const highThreshold = 100 / N + 12;
-    const mediumThreshold = 100 / N + 2;
+    // For N=3: High > 15pp gap, Medium > 5pp gap
+    // These thresholds reflect realistic score distributions with 30 questions
+    const highThreshold = Math.max(15, 100 / N - 18);
+    const mediumThreshold = Math.max(5, 100 / N - 28);
 
     // Determine confidence level
     let level: 'High' | 'Medium' | 'Low';

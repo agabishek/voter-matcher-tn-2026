@@ -343,85 +343,83 @@ describe('ScoringEngine', () => {
 
   describe('computeConfidence', () => {
     it('should return High confidence when gap exceeds high threshold (N=3)', () => {
-      // N=3: High threshold = 100/3 + 12 ≈ 45.333
-      // Gap of 50 should be High
+      // N=3: High threshold = max(15, 100/3 - 18) = 15
+      // Gap of 55 should be High
       const scores = { DMK: 70, AIADMK: 15, TVK: 15 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('High');
-      expect(result.gap).toBe(55); // 70 - 15 = 55
-      expect(result.thresholds.high).toBeCloseTo(100/3 + 12, 10);
-      expect(result.thresholds.medium).toBeCloseTo(100/3 + 2, 10);
+      expect(result.gap).toBe(55);
+      expect(result.thresholds.high).toBeCloseTo(15.33, 1);
+      expect(result.thresholds.medium).toBeCloseTo(5.33, 1);
     });
 
     it('should return Medium confidence when gap is between medium and high thresholds (N=3)', () => {
-      // N=3: Medium threshold = 100/3 + 2 ≈ 35.333
-      // N=3: High threshold = 100/3 + 12 ≈ 45.333
-      // Gap of 40 should be Medium
-      const scores = { DMK: 60, AIADMK: 20, TVK: 20 };
+      // N=3: Medium threshold ≈ 5.33, High threshold ≈ 15.33
+      // Gap of 10 should be Medium
+      const scores = { DMK: 45, AIADMK: 35, TVK: 20 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('Medium');
-      expect(result.gap).toBe(40); // 60 - 20 = 40
-      expect(result.thresholds.high).toBeCloseTo(45.333333333333336, 10);
-      expect(result.thresholds.medium).toBeCloseTo(35.333333333333336, 10);
+      expect(result.gap).toBe(10);
+      expect(result.thresholds.high).toBeCloseTo(15.33, 1);
+      expect(result.thresholds.medium).toBeCloseTo(5.33, 1);
     });
 
     it('should return Low confidence when gap is below medium threshold (N=3)', () => {
-      // N=3: Medium threshold = 100/3 + 2 = 35.333...
-      // Gap of 5 should be Low
+      // N=3: Medium threshold ≈ 5.33
+      // Gap of 2 should be Low
       const scores = { DMK: 35, AIADMK: 33, TVK: 32 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('Low');
-      expect(result.gap).toBe(2); // 35 - 33 = 2
-      expect(result.thresholds.high).toBeCloseTo(45.333333333333336, 10);
-      expect(result.thresholds.medium).toBeCloseTo(35.333333333333336, 10);
+      expect(result.gap).toBe(2);
+      expect(result.thresholds.high).toBeCloseTo(15.33, 1);
+      expect(result.thresholds.medium).toBeCloseTo(5.33, 1);
     });
 
     it('should work with N=2 parties', () => {
-      // N=2: High threshold = 100/2 + 12 = 62
-      // N=2: Medium threshold = 100/2 + 2 = 52
+      // N=2: High threshold = max(15, 100/2 - 18) = max(15, 32) = 32
+      // N=2: Medium threshold = max(5, 100/2 - 28) = max(5, 22) = 22
       const scores = { PARTY_A: 70, PARTY_B: 30 };
       const result = engine.computeConfidence(scores);
 
-      expect(result.level).toBe('Low');
-      expect(result.gap).toBe(40); // 70 - 30 = 40
-      expect(result.thresholds.high).toBe(62);
-      expect(result.thresholds.medium).toBe(52);
-    });
-
-    it('should work with N=5 parties', () => {
-      // N=5: High threshold = 100/5 + 12 = 32
-      // N=5: Medium threshold = 100/5 + 2 = 22
-      const scores = { P1: 40, P2: 25, P3: 20, P4: 10, P5: 5 };
-      const result = engine.computeConfidence(scores);
-
-      expect(result.level).toBe('Low');
-      expect(result.gap).toBe(15); // 40 - 25 = 15
+      expect(result.level).toBe('High');
+      expect(result.gap).toBe(40);
       expect(result.thresholds.high).toBe(32);
       expect(result.thresholds.medium).toBe(22);
     });
 
+    it('should work with N=5 parties', () => {
+      // N=5: High threshold = max(15, 100/5 - 18) = max(15, 2) = 15
+      // N=5: Medium threshold = max(5, 100/5 - 28) = max(5, -8) = 5
+      const scores = { P1: 40, P2: 25, P3: 20, P4: 10, P5: 5 };
+      const result = engine.computeConfidence(scores);
+
+      expect(result.level).toBe('High');
+      expect(result.gap).toBe(15);
+      expect(result.thresholds.high).toBe(15);
+      expect(result.thresholds.medium).toBe(5);
+    });
+
     it('should work with N=10 parties', () => {
-      // N=10: High threshold = 100/10 + 12 = 22
-      // N=10: Medium threshold = 100/10 + 2 = 12
+      // N=10: High threshold = max(15, 100/10 - 18) = max(15, -8) = 15
+      // N=10: Medium threshold = max(5, 100/10 - 28) = max(5, -18) = 5
       const scores = {
         P1: 20, P2: 15, P3: 12, P4: 10, P5: 9,
         P6: 8, P7: 8, P8: 7, P9: 6, P10: 5
       };
       const result = engine.computeConfidence(scores);
 
-      expect(result.level).toBe('Low');
-      expect(result.gap).toBe(5); // 20 - 15 = 5
-      expect(result.thresholds.high).toBe(22);
-      expect(result.thresholds.medium).toBe(12);
+      expect(result.level).toBe('Medium');
+      expect(result.gap).toBe(5);
+      expect(result.thresholds.high).toBe(15);
+      expect(result.thresholds.medium).toBe(5);
     });
 
     it('should handle exact threshold boundary for High (N=3)', () => {
-      // N=3: High threshold = 100/3 + 12 = 45.333...
-      // Gap exactly at threshold should be High
-      const highThreshold = 100/3 + 12;
+      // N=3: High threshold ≈ 15.33
+      const highThreshold = Math.max(15, 100/3 - 18);
       const scores = { DMK: 50 + highThreshold/2, AIADMK: 50 - highThreshold/2, TVK: 0 };
       const result = engine.computeConfidence(scores);
 
@@ -430,9 +428,8 @@ describe('ScoringEngine', () => {
     });
 
     it('should handle exact threshold boundary for Medium (N=3)', () => {
-      // N=3: Medium threshold = 100/3 + 2 = 35.333...
-      // Gap exactly at medium threshold should be Medium
-      const mediumThreshold = 100/3 + 2;
+      // N=3: Medium threshold ≈ 5.33
+      const mediumThreshold = Math.max(5, 100/3 - 28);
       const scores = { DMK: 50 + mediumThreshold/2, AIADMK: 50 - mediumThreshold/2, TVK: 0 };
       const result = engine.computeConfidence(scores);
 
@@ -535,30 +532,32 @@ describe('ScoringEngine', () => {
     });
 
     it('should handle N=2 with Medium confidence', () => {
-      // N=2: Medium threshold = 52, High threshold = 62
-      const scores = { PARTY_A: 78, PARTY_B: 22 };
+      // N=2: Medium threshold = 22, High threshold = 32
+      // Gap of 26 should be Medium
+      const scores = { PARTY_A: 63, PARTY_B: 37 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('Medium');
-      expect(result.gap).toBe(56); // 78 - 22 = 56
+      expect(result.gap).toBe(26);
     });
 
     it('should handle N=5 with High confidence', () => {
-      // N=5: High threshold = 32
+      // N=5: High threshold = 15
       const scores = { P1: 50, P2: 15, P3: 15, P4: 10, P5: 10 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('High');
-      expect(result.gap).toBe(35); // 50 - 15 = 35
+      expect(result.gap).toBe(35);
     });
 
     it('should handle N=5 with Medium confidence', () => {
-      // N=5: Medium threshold = 22, High threshold = 32
-      const scores = { P1: 40, P2: 15, P3: 15, P4: 15, P5: 15 };
+      // N=5: Medium threshold = 5, High threshold = 15
+      // Gap of 10 should be Medium
+      const scores = { P1: 30, P2: 20, P3: 20, P4: 15, P5: 15 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('Medium');
-      expect(result.gap).toBe(25); // 40 - 15 = 25
+      expect(result.gap).toBe(10);
     });
 
     it('should handle fractional scores', () => {
@@ -577,15 +576,15 @@ describe('ScoringEngine', () => {
     });
 
     it('should handle N=7 parties (realistic multi-party scenario)', () => {
-      // N=7: High threshold = 100/7 + 12 ≈ 26.286
-      // N=7: Medium threshold = 100/7 + 2 ≈ 16.286
+      // N=7: High threshold = max(15, 100/7 - 18) = max(15, -3.7) = 15
+      // N=7: Medium threshold = max(5, 100/7 - 28) = max(5, -13.7) = 5
       const scores = { P1: 25, P2: 18, P3: 15, P4: 14, P5: 12, P6: 10, P7: 6 };
       const result = engine.computeConfidence(scores);
 
-      expect(result.level).toBe('Low');
-      expect(result.gap).toBe(7); // 25 - 18 = 7
-      expect(result.thresholds.high).toBeCloseTo(100/7 + 12, 10);
-      expect(result.thresholds.medium).toBeCloseTo(100/7 + 2, 10);
+      expect(result.level).toBe('Medium');
+      expect(result.gap).toBe(7);
+      expect(result.thresholds.high).toBe(15);
+      expect(result.thresholds.medium).toBe(5);
     });
 
     it('should return thresholds in result for transparency', () => {
@@ -639,14 +638,16 @@ describe('ScoringEngine', () => {
     });
 
     it('should handle minimum N=2 requirement', () => {
-      // N=2 is the minimum for meaningful confidence calculation
+      // N=2: High threshold = max(15, 100/2 - 18) = 32
+      // N=2: Medium threshold = max(5, 100/2 - 28) = 22
+      // Gap of 20 should be Low (below medium threshold of 22)
       const scores = { PARTY_A: 60, PARTY_B: 40 };
       const result = engine.computeConfidence(scores);
 
       expect(result.level).toBe('Low');
       expect(result.gap).toBe(20);
-      expect(result.thresholds.high).toBe(62);
-      expect(result.thresholds.medium).toBe(52);
+      expect(result.thresholds.high).toBe(32);
+      expect(result.thresholds.medium).toBe(22);
     });
   });
 

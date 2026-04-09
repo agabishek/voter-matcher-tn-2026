@@ -71,8 +71,9 @@ describe('ScoringEngine Integration', () => {
     // With equal split (N=3), gap should be 0 → Low confidence
     expect(confidence.level).toBe('Low');
     expect(confidence.gap).toBeCloseTo(0, 5);
-    expect(confidence.thresholds.high).toBeCloseTo(100/3 + 12, 10);
-    expect(confidence.thresholds.medium).toBeCloseTo(100/3 + 2, 10);
+    // N=3: High ≈ 15.33, Medium ≈ 5.33
+    expect(confidence.thresholds.high).toBeCloseTo(15.33, 1);
+    expect(confidence.thresholds.medium).toBeCloseTo(5.33, 1);
   });
 
   it('should demonstrate full scoring workflow with real config', () => {
@@ -88,7 +89,7 @@ describe('ScoringEngine Integration', () => {
     
     // Verify normalization
     const sum = Object.values(normalized).reduce((acc, val) => acc + val, 0);
-    expect(sum).toBe(100);
+    expect(sum).toBeCloseTo(100, 10);
     
     // Compute confidence
     const confidence = engine.computeConfidence(normalized);

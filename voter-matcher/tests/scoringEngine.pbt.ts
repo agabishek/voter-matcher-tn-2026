@@ -919,8 +919,8 @@ describe('ScoringEngine Property-Based Tests', () => {
           fc.integer({ min: 2, max: 10 }),
           (partyCount) => {
             const N = partyCount;
-            const highThreshold = 100 / N + 12;
-            const mediumThreshold = 100 / N + 2;
+            const highThreshold = Math.max(15, 100 / N - 18);
+            const mediumThreshold = Math.max(5, 100 / N - 28);
 
             // Create scores with gap between medium and high thresholds
             // Use raw scores that will normalize to the desired gap
@@ -955,7 +955,7 @@ describe('ScoringEngine Property-Based Tests', () => {
           fc.integer({ min: 2, max: 10 }),
           (partyCount) => {
             const N = partyCount;
-            const mediumThreshold = 100 / N + 2;
+            const mediumThreshold = Math.max(5, 100 / N - 28);
 
             // Create scores with very small gap
             // Equal or nearly equal scores will produce low gap

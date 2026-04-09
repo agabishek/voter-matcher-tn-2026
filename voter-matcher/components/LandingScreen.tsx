@@ -38,7 +38,7 @@ export default function LandingScreen({ onStart }: LandingScreenProps): React.JS
     <div className="flex flex-col overflow-hidden" lang={activeLang} style={{ height: '100dvh' }}>
       {/* Nav */}
       <nav className="nav-blur flex justify-between items-center px-4 sm:px-6 py-3 shrink-0 gap-2">
-        <h1 className="font-bold text-base sm:text-lg gradient-text truncate">
+        <h1 className="font-bold text-sm sm:text-lg gradient-text" style={{ overflowWrap: 'break-word', lineHeight: '1.3' }}>
           {t('app.title')}
         </h1>
         <LanguageToggle />

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "i18n & Mobile Layout Check",
+  "description": "After editing any component file, verify: 1) No truncate/overflow-hidden on text that could be Tamil, 2) All language-dependent rendered content (like share cards) regenerates on language toggle, 3) Use 100dvh not 100vh for full-screen layouts, 4) Tamil text containers allow wrapping",
+  "version": "1",
+  "when": {
+    "type": "postToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "After writing to a .tsx component file, verify these before moving on: 1) No CSS truncate or text-overflow:ellipsis on elements that render Tamil text — Tamil strings are 20-30% longer than English. 2) Any canvas/image generation that uses language must regenerate when activeLang changes. 3) Full-screen containers use 100dvh not 100vh (Android Chrome address bar). 4) Nav bar titles use text-sm on mobile with overflow-wrap:break-word, never truncate. 5) Buttons at bottom of scrollable views should be in a sticky container outside the scroll area. If any of these are violated in the file just written, fix them immediately."
+  }
+}

@@ -110,7 +110,7 @@ export default function OnboardingScreen({ onBegin, onHome }: OnboardingScreenPr
               🏠
             </button>
           )}
-          <div className="font-bold text-lg gradient-text">
+          <div className="font-bold text-sm sm:text-lg gradient-text" style={{ overflowWrap: 'break-word', lineHeight: '1.3' }}>
             {t('app.title')}
           </div>
         </div>

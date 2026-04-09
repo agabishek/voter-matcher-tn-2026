@@ -16,7 +16,7 @@
  * @module components/SharePanel
  */
 
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useLanguage } from '@/lib/languageProvider';
 import { useConfig } from '@/lib/configProvider';
 
@@ -362,6 +362,14 @@ export default function SharePanel({
     await generateCard();
     setState('ready');
   }, [generateCard]);
+
+  /** Regenerate card when language changes (if card was already generated) */
+  useEffect(() => {
+    if (state !== 'idle' && state !== 'generating') {
+      generateCard().catch(() => { /* ignore regeneration errors */ });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang]);
 
   return (
     <section

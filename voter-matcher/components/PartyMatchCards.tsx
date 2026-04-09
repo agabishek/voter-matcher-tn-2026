@@ -66,7 +66,7 @@ export default function PartyMatchCards({
   const topParty = rankedParties.length > 0 ? rankedParties[0] : undefined;
 
   if (topParty === undefined) {
-    return null;
+    return <></>;
   }
 
   return (

@@ -343,6 +343,78 @@ const CROSS_WELFARE_REFORM: Record<string, string> = {
 };
 
 /* ================================================================== */
+/*  NEW PERSONAS – Additional voter profiles                          */
+/* ================================================================== */
+
+/**
+ * Persona 12: Urban Professional
+ * Profile: Economy C, governance B, corruption A/C, moderate on welfare/identity.
+ * Private sector jobs, anti-corruption, market reform, moderate federalism.
+ * Expected match: TVK
+ */
+const URBAN_PROFESSIONAL: Record<string, string> = {
+  q001: 'q001_c', q002: 'q002_c', q003: 'q003_b', q004: 'q004_c',
+  q005: 'q005_b', q006: 'q006_a', q007: 'q007_a', q008: 'q008_a',
+  q009: 'q009_b', q010: 'q010_a', q011: 'q011_b', q012: 'q012_c',
+  q013: 'q013_c', q014: 'q014_b', q015: 'q015_c', q016: 'q016_c',
+  q017: 'q017_a', q018: 'q018_a', q019: 'q019_a', q020: 'q020_b',
+  q021: 'q021_b', q022: 'q022_a', q023: 'q023_b', q024: 'q024_b',
+  q025: 'q025_b', q026: 'q026_b', q027: 'q027_b', q028: 'q028_b',
+  q029: 'q029_b', q030: 'q030_b',
+};
+
+/**
+ * Persona 13: Rural Woman
+ * Profile: Welfare A, poverty A, social justice A, moderate rest.
+ * Cash transfers, free goods, pensions, agriculture subsidies, cooperative federalism.
+ * Expected match: AIADMK
+ */
+const RURAL_WOMAN: Record<string, string> = {
+  q001: 'q001_a', q002: 'q002_a', q003: 'q003_a', q004: 'q004_a',
+  q005: 'q005_a', q006: 'q006_b', q007: 'q007_b', q008: 'q008_b',
+  q009: 'q009_a', q010: 'q010_c', q011: 'q011_a', q012: 'q012_a',
+  q013: 'q013_b', q014: 'q014_a', q015: 'q015_a', q016: 'q016_a',
+  q017: 'q017_b', q018: 'q018_b', q019: 'q019_b', q020: 'q020_a',
+  q021: 'q021_a', q022: 'q022_b', q023: 'q023_a', q024: 'q024_a',
+  q025: 'q025_a', q026: 'q026_b', q027: 'q027_b', q028: 'q028_b',
+  q029: 'q029_b', q030: 'q030_b',
+};
+
+/**
+ * Persona 14: Student Activist
+ * Profile: Social justice A, corruption A, federalism A, economy C.
+ * Reservation, anti-caste, state autonomy, public services, anti-Hindi.
+ * Expected match: DMK
+ */
+const STUDENT_ACTIVIST: Record<string, string> = {
+  q001: 'q001_b', q002: 'q002_b', q003: 'q003_b', q004: 'q004_b',
+  q005: 'q005_a', q006: 'q006_a', q007: 'q007_b', q008: 'q008_c',
+  q009: 'q009_c', q010: 'q010_b', q011: 'q011_c', q012: 'q012_b',
+  q013: 'q013_a', q014: 'q014_a', q015: 'q015_a', q016: 'q016_a',
+  q017: 'q017_a', q018: 'q018_a', q019: 'q019_a', q020: 'q020_a',
+  q021: 'q021_a', q022: 'q022_c', q023: 'q023_a', q024: 'q024_a',
+  q025: 'q025_a', q026: 'q026_a', q027: 'q027_a', q028: 'q028_a',
+  q029: 'q029_a', q030: 'q030_a',
+};
+
+/**
+ * Persona 15: Small Business Owner
+ * Profile: Economy C, responsibility B/C, corruption A, moderate welfare.
+ * Entrepreneurship, market competition, open bidding, skill training.
+ * Expected match: TVK
+ */
+const SMALL_BUSINESS_OWNER: Record<string, string> = {
+  q001: 'q001_c', q002: 'q002_c', q003: 'q003_c', q004: 'q004_c',
+  q005: 'q005_c', q006: 'q006_a', q007: 'q007_a', q008: 'q008_c',
+  q009: 'q009_b', q010: 'q010_a', q011: 'q011_b', q012: 'q012_c',
+  q013: 'q013_c', q014: 'q014_b', q015: 'q015_b', q016: 'q016_c',
+  q017: 'q017_a', q018: 'q018_a', q019: 'q019_a', q020: 'q020_b',
+  q021: 'q021_b', q022: 'q022_a', q023: 'q023_b', q024: 'q024_b',
+  q025: 'q025_c', q026: 'q026_b', q027: 'q027_b', q028: 'q028_b',
+  q029: 'q029_b', q030: 'q030_b',
+};
+
+/* ================================================================== */
 /*  HELPER: convert persona map to option IDs array                   */
 /* ================================================================== */
 function personaToOptionIds(persona: Record<string, string>): string[] {
@@ -469,6 +541,40 @@ describe('Expert Panel – Edge Case Personas', () => {
     // but cooperative/follow-centre in federalism clusters.
     // DMK should NOT win since option C avoids DMK's core positions.
     expect(result.topParty).not.toBe('DMK');
+  });
+});
+
+/* ================================================================== */
+/*  NEW PERSONA OUTCOME TESTS                                         */
+/* ================================================================== */
+
+describe('New Persona Outcomes', () => {
+  it('Urban Professional → TVK (economy + anti-corruption + market reform)', () => {
+    const result = runPipeline(personaToOptionIds(URBAN_PROFESSIONAL));
+    logResult('Urban Professional', result);
+    expect(result.topParty).toBe('TVK');
+    expect(result.gap).toBeGreaterThan(3);
+  });
+
+  it('Rural Woman → AIADMK (welfare + poverty + agriculture)', () => {
+    const result = runPipeline(personaToOptionIds(RURAL_WOMAN));
+    logResult('Rural Woman', result);
+    expect(result.topParty).toBe('AIADMK');
+    expect(result.gap).toBeGreaterThan(3);
+  });
+
+  it('Student Activist → DMK (social justice + federalism + anti-caste)', () => {
+    const result = runPipeline(personaToOptionIds(STUDENT_ACTIVIST));
+    logResult('Student Activist', result);
+    expect(result.topParty).toBe('DMK');
+    expect(result.gap).toBeGreaterThan(3);
+  });
+
+  it('Small Business Owner → TVK (entrepreneurship + market + anti-corruption)', () => {
+    const result = runPipeline(personaToOptionIds(SMALL_BUSINESS_OWNER));
+    logResult('Small Business Owner', result);
+    expect(result.topParty).toBe('TVK');
+    expect(result.gap).toBeGreaterThan(3);
   });
 });
 
@@ -667,6 +773,10 @@ describe('Explanation Quality for Expert Personas', () => {
       { name: 'AIADMK_SENIOR', answers: AIADMK_SENIOR },
       { name: 'SWING_MODERATE', answers: SWING_MODERATE },
       { name: 'CROSS_WELFARE_REFORM', answers: CROSS_WELFARE_REFORM },
+      { name: 'URBAN_PROFESSIONAL', answers: URBAN_PROFESSIONAL },
+      { name: 'RURAL_WOMAN', answers: RURAL_WOMAN },
+      { name: 'STUDENT_ACTIVIST', answers: STUDENT_ACTIVIST },
+      { name: 'SMALL_BUSINESS_OWNER', answers: SMALL_BUSINESS_OWNER },
     ];
 
     for (const persona of personas) {

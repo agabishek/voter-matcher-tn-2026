@@ -55,7 +55,7 @@ export default function PartyMatchCards({
         fullName: party.fullNames[langKey] ?? party.fullNames.en,
         score: partyScores[party.id] ?? 0,
       }))
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
 
     return sorted.map((party, index) => ({
       ...party,

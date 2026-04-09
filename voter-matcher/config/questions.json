@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "hash": "af2327fa6782610c635f75f771fa8f86585d7ffaa757a4b17a2d941c5ded9e61",
+  "hash": "97ca949a29b3e7c2b810daf332e01b897a44eba234f8c027bc1570a06eac12d6",
   "questions": [
     {
       "id": "q001",
@@ -456,8 +456,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 3,
-            "TVK": 5
+            "AIADMK": 4,
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -1199,8 +1199,8 @@
           },
           "partyWeights": {
             "DMK": 2,
-            "AIADMK": 2,
-            "TVK": 4
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "responsibility": 5,

@@ -426,7 +426,7 @@ describe('ScoringEngine Property-Based Tests', () => {
           (partyPairs) => {
             const rawScores: Record<string, number> = {};
             partyPairs.forEach(([id, score]) => {
-              rawScores[id] = score;
+              rawScores[id] = Number(score);
             });
 
             const normalized = engine.normalize(rawScores);

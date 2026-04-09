@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "hash": "bbcfb5b4a1af6e7cec65f3ef13e91519f9971c2eebfb1573ff3dc59159e0dd61",
+  "hash": "af2327fa6782610c635f75f771fa8f86585d7ffaa757a4b17a2d941c5ded9e61",
   "questions": [
     {
       "id": "q001",
@@ -51,7 +51,7 @@
           "partyWeights": {
             "DMK": 2,
             "AIADMK": 2,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "economy": 4,
@@ -207,7 +207,7 @@
             "ta": "இலவச சுகாதாரம் மற்றும் மானிய உணவு வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 3,
             "TVK": 3
           },
@@ -307,7 +307,7 @@
             "ta": "இடைத்தரகர்கள் இல்லாமல் ஒரே டிஜிட்டல் சாளரம் மூலம்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 3,
             "TVK": 5
           },
@@ -381,7 +381,7 @@
             "ta": "காலக்கெடு தீர்வுடன் கூடிய அர்ப்பணிப்பான புகார் தளம் மூலம்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 3,
             "TVK": 4
           },
@@ -457,7 +457,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 3,
-            "TVK": 4
+            "TVK": 5
           },
           "axisWeights": {
             "economy": 4,
@@ -617,7 +617,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 3,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "poverty": 4,
@@ -660,7 +660,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 5,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "poverty": 5,
@@ -751,7 +751,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 3,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "poverty": 3,
@@ -777,7 +777,7 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
+            "AIADMK": 5,
             "TVK": 4
           },
           "axisWeights": {
@@ -951,7 +951,7 @@
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 2,
+            "AIADMK": 3,
             "TVK": 5
           },
           "axisWeights": {
@@ -1009,7 +1009,7 @@
           },
           "partyWeights": {
             "DMK": 3,
-            "AIADMK": 2,
+            "AIADMK": 3,
             "TVK": 5
           },
           "axisWeights": {
@@ -1025,7 +1025,7 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 3,
+            "AIADMK": 4,
             "TVK": 4
           },
           "axisWeights": {
@@ -1142,7 +1142,7 @@
           "partyWeights": {
             "DMK": 2,
             "AIADMK": 2,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "responsibility": 5,
@@ -1200,7 +1200,7 @@
           "partyWeights": {
             "DMK": 2,
             "AIADMK": 2,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "responsibility": 5,
@@ -1256,7 +1256,7 @@
             "ta": "இல்லை, மாறாக பள்ளி வருகையை ஊக்குவிக்க ஊக்கத்தொகைகளை வழங்குதல்"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 5,
             "TVK": 3
           },
@@ -1315,7 +1315,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 3,
@@ -1372,8 +1372,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 4
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 3,
@@ -1430,8 +1430,8 @@
           },
           "partyWeights": {
             "DMK": 4,
-            "AIADMK": 4,
-            "TVK": 4
+            "AIADMK": 3,
+            "TVK": 3
           },
           "axisWeights": {
             "language_identity": 3,
@@ -1472,8 +1472,8 @@
           },
           "partyWeights": {
             "DMK": 5,
-            "AIADMK": 4,
-            "TVK": 5
+            "AIADMK": 3,
+            "TVK": 4
           },
           "axisWeights": {
             "federalism": 5,
@@ -1489,7 +1489,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 3,
@@ -1531,7 +1531,7 @@
           "partyWeights": {
             "DMK": 5,
             "AIADMK": 4,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "federalism": 5,
@@ -1589,7 +1589,7 @@
           "partyWeights": {
             "DMK": 5,
             "AIADMK": 4,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "federalism": 5,
@@ -1605,7 +1605,7 @@
           "partyWeights": {
             "DMK": 4,
             "AIADMK": 4,
-            "TVK": 4
+            "TVK": 3
           },
           "axisWeights": {
             "federalism": 3,
@@ -1703,9 +1703,9 @@
             "ta": "ஆம், இது நமது தனித்துவமான அடையாளம் மற்றும் பெருமையை பிரதிநிதித்துவப்படுத்துகிறது"
           },
           "partyWeights": {
-            "DMK": 4,
+            "DMK": 5,
             "AIADMK": 3,
-            "TVK": 5
+            "TVK": 4
           },
           "axisWeights": {
             "federalism": 4,

@@ -63,17 +63,15 @@ export default function PartyMatchCards({
     }));
   }, [config.parties.parties, partyScores, langKey]);
 
-  const topParty = rankedParties.length > 0 ? rankedParties[0] : undefined;
-
-  if (topParty === undefined) {
+  if (rankedParties.length === 0) {
     return <></>;
   }
 
   return (
     <div className="flex flex-col gap-4 w-full" role="list" aria-label={t('result.match.label')}>
-      {[topParty].map((party) => {
-        const isPrimary = true;
-        const isSecondary = false;
+      {rankedParties.map((party) => {
+        const isPrimary = party.rank === 1;
+        const isSecondary = party.rank === 2;
         const roundedScore = Math.round(party.score);
         const rankLabel = isPrimary
           ? t('result.party.primary')

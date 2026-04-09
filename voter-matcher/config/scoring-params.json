@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "hash": "e908ffb03783bb847c3564d3a32c45bcc1cb73f730eaf4d0566795e10addc453",
+  "questionCount": 30,
+  "optionsPerQuestion": 3,
+  "weightRange": {
+    "min": 0,
+    "max": 5
+  },
+  "minAnsweredThreshold": 0.5,
+  "collinearityThreshold": 0.7,
+  "discriminatingPowerThreshold": 1,
+  "confidenceFormula": "dynamic",
+  "estimatedCompletionMinutes": 3,
+  "performanceTargets": {
+    "loadTime4G": 1000,
+    "loadTime2G": 3000,
+    "scoringTime": 200,
+    "concurrentUsers": 100000
+  },
+  "disclaimerText": {
+    "en": "These results reflect your stated policy preferences and are not a voting recommendation. This tool is independent and not affiliated with any political party.",
+    "ta": "இந்த முடிவுகள் உங்கள் கொள்கை விருப்பங்களை மட்டுமே பிரதிபலிக்கின்றன. இது வாக்களிக்க பரிந்துரை அல்ல. எந்த கட்சியுடனும் தொடர்பில்லை."
+  }
+}

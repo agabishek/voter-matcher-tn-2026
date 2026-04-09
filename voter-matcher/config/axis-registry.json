@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "hash": "c199a6f23365016692942e4a518a737b60af37cca971590b71debc8df0d745cf",
+  "axes": [
+    {
+      "id": "welfare",
+      "labels": {
+        "en": "Government Support Programs",
+        "ta": "அரசு நலத் திட்டங்கள்"
+      },
+      "technicalName": {
+        "en": "Welfare",
+        "ta": "நலன்புரி"
+      },
+      "archetypeMapping": [
+        "security_seeker"
+      ],
+      "independentPairs": [
+        "economy",
+        "corruption"
+      ]
+    },
+    {
+      "id": "governance",
+      "labels": {
+        "en": "Quality of Governance",
+        "ta": "ஆட்சி தரம்"
+      },
+      "technicalName": {
+        "en": "Governance",
+        "ta": "ஆட்சி"
+      },
+      "archetypeMapping": [
+        "equity_builder"
+      ],
+      "independentPairs": [
+        "welfare",
+        "poverty"
+      ]
+    },
+    {
+      "id": "economy",
+      "labels": {
+        "en": "Economic Growth & Jobs",
+        "ta": "பொருளாதார வளர்ச்சி மற்றும் வேலைவாய்ப்பு"
+      },
+      "technicalName": {
+        "en": "Economy",
+        "ta": "பொருளாதாரம்"
+      },
+      "archetypeMapping": [
+        "system_reformer"
+      ],
+      "independentPairs": [
+        "welfare",
+        "social_justice"
+      ]
+    },
+    {
+      "id": "poverty",
+      "labels": {
+        "en": "Poverty Reduction",
+        "ta": "வறுமை ஒழிப்பு"
+      },
+      "technicalName": {
+        "en": "Poverty",
+        "ta": "வறுமை"
+      },
+      "archetypeMapping": [
+        "security_seeker"
+      ],
+      "independentPairs": [
+        "governance",
+        "corruption"
+      ]
+    },
+    {
+      "id": "social_justice",
+      "labels": {
+        "en": "Social Justice & Reservation",
+        "ta": "சமூக நீதி மற்றும் இட ஒதுக்கீடு"
+      },
+      "technicalName": {
+        "en": "Social Justice",
+        "ta": "சமூக நீதி"
+      },
+      "archetypeMapping": [
+        "equity_builder"
+      ],
+      "independentPairs": [
+        "economy",
+        "federalism"
+      ]
+    },
+    {
+      "id": "corruption",
+      "labels": {
+        "en": "Anti-Corruption & Transparency",
+        "ta": "ஊழல் எதிர்ப்பு மற்றும் வெளிப்படைத்தன்மை"
+      },
+      "technicalName": {
+        "en": "Corruption",
+        "ta": "ஊழல்"
+      },
+      "archetypeMapping": [
+        "system_reformer"
+      ],
+      "independentPairs": [
+        "welfare",
+        "poverty"
+      ]
+    },
+    {
+      "id": "responsibility",
+      "labels": {
+        "en": "State vs Individual Responsibility",
+        "ta": "அரசு மற்றும் தனிநபர் பொறுப்பு"
+      },
+      "technicalName": {
+        "en": "Responsibility",
+        "ta": "பொறுப்பு"
+      },
+      "archetypeMapping": [
+        "system_reformer"
+      ],
+      "independentPairs": [
+        "language_identity",
+        "federalism"
+      ]
+    },
+    {
+      "id": "language_identity",
+      "labels": {
+        "en": "Tamil Language & Cultural Identity",
+        "ta": "தமிழ் மொழி மற்றும் கலாச்சார அடையாளம்"
+      },
+      "technicalName": {
+        "en": "Language Identity",
+        "ta": "மொழி அடையாளம்"
+      },
+      "archetypeMapping": [
+        "identity_advocate"
+      ],
+      "independentPairs": [
+        "responsibility",
+        "economy"
+      ]
+    },
+    {
+      "id": "federalism",
+      "labels": {
+        "en": "State Autonomy & Centre-State Relations",
+        "ta": "மாநில சுயாட்சி மற்றும் மத்திய-மாநில உறவுகள்"
+      },
+      "technicalName": {
+        "en": "Federalism",
+        "ta": "கூட்டாட்சி"
+      },
+      "archetypeMapping": [
+        "identity_advocate"
+      ],
+      "independentPairs": [
+        "social_justice",
+        "responsibility"
+      ]
+    }
+  ]
+}

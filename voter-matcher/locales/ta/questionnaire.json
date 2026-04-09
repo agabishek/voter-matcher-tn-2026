@@ -1,0 +1,12 @@
+{
+  "questionnaire.progress.label": "கேள்வி {current} / {total}",
+  "questionnaire.progress.percent": "{percent}% முடிந்தது",
+  "questionnaire.skip.button": "இந்தக் கேள்வியைத் தவிர்க்க",
+  "questionnaire.skip.warning": "நீங்கள் பல கேள்விகளைத் தவிர்த்துள்ளீர்கள். முடிவுகள் முழுமையாக இல்லாமல் போகலாம்.",
+  "questionnaire.axis.warning": "{axis} தொடர்பான அனைத்து கேள்விகளையும் தவிர்த்துள்ளீர்கள். இந்தப் பகுதியின் முடிவுகள் முழுமையாக இருக்காது.",
+  "questionnaire.option.select": "இதைத் தேர்வு செய்",
+  "questionnaire.cluster.label": "பகுதி: {cluster}",
+  "questionnaire.question.accessibilityLabel": "கேள்வி: {text}",
+  "questionnaire.option.accessibilitySelected": "{text} (தேர்வு செய்யப்பட்டது)",
+  "questionnaire.options.groupLabel": "பதில் தேர்வுகள்"
+}

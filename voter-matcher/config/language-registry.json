@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "hash": "eb496bf59964fb9cfc9d56798e6ef79e16c02ed035505d2c19543ea382226eae",
+  "defaultLanguage": "ta",
+  "languages": [
+    {
+      "code": "ta",
+      "name": "தமிழ்",
+      "fontStack": "'Noto Sans Tamil', sans-serif",
+      "minFontSize": 16,
+      "direction": "ltr",
+      "translationPath": "/locales/ta"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "fontStack": "'Inter', sans-serif",
+      "minFontSize": 14,
+      "direction": "ltr",
+      "translationPath": "/locales/en"
+    }
+  ]
+}

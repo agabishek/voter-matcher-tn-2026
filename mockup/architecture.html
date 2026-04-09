@@ -1,0 +1,1076 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voter Matcher - Architecture</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d0d14;color:#e0e0f0;font-family:Inter,Segoe UI,sans-serif;font-size:14px}
+:root{--a:#7C3AED;--a2:#A78BFA;--g:#4ade80;--b:#60a5fa;--o:#fb923c;--r:#f87171;--y:#facc15;--c:#161622;--c2:#1e1e2e;--br:#2a2a3e;--m:#666}
+.tabs{display:flex;border-bottom:1px solid var(--br);background:#0d0d14;position:sticky;top:0;z-index:100;overflow-x:auto}
+.tab{padding:13px 18px;cursor:pointer;font-size:12.5px;font-weight:500;color:var(--m);border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s}
+.tab:hover{color:#e0e0f0}.tab.active{color:var(--a2);border-bottom-color:var(--a)}
+.panel{display:none;padding:24px;max-width:1400px;margin:0 auto}.panel.active{display:block}
+h2{font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:4px}
+h3{font-size:.95rem;font-weight:600;color:var(--a2);margin-bottom:10px}
+h4{font-size:.82rem;font-weight:600;color:#ccc;margin-bottom:6px}
+p{color:#aaa;line-height:1.6;font-size:.85rem}
+.sub{color:var(--m);font-size:.82rem;margin-bottom:20px}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:.7rem;font-weight:600}
+.bg{background:rgba(74,222,128,.12);color:var(--g);border:1px solid rgba(74,222,128,.25)}
+.bb{background:rgba(96,165,250,.12);color:var(--b);border:1px solid rgba(96,165,250,.25)}
+.bo{background:rgba(251,146,60,.12);color:var(--o);border:1px solid rgba(251,146,60,.25)}
+.bp{background:rgba(167,139,250,.12);color:var(--a2);border:1px solid rgba(167,139,250,.25)}
+.br2{background:rgba(248,113,113,.12);color:var(--r);border:1px solid rgba(248,113,113,.25)}
+.by{background:rgba(250,204,21,.12);color:var(--y);border:1px solid rgba(250,204,21,.25)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px}
+.card{background:var(--c);border:1px solid var(--br);border-radius:12px;padding:16px}
+.card2{background:var(--c2);border:1px solid var(--br);border-radius:8px;padding:12px}
+.sec{margin-bottom:28px}
+code{background:#1a1a2e;color:var(--a2);padding:1px 6px;border-radius:4px;font-size:.78rem;font-family:Fira Code,monospace}
+pre{background:#080812;border:1px solid var(--br);border-radius:8px;padding:14px;overflow-x:auto;font-size:.76rem;line-height:1.65;color:#c9d1d9;font-family:Fira Code,monospace}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th{background:#1a1a2e;color:var(--a2);padding:9px 12px;text-align:left;font-weight:600;border-bottom:1px solid var(--br)}
+td{padding:8px 12px;border-bottom:1px solid rgba(42,42,62,.5);color:#ccc;vertical-align:top}
+tr:hover td{background:rgba(124,58,237,.04)}
+.tag{display:inline-block;background:#1a1a2e;border:1px solid var(--br);border-radius:4px;padding:1px 7px;font-size:.72rem;color:#aaa;margin:2px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px}
+.dg{background:var(--g)}.db{background:var(--b)}.do{background:var(--o)}.dp{background:var(--a2)}.dr{background:var(--r)}
+.box{background:var(--c2);border:1px solid var(--br);border-radius:8px;padding:10px 14px;font-size:.8rem;color:#ddd;display:inline-block}
+.box.hl{border-color:var(--a);color:var(--a2)}
+.arrow{color:var(--m);margin:0 4px;font-size:.9rem}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:8px 0}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div style="padding:18px 24px 0;border-bottom:1px solid #2a2a3e">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:3px">
+    <span style="font-size:1.3rem">🗳️</span>
+    <h2 style="margin:0">Voter Matcher TN 2026 — Technical Architecture</h2>
+    <span class="badge bg">v1.0</span>
+    <span class="badge bb">Next.js 14</span>
+    <span class="badge bp">Modular</span>
+  </div>
+  <p class="sub">Click tabs to explore each architectural layer</p>
+</div>
+<div class="tabs">
+  <div class="tab active" onclick="show(0)">🏗️ Overview</div>
+  <div class="tab" onclick="show(1)">📦 Tech Stack</div>
+  <div class="tab" onclick="show(2)">⚙️ Services</div>
+  <div class="tab" onclick="show(3)">🗂️ Config Layer</div>
+  <div class="tab" onclick="show(4)">🗄️ DB Schema</div>
+  <div class="tab" onclick="show(5)">🔄 Data Flows</div>
+  <div class="tab" onclick="show(6)">📁 Repo Structure</div>
+  <div class="tab" onclick="show(7)">🔌 API Routes</div>
+  <div class="tab" onclick="show(8)">🔒 Security</div>
+  <div class="tab" onclick="show(9)">📐 Modularity</div>
+  <div class="tab" onclick="show(10)">💰 Cost</div>
+  
+</div>
+
+<!-- TAB 0: OVERVIEW -->
+<div class="panel active" id="p0">
+<div class="sec">
+<h2>System Overview</h2>
+<p class="sub">A fully data-driven political alignment engine. Zero hardcoded political content — all parties, axes, archetypes, languages and scoring parameters live in versioned config files.</p>
+<div class="g3">
+<div class="card">
+<h3>🎯 What it does</h3>
+<p>Matches voters to political parties based on ideological alignment across 9 policy axes. Produces party match %, archetype, confidence score, and bilingual explanation.</p>
+</div>
+<div class="card">
+<h3>🔧 Core principle</h3>
+<p>The application is a generic engine. Adding a new party, axis, language or updating a manifesto requires only config file changes — no code changes.</p>
+</div>
+<div class="card">
+<h3>🌐 Scale target</h3>
+<p>100K+ concurrent users. Client-side scoring by default. Server-side fallback API. Static config served via CDN. 99.9% uptime target.</p>
+</div>
+</div>
+</div>
+
+<div class="sec">
+<h3>High-Level Architecture</h3>
+<div class="card" style="font-family:Fira Code,monospace;font-size:.78rem;line-height:2">
+<div style="color:#A78BFA;margin-bottom:8px;font-weight:700">┌─ BROWSER ──────────────────────────────────────────────────────────┐</div>
+<div style="padding-left:16px">
+  <div style="color:#60a5fa">Next.js App (React + TypeScript)</div>
+  <div style="color:#aaa;padding-left:16px">Landing → Onboarding → Questionnaire → Processing → Results</div>
+  <div style="color:#aaa;padding-left:16px">ConfigProvider · LanguageProvider · SessionProvider</div>
+  <div style="color:#4ade80;padding-left:16px">Core Engines (run client-side): Scoring · Profiling · Explanation · Consistency</div>
+</div>
+<div style="color:#A78BFA;margin:4px 0">└────────────────────────────────────────────────────────────────────┘</div>
+<div style="text-align:center;color:#666;margin:4px 0">↕ HTTPS / TLS 1.3</div>
+<div style="color:#fb923c;margin-bottom:8px;font-weight:700">┌─ NEXT.JS API ROUTES (Edge / Serverless) ───────────────────────────┐</div>
+<div style="padding-left:16px;color:#aaa">
+  GET /api/config · POST /api/score (fallback) · POST /api/share · GET /api/methodology
+</div>
+<div style="color:#fb923c;margin:4px 0">└────────────────────────────────────────────────────────────────────┘</div>
+<div style="text-align:center;color:#666;margin:4px 0">↕</div>
+<div style="color:#facc15;margin-bottom:8px;font-weight:700">┌─ CONFIG LAYER (Versioned JSON + CDN) ──────────────────────────────┐</div>
+<div style="padding-left:16px;color:#aaa">
+  party-registry · axis-registry · archetype-registry · language-registry<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;questions · scoring-params · manifesto-versions
+</div>
+<div style="color:#facc15;margin:4px 0">└────────────────────────────────────────────────────────────────────┘</div>
+<div style="text-align:center;color:#666;margin:4px 0">↕ (optional)</div>
+<div style="color:#f87171;margin-bottom:8px;font-weight:700">┌─ DATA LAYER (Optional / Analytics only) ───────────────────────────┐</div>
+<div style="padding-left:16px;color:#aaa">Turso SQLite (aggregated analytics, free tier) · Git (audit log)</div>
+<div style="padding-left:16px;color:#666">No Redis · No PostgreSQL · No S3 · No CloudFront</div>
+<div style="color:#f87171;margin:4px 0">└────────────────────────────────────────────────────────────────────┘</div>
+</div>
+</div>
+
+<div class="sec">
+<h3>Key Design Decisions</h3>
+<div class="g4">
+<div class="card2"><h4>Client-first scoring</h4><p>All scoring runs in the browser. Server API is fallback only. Enables offline use and reduces server load.</p></div>
+<div class="card2"><h4>Config-driven everything</h4><p>Parties, axes, archetypes, languages, thresholds — all in JSON. Zero political content in code.</p></div>
+<div class="card2"><h4>Hash-verified config</h4><p>Every config file embeds its own sha256. App refuses to start if hash mismatches — tamper-proof.</p></div>
+<div class="card2"><h4>Stateless API</h4><p>No session state on server. Horizontal scaling trivial. Sessions live in browser localStorage only.</p></div>
+</div>
+</div>
+</div>
+
+<!-- TAB 1: TECH STACK -->
+<div class="panel" id="p1">
+<h2>Technology Stack</h2>
+<p class="sub">Every technology choice is justified by the modularity and scale requirements.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>Frontend</h3>
+<table>
+<tr><th>Technology</th><th>Version</th><th>Purpose</th></tr>
+<tr><td><span class="dot db"></span>Next.js</td><td>14 (App Router)</td><td>SSG + API routes + Edge runtime</td></tr>
+<tr><td><span class="dot db"></span>React</td><td>18</td><td>UI component tree</td></tr>
+<tr><td><span class="dot db"></span>TypeScript</td><td>5.x</td><td>Type safety across all engines</td></tr>
+<tr><td><span class="dot dg"></span>Tailwind CSS</td><td>3.x</td><td>Utility-first styling</td></tr>
+<tr><td><span class="dot dp"></span>next-intl</td><td>3.x</td><td>i18n — reads Language_Registry</td></tr>
+<tr><td><span class="dot do"></span>Noto Sans Tamil</td><td>Google Fonts</td><td>Tamil script rendering, min 16px</td></tr>
+<tr><td><span class="dot do"></span>Inter</td><td>Google Fonts</td><td>English UI font</td></tr>
+<tr><td><span class="dot dg"></span>Framer Motion</td><td>10.x</td><td>Question transitions, processing anim</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>Backend / Infrastructure</h3>
+<table>
+<tr><th>Technology</th><th>Purpose</th></tr>
+<tr><td><span class="dot do"></span>Next.js API Routes</td><td>Serverless edge functions — score fallback, share, config</td></tr>
+<tr><td><span class="dot dg"></span>Turso (SQLite)</td><td>Aggregated analytics only — free tier, <tr><td><span class="dot dr"></span>PostgreSQL 15</td><td>Aggregated analytics only (optional)</td></tr>/month</td></tr>
+<tr><td><span class="dot dg"></span>Vercel Edge Middleware</td><td>Rate limiting — built-in, free, no Redis needed</td></tr>
+<tr><td><span class="dot dg"></span>Git repo</td><td>Audit log (config commits) + config file versioning</td></tr>
+<tr><td><span class="dot dg"></span>Vercel CDN (included)</td><td>Static assets + config JSON — free, no setup</td></tr>
+<tr><td><span class="dot dp"></span>Node.js 20</td><td>CLI tooling (manifesto updater, validator)</td></tr>
+<tr><td><span class="dot dg"></span>Vitest</td><td>Unit + property-based testing</td></tr>
+<tr><td><span class="dot dg"></span>fast-check</td><td>Property-based testing library</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>Why these choices?</h3>
+<div class="g3">
+<div class="card2"><h4>Next.js App Router</h4><p>Static generation for all screens. API routes for server-side fallback. Edge runtime for low-latency scoring API. Single repo for frontend + backend.</p></div>
+<div class="card2"><h4>Client-side scoring</h4><p>Scoring engine runs entirely in the browser using the config bundle. No server round-trip for the happy path. Reduces latency to &lt;200ms trivially.</p></div>
+<div class="card2"><h4>PostgreSQL only for analytics</h4><p>No user data is stored. Only aggregated, non-identifiable analytics. PostgreSQL chosen for its JSON support and aggregation queries.</p></div>
+</div>
+</div>
+</div>
+<!-- TAB 2: SERVICES -->
+<div class="panel" id="p2">
+<h2>Service Architecture</h2>
+<p class="sub">Six core engines, all stateless, all reading from the Config Layer. Each engine has a defined interface and can be tested independently.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>1. Config Loader</h3>
+<span class="badge bp">Startup</span>
+<p style="margin:8px 0">Loads all 6 config files, verifies sha256 hash of each, throws on mismatch. Provides ConfigBundle to all engines via React context.</p>
+<pre>interface ConfigBundle {
+  parties: PartyRegistry
+  axes: AxisRegistry
+  archetypes: ArchetypeRegistry
+  languages: LanguageRegistry
+  questions: QuestionBank
+  params: ScoringParams
+  version: string
+}</pre>
+</div>
+<div class="card">
+<h3>2. Questionnaire Engine</h3>
+<span class="badge bb">Session</span>
+<p style="margin:8px 0">Creates sessions, cluster-randomizes questions, tracks answers/skips, handles back-navigation, emits warnings.</p>
+<pre>createSession(config, lang): Session
+selectOption(session, qId, optId): Session
+skipQuestion(session, qId): Session
+getProgress(session): Progress
+getWarnings(session): Warning[]</pre>
+</div>
+<div class="card">
+<h3>3. Scoring Engine</h3>
+<span class="badge bg">Core</span>
+<p style="margin:8px 0">Sums Party_Weights and Axis_Weights, normalizes to percentages, computes dynamic confidence thresholds based on party count N.</p>
+<pre>compute(session, config): ScoreResult
+normalize(raw): Record&lt;string,number&gt;
+// Confidence: High = 100/N+12pp
+//             Medium = 100/N+2pp
+//             Low = below medium</pre>
+</div>
+<div class="card">
+<h3>4. Ideology Mapping Engine</h3>
+<span class="badge by">Validation</span>
+<p style="margin:8px 0">Validates question bank against registries at startup. Checks collinearity (r &lt; 0.70) and discriminating power (variance &gt; 1.0). Emits weights on option selection.</p>
+<pre>validate(questions, config): ValidationResult
+getWeights(optionId): WeightEmission
+checkCollinearity(axes): CollinearityReport
+checkDiscriminatingPower(): PowerReport</pre>
+</div>
+<div class="card">
+<h3>5. Profiling Engine</h3>
+<span class="badge bp">Classification</span>
+<p style="margin:8px 0">Classifies user into archetype from Archetype_Registry. Detects contradictions using axis independence pairs from Axis_Registry. Never reads party scores.</p>
+<pre>classify(axisScores, config): ArchetypeResult
+detectContradictions(session, config): Contradiction[]
+// Archetype independence: reads only
+// Archetype_Registry, never party scores</pre>
+</div>
+<div class="card">
+<h3>6. Explanation Engine</h3>
+<span class="badge bo">Output</span>
+<p style="margin:8px 0">Generates all user-facing text dynamically from registries. No hardcoded strings. Supports any language in Language_Registry. Injects demographic context and track-record notices.</p>
+<pre>generate(result, archetype, config, lang): Explanation
+// Sources: Party_Registry descriptions
+//          Axis_Registry civic labels
+//          Archetype_Registry descriptions
+// Zero hardcoded explanation text</pre>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>Engine Interaction Map</h3>
+<div class="card" style="font-family:Fira Code,monospace;font-size:.78rem;line-height:1.9">
+<div style="color:#666">Config Layer (read-only by all engines)</div>
+<div style="color:#A78BFA;margin:6px 0">ConfigLoader ──────────────────────────────────────────────────────────────────┐</div>
+<div style="padding-left:20px">
+<div><span style="color:#60a5fa">QuestionnaireEngine</span> <span style="color:#666">──(session)──▶</span> <span style="color:#4ade80">ScoringEngine</span> <span style="color:#666">──(scores)──▶</span> <span style="color:#fb923c">ProfilingEngine</span></div>
+<div style="padding-left:20px"><span style="color:#666">└──(axis scores)──▶</span> <span style="color:#fb923c">ProfilingEngine</span> <span style="color:#666">──(archetype)──▶</span> <span style="color:#f87171">ExplanationEngine</span></div>
+<div style="padding-left:20px"><span style="color:#666">└──(contradictions)──▶</span> <span style="color:#f87171">ExplanationEngine</span></div>
+<div style="padding-left:20px"><span style="color:#4ade80">ScoringEngine</span> <span style="color:#666">──(scores)──▶</span> <span style="color:#f87171">ExplanationEngine</span></div>
+<div style="padding-left:20px"><span style="color:#f87171">ExplanationEngine</span> <span style="color:#666">──(explanation)──▶</span> <span style="color:#facc15">Result Dashboard</span></div>
+</div>
+<div style="color:#A78BFA;margin-top:6px">└──────────────────────────────────────────────────────────────────────────────┘</div>
+</div>
+</div>
+</div>
+
+<!-- TAB 3: CONFIG LAYER -->
+<div class="panel" id="p3">
+<h2>Config Layer</h2>
+<p class="sub">All political content, scoring parameters, and system behavior is externalized here. Hash-verified at startup. Version-controlled in Git.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>party-registry.json</h3>
+<span class="badge bg">Extensible</span>
+<pre>{
+  "version": "1.0.0",
+  "hash": "&lt;sha256&gt;",
+  "parties": [{
+    "id": "DMK",
+    "names": { "en": "DMK", "ta": "திமுக" },
+    "fullNames": {
+      "en": "Dravida Munnetra Kazhagam",
+      "ta": "திராவிட முன்னேற்றக் கழகம்"
+    },
+    "governanceStatus": "incumbent",
+    "weightBasis": "track-record",
+    "manifestoVersion": "dmk-2026-v1",
+    "active": true
+  }]
+}</pre>
+<p style="margin-top:8px">Add a new party = add one object here + update questions.json weights. Zero code changes.</p>
+</div>
+<div class="card">
+<h3>axis-registry.json</h3>
+<span class="badge bg">Extensible</span>
+<pre>{
+  "version": "1.0.0",
+  "hash": "&lt;sha256&gt;",
+  "axes": [{
+    "id": "welfare",
+    "labels": {
+      "en": "Government Support Programs",
+      "ta": "அரசு நலத் திட்டங்கள்"
+    },
+    "technicalName": { "en": "Welfare", "ta": "நலன்புரி" },
+    "archetypeMapping": ["security_seeker"],
+    "independentPairs": ["economy", "corruption"]
+  }]
+}</pre>
+</div>
+<div class="card">
+<h3>archetype-registry.json</h3>
+<span class="badge bg">Extensible</span>
+<pre>{
+  "archetypes": [{
+    "id": "security_seeker",
+    "names": {
+      "en": "Security Seeker",
+      "ta": "பாதுகாப்பு தேடுபவர்"
+    },
+    "dominantAxes": ["welfare", "poverty"],
+    "ambiguityThreshold": 0.10,
+    "descriptions": {
+      "en": "You prioritize direct government support...",
+      "ta": "நீங்கள் நேரடி அரசு ஆதரவை..."
+    }
+  }]
+}</pre>
+</div>
+<div class="card">
+<h3>scoring-params.json</h3>
+<span class="badge by">Configurable</span>
+<pre>{
+  "questionCount": 30,
+  "optionsPerQuestion": 3,
+  "weightRange": { "min": 0, "max": 5 },
+  "minAnsweredThreshold": 0.5,
+  "collinearityThreshold": 0.70,
+  "discriminatingPowerThreshold": 1.0,
+  "confidenceFormula": "dynamic",
+  "estimatedCompletionMinutes": 3,
+  "performanceTargets": {
+    "loadTime4G": 1000,
+    "loadTime2G": 3000,
+    "scoringTime": 200,
+    "concurrentUsers": 100000
+  }
+}</pre>
+</div>
+<div class="card">
+<h3>language-registry.json</h3>
+<span class="badge bg">Extensible</span>
+<pre>{
+  "defaultLanguage": "ta",
+  "languages": [
+    {
+      "code": "ta",
+      "name": "தமிழ்",
+      "fontStack": "Noto Sans Tamil, sans-serif",
+      "minFontSize": 16,
+      "direction": "ltr",
+      "translationPath": "/locales/ta"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "fontStack": "Inter, sans-serif",
+      "minFontSize": 14,
+      "direction": "ltr",
+      "translationPath": "/locales/en"
+    }
+  ]
+}</pre>
+<p style="margin-top:8px">Add a language = add entry here + provide /locales/{code}/ files. Zero code changes.</p>
+</div>
+<div class="card">
+<h3>questions.json (structure)</h3>
+<span class="badge by">Bilingual</span>
+<pre>{
+  "questions": [{
+    "id": "q001",
+    "cluster": "welfare",
+    "text": {
+      "en": "If the government has a limited budget...",
+      "ta": "அரசாங்கத்திடம் வரையறுக்கப்பட்ட நிதி..."
+    },
+    "options": [{
+      "id": "q001_a",
+      "text": {
+        "en": "Give cash directly to families",
+        "ta": "குடும்பங்களுக்கு நேரடியாக பணம்"
+      },
+      "partyWeights": {
+        "DMK": 2, "AIADMK": 4, "TVK": 3
+      },
+      "axisWeights": {
+        "welfare": 4, "poverty": 3
+      }
+    }]
+  }]
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 4: DB SCHEMA -->
+<div class="panel" id="p4">
+<h2>Database Schema</h2>
+<p class="sub">PostgreSQL is used only for optional aggregated analytics. No user data, no session data, no individual answers are stored. All tables contain only aggregate counts.</p>
+<div class="sec">
+<div class="card" style="margin-bottom:16px">
+<h3>Schema Overview</h3>
+<div class="g4">
+<div class="card2"><span class="dot dg"></span><strong>analytics_sessions</strong><br><span style="color:#666;font-size:.78rem">Aggregated session counts only</span></div>
+<div class="card2"><span class="dot dg"></span><strong>analytics_answers</strong><br><span style="color:#666;font-size:.78rem">Answer frequency distributions</span></div>
+<div class="card2"><span class="dot dg"></span><strong>analytics_results</strong><br><span style="color:#666;font-size:.78rem">Party match distributions</span></div>
+<div class="card2"><span class="dot dp"></span><strong>config_audit_log</strong><br><span style="color:#666;font-size:.78rem">Config version change history</span></div>
+</div>
+</div>
+</div>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>analytics_sessions</h3>
+<p style="margin-bottom:10px">Counts only — no session IDs, no timestamps below day granularity.</p>
+<table>
+<tr><th>Column</th><th>Type</th><th>Description</th></tr>
+<tr><td>date</td><td>DATE</td><td>Day of sessions (no finer granularity)</td></tr>
+<tr><td>config_version</td><td>VARCHAR(20)</td><td>Active config version that day</td></tr>
+<tr><td>sessions_started</td><td>INTEGER</td><td>Count of sessions started</td></tr>
+<tr><td>sessions_completed</td><td>INTEGER</td><td>Count reaching result screen</td></tr>
+<tr><td>language</td><td>VARCHAR(5)</td><td>Language code (ta / en)</td></tr>
+</table>
+<pre style="margin-top:10px">-- No PRIMARY KEY on session ID
+-- No user identifiers of any kind
+-- Aggregated at day level only
+CREATE TABLE analytics_sessions (
+  date DATE NOT NULL,
+  config_version VARCHAR(20),
+  language VARCHAR(5),
+  sessions_started INTEGER DEFAULT 0,
+  sessions_completed INTEGER DEFAULT 0,
+  PRIMARY KEY (date, config_version, language)
+);</pre>
+</div>
+<div class="card">
+<h3>analytics_answers</h3>
+<p style="margin-bottom:10px">Answer frequency per question per option — no session linkage.</p>
+<table>
+<tr><th>Column</th><th>Type</th><th>Description</th></tr>
+<tr><td>date</td><td>DATE</td><td>Day</td></tr>
+<tr><td>config_version</td><td>VARCHAR(20)</td><td>Question bank version</td></tr>
+<tr><td>question_id</td><td>VARCHAR(20)</td><td>Question ID from questions.json</td></tr>
+<tr><td>option_id</td><td>VARCHAR(20)</td><td>Option ID selected</td></tr>
+<tr><td>count</td><td>INTEGER</td><td>Times this option was selected</td></tr>
+<tr><td>skip_count</td><td>INTEGER</td><td>Times this question was skipped</td></tr>
+</table>
+<pre style="margin-top:10px">CREATE TABLE analytics_answers (
+  date DATE NOT NULL,
+  config_version VARCHAR(20),
+  question_id VARCHAR(20),
+  option_id VARCHAR(20),
+  count INTEGER DEFAULT 0,
+  skip_count INTEGER DEFAULT 0,
+  PRIMARY KEY (date, config_version, question_id, option_id)
+);</pre>
+</div>
+<div class="card">
+<h3>analytics_results</h3>
+<p style="margin-bottom:10px">Distribution of party matches, archetypes, confidence levels.</p>
+<table>
+<tr><th>Column</th><th>Type</th><th>Description</th></tr>
+<tr><td>date</td><td>DATE</td><td>Day</td></tr>
+<tr><td>config_version</td><td>VARCHAR(20)</td><td>Config version</td></tr>
+<tr><td>primary_party_id</td><td>VARCHAR(20)</td><td>Top matched party</td></tr>
+<tr><td>archetype_id</td><td>VARCHAR(30)</td><td>Assigned archetype</td></tr>
+<tr><td>confidence_level</td><td>VARCHAR(10)</td><td>High / Medium / Low</td></tr>
+<tr><td>count</td><td>INTEGER</td><td>Number of results with this combination</td></tr>
+</table>
+<pre style="margin-top:10px">CREATE TABLE analytics_results (
+  date DATE NOT NULL,
+  config_version VARCHAR(20),
+  primary_party_id VARCHAR(20),
+  archetype_id VARCHAR(30),
+  confidence_level VARCHAR(10),
+  count INTEGER DEFAULT 0,
+  PRIMARY KEY (date, config_version, primary_party_id,
+               archetype_id, confidence_level)
+);</pre>
+</div>
+<div class="card">
+<h3>config_audit_log</h3>
+<p style="margin-bottom:10px">Immutable log of every config change. Used for bias review and legal compliance.</p>
+<table>
+<tr><th>Column</th><th>Type</th><th>Description</th></tr>
+<tr><td>id</td><td>SERIAL</td><td>Auto-increment</td></tr>
+<tr><td>changed_at</td><td>TIMESTAMPTZ</td><td>When change was applied</td></tr>
+<tr><td>config_file</td><td>VARCHAR(50)</td><td>Which file changed</td></tr>
+<tr><td>previous_version</td><td>VARCHAR(20)</td><td>Previous version string</td></tr>
+<tr><td>new_version</td><td>VARCHAR(20)</td><td>New version string</td></tr>
+<tr><td>previous_hash</td><td>CHAR(64)</td><td>SHA256 of previous file</td></tr>
+<tr><td>new_hash</td><td>CHAR(64)</td><td>SHA256 of new file</td></tr>
+<tr><td>changed_by</td><td>VARCHAR(100)</td><td>Operator identifier</td></tr>
+<tr><td>change_summary</td><td>TEXT</td><td>Human-readable description</td></tr>
+<tr><td>diff_json</td><td>JSONB</td><td>Machine-readable diff of changed fields</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sec">
+<div class="card" style="border-color:rgba(248,113,113,.3)">
+<h3 style="color:var(--r)">⚠️ What is NOT stored</h3>
+<div class="g4">
+<div class="card2"><span style="color:var(--r)">✗</span> Individual session IDs</div>
+<div class="card2"><span style="color:var(--r)">✗</span> User answers per session</div>
+<div class="card2"><span style="color:var(--r)">✗</span> IP addresses or device IDs</div>
+<div class="card2"><span style="color:var(--r)">✗</span> Browser fingerprints</div>
+<div class="card2"><span style="color:var(--r)">✗</span> Timestamps below day level</div>
+<div class="card2"><span style="color:var(--r)">✗</span> Party score per session</div>
+<div class="card2"><span style="color:var(--r)">✗</span> Demographic data</div>
+<div class="card2"><span style="color:var(--r)">✗</span> Any PII whatsoever</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- TAB 5: DATA FLOWS -->
+<div class="panel" id="p5">
+<h2>Data Flows</h2>
+<p class="sub">Three key flows: normal session, manifesto update, and adding a new party.</p>
+<div class="sec">
+<h3>Flow 1: Normal User Session</h3>
+<div class="card">
+<div style="font-family:Fira Code,monospace;font-size:.8rem;line-height:2.2">
+<div><span style="color:#60a5fa">1. App loads</span> → ConfigLoader verifies all 6 config hashes → ConfigBundle injected into React context</div>
+<div><span style="color:#60a5fa">2. User starts</span> → QuestionnaireEngine.createSession() → cluster-randomizes questions → pins config version to session</div>
+<div><span style="color:#60a5fa">3. Each answer</span> → session updated in React state → synced to localStorage → IdeologyMappingEngine emits weights</div>
+<div><span style="color:#60a5fa">4. Session complete</span> → ScoringEngine.compute() → raw scores → normalize() → confidence (dynamic N-party formula)</div>
+<div><span style="color:#60a5fa">5. Profiling</span> → ProfilingEngine.classify() reads Archetype_Registry → primary + secondary archetype</div>
+<div><span style="color:#60a5fa">6. Consistency</span> → ProfilingEngine.detectContradictions() reads axis independence pairs → adjusts confidence if needed</div>
+<div><span style="color:#60a5fa">7. Explanation</span> → ExplanationEngine.generate() reads all registries → bilingual explanation assembled</div>
+<div><span style="color:#60a5fa">8. Result rendered</span> → Result_Dashboard reads Party_Registry for party count → renders N party cards dynamically</div>
+<div><span style="color:#60a5fa">9. Share</span> → POST /api/share → HMAC-SHA256 signed URL → monochrome share card generated</div>
+<div><span style="color:#60a5fa">10. Session end</span> → localStorage cleared → analytics incremented (aggregated only)</div>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>Flow 2: Manifesto Update</h3>
+<div class="card">
+<div style="font-family:Fira Code,monospace;font-size:.8rem;line-height:2.2">
+<div><span style="color:#facc15">1. Operator runs</span> → <code>scripts/update-manifesto.ts --party DMK --file dmk-2026-v2.json</code></div>
+<div><span style="color:#facc15">2. Script parses</span> → new manifesto → recomputes Party_Weights for all DMK options in questions.json</div>
+<div><span style="color:#facc15">3. Validation</span> → IdeologyMappingEngine.validate() → collinearity check → discriminating power check</div>
+<div><span style="color:#facc15">4. Hash update</span> → new sha256 computed → embedded in questions.json and party-registry.json</div>
+<div><span style="color:#facc15">5. Audit log</span> → config_audit_log entry written: {prev_version, new_version, prev_hash, new_hash, diff_json}</div>
+<div><span style="color:#facc15">6. Deploy</span> → new config files pushed to CDN → ConfigLoader picks up on next app startup</div>
+<div><span style="color:#facc15">7. In-progress sessions</span> → complete using version pinned at session creation → unaffected</div>
+<div><span style="color:#facc15">8. New sessions</span> → use updated weights automatically</div>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>Flow 3: Add New Party</h3>
+<div class="card">
+<div style="font-family:Fira Code,monospace;font-size:.8rem;line-height:2.2">
+<div><span style="color:#4ade80">1. Operator runs</span> → <code>scripts/add-party.ts --id NEWPARTY --name-en "New Party" --name-ta "புதிய கட்சி"</code></div>
+<div><span style="color:#4ade80">2. Script adds</span> → party entry to party-registry.json with governanceStatus, weightBasis fields</div>
+<div><span style="color:#4ade80">3. Script scaffolds</span> → Party_Weight fields for NEWPARTY in all 30 questions (set to 0 as placeholder)</div>
+<div><span style="color:#4ade80">4. Operator fills</span> → Party_Weights based on manifesto analysis (domain expert review required)</div>
+<div><span style="color:#4ade80">5. Validation</span> → scripts/validate-config.ts → all checks pass</div>
+<div><span style="color:#4ade80">6. Hashes updated</span> → both files rehashed</div>
+<div><span style="color:#4ade80">7. Deploy</span> → app automatically renders N+1 party cards on Result_Dashboard</div>
+<div><span style="color:#4ade80">8. Confidence thresholds</span> → auto-recalculate: High = 100/(N+1)+12, Medium = 100/(N+1)+2</div>
+<div><span style="color:#4ade80">9. Zero code changes</span> → entire flow is config-only</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 6: REPO STRUCTURE -->
+<div class="panel" id="p6">
+<h2>Repository Structure</h2>
+<p class="sub">Monorepo — Next.js app, config layer, CLI tooling, and tests all in one repo.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>Directory Tree</h3>
+<pre>voter-matcher-tn-2026/
+├── app/                        # Next.js App Router
+│   ├── page.tsx                # Landing screen
+│   ├── layout.tsx              # Root layout + providers
+│   └── api/
+│       ├── config/route.ts     # GET /api/config
+│       ├── score/route.ts      # POST /api/score
+│       ├── share/route.ts      # POST /api/share
+│       └── methodology/route.ts
+│
+├── components/
+│   ├── screens/
+│   │   ├── LandingScreen.tsx
+│   │   ├── OnboardingScreen.tsx
+│   │   ├── QuestionnaireScreen.tsx
+│   │   ├── ProcessingScreen.tsx
+│   │   └── ResultDashboard.tsx
+│   ├── ui/
+│   │   ├── PartyMatchCards.tsx  # Renders N cards from Party_Registry
+│   │   ├── AxisBreakdown.tsx    # Renders N axes from Axis_Registry
+│   │   ├── ArchetypeCard.tsx
+│   │   ├── ConfidencePanel.tsx
+│   │   ├── ExplanationPanel.tsx
+│   │   ├── SharePanel.tsx
+│   │   ├── ProgressBar.tsx
+│   │   └── QuestionCard.tsx
+│   └── providers/
+│       ├── ConfigProvider.tsx
+│       ├── LanguageProvider.tsx
+│       └── SessionProvider.tsx
+│
+├── engines/                    # Core business logic
+│   ├── ConfigLoader.ts
+│   ├── QuestionnaireEngine.ts
+│   ├── ScoringEngine.ts
+│   ├── IdeologyMappingEngine.ts
+│   ├── ProfilingEngine.ts
+│   ├── ExplanationEngine.ts
+│   ├── ConsistencyDetector.ts
+│   └── ShareCardService.ts
+│
+├── config/                     # Config Layer (versioned JSON)
+│   ├── party-registry.json
+│   ├── axis-registry.json
+│   ├── archetype-registry.json
+│   ├── language-registry.json
+│   ├── scoring-params.json
+│   └── questions.json
+│
+├── locales/                    # Translation files
+│   ├── ta/
+│   │   ├── common.json
+│   │   ├── questionnaire.json
+│   │   ├── result.json
+│   │   └── explanation.json
+│   └── en/
+│       ├── common.json
+│       ├── questionnaire.json
+│       ├── result.json
+│       └── explanation.json
+│
+├── scripts/                    # CLI tooling
+│   ├── update-manifesto.ts
+│   ├── add-party.ts
+│   ├── add-language.ts
+│   └── validate-config.ts
+│
+├── tests/
+│   ├── unit/
+│   │   ├── ScoringEngine.test.ts
+│   │   ├── ProfilingEngine.test.ts
+│   │   └── ExplanationEngine.test.ts
+│   └── pbt/                    # Property-based tests
+│       ├── scoring.pbt.ts      # Normalization, determinism, confidence
+│       ├── profiling.pbt.ts    # Archetype independence
+│       └── config.pbt.ts       # Hash integrity, language completeness
+│
+├── docs/
+│   └── manifesto-versions/     # Archived manifesto snapshots
+│       ├── dmk-2026-v1.json
+│       ├── aiadmk-2026-v1.json
+│       └── tvk-2026-v1.json
+│
+└── types/
+    ├── config.ts               # ConfigBundle, PartyRegistry, etc.
+    ├── session.ts              # Session, Answer, Warning
+    └── result.ts               # ScoreResult, ArchetypeResult, Explanation</pre>
+</div>
+<div>
+<div class="card" style="margin-bottom:14px">
+<h3>Key Separation of Concerns</h3>
+<table>
+<tr><th>Layer</th><th>What lives here</th><th>Who changes it</th></tr>
+<tr><td><code>engines/</code></td><td>Pure business logic, no political content</td><td>Developers</td></tr>
+<tr><td><code>config/</code></td><td>All political content, scoring params</td><td>Domain experts + operators</td></tr>
+<tr><td><code>locales/</code></td><td>UI strings in all languages</td><td>Translators</td></tr>
+<tr><td><code>components/</code></td><td>UI rendering, reads config via context</td><td>Developers</td></tr>
+<tr><td><code>scripts/</code></td><td>Config update tooling</td><td>Operators</td></tr>
+<tr><td><code>tests/pbt/</code></td><td>Correctness property tests</td><td>Developers</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>10 Correctness Properties (PBT)</h3>
+<table>
+<tr><th>#</th><th>Property</th><th>Engine</th></tr>
+<tr><td>1</td><td>sum(partyScores) === 100 for all non-zero inputs</td><td>Scoring</td></tr>
+<tr><td>2</td><td>All-skipped → each party gets 100/N exactly</td><td>Scoring</td></tr>
+<tr><td>3</td><td>Same answers + same config → identical result</td><td>Scoring</td></tr>
+<tr><td>4</td><td>Higher gap → equal or higher confidence level</td><td>Scoring</td></tr>
+<tr><td>5</td><td>Archetype classification never reads party scores</td><td>Profiling</td></tr>
+<tr><td>6</td><td>Contradiction → confidence drops exactly one level</td><td>Consistency</td></tr>
+<tr><td>7</td><td>High &gt; Medium &gt; Low thresholds for all N ≥ 2</td><td>Scoring</td></tr>
+<tr><td>8</td><td>Hash mismatch → system refuses to start</td><td>ConfigLoader</td></tr>
+<tr><td>9</td><td>Tampered share URL fails verification</td><td>ShareCard</td></tr>
+<tr><td>10</td><td>Every string key present in all language files</td><td>i18n</td></tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- TAB 7: API ROUTES -->
+<div class="panel" id="p7">
+<h2>API Reference</h2>
+<p class="sub">Four API routes — all stateless, all serverless-compatible. Scoring runs client-side by default; server API is fallback only.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>GET /api/config</h3>
+<span class="badge bg">Public</span>
+<p style="margin:8px 0">Returns the public-safe ConfigBundle subset. Used by client to verify it has the latest config version. Does NOT include question weights (security).</p>
+<pre>// Response
+{
+  "version": "1.0.0",
+  "parties": [...],       // Party_Registry (no weights)
+  "axes": [...],          // Axis_Registry
+  "archetypes": [...],    // Archetype_Registry
+  "languages": [...],     // Language_Registry
+  "params": {
+    "questionCount": 30,
+    "estimatedMinutes": 3
+    // No weight ranges exposed
+  }
+}</pre>
+</div>
+<div class="card">
+<h3>POST /api/score</h3>
+<span class="badge bo">Fallback</span>
+<p style="margin:8px 0">Server-side scoring fallback. Used when client-side scoring fails (e.g., corrupted localStorage). Validates configVersion matches server's active version.</p>
+<pre>// Request
+{
+  "answers": {
+    "q001": "q001_a",
+    "q002": "q002_c"
+  },
+  "configVersion": "1.0.0",
+  "language": "ta"
+}
+
+// Response
+{
+  "partyScores": { "DMK": 58, "AIADMK": 28, "TVK": 14 },
+  "axisScores": { "welfare": 42, "socialJustice": 38 },
+  "confidenceScore": "High",
+  "archetype": { "primary": "equity_builder" },
+  "explanation": { "primary": "...", "secondary": "..." }
+}</pre>
+</div>
+<div class="card">
+<h3>POST /api/share</h3>
+<span class="badge bp">Signed</span>
+<p style="margin:8px 0">Generates a tamper-proof share card. Rate-limited to 10 requests/minute per IP. Returns HMAC-SHA256 signed URL and monochrome PNG.</p>
+<pre>// Request
+{
+  "partyScores": { "DMK": 58, "AIADMK": 28, "TVK": 14 },
+  "archetype": "equity_builder",
+  "confidence": "High",
+  "language": "ta"
+}
+
+// Response
+{
+  "url": "https://votermatcher.in/r?d=...&sig=...",
+  "imageData": "data:image/png;base64,...",
+  "disclaimer": "இது வாக்களிக்க பரிந்துரை அல்ல...",
+  "verifyUrl": "https://votermatcher.in/methodology"
+}
+
+// Rate limit: 10 req/min per IP (Redis)
+// Signing: HMAC-SHA256(payload, SERVER_SECRET)</pre>
+</div>
+<div class="card">
+<h3>GET /api/methodology</h3>
+<span class="badge bg">Public</span>
+<p style="margin:8px 0">Returns the public methodology page data — axis definitions, weight basis documentation, audit log summary, disclaimer text.</p>
+<pre>// Response
+{
+  "axes": [
+    {
+      "id": "welfare",
+      "label": { "en": "Government Support Programs" },
+      "definition": "...",
+      "weightBasis": "documented policy positions"
+    }
+  ],
+  "parties": [
+    {
+      "id": "TVK",
+      "weightBasis": "promise-based",
+      "manifestoVersion": "tvk-2026-v1",
+      "auditedBy": "Expert Panel 2026-03-15"
+    }
+  ],
+  "auditLog": [
+    { "date": "2026-03-01", "change": "Initial weights set" }
+  ]
+}</pre>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>Rate Limiting — Vercel Edge Middleware (Free, No Redis)</h3>
+<div class="g3">
+<div class="card2"><h4>POST /api/score</h4><p>100 req/min per IP via Edge Middleware. No Redis. Vercel handles this natively at the edge.</p></div>
+<div class="card2"><h4>POST /api/share</h4><p>10 req/min per IP via Edge Middleware. Share card PNG generated client-side — server only signs URL.</p></div>
+<div class="card2"><h4>GET /api/config</h4><p>Served as static JSON from Vercel CDN — no serverless invocation, no rate limit needed.</p></div>
+</div>
+</div>
+</div>
+<!-- TAB 8: SECURITY -->
+<div class="panel" id="p8">
+<h2>Security Architecture</h2>
+<p class="sub">Politically sensitive system at scale — security is layered across config integrity, API protection, share card anti-forgery, and privacy.</p>
+<div class="sec">
+<div class="g2">
+<div class="card">
+<h3>Config Integrity</h3>
+<table>
+<tr><th>Threat</th><th>Mitigation</th></tr>
+<tr><td>Tampered config file skews results</td><td>SHA256 hash embedded in each file, verified at startup. Mismatch = startup failure.</td></tr>
+<tr><td>Unauthorized config change</td><td>Config files in version-controlled repo. All changes logged in config_audit_log with operator ID.</td></tr>
+<tr><td>Stale config served from CDN</td><td>Config version pinned to each session. Server validates configVersion on /api/score requests.</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>API Protection</h3>
+<table>
+<tr><th>Threat</th><th>Mitigation</th></tr>
+<tr><td>Reverse-engineer optimal answer sequences</td><td>Rate limiting on /api/score (100 req/min). Question weights not exposed in /api/config response.</td></tr>
+<tr><td>Automated bulk scoring</td><td>Bot detection: minimum session duration check, honeypot fields in questionnaire form.</td></tr>
+<tr><td>Bulk fake share card generation</td><td>Rate limiting on /api/share (10 req/min per IP).</td></tr>
+<tr><td>Forged share card URLs</td><td>HMAC-SHA256 signing of all share URLs. Verification endpoint rejects tampered payloads.</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>Privacy</h3>
+<table>
+<tr><th>Requirement</th><th>Implementation</th></tr>
+<tr><td>No PII stored</td><td>Anonymous_Mode by default. No session IDs, no IP logging, no device fingerprinting.</td></tr>
+<tr><td>TLS 1.3</td><td>All API routes enforce TLS 1.3 minimum. Configured at CDN/load balancer level.</td></tr>
+<tr><td>localStorage cleared on session end</td><td>SessionProvider clears localStorage on result view, browser close (beforeunload), and navigation away.</td></tr>
+<tr><td>Analytics non-identifiable</td><td>Only day-level aggregates stored. No combination of fields can re-identify a user.</td></tr>
+<tr><td>DPDPA compliance</td><td>Pre-session disclosure when analytics enabled. Specific disclosure of what is collected and why.</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>Share Card Anti-Misinformation</h3>
+<table>
+<tr><th>Rule</th><th>Enforcement</th></tr>
+<tr><td>No party colors</td><td>ShareCardService uses monochrome palette only. Enforced in generator, not CSS.</td></tr>
+<tr><td>No party logos</td><td>ShareCardService renders text labels only. No image assets from Party_Registry used.</td></tr>
+<tr><td>Disclaimer always visible</td><td>Disclaimer text sourced from scoring-params.json, rendered as non-removable element in PNG.</td></tr>
+<tr><td>Verify URL always present</td><td>Methodology URL embedded in every share card image and URL.</td></tr>
+<tr><td>URL tamper detection</td><td>HMAC-SHA256 signature. Any modification to payload invalidates signature.</td></tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- TAB 9: MODULARITY -->
+<div class="panel" id="p9">
+<h2>Modularity & Extensibility</h2>
+<p class="sub">Every extension scenario requires only config changes. Zero code changes for adding parties, languages, axes, or updating manifestos.</p>
+<div class="sec">
+<div class="g3">
+<div class="card">
+<h3>➕ Add a New Party</h3>
+<div style="margin:8px 0">
+<span class="badge bg">Config only</span>
+<span class="badge by" style="margin-left:4px">~2 hours</span>
+</div>
+<p>1. Add entry to <code>party-registry.json</code><br>
+2. Run <code>add-party.ts</code> to scaffold weights<br>
+3. Fill Party_Weights (domain expert)<br>
+4. Run <code>validate-config.ts</code><br>
+5. Deploy — UI auto-renders new party card<br>
+6. Confidence thresholds auto-recalculate</p>
+</div>
+<div class="card">
+<h3>📄 Update a Manifesto</h3>
+<div style="margin:8px 0">
+<span class="badge bg">Config only</span>
+<span class="badge by" style="margin-left:4px">~1 hour</span>
+</div>
+<p>1. Run <code>update-manifesto.ts</code> with new file<br>
+2. Script recomputes Party_Weights<br>
+3. Collinearity + power checks run<br>
+4. Hashes updated automatically<br>
+5. Audit log entry written<br>
+6. In-progress sessions unaffected</p>
+</div>
+<div class="card">
+<h3>🌐 Add a New Language</h3>
+<div style="margin:8px 0">
+<span class="badge bg">Config only</span>
+<span class="badge by" style="margin-left:4px">~4 hours</span>
+</div>
+<p>1. Add entry to <code>language-registry.json</code><br>
+2. Run <code>add-language.ts</code> to scaffold files<br>
+3. Translate all string keys<br>
+4. Add translated text to questions.json<br>
+5. Deploy — language toggle auto-shows new option</p>
+</div>
+<div class="card">
+<h3>📊 Add a New Axis</h3>
+<div style="margin:8px 0">
+<span class="badge bo">Config + questions</span>
+<span class="badge by" style="margin-left:4px">~1 day</span>
+</div>
+<p>1. Add entry to <code>axis-registry.json</code><br>
+2. Add Axis_Weights to relevant questions<br>
+3. Add archetype mapping if needed<br>
+4. Run <code>validate-config.ts</code><br>
+5. Deploy — axis breakdown auto-renders new row</p>
+</div>
+<div class="card">
+<h3>🧠 Add a New Archetype</h3>
+<div style="margin:8px 0">
+<span class="badge bo">Config + axes</span>
+<span class="badge by" style="margin-left:4px">~2 hours</span>
+</div>
+<p>1. Add entry to <code>archetype-registry.json</code><br>
+2. Define dominant axes and thresholds<br>
+3. Add descriptions in all languages<br>
+4. Update axis independence pairs if needed<br>
+5. Deploy — ProfilingEngine auto-includes new archetype</p>
+</div>
+<div class="card">
+<h3>🗳️ New Election / Region</h3>
+<div style="margin:8px 0">
+<span class="badge bp">Full config swap</span>
+<span class="badge by" style="margin-left:4px">~1 week</span>
+</div>
+<p>1. Create new config set for new election<br>
+2. New party-registry with regional parties<br>
+3. New questions relevant to that region<br>
+4. New language-registry if different languages<br>
+5. Deploy — same codebase, different config</p>
+</div>
+</div>
+</div>
+<div class="sec">
+<h3>What is hardcoded vs configurable</h3>
+<div class="g2">
+<div class="card">
+<h3 style="color:var(--r)">🔒 Hardcoded (intentionally)</h3>
+<table>
+<tr><th>Item</th><th>Why hardcoded</th></tr>
+<tr><td>Scoring algorithm (sum of weights)</td><td>Core correctness property — changing it requires PBT re-validation</td></tr>
+<tr><td>Normalization formula (sum to 100)</td><td>Mathematical invariant — not a policy decision</td></tr>
+<tr><td>HMAC-SHA256 for share signing</td><td>Security primitive — not configurable by design</td></tr>
+<tr><td>TLS 1.3 minimum</td><td>Security floor — not configurable by design</td></tr>
+<tr><td>localStorage clear on session end</td><td>Privacy requirement — not configurable by design</td></tr>
+</table>
+</div>
+<div class="card">
+<h3 style="color:var(--g)">✅ Configurable (via Config Layer)</h3>
+<table>
+<tr><th>Item</th><th>Config file</th></tr>
+<tr><td>Party list, count, names</td><td>party-registry.json</td></tr>
+<tr><td>Axis list, count, labels</td><td>axis-registry.json</td></tr>
+<tr><td>Archetype list, thresholds</td><td>archetype-registry.json</td></tr>
+<tr><td>Supported languages</td><td>language-registry.json</td></tr>
+<tr><td>Question count, option count</td><td>scoring-params.json</td></tr>
+<tr><td>Weight range (min/max)</td><td>scoring-params.json</td></tr>
+<tr><td>Confidence thresholds</td><td>Derived dynamically from N</td></tr>
+<tr><td>Collinearity threshold</td><td>scoring-params.json</td></tr>
+<tr><td>Disclaimer text</td><td>scoring-params.json</td></tr>
+<tr><td>Performance targets</td><td>scoring-params.json</td></tr>
+<tr><td>All political content</td><td>questions.json + registries</td></tr>
+<tr><td>All UI strings</td><td>locales/{lang}/*.json</td></tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- TAB 10: COST -->
+<div class="panel" id="p10">
+<h2>Cost Architecture</h2>
+<p class="sub">Designed for near-zero infrastructure cost. Total estimated monthly spend: $0-$1. All scoring runs in the browser — the server barely exists.</p>
+<div class="sec">
+<h3>Why it costs almost nothing</h3>
+<div class="g3">
+<div class="card"><h3>Client-side scoring</h3><p>All 6 engines run in the browser. Server API is fallback only — called maybe 0.1% of sessions. Vercel free tier handles millions of invocations/month.</p></div>
+<div class="card"><h3>Static config</h3><p>All 6 config JSON files (~50KB total) are static assets on Vercel CDN. Zero serverless invocations for config reads. Cached in browser after first load.</p></div>
+<div class="card"><h3>Client-side share cards</h3><p>Share card PNG generated via Canvas API in browser. Server only signs a URL string via Web Crypto API. No image processing on server.</p></div>
+</div>
+</div>
+<div class="sec">
+<h3>Full Cost Breakdown</h3>
+<div class="card">
+<table>
+<tr><th>Component</th><th>Original</th><th>Optimized</th><th>Monthly Cost</th><th>Saving</th></tr>
+<tr><td>Hosting</td><td>Vercel Pro</td><td>Vercel Free/Hobby</td><td style="color:var(--g)">$0</td><td>~$20</td></tr>
+<tr><td>Database</td><td>PostgreSQL managed</td><td>Turso SQLite free tier</td><td style="color:var(--g)">$0</td><td>~$25</td></tr>
+<tr><td>Rate limiting</td><td>Redis</td><td>Vercel Edge Middleware (built-in)</td><td style="color:var(--g)">$0</td><td>~$15</td></tr>
+<tr><td>File storage</td><td>AWS S3</td><td>Git repo (config is code)</td><td style="color:var(--g)">$0</td><td>~$5</td></tr>
+<tr><td>CDN</td><td>AWS CloudFront</td><td>Vercel CDN (included free)</td><td style="color:var(--g)">$0</td><td>~$10</td></tr>
+<tr><td>Share card gen</td><td>Server-side PNG</td><td>Client-side Canvas API</td><td style="color:var(--g)">$0</td><td>~$5</td></tr>
+<tr><td>Audit log</td><td>PostgreSQL table</td><td>Git commits (free)</td><td style="color:var(--g)">$0</td><td>$0</td></tr>
+<tr><td>Domain</td><td>—</td><td>Custom domain (one-time)</td><td style="color:var(--y)">~$1</td><td>—</td></tr>
+<tr style="font-weight:700"><td>Total</td><td>~$80/month</td><td>Vercel Free + Turso Free</td><td style="color:var(--g);font-size:1.1rem">$0-$1/month</td><td style="color:var(--g)">~$79/month</td></tr>
+</table>
+</div>
+</div>
+<div class="sec">
+<h3>Infrastructure Stack</h3>
+<div class="g2">
+<div class="card">
+<h3>What we use</h3>
+<table>
+<tr><th>Service</th><th>Free Tier Limits</th><th>Our Usage</th></tr>
+<tr><td><span class="dot dg"></span>Vercel Free</td><td>100GB bandwidth, 100K invocations/month</td><td>~50KB config x users + rare fallback calls</td></tr>
+<tr><td><span class="dot dg"></span>Turso SQLite</td><td>500 databases, 1B row reads/month</td><td>3 tables, ~1K writes/day max</td></tr>
+<tr><td><span class="dot dg"></span>Vercel Edge Middleware</td><td>Unlimited edge invocations</td><td>Rate limiting on 2 API routes</td></tr>
+<tr><td><span class="dot dg"></span>GitHub</td><td>Unlimited public repos</td><td>Config versioning + audit log</td></tr>
+<tr><td><span class="dot dg"></span>Web Crypto API</td><td>Browser native — free</td><td>HMAC-SHA256 share card signing</td></tr>
+<tr><td><span class="dot dg"></span>Canvas API</td><td>Browser native — free</td><td>Share card PNG generation</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>What we eliminated</h3>
+<table>
+<tr><th>Removed</th><th>Why not needed</th></tr>
+<tr><td><span class="dot dr"></span>Redis</td><td>Vercel Edge Middleware handles rate limiting natively</td></tr>
+<tr><td><span class="dot dr"></span>PostgreSQL</td><td>SQLite (Turso) sufficient for append-only aggregated analytics</td></tr>
+<tr><td><span class="dot dr"></span>AWS S3</td><td>Config files live in Git. No binary assets to store.</td></tr>
+<tr><td><span class="dot dr"></span>AWS CloudFront</td><td>Vercel CDN is included and sufficient</td></tr>
+<tr><td><span class="dot dr"></span>Server PNG generation</td><td>Canvas API in browser — zero server cost</td></tr>
+<tr><td><span class="dot dr"></span>Session store</td><td>Everything in browser localStorage — no server state</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sec">
+<div class="card" style="border-color:rgba(74,222,128,.3)">
+<h3 style="color:var(--g)">Scale check: Can free tier handle 100K concurrent users?</h3>
+<p style="margin:8px 0">Yes — because the server does almost nothing:</p>
+<div class="g4" style="margin-top:12px">
+<div class="card2"><strong>Config load</strong><br><span style="color:#666;font-size:.78rem">Static CDN, cached in browser. 0 serverless calls after first load.</span></div>
+<div class="card2"><strong>Scoring</strong><br><span style="color:#666;font-size:.78rem">100% client-side. 0 server calls for 99.9% of sessions.</span></div>
+<div class="card2"><strong>Share card</strong><br><span style="color:#666;font-size:.78rem">Canvas API in browser. Server only signs URL — 1 lightweight call.</span></div>
+<div class="card2"><strong>Analytics</strong><br><span style="color:#666;font-size:.78rem">Batched writes to Turso. 1 write per completed session.</span></div>
+</div>
+</div>
+</div>
+</div><!-- TAB 10: COST -->
+<script>
+function show(n){
+  document.querySelectorAll(".panel").forEach((p,i)=>{p.classList.toggle("active",i===n)});
+  document.querySelectorAll(".tab").forEach((t,i)=>{t.classList.toggle("active",i===n)});
+}
+</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>வாக்காளர் பொருத்தி | Voter Matcher – TN 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --dmk:#E63946;--aiadmk:#F4A261;--tvk:#457B9D;
+  --bg:#0f0f13;--card:#1a1a24;--card2:#22222f;
+  --text:#f0f0f0;--muted:#888;--border:#2e2e3e;
+  --accent:#7C3AED;--accent2:#A78BFA;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter','Noto Sans Tamil',sans-serif;min-height:100vh}
+.ta{font-family:'Noto Sans Tamil',sans-serif;font-size:1.05em}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--border);background:rgba(15,15,19,0.95);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{font-weight:700;font-size:1.1rem;color:var(--accent2)}
+.lang-toggle{display:flex;gap:4px;background:var(--card2);border-radius:8px;padding:4px}
+.lang-btn{padding:6px 14px;border-radius:6px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;transition:all 0.2s;background:transparent;color:var(--muted)}
+.lang-btn.active{background:var(--accent);color:#fff}
+
+/* SCREENS */
+.screen{display:none;min-height:calc(100vh - 60px)}
+.screen.active{display:flex;flex-direction:column}
+
+/* LANDING */
+#landing{align-items:center;justify-content:center;text-align:center;padding:40px 24px;background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,0.15) 0%,transparent 70%)}
+.hero-badge{background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);color:var(--accent2);padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:600;margin-bottom:24px;display:inline-block}
+.hero-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:12px}
+.hero-title span{background:linear-gradient(135deg,var(--accent2),#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto 32px;line-height:1.6}
+.hero-stats{display:flex;gap:32px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--accent2)}
+.stat-label{font-size:0.75rem;color:var(--muted);margin-top:2px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#6D28D9);color:#fff;border:none;padding:16px 40px;border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(124,58,237,0.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(124,58,237,0.5)}
+.party-pills{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.pill{padding:8px 20px;border-radius:20px;font-size:0.85rem;font-weight:600;border:1px solid}
+.pill.dmk{color:var(--dmk);border-color:rgba(230,57,70,0.4);background:rgba(230,57,70,0.08)}
+.pill.aiadmk{color:var(--aiadmk);border-color:rgba(244,162,97,0.4);background:rgba(244,162,97,0.08)}
+.pill.tvk{color:var(--tvk);border-color:rgba(69,123,157,0.4);background:rgba(69,123,157,0.08)}
+
+/* ONBOARDING */
+#onboarding{padding:32px 24px;max-width:600px;margin:0 auto;width:100%}
+.onboard-step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;display:flex;gap:16px;align-items:flex-start}
+.onboard-icon{width:44px;height:44px;border-radius:12px;background:rgba(124,58,237,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.onboard-title{font-weight:600;margin-bottom:4px}
+.onboard-desc{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.disclaimer-box{background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.3);border-radius:12px;padding:16px;margin:20px 0;font-size:0.85rem;color:var(--muted);line-height:1.6}
+
+/* QUESTIONNAIRE */
+#questionnaire{padding:0;max-width:680px;margin:0 auto;width:100%}
+.q-header{padding:20px 24px;border-bottom:1px solid var(--border);background:var(--card)}
+.progress-bar-wrap{background:var(--border);border-radius:4px;height:6px;margin-bottom:12px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:4px;transition:width 0.4s ease;width:23%}
+.q-meta{display:flex;justify-content:space-between;align-items:center}
+.q-count{font-size:0.85rem;color:var(--muted)}
+.q-axis-tag{background:rgba(124,58,237,0.15);color:var(--accent2);padding:3px 10px;border-radius:10px;font-size:0.75rem;font-weight:600}
+.q-body{padding:28px 24px}
+.q-text{font-size:1.15rem;font-weight:600;line-height:1.5;margin-bottom:8px}
+.q-text-ta{font-size:1.1rem;color:var(--muted);margin-bottom:28px;line-height:1.6}
+.options-list{display:flex;flex-direction:column;gap:12px}
+.option-btn{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;text-align:left;cursor:pointer;transition:all 0.2s;width:100%}
+.option-btn:hover{border-color:var(--accent);background:rgba(124,58,237,0.08);transform:translateX(4px)}
+.option-btn.selected{border-color:var(--accent);background:rgba(124,58,237,0.15)}
+.option-en{font-weight:500;font-size:0.95rem;margin-bottom:4px;color:var(--text)}
+.option-ta{font-size:0.88rem;color:var(--muted)}
+.q-actions{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid var(--border)}
+.btn-skip{background:transparent;border:1px solid var(--border);color:var(--muted);padding:10px 20px;border-radius:8px;cursor:pointer;font-size:0.85rem}
+.btn-next{background:var(--accent);color:#fff;border:none;padding:10px 28px;border-radius:8px;cursor:pointer;font-weight:600;font-size:0.9rem}
+
+/* PROCESSING */
+#processing{align-items:center;justify-content:center;text-align:center;padding:40px 24px}
+.spinner{width:64px;height:64px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 24px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.processing-steps{margin-top:32px;text-align:left;max-width:320px}
+.p-step{display:flex;align-items:center;gap:12px;padding:10px 0;color:var(--muted);font-size:0.9rem}
+.p-step.done{color:var(--text)}
+.p-step.done::before{content:'✓';color:#4ade80;font-weight:700}
+.p-step:not(.done)::before{content:'○';color:var(--muted)}
+
+/* RESULTS */
+#results{padding:24px;max-width:720px;margin:0 auto;width:100%}
+.result-header{text-align:center;margin-bottom:32px}
+.result-title{font-size:1.5rem;font-weight:700;margin-bottom:8px}
+.result-sub{color:var(--muted);font-size:0.9rem}
+
+.match-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:28px}
+.match-card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.match-card.primary{border-color:var(--dmk);background:rgba(230,57,70,0.06)}
+.match-card.primary .match-pct{color:var(--dmk)}
+.match-card.secondary{border-color:var(--aiadmk)}
+.match-card.secondary .match-pct{color:var(--aiadmk)}
+.match-card.third .match-pct{color:var(--tvk)}
+.primary-badge{position:absolute;top:10px;right:10px;background:var(--dmk);color:#fff;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:8px}
+.match-party{font-weight:700;font-size:0.95rem;margin-bottom:4px}
+.match-pct{font-size:2rem;font-weight:700}
+.match-label{font-size:0.75rem;color:var(--muted);margin-top:2px}
+.match-bar{height:4px;border-radius:2px;margin-top:12px;background:var(--border)}
+.match-bar-fill{height:100%;border-radius:2px}
+.dmk-fill{background:var(--dmk);width:58%}
+.aiadmk-fill{background:var(--aiadmk);width:28%}
+.tvk-fill{background:var(--tvk);width:14%}
+
+.result-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px}
+.section-title{font-weight:700;font-size:1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';width:4px;height:18px;background:var(--accent);border-radius:2px;display:inline-block}
+
+.archetype-card{display:flex;gap:16px;align-items:flex-start}
+.archetype-icon{width:52px;height:52px;border-radius:14px;background:rgba(230,57,70,0.15);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.archetype-name{font-weight:700;font-size:1.1rem;color:var(--dmk);margin-bottom:4px}
+.archetype-name-ta{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
+.archetype-desc{font-size:0.9rem;color:var(--muted);line-height:1.6}
+
+.confidence-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+.confidence-row:last-child{border-bottom:none}
+.conf-label{font-size:0.9rem;color:var(--muted)}
+.conf-value{font-weight:600;font-size:0.9rem}
+.conf-high{color:#4ade80}
+.conf-med{color:#facc15}
+.conf-low{color:#f87171}
+
+.axis-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.axis-item{background:var(--card2);border-radius:10px;padding:14px}
+.axis-name{font-size:0.8rem;color:var(--muted);margin-bottom:8px}
+.axis-bar-wrap{background:var(--border);border-radius:3px;height:6px;overflow:hidden}
+.axis-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.axis-score{font-size:0.75rem;color:var(--muted);margin-top:4px;text-align:right}
+
+.explanation-text{font-size:0.92rem;line-height:1.7;color:var(--muted);margin-bottom:12px}
+.belief-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.belief-tag{background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:var(--accent2);padding:6px 14px;border-radius:20px;font-size:0.8rem}
+
+.consistency-notice{background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.3);border-radius:12px;padding:14px;font-size:0.85rem;color:#fde68a;line-height:1.5;margin-bottom:16px}
+
+.share-row{display:flex;gap:12px;margin-top:8px}
+.btn-share{flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card2);color:var(--text);cursor:pointer;font-weight:600;font-size:0.9rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-share:hover{border-color:var(--accent);background:rgba(124,58,237,0.1)}
+.btn-retake{flex:1;padding:12px;border-radius:10px;border:none;background:var(--accent);color:#fff;cursor:pointer;font-weight:600;font-size:0.9rem}
+
+.result-disclaimer{font-size:0.75rem;color:var(--muted);text-align:center;margin-top:20px;line-height:1.6;padding:0 8px}
+
+@media(max-width:520px){
+  .match-cards{grid-template-columns:1fr}
+  .axis-grid{grid-template-columns:1fr}
+  .hero-stats{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🗳️ வாக்காளர் பொருத்தி</div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('ta')">தமிழ்</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+  </div>
+</nav>
+
+<!-- SCREEN 1: LANDING -->
+<div id="landing" class="screen active">
+  <div class="hero-badge" id="badge-text">🗳️ தமிழ்நாடு சட்டமன்றத் தேர்தல் 2026</div>
+  <h1 class="hero-title"><span id="hero-h1">உங்கள் அரசியல் பொருத்தத்தை கண்டறியுங்கள்</span></h1>
+  <p class="hero-sub ta" id="hero-sub">30 கேள்விகளுக்கு பதிலளியுங்கள். உங்கள் நம்பிக்கைகளின் அடிப்படையில் DMK, AIADMK அல்லது TVK உடன் உங்கள் சித்தாந்த பொருத்தத்தை அறியுங்கள்.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label" id="stat1">கேள்விகள்</div></div>
+    <div class="stat"><div class="stat-num">~3</div><div class="stat-label" id="stat2">நிமிடங்கள்</div></div>
+    <div class="stat"><div class="stat-num">9</div><div class="stat-label" id="stat3">சித்தாந்த அச்சுகள்</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label" id="stat4">அநாமதேய</div></div>
+  </div>
+  <button class="btn-primary" onclick="showScreen('onboarding')" id="start-btn">தொடங்குங்கள் →</button>
+  <div class="party-pills">
+    <div class="pill dmk">திமுக · DMK</div>
+    <div class="pill aiadmk">அதிமுக · AIADMK</div>
+    <div class="pill tvk">தவக · TVK</div>
+  </div>
+</div>
+
+<!-- SCREEN 2: ONBOARDING -->
+<div id="onboarding" class="screen">
+  <div style="max-width:600px;margin:0 auto;width:100%;padding:32px 24px">
+    <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:8px" id="onboard-title">இது எப்படி வேலை செய்கிறது?</h2>
+    <p style="color:var(--muted);font-size:0.9rem;margin-bottom:24px" id="onboard-sub">தொடங்குவதற்கு முன் இதை படியுங்கள்</p>
+
+    <div class="onboard-step">
+      <div class="onboard-icon">📋</div>
+      <div>
+        <div class="onboard-title ta" id="ob1-t">30 கேள்விகளுக்கு பதிலளியுங்கள்</div>
+        <div class="onboard-desc ta" id="ob1-d">ஒவ்வொரு கேள்வியும் நிஜமான கொள்கை தேர்வுகளை அடிப்படையாகக் கொண்டது — வாக்குறுதிகளை அல்ல. உங்கள் நம்பிக்கைகளை நேர்மையாக பதிலளியுங்கள்.</div>
+      </div>
+    </div>
+
+    <div class="onboard-step">
+      <div class="onboard-icon">⚖️</div>
+      <div>
+        <div class="onboard-title ta" id="ob2-t">9 சித்தாந்த அச்சுகளில் மதிப்பிடப்படுகிறீர்கள்</div>
+        <div class="onboard-desc ta" id="ob2-d">நலன்புரி, ஆட்சி, பொருளாதாரம், வறுமை, சமூக நீதி, ஊழல், பொறுப்பு, மொழி அடையாளம், கூட்டாட்சி — இந்த 9 பரிமாணங்களில் உங்கள் நிலை அளவிடப்படும்.</div>
+      </div>
+    </div>
+
+    <div class="onboard-step">
+      <div class="onboard-icon">🧠</div>
+      <div>
+        <div class="onboard-title ta" id="ob3-t">உங்கள் வாக்காளர் வகை அறியப்படும்</div>
+        <div class="onboard-desc ta" id="ob3-d">பாதுகாப்பு தேடுபவர், சமத்துவ கட்டுநர், அமைப்பு சீர்திருத்தவாதி அல்லது அடையாள வாதி — உங்கள் ஆழமான அரசியல் உளவியல் வகை கண்டறியப்படும்.</div>
+      </div>
+    </div>
+
+    <div class="onboard-step">
+      <div class="onboard-icon">🔒</div>
+      <div>
+        <div class="onboard-title ta" id="ob4-t">தனியுரிமை முழுமையாக பாதுகாக்கப்படுகிறது</div>
+        <div class="onboard-desc ta" id="ob4-d">எந்த தனிப்பட்ட தகவலும் சேகரிக்கப்படுவதில்லை. பதிவு தேவையில்லை. உங்கள் பதில்கள் உங்கள் சாதனத்திலேயே இருக்கும்.</div>
+      </div>
+    </div>
+
+    <div class="disclaimer-box ta" id="disclaimer-text">
+      ⚠️ இந்த கருவி உங்கள் கொள்கை விருப்பங்களின் அடிப்படையில் சித்தாந்த பொருத்தத்தை காட்டுகிறது. இது வாக்களிக்க பரிந்துரை அல்ல. எந்த கட்சியுடனும் தொடர்பில்லை.
+    </div>
+
+    <button class="btn-primary" style="width:100%" onclick="showScreen('questionnaire')" id="begin-btn">கேள்விகளை தொடங்கு →</button>
+  </div>
+</div>
+
+<!-- SCREEN 3: QUESTIONNAIRE -->
+<div id="questionnaire" class="screen">
+  <div class="q-header">
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="q-meta">
+      <span class="q-count" id="q-count">கேள்வி 7 / 30</span>
+      <span class="q-axis-tag" id="q-axis">நலன்புரி</span>
+    </div>
+  </div>
+  <div class="q-body">
+    <div class="q-text" id="q-text-en">If the government has a limited budget, what should be the priority?</div>
+    <div class="q-text-ta" id="q-text-ta">அரசாங்கத்திடம் வரையறுக்கப்பட்ட நிதி இருந்தால், முன்னுரிமை என்னவாக இருக்க வேண்டும்?</div>
+    <div class="options-list" id="options-list">
+      <button class="option-btn selected" onclick="selectOption(this)">
+        <div class="option-en">Give cash directly to families in need</div>
+        <div class="option-ta ta">தேவைப்படும் குடும்பங்களுக்கு நேரடியாக பணம் வழங்கு</div>
+      </button>
+      <button class="option-btn" onclick="selectOption(this)">
+        <div class="option-en">Build hospitals, schools and public infrastructure</div>
+        <div class="option-ta ta">மருத்துவமனைகள், பள்ளிகள் மற்றும் பொது உள்கட்டமைப்பை கட்டு</div>
+      </button>
+      <button class="option-btn" onclick="selectOption(this)">
+        <div class="option-en">Create jobs through private sector investment incentives</div>
+        <div class="option-ta ta">தனியார் துறை முதலீட்டு ஊக்கத்தொகை மூலம் வேலைவாய்ப்பை உருவாக்கு</div>
+      </button>
+    </div>
+  </div>
+  <div class="q-actions">
+    <button class="btn-skip" id="skip-btn" onclick="showScreen('processing')">தவிர்</button>
+    <button class="btn-next" id="next-btn" onclick="showScreen('processing')">அடுத்தது →</button>
+  </div>
+</div>
+
+<!-- SCREEN 4: PROCESSING -->
+<div id="processing" class="screen">
+  <div class="spinner"></div>
+  <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:8px" id="proc-title">உங்கள் விருப்பங்களை பகுப்பாய்வு செய்கிறோம்…</h2>
+  <p style="color:var(--muted);font-size:0.9rem" id="proc-sub">சில நொடிகள் காத்திருங்கள்</p>
+  <div class="processing-steps">
+    <div class="p-step done" id="ps1">கேள்விகளை செயலாக்குகிறோம்</div>
+    <div class="p-step done" id="ps2">சித்தாந்த அச்சுகளை கணக்கிடுகிறோம்</div>
+    <div class="p-step done" id="ps3">கட்சி பொருத்தத்தை மதிப்பிடுகிறோம்</div>
+    <div class="p-step" id="ps4">உங்கள் வாக்காளர் வகையை தீர்மானிக்கிறோம்</div>
+    <div class="p-step" id="ps5">விளக்கங்களை உருவாக்குகிறோம்</div>
+  </div>
+</div>
+
+<!-- SCREEN 5: RESULTS -->
+<div id="results" class="screen">
+  <div class="result-header">
+    <h2 class="result-title" id="res-title">உங்கள் அரசியல் பொருத்தம்</h2>
+    <p class="result-sub ta" id="res-sub">உங்கள் கொள்கை விருப்பங்களின் அடிப்படையில் சித்தாந்த பொருத்தம்</p>
+  </div>
+
+  <!-- Party Match Cards -->
+  <div class="match-cards">
+    <div class="match-card primary">
+      <div class="primary-badge">முதன்மை பொருத்தம்</div>
+      <div class="match-party">திமுக · DMK</div>
+      <div class="match-pct">58%</div>
+      <div class="match-label ta">திராவிட முன்னேற்றக் கழகம்</div>
+      <div class="match-bar"><div class="match-bar-fill dmk-fill"></div></div>
+    </div>
+    <div class="match-card secondary">
+      <div class="match-party">அதிமுக · AIADMK</div>
+      <div class="match-pct">28%</div>
+      <div class="match-label ta">அனைத்திந்திய அண்ணா திமுக</div>
+      <div class="match-bar"><div class="match-bar-fill aiadmk-fill"></div></div>
+    </div>
+    <div class="match-card third">
+      <div class="match-party">தவக · TVK</div>
+      <div class="match-pct">14%</div>
+      <div class="match-label ta">தமிழக வெற்றி கழகம்</div>
+      <div class="match-bar"><div class="match-bar-fill tvk-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Archetype -->
+  <div class="result-section">
+    <div class="section-title" id="arch-section-title">உங்கள் வாக்காளர் வகை</div>
+    <div class="archetype-card">
+      <div class="archetype-icon">🔴</div>
+      <div>
+        <div class="archetype-name">Equity Builder</div>
+        <div class="archetype-name-ta ta">சமத்துவ கட்டுநர்</div>
+        <div class="archetype-desc ta" id="arch-desc">நீங்கள் சமூக நீதி, இட ஒதுக்கீடு மற்றும் அரசு வழங்கும் சேவைகளை முன்னுரிமை அளிக்கிறீர்கள். ஒடுக்கப்பட்ட சமூகங்களுக்கான கட்டமைப்பு மாற்றத்தில் நம்பிக்கை கொண்டவர்.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confidence + Consistency -->
+  <div class="result-section">
+    <div class="section-title" id="conf-section-title">நம்பகத்தன்மை மதிப்பீடு</div>
+    <div class="consistency-notice ta" id="consistency-notice">
+      ℹ️ உங்கள் சில பதில்கள் குறுக்கு-சித்தாந்த கண்ணோட்டங்களை பிரதிபலிக்கின்றன — இது நுணுக்கமான அரசியல் சிந்தனையின் அறிகுறி.
+    </div>
+    <div class="confidence-row">
+      <span class="conf-label ta" id="conf-label1">பொருத்த வலிமை</span>
+      <span class="conf-value conf-high">அதிகம் (High)</span>
+    </div>
+    <div class="confidence-row">
+      <span class="conf-label ta" id="conf-label2">முதல்-இரண்டாம் இடைவெளி</span>
+      <span class="conf-value">30 புள்ளிகள்</span>
+    </div>
+    <div class="confidence-row">
+      <span class="conf-label ta" id="conf-label3">பதிலளித்த கேள்விகள்</span>
+      <span class="conf-value">27 / 30</span>
+    </div>
+    <div class="confidence-row">
+      <span class="conf-label ta" id="conf-label4">முரண்பாடுகள் கண்டறியப்பட்டன</span>
+      <span class="conf-value conf-med">1 (நுணுக்கமான கண்ணோட்டம்)</span>
+    </div>
+  </div>
+
+  <!-- Axis Breakdown -->
+  <div class="result-section">
+    <div class="section-title" id="axis-section-title">சித்தாந்த அச்சு பகுப்பாய்வு</div>
+    <div class="axis-grid">
+      <div class="axis-item">
+        <div class="axis-name ta">நலன்புரி (Welfare)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:78%"></div></div>
+        <div class="axis-score">78 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">சமூக நீதி (Social Justice)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:85%"></div></div>
+        <div class="axis-score">85 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">ஆட்சி (Governance)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:62%"></div></div>
+        <div class="axis-score">62 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">பொருளாதாரம் (Economy)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:45%"></div></div>
+        <div class="axis-score">45 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">வறுமை (Poverty)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:70%"></div></div>
+        <div class="axis-score">70 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">ஊழல் (Corruption)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:55%"></div></div>
+        <div class="axis-score">55 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">மொழி அடையாளம் (Language)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:90%"></div></div>
+        <div class="axis-score">90 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">கூட்டாட்சி (Federalism)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:82%"></div></div>
+        <div class="axis-score">82 / 100</div>
+      </div>
+      <div class="axis-item">
+        <div class="axis-name ta">பொறுப்பு (Responsibility)</div>
+        <div class="axis-bar-wrap"><div class="axis-bar-fill" style="width:38%"></div></div>
+        <div class="axis-score">38 / 100</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explanation -->
+  <div class="result-section">
+    <div class="section-title" id="expl-section-title">ஏன் இந்த பொருத்தம்?</div>
+    <p class="explanation-text ta" id="expl-primary">உங்கள் பதில்கள் சமூக நீதி மற்றும் மொழி அடையாளத்தில் வலுவான நம்பிக்கையை காட்டுகின்றன — இவை திமுகவின் திராவிட மாடல் ஆட்சியின் மையக் கொள்கைகளுடன் நெருக்கமாக பொருந்துகின்றன. இட ஒதுக்கீட்டை ஆதரிக்கும் உங்கள் நிலை மற்றும் மாநில சுயாட்சிக்கான விருப்பம் இந்த பொருத்தத்தை வலுப்படுத்துகிறது.</p>
+    <p class="explanation-text ta" id="expl-secondary">இரண்டாம் நிலை பொருத்தமாக அதிமுக உள்ளது — நேரடி நலன்புரி திட்டங்கள் மற்றும் குடும்பங்களுக்கான நேரடி பண உதவி குறித்த உங்கள் சில விருப்பங்கள் அதிமுகவின் கொள்கை நிலைப்பாட்டுடன் ஒத்துப்போகின்றன.</p>
+    <div class="belief-tags">
+      <span class="belief-tag ta">சமூக நீதியை முன்னுரிமை அளிக்கிறீர்கள்</span>
+      <span class="belief-tag ta">மாநில உரிமைகளை ஆதரிக்கிறீர்கள்</span>
+      <span class="belief-tag ta">தமிழ் மொழி பாதுகாப்பில் அக்கறை</span>
+      <span class="belief-tag ta">அரசு சேவை வழங்குநராக இருக்க வேண்டும்</span>
+    </div>
+  </div>
+
+  <!-- Share -->
+  <div class="result-section">
+    <div class="section-title" id="share-section-title">பகிர்</div>
+    <div class="share-row">
+      <button class="btn-share" id="share-btn">📤 பகிர்</button>
+      <button class="btn-retake" onclick="showScreen('landing')" id="retake-btn">மீண்டும் முயற்சி</button>
+    </div>
+  </div>
+
+  <p class="result-disclaimer ta" id="result-disclaimer">
+    இந்த முடிவுகள் உங்கள் கொள்கை விருப்பங்களின் சித்தாந்த பொருத்தத்தை மட்டுமே காட்டுகின்றன. இது வாக்களிக்க பரிந்துரை அல்ல. எந்த கட்சியுடனும் தொடர்பில்லை. <a href="#" style="color:var(--accent2)">முறையியல் பக்கம் →</a>
+  </p>
+</div>
+
+<script>
+const t = {
+  ta: {
+    badge:'🗳️ தமிழ்நாடு சட்டமன்றத் தேர்தல் 2026',
+    h1:'உங்கள் அரசியல் பொருத்தத்தை கண்டறியுங்கள்',
+    sub:'30 கேள்விகளுக்கு பதிலளியுங்கள். உங்கள் நம்பிக்கைகளின் அடிப்படையில் DMK, AIADMK அல்லது TVK உடன் உங்கள் சித்தாந்த பொருத்தத்தை அறியுங்கள்.',
+    stat1:'கேள்விகள்', stat2:'நிமிடங்கள்', stat3:'சித்தாந்த அச்சுகள்', stat4:'அநாமதேய',
+    startBtn:'தொடங்குங்கள் →',
+    onboardTitle:'இது எப்படி வேலை செய்கிறது?',
+    onboardSub:'தொடங்குவதற்கு முன் இதை படியுங்கள்',
+    beginBtn:'கேள்விகளை தொடங்கு →',
+    procTitle:'உங்கள் விருப்பங்களை பகுப்பாய்வு செய்கிறோம்…',
+    procSub:'சில நொடிகள் காத்திருங்கள்',
+    resTitle:'உங்கள் அரசியல் பொருத்தம்',
+    resSub:'உங்கள் கொள்கை விருப்பங்களின் அடிப்படையில் சித்தாந்த பொருத்தம்',
+    skipBtn:'தவிர்', nextBtn:'அடுத்தது →',
+    shareBtn:'📤 பகிர்', retakeBtn:'மீண்டும் முயற்சி',
+    disclaimer:'⚠️ இந்த கருவி உங்கள் கொள்கை விருப்பங்களின் அடிப்படையில் சித்தாந்த பொருத்தத்தை காட்டுகிறது. இது வாக்களிக்க பரிந்துரை அல்ல. எந்த கட்சியுடனும் தொடர்பில்லை.',
+    resultDisclaimer:'இந்த முடிவுகள் உங்கள் கொள்கை விருப்பங்களின் சித்தாந்த பொருத்தத்தை மட்டுமே காட்டுகின்றன. இது வாக்களிக்க பரிந்துரை அல்ல. எந்த கட்சியுடனும் தொடர்பில்லை.'
+  },
+  en: {
+    badge:'🗳️ Tamil Nadu Legislative Assembly Election 2026',
+    h1:'Discover Your Political Alignment',
+    sub:'Answer 30 questions. Find out how your beliefs align with DMK, AIADMK or TVK based on ideology — not promises.',
+    stat1:'Questions', stat2:'Minutes', stat3:'Ideology Axes', stat4:'Anonymous',
+    startBtn:'Get Started →',
+    onboardTitle:'How does this work?',
+    onboardSub:'Read this before you begin',
+    beginBtn:'Start Questions →',
+    procTitle:'Analyzing your preferences…',
+    procSub:'Please wait a moment',
+    resTitle:'Your Political Alignment',
+    resSub:'Ideological match based on your policy preferences',
+    skipBtn:'Skip', nextBtn:'Next →',
+    shareBtn:'📤 Share', retakeBtn:'Retake Quiz',
+    disclaimer:'⚠️ This tool shows ideological alignment based on your policy preferences. It is not a voting recommendation and is not affiliated with any political party.',
+    resultDisclaimer:'These results reflect your stated policy preferences only. This is not a voting recommendation and is not affiliated with any political party.'
+  }
+};
+
+let lang = 'ta';
+
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+  const d = t[l];
+  document.getElementById('badge-text').textContent = d.badge;
+  document.getElementById('hero-h1').textContent = d.h1;
+  document.getElementById('hero-sub').textContent = d.sub;
+  document.getElementById('stat1').textContent = d.stat1;
+  document.getElementById('stat2').textContent = d.stat2;
+  document.getElementById('stat3').textContent = d.stat3;
+  document.getElementById('stat4').textContent = d.stat4;
+  document.getElementById('start-btn').textContent = d.startBtn;
+  document.getElementById('onboard-title').textContent = d.onboardTitle;
+  document.getElementById('onboard-sub').textContent = d.onboardSub;
+  document.getElementById('begin-btn').textContent = d.beginBtn;
+  document.getElementById('proc-title').textContent = d.procTitle;
+  document.getElementById('proc-sub').textContent = d.procSub;
+  document.getElementById('res-title').textContent = d.resTitle;
+  document.getElementById('res-sub').textContent = d.resSub;
+  document.getElementById('skip-btn').textContent = d.skipBtn;
+  document.getElementById('next-btn').textContent = d.nextBtn;
+  document.getElementById('share-btn').textContent = d.shareBtn;
+  document.getElementById('retake-btn').textContent = d.retakeBtn;
+  document.getElementById('disclaimer-text').textContent = d.disclaimer;
+  document.getElementById('result-disclaimer').innerHTML = d.resultDisclaimer + ' <a href="#" style="color:var(--accent2)">' + (l==='ta'?'முறையியல் பக்கம் →':'Methodology →') + '</a>';
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'processing') {
+    setTimeout(() => {
+      document.getElementById('ps4').classList.add('done');
+      setTimeout(() => {
+        document.getElementById('ps5').classList.add('done');
+        setTimeout(() => showScreen('results'), 600);
+      }, 700);
+    }, 900);
+  }
+}
+
+function selectOption(btn) {
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+</script>
+</body>
+</html>

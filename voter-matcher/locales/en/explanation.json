@@ -1,0 +1,12 @@
+{
+  "explanation.primary.label": "Why this match?",
+  "explanation.secondary.label": "Additional insight",
+  "explanation.beliefs.label": "Your key priorities",
+  "explanation.archetype.label": "Your political profile",
+  "explanation.contradiction.label": "A nuanced perspective",
+  "explanation.contradiction.description": "Some of your answers reflect nuanced or cross-ideological views. This is common and shows the complexity of your political thinking.",
+  "explanation.trackRecord.label": "About this alignment",
+  "explanation.section.title": "Your alignment explained",
+  "explanation.beliefs.title": "What you believe in",
+  "explanation.secondary.title": "Secondary alignment"
+}

@@ -1,0 +1,12 @@
+{
+  "questionnaire.progress.label": "Question {current} of {total}",
+  "questionnaire.progress.percent": "{percent}% complete",
+  "questionnaire.skip.button": "Skip this question",
+  "questionnaire.skip.warning": "You have skipped many questions in this section. Your results may be less accurate.",
+  "questionnaire.axis.warning": "You have skipped all questions in the {axis} section.",
+  "questionnaire.option.select": "Select this option",
+  "questionnaire.cluster.label": "Topic: {cluster}",
+  "questionnaire.question.accessibilityLabel": "Question: {text}",
+  "questionnaire.option.accessibilitySelected": "{text} (selected)",
+  "questionnaire.options.groupLabel": "Answer options"
+}

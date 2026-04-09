@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark theme matching mockup */
+  --background: #0f0f13;
+  --foreground: #f0f0f0;
+  --card: #1a1a24;
+  --card2: #22222f;
+  --border: #2e2e3e;
+  --muted: #888;
+  --accent: #7C3AED;
+  --accent2: #A78BFA;
+  --accent-glow: rgba(124, 58, 237, 0.4);
+
+  /* Party colors */
+  --dmk: #E63946;
+  --aiadmk: #F4A261;
+  --tvk: #457B9D;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), 'Inter', 'Noto Sans Tamil', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+[lang="ta"] {
+  font-family: var(--font-noto-sans-tamil), 'Noto Sans Tamil', sans-serif;
+  font-size: 1.05em;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent2), #60A5FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary button with glow */
+.btn-glow {
+  background: linear-gradient(135deg, var(--accent), #6D28D9);
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(124, 58, 237, 0.5);
+}
+
+/* Card base */
+.vm-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Section title with accent bar */
+.section-bar::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Party pill colors */
+.pill-dmk { color: var(--dmk); border-color: rgba(230,57,70,0.4); background: rgba(230,57,70,0.08); }
+.pill-aiadmk { color: var(--aiadmk); border-color: rgba(244,162,97,0.4); background: rgba(244,162,97,0.08); }
+.pill-tvk { color: var(--tvk); border-color: rgba(69,123,157,0.4); background: rgba(69,123,157,0.08); }
+
+/* Match card party borders */
+.match-dmk { border-color: var(--dmk) !important; background: rgba(230,57,70,0.06); }
+.match-aiadmk { border-color: var(--aiadmk) !important; }
+.match-tvk { border-color: var(--tvk) !important; }
+
+/* Bar fills */
+.bar-dmk { background: var(--dmk); }
+.bar-aiadmk { background: var(--aiadmk); }
+.bar-tvk { background: var(--tvk); }
+
+/* Accent badge */
+.accent-badge {
+  background: rgba(124,58,237,0.2);
+  border: 1px solid rgba(124,58,237,0.4);
+  color: var(--accent2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Belief tags */
+.belief-tag {
+  background: rgba(124,58,237,0.12);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: var(--accent2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Progress bar gradient */
+.progress-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+
+/* Axis tag */
+.axis-tag {
+  background: rgba(124,58,237,0.15);
+  color: var(--accent2);
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Option hover effect */
+.option-hover:hover {
+  border-color: var(--accent) !important;
+  background: rgba(124,58,237,0.08);
+  transform: translateX(4px);
+}
+.option-selected {
+  border-color: var(--accent) !important;
+  background: rgba(124,58,237,0.15) !important;
+}
+
+/* Consistency notice */
+.notice-warn {
+  background: rgba(250,204,21,0.08);
+  border: 1px solid rgba(250,204,21,0.3);
+  color: #fde68a;
+}
+
+/* Confidence colors */
+.conf-high { color: #4ade80; }
+.conf-medium { color: #facc15; }
+.conf-low { color: #f87171; }
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Sticky nav with blur */
+.nav-blur {
+  background: rgba(15,15,19,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Landing radial glow */
+.landing-glow {
+  background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.15) 0%, transparent 70%);
+}
+
+/* Party flag icon */
+.party-flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* Language toggle pill */
+.lang-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--card2);
+  border-radius: 8px;
+  padding: 4px;
+}
+.lang-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Mobile Support ── */
+
+/* Safe area insets for notched phones (iPhone X+) */
+@supports (padding: env(safe-area-inset-top)) {
+  .nav-blur {
+    padding-top: calc(env(safe-area-inset-top) + 12px);
+    padding-left: calc(env(safe-area-inset-left) + 16px);
+    padding-right: calc(env(safe-area-inset-right) + 16px);
+  }
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Small screens (320px - 480px) */
+@media (max-width: 480px) {
+  .btn-glow {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .lang-toggle {
+    padding: 3px;
+  }
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.78rem;
+  }
+
+  .accent-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .party-flag {
+    width: 22px;
+    height: 22px;
+  }
+
+  .vm-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .belief-tag {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .axis-tag {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  /* Prevent horizontal overflow */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.25rem !important; }
+}
+
+/* Very small screens (320px) */
+@media (max-width: 360px) {
+  h1 { font-size: 1.5rem !important; }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+}
+
+/* Touch targets — minimum 44px for all interactive elements */
+@media (pointer: coarse) {
+  button, select, a, [role="radio"], [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  select {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Prevent text overflow on long Tamil strings */
+.truncate-tamil {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Smooth scrolling for the whole app */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent pull-to-refresh interfering with swipe gestures */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Fix for iOS input zoom */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}

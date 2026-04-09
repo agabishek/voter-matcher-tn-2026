@@ -1,0 +1,1750 @@
+{
+  "version": "1.0.0",
+  "hash": "bbcfb5b4a1af6e7cec65f3ef13e91519f9971c2eebfb1573ff3dc59159e0dd61",
+  "questions": [
+    {
+      "id": "q001",
+      "cluster": "welfare",
+      "text": {
+        "en": "If the government has a limited budget, what should be the priority?",
+        "ta": "அரசாங்கத்திடம் வரையறுக்கப்பட்ட நிதி இருந்தால், முன்னுரிமை என்னவாக இருக்க வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q001_a",
+          "text": {
+            "en": "Give cash directly to families in need",
+            "ta": "தேவைப்படும் குடும்பங்களுக்கு நேரடியாக பணம் வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "welfare": 4,
+            "poverty": 3
+          }
+        },
+        {
+          "id": "q001_b",
+          "text": {
+            "en": "Invest in public services like hospitals and schools",
+            "ta": "மருத்துவமனைகள் மற்றும் பள்ளிகள் போன்ற பொது சேவைகளில் முதலீடு செய்தல்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "welfare": 3,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q001_c",
+          "text": {
+            "en": "Create jobs through private sector investment",
+            "ta": "தனியார் துறை முதலீட்டின் மூலம் வேலைவாய்ப்பு உருவாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "economy": 4,
+            "responsibility": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q002",
+      "cluster": "welfare",
+      "text": {
+        "en": "Should the government provide a monthly cash allowance to women who are heads of their households?",
+        "ta": "குடும்பத் தலைவிகளாக இருக்கும் பெண்களுக்கு அரசு மாதாந்திர பண உதவி வழங்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q002_a",
+          "text": {
+            "en": "Yes, and the amount should be increased over time",
+            "ta": "ஆம், மேலும் காலப்போக்கில் தொகை உயர்த்தப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "welfare": 5,
+            "poverty": 4
+          }
+        },
+        {
+          "id": "q002_b",
+          "text": {
+            "en": "Yes, but only for families below the poverty line",
+            "ta": "ஆம், ஆனால் வறுமை வரம்புக்கு கீழ் உள்ள குடும்பங்களுக்கு மட்டுமே"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "welfare": 3,
+            "poverty": 5
+          }
+        },
+        {
+          "id": "q002_c",
+          "text": {
+            "en": "No, the money is better spent on skill training and employment",
+            "ta": "இல்லை, அந்த பணத்தை திறன் பயிற்சி மற்றும் வேலைவாய்ப்பிற்காக செலவிடுவது சிறந்தது"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "economy": 3,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q003",
+      "cluster": "welfare",
+      "text": {
+        "en": "Should free meals, free bus travel, and free household goods be provided by the government?",
+        "ta": "இலவச உணவு, இலவச பேருந்து பயணம் மற்றும் இலவச வீட்டு பொருட்கள் அரசால் வழங்கப்பட வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q003_a",
+          "text": {
+            "en": "Yes, these are essential for the dignity of every citizen",
+            "ta": "ஆம், இவை ஒவ்வொரு குடிமகனின் கண்ணியத்திற்கு இன்றியமையாதவை"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "welfare": 5,
+            "poverty": 3
+          }
+        },
+        {
+          "id": "q003_b",
+          "text": {
+            "en": "Some are essential, but others create dependency",
+            "ta": "சில இன்றியமையாதவை, ஆனால் மற்றவை சார்புநிலையை உருவாக்குகின்றன"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "welfare": 2,
+            "responsibility": 3
+          }
+        },
+        {
+          "id": "q003_c",
+          "text": {
+            "en": "No, the government should focus on building long-term economic capacity",
+            "ta": "இல்லை, அரசு நீண்டகால பொருளாதார திறனை கட்டியெழுப்புவதில் கவனம் செலுத்த வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "economy": 4,
+            "responsibility": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "q004",
+      "cluster": "welfare",
+      "text": {
+        "en": "How should the government support elderly citizens who have no income?",
+        "ta": "வருமானம் இல்லாத முதியோரை அரசு எவ்வாறு ஆதரிக்க வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q004_a",
+          "text": {
+            "en": "Provide a monthly pension of at least ₹2,000",
+            "ta": "குறைந்தது ₹2,000 மாதாந்திர ஓய்வூதியம் வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "welfare": 5,
+            "poverty": 4
+          }
+        },
+        {
+          "id": "q004_b",
+          "text": {
+            "en": "Provide free healthcare and subsidised food",
+            "ta": "இலவச சுகாதாரம் மற்றும் மானிய உணவு வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "welfare": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q004_c",
+          "text": {
+            "en": "Encourage families and communities to take care of their elderly",
+            "ta": "குடும்பங்கள் மற்றும் சமூகங்கள் தங்கள் முதியோரை கவனிக்க ஊக்குவிக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "responsibility": 5,
+            "welfare": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q005",
+      "cluster": "governance",
+      "text": {
+        "en": "What is the most important quality in a state government?",
+        "ta": "மாநில அரசாங்கத்தில் மிக முக்கியமான தரம் என்ன?"
+      },
+      "options": [
+        {
+          "id": "q005_a",
+          "text": {
+            "en": "Delivering welfare schemes efficiently to those who need them",
+            "ta": "தேவைப்படுவோருக்கு நலத் திட்டங்களை திறமையாக வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "governance": 3,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q005_b",
+          "text": {
+            "en": "Being transparent and free from corruption",
+            "ta": "வெளிப்படையாகவும் ஊழல் இல்லாமலும் இருத்தல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "governance": 5,
+            "corruption": 4
+          }
+        },
+        {
+          "id": "q005_c",
+          "text": {
+            "en": "Attracting investment and creating jobs",
+            "ta": "முதலீட்டை ஈர்த்து வேலைவாய்ப்பு உருவாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "economy": 4,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q006",
+      "cluster": "governance",
+      "text": {
+        "en": "How should government services like ration cards and certificates be delivered?",
+        "ta": "ரேஷன் அட்டைகள் மற்றும் சான்றிதழ்கள் போன்ற அரசு சேவைகள் எவ்வாறு வழங்கப்பட வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q006_a",
+          "text": {
+            "en": "Through a single digital window with no middlemen",
+            "ta": "இடைத்தரகர்கள் இல்லாமல் ஒரே டிஜிட்டல் சாளரம் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "governance": 5,
+            "corruption": 4
+          }
+        },
+        {
+          "id": "q006_b",
+          "text": {
+            "en": "Through local government offices that people can visit in person",
+            "ta": "மக்கள் நேரில் சென்று சந்திக்கக்கூடிய உள்ளாட்சி அலுவலகங்கள் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "governance": 3,
+            "welfare": 2
+          }
+        },
+        {
+          "id": "q006_c",
+          "text": {
+            "en": "Through community volunteers and elected representatives",
+            "ta": "சமூக தன்னார்வலர்கள் மற்றும் தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகள் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "governance": 2,
+            "responsibility": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q007",
+      "cluster": "governance",
+      "text": {
+        "en": "How should the government handle complaints from citizens about public officials?",
+        "ta": "பொது அதிகாரிகளைப் பற்றிய குடிமக்களின் புகார்களை அரசு எவ்வாறு கையாள வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q007_a",
+          "text": {
+            "en": "Through an independent ombudsman with power to take action",
+            "ta": "நடவடிக்கை எடுக்கும் அதிகாரம் கொண்ட சுயாதீன ஓம்புட்ஸ்மேன் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "governance": 5,
+            "corruption": 5
+          }
+        },
+        {
+          "id": "q007_b",
+          "text": {
+            "en": "Through a dedicated grievance portal with time-bound resolution",
+            "ta": "காலக்கெடு தீர்வுடன் கூடிய அர்ப்பணிப்பான புகார் தளம் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "governance": 4,
+            "corruption": 3
+          }
+        },
+        {
+          "id": "q007_c",
+          "text": {
+            "en": "Through elected representatives who can escalate issues",
+            "ta": "பிரச்சினைகளை மேலே கொண்டு செல்லக்கூடிய தேர்ந்தெடுக்கப்பட்ட பிரதிநிதிகள் மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "governance": 2,
+            "responsibility": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q008",
+      "cluster": "economy",
+      "text": {
+        "en": "What is the best way to create jobs in Tamil Nadu?",
+        "ta": "தமிழ்நாட்டில் வேலைவாய்ப்பு உருவாக்க சிறந்த வழி என்ன?"
+      },
+      "options": [
+        {
+          "id": "q008_a",
+          "text": {
+            "en": "Attract large private companies with tax breaks and incentives",
+            "ta": "வரி விலக்குகள் மற்றும் ஊக்கத்தொகைகளுடன் பெரிய தனியார் நிறுவனங்களை ஈர்த்தல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "economy": 5,
+            "responsibility": 3
+          }
+        },
+        {
+          "id": "q008_b",
+          "text": {
+            "en": "Expand government employment in public services",
+            "ta": "பொது சேவைகளில் அரசு வேலைவாய்ப்பை விரிவுபடுத்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "economy": 3,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q008_c",
+          "text": {
+            "en": "Support small businesses and local entrepreneurs",
+            "ta": "சிறு வணிகங்கள் மற்றும் உள்ளூர் தொழில்முனைவோரை ஆதரித்தல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "economy": 4,
+            "responsibility": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q009",
+      "cluster": "economy",
+      "text": {
+        "en": "Should the government prioritize agriculture or industry for economic growth?",
+        "ta": "பொருளாதார வளர்ச்சிக்கு அரசு விவசாயம் அல்லது தொழில்துறைக்கு முன்னுரிமை அளிக்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q009_a",
+          "text": {
+            "en": "Agriculture - support farmers with subsidies and loan waivers",
+            "ta": "விவசாயம் - மானியங்கள் மற்றும் கடன் தள்ளுபடிகளுடன் விவசாயிகளை ஆதரித்தல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "economy": 3,
+            "welfare": 4,
+            "poverty": 3
+          }
+        },
+        {
+          "id": "q009_b",
+          "text": {
+            "en": "Industry - build factories and attract manufacturing",
+            "ta": "தொழில்துறை - தொழிற்சாலைகளை கட்டி உற்பத்தியை ஈர்த்தல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "economy": 5,
+            "responsibility": 3
+          }
+        },
+        {
+          "id": "q009_c",
+          "text": {
+            "en": "Both equally - balanced investment in rural and urban sectors",
+            "ta": "இரண்டும் சமமாக - கிராமப்புற மற்றும் நகர்ப்புற துறைகளில் சமநிலை முதலீடு"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "economy": 4,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q010",
+      "cluster": "economy",
+      "text": {
+        "en": "How should the government handle public sector companies that are losing money?",
+        "ta": "நஷ்டத்தில் இயங்கும் பொதுத்துறை நிறுவனங்களை அரசு எவ்வாறு கையாள வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q010_a",
+          "text": {
+            "en": "Privatize them to improve efficiency",
+            "ta": "திறனை மேம்படுத்த அவற்றை தனியார்மயமாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "economy": 4,
+            "responsibility": 5
+          }
+        },
+        {
+          "id": "q010_b",
+          "text": {
+            "en": "Keep them public but reform management and reduce corruption",
+            "ta": "அவற்றை பொதுவுடைமையாக வைத்து நிர்வாகத்தை சீர்திருத்தி ஊழலை குறைத்தல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "economy": 3,
+            "governance": 4,
+            "corruption": 4
+          }
+        },
+        {
+          "id": "q010_c",
+          "text": {
+            "en": "Continue funding them because they provide essential services",
+            "ta": "அத்தியாவசிய சேவைகளை வழங்குவதால் அவற்றுக்கு நிதியளிப்பதை தொடர்தல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "economy": 2,
+            "welfare": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q011",
+      "cluster": "poverty",
+      "text": {
+        "en": "What is the most effective way to reduce poverty?",
+        "ta": "வறுமையை குறைக்க மிகவும் பயனுள்ள வழி என்ன?"
+      },
+      "options": [
+        {
+          "id": "q011_a",
+          "text": {
+            "en": "Provide direct cash transfers to poor families",
+            "ta": "ஏழை குடும்பங்களுக்கு நேரடி பண பரிமாற்றம் வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "poverty": 5,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q011_b",
+          "text": {
+            "en": "Create employment opportunities through skill training",
+            "ta": "திறன் பயிற்சி மூலம் வேலைவாய்ப்பு வாய்ப்புகளை உருவாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "poverty": 4,
+            "economy": 4,
+            "responsibility": 3
+          }
+        },
+        {
+          "id": "q011_c",
+          "text": {
+            "en": "Improve access to education and healthcare",
+            "ta": "கல்வி மற்றும் சுகாதாரத்திற்கான அணுகலை மேம்படுத்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "poverty": 4,
+            "governance": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q012",
+      "cluster": "poverty",
+      "text": {
+        "en": "Should the government provide free housing to families living in slums?",
+        "ta": "சேரிகளில் வாழும் குடும்பங்களுக்கு அரசு இலவச வீடு வழங்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q012_a",
+          "text": {
+            "en": "Yes, housing is a basic right and the government must provide it",
+            "ta": "ஆம், வீடு ஒரு அடிப்படை உரிமை மற்றும் அரசு அதை வழங்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "poverty": 5,
+            "welfare": 5
+          }
+        },
+        {
+          "id": "q012_b",
+          "text": {
+            "en": "Yes, but with subsidized loans that families can repay over time",
+            "ta": "ஆம், ஆனால் குடும்பங்கள் காலப்போக்கில் திருப்பிச் செலுத்தக்கூடிய மானிய கடன்களுடன்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "poverty": 3,
+            "responsibility": 3
+          }
+        },
+        {
+          "id": "q012_c",
+          "text": {
+            "en": "No, focus on creating jobs so families can afford their own housing",
+            "ta": "இல்லை, குடும்பங்கள் தங்கள் சொந்த வீட்டை வாங்க முடியும் வகையில் வேலைவாய்ப்பு உருவாக்குவதில் கவனம் செலுத்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 1,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "economy": 4,
+            "responsibility": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "q013",
+      "cluster": "poverty",
+      "text": {
+        "en": "How should the government support children from poor families?",
+        "ta": "ஏழை குடும்பங்களைச் சேர்ந்த குழந்தைகளை அரசு எவ்வாறு ஆதரிக்க வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q013_a",
+          "text": {
+            "en": "Provide free education, meals, and school supplies",
+            "ta": "இலவச கல்வி, உணவு மற்றும் பள்ளி பொருட்களை வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "poverty": 5,
+            "welfare": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q013_b",
+          "text": {
+            "en": "Give cash incentives to parents to keep children in school",
+            "ta": "குழந்தைகளை பள்ளியில் வைத்திருக்க பெற்றோருக்கு பண ஊக்கத்தொகை வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "poverty": 4,
+            "welfare": 3
+          }
+        },
+        {
+          "id": "q013_c",
+          "text": {
+            "en": "Focus on improving school quality so education leads to better jobs",
+            "ta": "கல்வி சிறந்த வேலைகளுக்கு வழிவகுக்கும் வகையில் பள்ளி தரத்தை மேம்படுத்துவதில் கவனம் செலுத்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "poverty": 3,
+            "governance": 4,
+            "economy": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q014",
+      "cluster": "social_justice",
+      "text": {
+        "en": "Should reservation in government jobs and education be continued?",
+        "ta": "அரசு வேலைகள் மற்றும் கல்வியில் இட ஒதுக்கீடு தொடர வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q014_a",
+          "text": {
+            "en": "Yes, and it should be expanded to include more communities",
+            "ta": "ஆம், மேலும் அதிக சமூகங்களை உள்ளடக்கும் வகையில் விரிவுபடுத்தப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "social_justice": 5,
+            "poverty": 3
+          }
+        },
+        {
+          "id": "q014_b",
+          "text": {
+            "en": "Yes, but only for economically backward communities",
+            "ta": "ஆம், ஆனால் பொருளாதார ரீதியாக பின்தங்கிய சமூகங்களுக்கு மட்டுமே"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "social_justice": 3,
+            "poverty": 4
+          }
+        },
+        {
+          "id": "q014_c",
+          "text": {
+            "en": "No, merit should be the only criterion for jobs and education",
+            "ta": "இல்லை, வேலைகள் மற்றும் கல்விக்கு தகுதி மட்டுமே அளவுகோலாக இருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "social_justice": 1,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q015",
+      "cluster": "social_justice",
+      "text": {
+        "en": "How should the government address caste-based discrimination?",
+        "ta": "சாதி அடிப்படையிலான பாகுபாட்டை அரசு எவ்வாறு நிவர்த்தி செய்ய வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q015_a",
+          "text": {
+            "en": "Strict laws with severe punishment for discrimination",
+            "ta": "பாகுபாட்டிற்கு கடுமையான தண்டனையுடன் கூடிய கடுமையான சட்டங்கள்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "social_justice": 5,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q015_b",
+          "text": {
+            "en": "Education and awareness programs to change mindsets",
+            "ta": "மனநிலையை மாற்ற கல்வி மற்றும் விழிப்புணர்வு திட்டங்கள்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "social_justice": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q015_c",
+          "text": {
+            "en": "Economic development will naturally reduce caste divisions",
+            "ta": "பொருளாதார வளர்ச்சி இயற்கையாகவே சாதி பிரிவுகளை குறைக்கும்"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "social_justice": 2,
+            "economy": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q016",
+      "cluster": "social_justice",
+      "text": {
+        "en": "Should there be separate laws to protect women's rights in the workplace?",
+        "ta": "பணியிடத்தில் பெண்களின் உரிமைகளை பாதுகாக்க தனி சட்டங்கள் இருக்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q016_a",
+          "text": {
+            "en": "Yes, with strict enforcement and fast-track courts",
+            "ta": "ஆம், கடுமையான அமலாக்கம் மற்றும் விரைவு நீதிமன்றங்களுடன்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "social_justice": 5,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q016_b",
+          "text": {
+            "en": "Yes, but focus on prevention through workplace training",
+            "ta": "ஆம், ஆனால் பணியிட பயிற்சி மூலம் தடுப்பில் கவனம் செலுத்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "social_justice": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q016_c",
+          "text": {
+            "en": "Existing laws are sufficient, just need better implementation",
+            "ta": "தற்போதுள்ள சட்டங்கள் போதுமானவை, சிறந்த செயல்படுத்தல் மட்டுமே தேவை"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "social_justice": 3,
+            "governance": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q017",
+      "cluster": "corruption",
+      "text": {
+        "en": "What is the best way to reduce corruption in government?",
+        "ta": "அரசாங்கத்தில் ஊழலை குறைக்க சிறந்த வழி என்ன?"
+      },
+      "options": [
+        {
+          "id": "q017_a",
+          "text": {
+            "en": "Create an independent anti-corruption agency with prosecution powers",
+            "ta": "வழக்குத் தொடரும் அதிகாரங்களுடன் சுயாதீன ஊழல் எதிர்ப்பு நிறுவனத்தை உருவாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q017_b",
+          "text": {
+            "en": "Digitize all government services to reduce human contact",
+            "ta": "மனித தொடர்பை குறைக்க அனைத்து அரசு சேவைகளையும் டிஜிட்டல் மயமாக்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q017_c",
+          "text": {
+            "en": "Increase salaries of government employees to reduce temptation",
+            "ta": "சோதனையை குறைக்க அரசு ஊழியர்களின் சம்பளத்தை உயர்த்துதல்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "corruption": 2,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q018",
+      "cluster": "corruption",
+      "text": {
+        "en": "Should politicians be required to declare their assets publicly every year?",
+        "ta": "அரசியல்வாதிகள் ஒவ்வொரு ஆண்டும் தங்கள் சொத்துக்களை பகிரங்கமாக அறிவிக்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q018_a",
+          "text": {
+            "en": "Yes, and their family members' assets too",
+            "ta": "ஆம், மேலும் அவர்களது குடும்ப உறுப்பினர்களின் சொத்துக்களும் கூட"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q018_b",
+          "text": {
+            "en": "Yes, but only their own assets, not family members",
+            "ta": "ஆம், ஆனால் அவர்களது சொந்த சொத்துக்கள் மட்டும், குடும்ப உறுப்பினர்கள் அல்ல"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q018_c",
+          "text": {
+            "en": "No, this violates their right to privacy",
+            "ta": "இல்லை, இது அவர்களின் தனியுரிமை உரிமையை மீறுகிறது"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "corruption": 1,
+            "responsibility": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q019",
+      "cluster": "corruption",
+      "text": {
+        "en": "How should the government handle contracts for large infrastructure projects?",
+        "ta": "பெரிய உள்கட்டமைப்பு திட்டங்களுக்கான ஒப்பந்தங்களை அரசு எவ்வாறு கையாள வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q019_a",
+          "text": {
+            "en": "Open competitive bidding with full transparency",
+            "ta": "முழு வெளிப்படைத்தன்மையுடன் திறந்த போட்டி ஏலம்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "corruption": 5,
+            "governance": 5
+          }
+        },
+        {
+          "id": "q019_b",
+          "text": {
+            "en": "Give preference to local companies to support state economy",
+            "ta": "மாநில பொருளாதாரத்தை ஆதரிக்க உள்ளூர் நிறுவனங்களுக்கு முன்னுரிமை வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "corruption": 3,
+            "economy": 4
+          }
+        },
+        {
+          "id": "q019_c",
+          "text": {
+            "en": "Government should build projects directly without private contractors",
+            "ta": "தனியார் ஒப்பந்ததாரர்கள் இல்லாமல் அரசு நேரடியாக திட்டங்களை கட்ட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 4,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "corruption": 4,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q020",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Who should be primarily responsible for a person's economic well-being?",
+        "ta": "ஒரு நபரின் பொருளாதார நல்வாழ்வுக்கு முதன்மையாக யார் பொறுப்பாக இருக்க வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q020_a",
+          "text": {
+            "en": "The government - it should ensure everyone has basic needs met",
+            "ta": "அரசாங்கம் - அனைவருக்கும் அடிப்படை தேவைகள் பூர்த்தி செய்யப்படுவதை உறுதி செய்ய வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 1,
+            "welfare": 5
+          }
+        },
+        {
+          "id": "q020_b",
+          "text": {
+            "en": "The individual - government should only provide opportunities",
+            "ta": "தனிநபர் - அரசு வாய்ப்புகளை மட்டுமே வழங்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "responsibility": 5,
+            "economy": 3
+          }
+        },
+        {
+          "id": "q020_c",
+          "text": {
+            "en": "Both - government provides support, individuals work hard",
+            "ta": "இருவரும் - அரசு ஆதரவு வழங்குகிறது, தனிநபர்கள் கடினமாக உழைக்கிறார்கள்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "welfare": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q021",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Should the government regulate how much profit private companies can make?",
+        "ta": "தனியார் நிறுவனங்கள் எவ்வளவு லாபம் ஈட்ட முடியும் என்பதை அரசு ஒழுங்குபடுத்த வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q021_a",
+          "text": {
+            "en": "Yes, especially for essential goods and services",
+            "ta": "ஆம், குறிப்பாக அத்தியாவசிய பொருட்கள் மற்றும் சேவைகளுக்கு"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 2,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q021_b",
+          "text": {
+            "en": "No, market competition will naturally control prices",
+            "ta": "இல்லை, சந்தை போட்டி இயற்கையாகவே விலைகளை கட்டுப்படுத்தும்"
+          },
+          "partyWeights": {
+            "DMK": 2,
+            "AIADMK": 2,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "responsibility": 5,
+            "economy": 4
+          }
+        },
+        {
+          "id": "q021_c",
+          "text": {
+            "en": "Only in emergencies or when there is price gouging",
+            "ta": "அவசரநிலைகளில் அல்லது விலை உயர்வு இருக்கும்போது மட்டும்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q022",
+      "cluster": "responsibility",
+      "text": {
+        "en": "Should parents be penalized if their children do not attend school?",
+        "ta": "குழந்தைகள் பள்ளிக்கு செல்லவில்லை என்றால் பெற்றோர் தண்டிக்கப்பட வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q022_a",
+          "text": {
+            "en": "Yes, education is mandatory and parents must be held accountable",
+            "ta": "ஆம், கல்வி கட்டாயம் மற்றும் பெற்றோர் பொறுப்புக்கூற வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "responsibility": 4,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q022_b",
+          "text": {
+            "en": "No, instead provide incentives to encourage school attendance",
+            "ta": "இல்லை, மாறாக பள்ளி வருகையை ஊக்குவிக்க ஊக்கத்தொகைகளை வழங்குதல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 5,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 2,
+            "welfare": 4
+          }
+        },
+        {
+          "id": "q022_c",
+          "text": {
+            "en": "It depends on the family's economic situation",
+            "ta": "இது குடும்பத்தின் பொருளாதார நிலைமையைப் பொறுத்தது"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "responsibility": 3,
+            "poverty": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q023",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should Tamil be made mandatory in all schools in Tamil Nadu?",
+        "ta": "தமிழ்நாட்டில் உள்ள அனைத்து பள்ளிகளிலும் தமிழ் கட்டாயமாக்கப்பட வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q023_a",
+          "text": {
+            "en": "Yes, Tamil is our identity and must be protected",
+            "ta": "ஆம், தமிழ் நமது அடையாளம் மற்றும் பாதுகாக்கப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5
+          }
+        },
+        {
+          "id": "q023_b",
+          "text": {
+            "en": "Yes, but parents should have the option to choose other languages too",
+            "ta": "ஆம், ஆனால் பெற்றோர்கள் மற்ற மொழிகளையும் தேர்வு செய்யும் விருப்பம் இருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "responsibility": 2
+          }
+        },
+        {
+          "id": "q023_c",
+          "text": {
+            "en": "No, language choice should be left to individual schools and parents",
+            "ta": "இல்லை, மொழி தேர்வு தனிப்பட்ட பள்ளிகள் மற்றும் பெற்றோருக்கு விடப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q024",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should the central government be allowed to impose Hindi in Tamil Nadu?",
+        "ta": "மத்திய அரசு தமிழ்நாட்டில் இந்தியை திணிக்க அனுமதிக்கப்பட வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q024_a",
+          "text": {
+            "en": "No, this is an attack on Tamil identity and must be resisted",
+            "ta": "இல்லை, இது தமிழ் அடையாளத்தின் மீதான தாக்குதல் மற்றும் எதிர்க்கப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5,
+            "federalism": 4
+          }
+        },
+        {
+          "id": "q024_b",
+          "text": {
+            "en": "Hindi can be optional, but not mandatory",
+            "ta": "இந்தி விருப்பமாக இருக்கலாம், ஆனால் கட்டாயமாக இருக்கக்கூடாது"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "federalism": 3
+          }
+        },
+        {
+          "id": "q024_c",
+          "text": {
+            "en": "Learning Hindi is useful for national integration",
+            "ta": "தேசிய ஒருங்கிணைப்புக்கு இந்தி கற்றல் பயனுள்ளதாக இருக்கும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "federalism": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q025",
+      "cluster": "language_identity",
+      "text": {
+        "en": "Should government jobs in Tamil Nadu require knowledge of Tamil?",
+        "ta": "தமிழ்நாட்டில் அரசு வேலைகளுக்கு தமிழ் அறிவு தேவைப்பட வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q025_a",
+          "text": {
+            "en": "Yes, all government employees must know Tamil to serve the people",
+            "ta": "ஆம், மக்களுக்கு சேவை செய்ய அனைத்து அரசு ஊழியர்களும் தமிழ் தெரிந்திருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "language_identity": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q025_b",
+          "text": {
+            "en": "Yes, but only for public-facing positions",
+            "ta": "ஆம், ஆனால் பொது முகமுள்ள பதவிகளுக்கு மட்டும்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "language_identity": 3,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q025_c",
+          "text": {
+            "en": "No, competence should be the only requirement",
+            "ta": "இல்லை, திறமை மட்டுமே தேவையாக இருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 1,
+            "TVK": 2
+          },
+          "axisWeights": {
+            "language_identity": 1,
+            "responsibility": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q026",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have more autonomy from the central government?",
+        "ta": "தமிழ்நாடு மத்திய அரசிடமிருந்து அதிக சுயாட்சி பெற வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q026_a",
+          "text": {
+            "en": "Yes, states should have full control over their own affairs",
+            "ta": "ஆம், மாநிலங்கள் தங்கள் சொந்த விவகாரங்களில் முழு கட்டுப்பாட்டை கொண்டிருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "language_identity": 3
+          }
+        },
+        {
+          "id": "q026_b",
+          "text": {
+            "en": "Yes, but maintain cooperation with the centre on national issues",
+            "ta": "ஆம், ஆனால் தேசிய பிரச்சினைகளில் மையத்துடன் ஒத்துழைப்பை பராமரித்தல்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 2
+          }
+        },
+        {
+          "id": "q026_c",
+          "text": {
+            "en": "No, a strong central government is needed for national unity",
+            "ta": "இல்லை, தேசிய ஒற்றுமைக்கு வலுவான மத்திய அரசு தேவை"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q027",
+      "cluster": "federalism",
+      "text": {
+        "en": "How should tax revenue be shared between the central and state governments?",
+        "ta": "மத்திய மற்றும் மாநில அரசுகளுக்கு இடையே வரி வருவாய் எவ்வாறு பகிரப்பட வேண்டும்?"
+      },
+      "options": [
+        {
+          "id": "q027_a",
+          "text": {
+            "en": "States should get a much larger share since they provide most services",
+            "ta": "மாநிலங்கள் பெரும்பாலான சேவைகளை வழங்குவதால் அதிக பங்கு பெற வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q027_b",
+          "text": {
+            "en": "Current sharing is fair, but implementation needs improvement",
+            "ta": "தற்போதைய பகிர்வு நியாயமானது, ஆனால் செயல்படுத்தல் மேம்பாடு தேவை"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q027_c",
+          "text": {
+            "en": "Centre needs more funds for national defense and infrastructure",
+            "ta": "தேசிய பாதுகாப்பு மற்றும் உள்கட்டமைப்புக்கு மையத்திற்கு அதிக நிதி தேவை"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q028",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have the right to oppose central government policies?",
+        "ta": "மத்திய அரசு கொள்கைகளை எதிர்க்கும் உரிமை தமிழ்நாட்டிற்கு இருக்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q028_a",
+          "text": {
+            "en": "Yes, states must be able to protect their interests",
+            "ta": "ஆம், மாநிலங்கள் தங்கள் நலன்களை பாதுகாக்க முடிய வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 4,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q028_b",
+          "text": {
+            "en": "Yes, but through dialogue and negotiation, not confrontation",
+            "ta": "ஆம், ஆனால் மோதல் அல்ல, உரையாடல் மற்றும் பேச்சுவார்த்தை மூலம்"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 4,
+            "TVK": 4
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q028_c",
+          "text": {
+            "en": "No, states must follow central government decisions",
+            "ta": "இல்லை, மாநிலங்கள் மத்திய அரசு முடிவுகளை பின்பற்ற வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q029",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu control its own water resources without central interference?",
+        "ta": "மத்திய தலையீடு இல்லாமல் தமிழ்நாடு தனது சொந்த நீர் வளங்களை கட்டுப்படுத்த வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q029_a",
+          "text": {
+            "en": "Yes, water is a state subject and centre should not interfere",
+            "ta": "ஆம், நீர் ஒரு மாநில பொருள் மற்றும் மையம் தலையிடக்கூடாது"
+          },
+          "partyWeights": {
+            "DMK": 5,
+            "AIADMK": 5,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 5,
+            "governance": 3
+          }
+        },
+        {
+          "id": "q029_b",
+          "text": {
+            "en": "Centre should mediate disputes between states fairly",
+            "ta": "மாநிலங்களுக்கு இடையிலான தகராறுகளை மையம் நியாயமாக மத்தியஸ்தம் செய்ய வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 3,
+            "governance": 4
+          }
+        },
+        {
+          "id": "q029_c",
+          "text": {
+            "en": "Centre should have final authority on inter-state water issues",
+            "ta": "மாநிலங்களுக்கு இடையிலான நீர் பிரச்சினைகளில் மையத்திற்கு இறுதி அதிகாரம் இருக்க வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "governance": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q030",
+      "cluster": "federalism",
+      "text": {
+        "en": "Should Tamil Nadu have its own flag alongside the national flag?",
+        "ta": "தேசியக் கொடியுடன் தமிழ்நாட்டிற்கு தனது சொந்த கொடி இருக்க வேண்டுமா?"
+      },
+      "options": [
+        {
+          "id": "q030_a",
+          "text": {
+            "en": "Yes, it represents our distinct identity and pride",
+            "ta": "ஆம், இது நமது தனித்துவமான அடையாளம் மற்றும் பெருமையை பிரதிநிதித்துவப்படுத்துகிறது"
+          },
+          "partyWeights": {
+            "DMK": 4,
+            "AIADMK": 3,
+            "TVK": 5
+          },
+          "axisWeights": {
+            "federalism": 4,
+            "language_identity": 5
+          }
+        },
+        {
+          "id": "q030_b",
+          "text": {
+            "en": "It's acceptable as a cultural symbol, not a political one",
+            "ta": "இது ஒரு கலாச்சார சின்னமாக ஏற்றுக்கொள்ளத்தக்கது, அரசியல் சின்னம் அல்ல"
+          },
+          "partyWeights": {
+            "DMK": 3,
+            "AIADMK": 3,
+            "TVK": 3
+          },
+          "axisWeights": {
+            "federalism": 2,
+            "language_identity": 3
+          }
+        },
+        {
+          "id": "q030_c",
+          "text": {
+            "en": "No, only the national flag should be used",
+            "ta": "இல்லை, தேசியக் கொடி மட்டுமே பயன்படுத்தப்பட வேண்டும்"
+          },
+          "partyWeights": {
+            "DMK": 1,
+            "AIADMK": 2,
+            "TVK": 1
+          },
+          "axisWeights": {
+            "federalism": 1,
+            "language_identity": 1
+          }
+        }
+      ]
+    }
+  ]
+}

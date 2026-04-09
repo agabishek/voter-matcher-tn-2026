@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "hash": "8383b1e482fa50f14e9501dae4d4b97c1040da80dc321bc90cd92c70840382a3",
+  "archetypes": [
+    {
+      "id": "security_seeker",
+      "names": {
+        "en": "Security Seeker",
+        "ta": "பாதுகாப்பு தேடுபவர்"
+      },
+      "dominantAxes": [
+        "welfare",
+        "poverty"
+      ],
+      "ambiguityThreshold": 0.1,
+      "descriptions": {
+        "en": "You prioritize direct government support and economic security for families. You believe the state's primary role is to protect citizens from hardship through targeted welfare programs. Ensuring that no family goes without food, shelter, or basic income is your core concern.",
+        "ta": "நீங்கள் குடும்பங்களுக்கான நேரடி அரசு ஆதரவு மற்றும் பொருளாதார பாதுகாப்பை முன்னுரிமை அளிக்கிறீர்கள். கடினமான சூழ்நிலைகளிலிருந்து குடிமக்களை பாதுகாப்பது அரசின் முதன்மைப் பொறுப்பு என்று நம்புகிறீர்கள். எந்த குடும்பமும் உணவு, வீடு அல்லது அடிப்படை வருமானம் இல்லாமல் இருக்கக்கூடாது என்பது உங்கள் மையக் கவலை."
+      }
+    },
+    {
+      "id": "equity_builder",
+      "names": {
+        "en": "Equity Builder",
+        "ta": "சமத்துவ கட்டுநர்"
+      },
+      "dominantAxes": [
+        "social_justice",
+        "governance"
+      ],
+      "ambiguityThreshold": 0.1,
+      "descriptions": {
+        "en": "You prioritize systemic equality and institutional reform to ensure fair representation for all communities. You believe that lasting change requires transforming the structures that produce inequality, not just addressing its symptoms. Strong governance and proportional representation are central to your vision.",
+        "ta": "அனைத்து சமூகங்களுக்கும் நியாயமான பிரதிநிதித்துவத்தை உறுதி செய்ய அமைப்பு ரீதியான சமத்துவம் மற்றும் நிறுவன சீர்திருத்தத்தை நீங்கள் முன்னுரிமை அளிக்கிறீர்கள். சமத்துவமின்மையை உருவாக்கும் கட்டமைப்புகளை மாற்றுவதன் மூலமே நிலையான மாற்றம் சாத்தியம் என்று நம்புகிறீர்கள். வலுவான ஆட்சி மற்றும் விகிதாசார பிரதிநிதித்துவம் உங்கள் பார்வையின் மையமாக உள்ளது."
+      }
+    },
+    {
+      "id": "system_reformer",
+      "names": {
+        "en": "System Reformer",
+        "ta": "அமைப்பு சீர்திருத்தவாதி"
+      },
+      "dominantAxes": [
+        "corruption",
+        "economy",
+        "responsibility"
+      ],
+      "ambiguityThreshold": 0.1,
+      "descriptions": {
+        "en": "You prioritize transparency, accountability, and economic reform as the foundation for a better society. You believe that corruption and inefficiency in public institutions are the root causes of most social problems. Structural reform — not just welfare spending — is the path to sustainable development.",
+        "ta": "சிறந்த சமுதாயத்திற்கான அடித்தளமாக வெளிப்படைத்தன்மை, பொறுப்புணர்வு மற்றும் பொருளாதார சீர்திருத்தத்தை நீங்கள் முன்னுரிமை அளிக்கிறீர்கள். பொது நிறுவனங்களில் ஊழல் மற்றும் திறமையின்மையே பெரும்பாலான சமூக பிரச்சினைகளுக்கு மூல காரணம் என்று நம்புகிறீர்கள். நலன்புரி செலவினம் மட்டுமல்ல, அமைப்பு சீர்திருத்தமே நிலையான வளர்ச்சிக்கான பாதை என்று கருதுகிறீர்கள்."
+      }
+    },
+    {
+      "id": "identity_advocate",
+      "names": {
+        "en": "Identity Advocate",
+        "ta": "அடையாள வாதி"
+      },
+      "dominantAxes": [
+        "language_identity",
+        "federalism"
+      ],
+      "ambiguityThreshold": 0.1,
+      "descriptions": {
+        "en": "You prioritize Tamil cultural identity and state autonomy as foundational political values. You believe that protecting the Tamil language, heritage, and the rights of Tamil Nadu as a state are non-negotiable. A strong federal structure that respects state sovereignty is essential to your political vision.",
+        "ta": "தமிழ் கலாச்சார அடையாளம் மற்றும் மாநில சுயாட்சியை அடிப்படை அரசியல் மதிப்புகளாக நீங்கள் முன்னுரிமை அளிக்கிறீர்கள். தமிழ் மொழி, பாரம்பரியம் மற்றும் மாநிலமாக தமிழ்நாட்டின் உரிமைகளை பாதுகாப்பது சமரசமற்றது என்று நம்புகிறீர்கள். மாநில இறையாண்மையை மதிக்கும் வலுவான கூட்டாட்சி கட்டமைப்பு உங்கள் அரசியல் பார்வைக்கு இன்றியமையாதது."
+      }
+    }
+  ]
+}

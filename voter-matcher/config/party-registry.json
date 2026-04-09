@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "hash": "be5177d9f41928edb914f69b02e844341c407d5b4b09490031a32d85246418c7",
+  "parties": [
+    {
+      "id": "DMK",
+      "names": {
+        "en": "DMK",
+        "ta": "திமுக"
+      },
+      "fullNames": {
+        "en": "Dravida Munnetra Kazhagam",
+        "ta": "திராவிட முன்னேற்றக் கழகம்"
+      },
+      "governanceStatus": "incumbent",
+      "weightBasis": "track-record",
+      "manifestoVersion": "dmk-2026-v1",
+      "active": true
+    },
+    {
+      "id": "AIADMK",
+      "names": {
+        "en": "AIADMK",
+        "ta": "அதிமுக"
+      },
+      "fullNames": {
+        "en": "All India Anna Dravida Munnetra Kazhagam",
+        "ta": "அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்"
+      },
+      "governanceStatus": "incumbent",
+      "weightBasis": "track-record",
+      "manifestoVersion": "aiadmk-2026-v1",
+      "active": true
+    },
+    {
+      "id": "TVK",
+      "names": {
+        "en": "TVK",
+        "ta": "தவக"
+      },
+      "fullNames": {
+        "en": "Tamilaga Vettri Kazhagam",
+        "ta": "தமிழக வெற்றி கழகம்"
+      },
+      "governanceStatus": "new",
+      "weightBasis": "promise",
+      "manifestoVersion": "tvk-2026-v1",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "parties": {
+    "DMK": {
+      "name": { "en": "DMK", "ta": "திமுக" },
+      "fullName": {
+        "en": "Dravida Munnetra Kazhagam",
+        "ta": "திராவிட முன்னேற்றக் கழகம்"
+      },
+      "color": "#E63946",
+      "ideology": {
+        "en": "Dravidian Model – Social Justice, Federalism, Secularism, State Autonomy",
+        "ta": "திராவிட மாடல் – சமூக நீதி, கூட்டாட்சி, மதச்சார்பின்மை, மாநில சுயாட்சி"
+      },
+      "keyPolicies": {
+        "welfare": {
+          "en": "Kalaignar Magalir Urimai Thittam – ₹1,000/month (to be raised to ₹2,000) for women heads of households. Free breakfast scheme for school children. Anbu Sathukkadu free meals. Free bus travel for women.",
+          "ta": "கலைஞர் மகளிர் உரிமைத் திட்டம் – குடும்பத் தலைவிகளுக்கு மாதம் ₹1,000 (₹2,000 ஆக உயர்த்தப்படும்). பள்ளி மாணவர்களுக்கு இலவச காலை உணவு. அன்பு சத்துக்காடு இலவச உணவு. பெண்களுக்கு இலவச பேருந்து பயணம்."
+        },
+        "socialJustice": {
+          "en": "69% reservation protected constitutionally. Reservation monitoring commission established. Caste census to ensure proportional representation. SC/ST/OBC scholarship enhancement. Ambedkar foreign education scheme.",
+          "ta": "69% இட ஒதுக்கீடு அரசியலமைப்பு ரீதியாக பாதுகாக்கப்பட்டது. இட ஒதுக்கீடு கண்காணிப்பு ஆணையம் அமைக்கப்பட்டது. சாதி வாரி கணக்கெடுப்பு. SC/ST/OBC உதவித்தொகை உயர்வு. அம்பேத்கர் வெளிநாட்டு கல்வித் திட்டம்."
+        },
+        "federalism": {
+          "en": "Strong state autonomy – 'Self-rule in states, federation at centre'. Demand 50-70% GST share for states. Oppose One Nation One Election. Education to State List. Oppose Hindi imposition. Justice Kurian Joseph committee on state rights.",
+          "ta": "வலுவான மாநில சுயாட்சி – 'மாநிலத்தில் சுயாட்சி, மத்தியில் கூட்டாட்சி'. மாநிலங்களுக்கு 50-70% GST பங்கு கோரிக்கை. ஒரே நாடு ஒரே தேர்தல் எதிர்ப்பு. கல்வியை மாநிலப் பட்டியலுக்கு மாற்றம். இந்தி திணிப்பு எதிர்ப்பு."
+        },
+        "languageIdentity": {
+          "en": "Tamil as official language of Madras High Court. Tamil chairs in 25 international universities. Oppose Hindi imposition – two-language policy. Protect Dravidian language identity. Sangam Tamil research and AI language models.",
+          "ta": "சென்னை உயர்நீதிமன்றத்தில் தமிழை நடைமுறை மொழியாக்குதல். 25 சர்வதேச பல்கலைக்கழகங்களில் தமிழ் கல்வி. இந்தி திணிப்பு எதிர்ப்பு – இருமொழிக் கொள்கை. திராவிட மொழி அடையாளம் பாதுகாப்பு."
+        },
+        "governance": {
+          "en": "Dravidian Model 2.0 – transparent, accessible governance. Single window clearance. E-governance expansion. Anti-corruption stance. Guaranteed pension scheme (TAPS) for government employees.",
+          "ta": "திராவிட மாடல் 2.0 – வெளிப்படையான, எளிமையான ஆட்சி. ஒற்றைச் சாளர அனுமதி. மின்-ஆட்சி விரிவாக்கம். ஊழல் எதிர்ப்பு நிலைப்பாடு. அரசு ஊழியர்களுக்கு உத்தரவாதமான ஓய்வூதியத் திட்டம் (TAPS)."
+        },
+        "economy": {
+          "en": "11.19% GDP growth achieved. IT parks in tier-2 cities. Startup ecosystem. AI Mission 2.0. Skill development for 50 lakh people. Global Talent Gateway in 5 cities. MSME support.",
+          "ta": "11.19% GDP வளர்ச்சி அடையப்பட்டது. இரண்டாம் நிலை நகரங்களில் IT பூங்காக்கள். தொடக்க நிறுவன சூழல். AI Mission 2.0. 50 லட்சம் பேருக்கு திறன் மேம்பாடு. 5 நகரங்களில் Global Talent Gateway."
+        },
+        "poverty": {
+          "en": "Noon meal scheme expanded to Class 8. Free laptops for 35 lakh college students. Anbu Sathukkadu free meals for elderly. Housing for all Adi Dravidar families by 2030. ₹2,000 crore for Ambedkar housing scheme.",
+          "ta": "காலை உணவு திட்டம் 8ஆம் வகுப்பு வரை விரிவாக்கம். 35 லட்சம் கல்லூரி மாணவர்களுக்கு இலவச மடிக்கணினி. முதியோருக்கு அன்பு சத்துக்காடு இலவச உணவு. 2030க்குள் அனைத்து ஆதிதிராவிட குடும்பங்களுக்கும் வீடு."
+        },
+        "corruption": {
+          "en": "Transparent governance as core Dravidian Model principle. Anti-corruption as institutional value. Guaranteed pension to prevent financial insecurity. Single window to reduce bribery.",
+          "ta": "வெளிப்படையான ஆட்சி திராவிட மாடலின் மையக் கொள்கை. ஊழல் எதிர்ப்பு நிறுவன மதிப்பாக. நிதி பாதுகாப்பிற்கு உத்தரவாதமான ஓய்வூதியம். லஞ்சம் குறைக்க ஒற்றைச் சாளரம்."
+        },
+        "responsibility": {
+          "en": "State as primary provider and enabler. Government takes responsibility for welfare delivery. Dravidian Model emphasises collective responsibility over individual market solutions.",
+          "ta": "அரசு முதன்மை வழங்குநராகவும் செயல்படுத்துபவராகவும். அரசு நலன்புரி வழங்கலுக்கு பொறுப்பேற்கிறது. திராவிட மாடல் தனிநபர் சந்தை தீர்வுகளை விட கூட்டுப் பொறுப்பை வலியுறுத்துகிறது."
+        }
+      },
+      "axisWeights": {
+        "welfare": 4, "governance": 4, "economy": 3, "poverty": 4,
+        "socialJustice": 5, "corruption": 3, "responsibility": 2,
+        "languageIdentity": 5, "federalism": 5
+      }
+    },
+    "AIADMK": {
+      "name": { "en": "AIADMK", "ta": "அதிமுக" },
+      "fullName": {
+        "en": "All India Anna Dravida Munnetra Kazhagam",
+        "ta": "அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்"
+      },
+      "color": "#F4A261",
+      "ideology": {
+        "en": "Annaism – Welfare State, Direct Benefits, Social Security, Cooperative Federalism",
+        "ta": "அண்ணாவியம் – நலன்புரி அரசு, நேரடி நலன்கள், சமூகப் பாதுகாப்பு, கூட்டுறவு கூட்டாட்சி"
+      },
+      "keyPolicies": {
+        "welfare": {
+          "en": "Kula Vilakku Scheme – ₹2,000/month direct cash to female head of family. ₹10,000 special assistance to every family for price rise. Free refrigerator for rice cardholders. Free sarees and dhotis for Deepavali. 3 free LPG cylinders/year. Free bus travel for men and women.",
+          "ta": "குல விளக்கு திட்டம் – குடும்பத் தலைவிக்கு மாதம் ₹2,000 நேரடி பணம். விலைவாசி நிவாரணமாக ஒவ்வொரு குடும்பத்திற்கும் ₹10,000 சிறப்பு உதவி. அரிசி அட்டைதாரர்களுக்கு இலவச குளிர்சாதனப் பெட்டி. தீபாவளிக்கு இலவச புடவை மற்றும் வேட்டி. ஆண்டுக்கு 3 இலவச LPG சிலிண்டர்."
+        },
+        "socialJustice": {
+          "en": "69% reservation legally protected – AIADMK created this constitutional protection. Adi Dravidar welfare – TAHDCO loan waiver. 7.5% internal reservation for government school students in medical colleges. Caste census support.",
+          "ta": "69% இட ஒதுக்கீடு சட்டரீதியாக பாதுகாக்கப்பட்டது – அதிமுக இந்த அரசியலமைப்பு பாதுகாப்பை உருவாக்கியது. ஆதிதிராவிட நலன் – TAHDCO கடன் தள்ளுபடி. அரசுப் பள்ளி மாணவர்களுக்கு மருத்துவக் கல்லூரியில் 7.5% உள் இட ஒதுக்கீடு."
+        },
+        "federalism": {
+          "en": "Cooperative federalism – 'Never bound to anyone, not for separation, join as equals' (Annaism). Demand financial devolution from Centre. Oppose reduction of TN's share in Finance Commission. Education and Medicine to State List.",
+          "ta": "கூட்டுறவு கூட்டாட்சி – 'யாருக்கும் கட்டுப்படோம், பிரிவினை வேண்டோம், சமத்துவமாக இணைவோம்' (அண்ணாவியம்). மத்தியிலிருந்து நிதி பகிர்வு கோரிக்கை. நிதிக் குழுவில் தமிழ்நாட்டின் பங்கு குறைப்பை எதிர்ப்பு."
+        },
+        "languageIdentity": {
+          "en": "Tamil as official language in all Central competitive exams. Tamil chairs in 25 international universities. Protect Tamil cultural heritage. Keeladi and other archaeological excavations. Katchatheevu retrieval.",
+          "ta": "அனைத்து மத்திய போட்டித் தேர்வுகளிலும் தமிழ் மொழி. 25 சர்வதேச பல்கலைக்கழகங்களில் தமிழ் கல்வி. தமிழ் கலாச்சார பாரம்பரியம் பாதுகாப்பு. கீழடி மற்றும் பிற தொல்லியல் அகழ்வாராய்ச்சிகள். கச்சத்தீவு மீட்பு."
+        },
+        "governance": {
+          "en": "Anti-corruption – strict action against DMK corruption. E-Seva strengthening for quick document delivery. Transparent petition tracking. Single Window under CM for industrial investment. Manu Neethi Naal grievance redressal.",
+          "ta": "ஊழல் எதிர்ப்பு – திமுக ஊழலுக்கு எதிராக கடுமையான நடவடிக்கை. விரைவான ஆவண வழங்கலுக்கு E-Seva வலுப்படுத்தல். வெளிப்படையான மனு கண்காணிப்பு. தொழில் முதலீட்டிற்கு முதல்வர் கீழ் ஒற்றைச் சாளரம்."
+        },
+        "economy": {
+          "en": "Global Investors Meet every 2 years. One Trillion Dollar Economy target. Decentralised industrial development in southern districts. Satellite Software Park. Defence corridor. Pharmaceutical parks. MSME support.",
+          "ta": "ஒவ்வொரு 2 ஆண்டுகளுக்கும் உலக முதலீட்டாளர் கூட்டம். ஒரு டிரில்லியன் டாலர் பொருளாதார இலக்கு. தென் மாவட்டங்களில் பரவலாக்கப்பட்ட தொழில் வளர்ச்சி. செயற்கைக்கோள் மென்பொருள் பூங்கா."
+        },
+        "poverty": {
+          "en": "Amma Illam Scheme – free houses for homeless families. 100-day employment raised to 150 days. Pension increased to ₹2,000 for elderly, widows, disabled. Education loan waiver. ₹10,000 Pongal gift + cash.",
+          "ta": "அம்மா இல்லம் திட்டம் – வீடற்ற குடும்பங்களுக்கு இலவச வீடுகள். 100 நாள் வேலைவாய்ப்பு 150 நாட்களாக உயர்வு. முதியோர், விதவைகள், மாற்றுத்திறனாளிகளுக்கு ₹2,000 ஓய்வூதியம். கல்விக் கடன் தள்ளுபடி."
+        },
+        "corruption": {
+          "en": "Anti-corruption as central campaign theme against DMK. Strict action against officials who looted public money. Anti-Drug Task Force under CM. Law and order restoration.",
+          "ta": "திமுகவிற்கு எதிரான மையப் பிரச்சார கருப்பொருளாக ஊழல் எதிர்ப்பு. பொது பணத்தை கொள்ளையடித்த அதிகாரிகளுக்கு கடுமையான நடவடிக்கை. முதல்வர் கீழ் போதைப்பொருள் எதிர்ப்பு படை."
+        },
+        "responsibility": {
+          "en": "State as direct welfare provider – 'We will do the impossible for those who have nothing'. Direct cash transfers, free goods, subsidies as primary mechanism. Individual upliftment through state schemes.",
+          "ta": "அரசு நேரடி நலன்புரி வழங்குநராக – 'எதுவும் இல்லாதவர்களுக்காக சாத்தியமற்றதை செய்வோம்'. நேரடி பண பரிமாற்றம், இலவச பொருட்கள், மானியங்கள் முதன்மை வழிமுறையாக."
+        }
+      },
+      "axisWeights": {
+        "welfare": 5, "governance": 3, "economy": 3, "poverty": 5,
+        "socialJustice": 4, "corruption": 4, "responsibility": 1,
+        "languageIdentity": 4, "federalism": 3
+      }
+    },
+    "TVK": {
+      "name": { "en": "TVK", "ta": "தவக" },
+      "fullName": {
+        "en": "Tamilaga Vettri Kazhagam",
+        "ta": "தமிழக வெற்றி கழகம்"
+      },
+      "color": "#457B9D",
+      "ideology": {
+        "en": "Secular Social Justice – Youth Empowerment, System Reform, Anti-Corruption, Local Employment",
+        "ta": "மதச்சார்பற்ற சமூக நீதி – இளைஞர் மேம்பாடு, அமைப்பு சீர்திருத்தம், ஊழல் எதிர்ப்பு, உள்ளூர் வேலைவாய்ப்பு"
+      },
+      "keyPolicies": {
+        "welfare": {
+          "en": "₹2,500/month for women heads of households (highest among all parties). 6 free LPG cylinders/year. Free bus travel for women statewide. Newborn welcome kit with gold ring. 1 sovereign gold + silk sari for poor brides.",
+          "ta": "குடும்பத் தலைவிகளுக்கு மாதம் ₹2,500 (அனைத்து கட்சிகளிலும் அதிகம்). ஆண்டுக்கு 6 இலவச LPG சிலிண்டர். மாநிலம் முழுவதும் பெண்களுக்கு இலவச பேருந்து பயணம். புதிதாகப் பிறந்த குழந்தைக்கு தங்க மோதிரம் உள்ளிட்ட வரவேற்பு கிட்."
+        },
+        "socialJustice": {
+          "en": "Secular Social Justice as core ideology. 75% local jobs reservation for Tamil people. Anti-caste discrimination. Inclusive development for marginalized communities. Transparent TNPSC exams to ensure merit-based selection.",
+          "ta": "மதச்சார்பற்ற சமூக நீதி மையக் கொள்கையாக. தமிழர்களுக்கு 75% உள்ளூர் வேலைவாய்ப்பு இட ஒதுக்கீடு. சாதி பாகுபாடு எதிர்ப்பு. விளிம்புநிலை சமூகங்களுக்கு உள்ளடக்கிய வளர்ச்சி."
+        },
+        "federalism": {
+          "en": "State autonomy advocate. Katchatheevu retrieval for Tamil fishermen. Protect Tamil fishermen's rights. Federal structure protection.",
+          "ta": "மாநில சுயாட்சி ஆதரவாளர். தமிழ் மீனவர்களுக்காக கச்சத்தீவு மீட்பு. தமிழ் மீனவர்களின் உரிமைகள் பாதுகாப்பு. கூட்டாட்சி கட்டமைப்பு பாதுகாப்பு."
+        },
+        "languageIdentity": {
+          "en": "Tamil identity and pride as foundational value. Protect Tamil fishermen (Katchatheevu). Local employment for Tamil people. Tamil Nadu first approach.",
+          "ta": "தமிழ் அடையாளம் மற்றும் பெருமை அடிப்படை மதிப்பாக. தமிழ் மீனவர்களை பாதுகாப்பு (கச்சத்தீவு). தமிழ் மக்களுக்கு உள்ளூர் வேலைவாய்ப்பு. தமிழ்நாடு முதல் அணுகுமுறை."
+        },
+        "governance": {
+          "en": "System reform as core promise. Transparent TNPSC exams on strict schedule. Anti-corruption as central pillar. Youth advisory council. Drug-free Tamil Nadu mission with strict laws. Anti-drug protection zones in all schools/colleges.",
+          "ta": "அமைப்பு சீர்திருத்தம் மையப் வாக்குறுதியாக. கண்டிப்பான அட்டவணையில் வெளிப்படையான TNPSC தேர்வுகள். ஊழல் எதிர்ப்பு மையத் தூணாக. இளைஞர் ஆலோசனை குழு. போதைப்பொருள் இல்லா தமிழ்நாடு இயக்கம்."
+        },
+        "economy": {
+          "en": "Job creators not job seekers – entrepreneurship focus. Interest-free loans up to ₹25 lakh for young entrepreneurs. 1.5 lakh new entrepreneurs via Creative Entrepreneurs Scheme. 500 Creative Schools. 5 lakh internships/year with ₹10,000 stipend. Private companies hiring 75% Tamils get GST subsidy.",
+          "ta": "வேலை தேடுபவர்கள் அல்ல வேலை உருவாக்குபவர்கள் – தொழில்முனைவு கவனம். இளம் தொழில்முனைவோருக்கு ₹25 லட்சம் வரை வட்டியில்லா கடன். படைப்பாற்றல் தொழில்முனைவோர் திட்டம் மூலம் 1.5 லட்சம் புதிய தொழில்முனைவோர்."
+        },
+        "poverty": {
+          "en": "Free higher education for children of small farmers (under 2 acres). Agricultural loan relief. ₹4,000/month unemployment allowance for graduates over 29. ₹2,000/month for diploma holders. Interest-free education loans up to ₹20 lakh.",
+          "ta": "சிறு விவசாயிகளின் (2 ஏக்கருக்கும் குறைவான) குழந்தைகளுக்கு இலவச உயர்கல்வி. விவசாயக் கடன் நிவாரணம். 29 வயதுக்கு மேல் பட்டதாரிகளுக்கு மாதம் ₹4,000 வேலையின்மை உதவி. டிப்ளோமா தாரர்களுக்கு ₹2,000."
+        },
+        "corruption": {
+          "en": "Anti-corruption as founding principle. Transparent TNPSC exams. Drug-free mission with strict enforcement. System reform to eliminate institutional corruption. Youth advisory council for accountability.",
+          "ta": "ஊழல் எதிர்ப்பு நிறுவன கொள்கையாக. வெளிப்படையான TNPSC தேர்வுகள். கண்டிப்பான அமலாக்கத்துடன் போதைப்பொருள் இல்லா இயக்கம். நிறுவன ஊழலை ஒழிக்க அமைப்பு சீர்திருத்தம்."
+        },
+        "responsibility": {
+          "en": "Balanced – state provides safety net but empowers individuals. 'Job creators not job seekers' philosophy. Entrepreneurship and self-reliance alongside welfare. Individual empowerment through systemic reform.",
+          "ta": "சமநிலை – அரசு பாதுகாப்பு வலை வழங்கும் ஆனால் தனிநபர்களை மேம்படுத்தும். 'வேலை தேடுபவர்கள் அல்ல வேலை உருவாக்குபவர்கள்' தத்துவம். நலன்புரியுடன் தொழில்முனைவு மற்றும் சுயசார்பு."
+        }
+      },
+      "axisWeights": {
+        "welfare": 4, "governance": 5, "economy": 4, "poverty": 3,
+        "socialJustice": 4, "corruption": 5, "responsibility": 3,
+        "languageIdentity": 3, "federalism": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "version": "1.0.0",
+  "hash": "",
+  "districts": [
+    {
+      "id": "thiruvallur",
+      "names": { "en": "Thiruvallur", "ta": "திருவள்ளூர்" },
+      "constituencies": [
+        { "id": 1, "name": { "en": "Gummidipoondi", "ta": "கும்மிடிப்பூண்டி" } },
+        { "id": 2, "name": { "en": "Ponneri", "ta": "பொன்னேரி" } },
+        { "id": 3, "name": { "en": "Tiruttani", "ta": "திருத்தணி" } },
+        { "id": 4, "name": { "en": "Thiruvallur", "ta": "திருவள்ளூர்" } },
+        { "id": 5, "name": { "en": "Poonamallee", "ta": "பூந்தமல்லி" } },
+        { "id": 6, "name": { "en": "Avadi", "ta": "ஆவடி" } },
+        { "id": 9, "name": { "en": "Madavaram", "ta": "மாதவரம்" } }
+      ]
+    },
+    {
+      "id": "chennai",
+      "names": { "en": "Chennai", "ta": "சென்னை" },
+      "constituencies": [
+        { "id": 7, "name": { "en": "Maduravoyal", "ta": "மதுரவாயல்" } },
+        { "id": 8, "name": { "en": "Ambattur", "ta": "அம்பத்தூர்" } },
+        { "id": 10, "name": { "en": "Thiruvottiyur", "ta": "திருவொற்றியூர்" } },
+        { "id": 11, "name": { "en": "Dr.Radhakrishnan Nagar", "ta": "டாக்டர் ராதாகிருஷ்ணன் நகர்" } },
+        { "id": 12, "name": { "en": "Perambur", "ta": "பெரம்பூர்" } },
+        { "id": 13, "name": { "en": "Kolathur", "ta": "கொளத்தூர்" } },
+        { "id": 14, "name": { "en": "Villivakkam", "ta": "வில்லிவாக்கம்" } },
+        { "id": 15, "name": { "en": "Thiru-Vi-Ka-Nagar", "ta": "திரு.வி.க.நகர்" } },
+        { "id": 16, "name": { "en": "Egmore", "ta": "எழும்பூர்" } },
+        { "id": 17, "name": { "en": "Royapuram", "ta": "இராயபுரம்" } },
+        { "id": 18, "name": { "en": "Harbour", "ta": "துறைமுகம்" } },
+        { "id": 19, "name": { "en": "Chepauk-Thiruvallikeni", "ta": "சேப்பாக்கம்-திருவல்லிக்கேணி" } },
+        { "id": 20, "name": { "en": "Thousand Lights", "ta": "ஆயிரம் விளக்கு" } },
+        { "id": 21, "name": { "en": "Anna Nagar", "ta": "அண்ணா நகர்" } },
+        { "id": 22, "name": { "en": "Virugampakkam", "ta": "விருகம்பாக்கம்" } },
+        { "id": 23, "name": { "en": "Saidapet", "ta": "சைதாப்பேட்டை" } },
+        { "id": 24, "name": { "en": "Thiyagarayanagar", "ta": "தியாகராயநகர்" } },
+        { "id": 25, "name": { "en": "Mylapore", "ta": "மயிலாப்பூர்" } },
+        { "id": 26, "name": { "en": "Velachery", "ta": "வேளச்சேரி" } },
+        { "id": 27, "name": { "en": "Sholinganallur", "ta": "சோழிங்கநல்லூர்" } },
+        { "id": 28, "name": { "en": "Alandur", "ta": "ஆலந்தூர்" } }
+      ]
+    },
+    {
+      "id": "kancheepuram",
+      "names": { "en": "Kancheepuram", "ta": "காஞ்சிபுரம்" },
+      "constituencies": [
+        { "id": 29, "name": { "en": "Sriperumbudur", "ta": "ஸ்ரீபெரும்புதூர்" } },
+        { "id": 36, "name": { "en": "Uthiramerur", "ta": "உத்திரமேரூர்" } },
+        { "id": 37, "name": { "en": "Kancheepuram", "ta": "காஞ்சிபுரம்" } }
+      ]
+    },
+    {
+      "id": "chengalpattu",
+      "names": { "en": "Chengalpattu", "ta": "செங்கல்பட்டு" },
+      "constituencies": [
+        { "id": 30, "name": { "en": "Pallavaram", "ta": "பல்லாவரம்" } },
+        { "id": 31, "name": { "en": "Tambaram", "ta": "தாம்பரம்" } },
+        { "id": 32, "name": { "en": "Chengalpattu", "ta": "செங்கல்பட்டு" } },
+        { "id": 33, "name": { "en": "Thiruporur", "ta": "திருப்போரூர்" } },
+        { "id": 34, "name": { "en": "Cheyyur", "ta": "செய்யூர்" } },
+        { "id": 35, "name": { "en": "Madurantakam", "ta": "மதுராந்தகம்" } }
+      ]
+    },
+    {
+      "id": "ranipet",
+      "names": { "en": "Ranipet", "ta": "ராணிப்பேட்டை" },
+      "constituencies": [
+        { "id": 38, "name": { "en": "Arakkonam", "ta": "அரக்கோணம்" } },
+        { "id": 39, "name": { "en": "Sholingur", "ta": "சோளிங்கர்" } },
+        { "id": 41, "name": { "en": "Ranipet", "ta": "ராணிப்பேட்டை" } },
+        { "id": 42, "name": { "en": "Arcot", "ta": "ஆற்காடு" } }
+      ]
+    },
+    {
+      "id": "vellore",
+      "names": { "en": "Vellore", "ta": "வேலூர்" },
+      "constituencies": [
+        { "id": 40, "name": { "en": "Katpadi", "ta": "காட்பாடி" } },
+        { "id": 43, "name": { "en": "Vellore", "ta": "வேலூர்" } },
+        { "id": 44, "name": { "en": "Anaikattu", "ta": "அணைக்கட்டு" } },
+        { "id": 45, "name": { "en": "Kilvaithinankuppam", "ta": "கீழ்வைத்தீஸ்வரன்கோவில்" } },
+        { "id": 46, "name": { "en": "Gudiyatham", "ta": "குடியாத்தம்" } }
+      ]
+    },
+    {
+      "id": "tirupattur",
+      "names": { "en": "Tirupattur", "ta": "திருப்பத்தூர்" },
+      "constituencies": [
+        { "id": 47, "name": { "en": "Vaniyambadi", "ta": "வாணியம்பாடி" } },
+        { "id": 48, "name": { "en": "Ambur", "ta": "ஆம்பூர்" } },
+        { "id": 49, "name": { "en": "Jolarpet", "ta": "ஜோலார்பேட்டை" } },
+        { "id": 50, "name": { "en": "Tiruppattur", "ta": "திருப்பத்தூர்" } }
+      ]
+    },
+    {
+      "id": "krishnagiri",
+      "names": { "en": "Krishnagiri", "ta": "கிருஷ்ணகிரி" },
+      "constituencies": [
+        { "id": 51, "name": { "en": "Uthangarai", "ta": "உத்தங்கரை" } },
+        { "id": 52, "name": { "en": "Bargur", "ta": "பர்கூர்" } },
+        { "id": 53, "name": { "en": "Krishnagiri", "ta": "கிருஷ்ணகிரி" } },
+        { "id": 54, "name": { "en": "Veppanahalli", "ta": "வேப்பனஹள்ளி" } },
+        { "id": 55, "name": { "en": "Hosur", "ta": "ஓசூர்" } },
+        { "id": 56, "name": { "en": "Thalli", "ta": "தள்ளி" } }
+      ]
+    },
+    {
+      "id": "dharmapuri",
+      "names": { "en": "Dharmapuri", "ta": "தர்மபுரி" },
+      "constituencies": [
+        { "id": 57, "name": { "en": "Palacode", "ta": "பாலக்கோடு" } },
+        { "id": 58, "name": { "en": "Pennagaram", "ta": "பென்னாகரம்" } },
+        { "id": 59, "name": { "en": "Dharmapuri", "ta": "தர்மபுரி" } },
+        { "id": 60, "name": { "en": "Pappireddippatti", "ta": "பாப்பிரெட்டிப்பட்டி" } },
+        { "id": 61, "name": { "en": "Harur", "ta": "அரூர்" } }
+      ]
+    },
+    {
+      "id": "tiruvannamalai",
+      "names": { "en": "Tiruvannamalai", "ta": "திருவண்ணாமலை" },
+      "constituencies": [
+        { "id": 62, "name": { "en": "Chengam", "ta": "செங்கம்" } },
+        { "id": 63, "name": { "en": "Tiruvannamalai", "ta": "திருவண்ணாமலை" } },
+        { "id": 64, "name": { "en": "Kilpennathur", "ta": "கீழ்பெண்ணாத்தூர்" } },
+        { "id": 65, "name": { "en": "Kalasapakkam", "ta": "கலசப்பாக்கம்" } },
+        { "id": 66, "name": { "en": "Polur", "ta": "போளூர்" } },
+        { "id": 67, "name": { "en": "Arani", "ta": "ஆரணி" } },
+        { "id": 68, "name": { "en": "Cheyyar", "ta": "செய்யாறு" } },
+        { "id": 69, "name": { "en": "Vandavasi", "ta": "வந்தவாசி" } }
+      ]
+    },
+    {
+      "id": "viluppuram",
+      "names": { "en": "Viluppuram", "ta": "விழுப்புரம்" },
+      "constituencies": [
+        { "id": 70, "name": { "en": "Gingee", "ta": "செஞ்சி" } },
+        { "id": 71, "name": { "en": "Mailam", "ta": "மயிலம்" } },
+        { "id": 72, "name": { "en": "Tindivanam", "ta": "திண்டிவனம்" } },
+        { "id": 73, "name": { "en": "Vanur", "ta": "வானூர்" } },
+        { "id": 74, "name": { "en": "Villupuram", "ta": "விழுப்புரம்" } },
+        { "id": 75, "name": { "en": "Vikravandi", "ta": "விக்கிரவாண்டி" } }
+      ]
+    },
+    {
+      "id": "kallakurichi",
+      "names": { "en": "Kallakurichi", "ta": "கள்ளக்குறிச்சி" },
+      "constituencies": [
+        { "id": 76, "name": { "en": "Tirukkoyilur", "ta": "திருக்கோயிலூர்" } },
+        { "id": 77, "name": { "en": "Ulundurpettai", "ta": "உளுந்தூர்பேட்டை" } },
+        { "id": 78, "name": { "en": "Rishivandiyam", "ta": "ரிஷிவந்தியம்" } },
+        { "id": 79, "name": { "en": "Sankarapuram", "ta": "சங்கராபுரம்" } },
+        { "id": 80, "name": { "en": "Kallakurichi", "ta": "கள்ளக்குறிச்சி" } }
+      ]
+    }
+,
+    {
+      "id": "salem",
+      "names": { "en": "Salem", "ta": "சேலம்" },
+      "constituencies": [
+        { "id": 81, "name": { "en": "Gangavalli", "ta": "கங்கவள்ளி" } },
+        { "id": 82, "name": { "en": "Attur", "ta": "ஆத்தூர்" } },
+        { "id": 83, "name": { "en": "Yercaud", "ta": "ஏற்காடு" } },
+        { "id": 84, "name": { "en": "Omalur", "ta": "ஓமலூர்" } },
+        { "id": 85, "name": { "en": "Mettur", "ta": "மேட்டூர்" } },
+        { "id": 86, "name": { "en": "Edappadi", "ta": "எடப்பாடி" } },
+        { "id": 87, "name": { "en": "Sankari", "ta": "சங்கரி" } },
+        { "id": 88, "name": { "en": "Salem West", "ta": "சேலம் மேற்கு" } },
+        { "id": 89, "name": { "en": "Salem North", "ta": "சேலம் வடக்கு" } },
+        { "id": 90, "name": { "en": "Salem South", "ta": "சேலம் தெற்கு" } },
+        { "id": 91, "name": { "en": "Veerapandi", "ta": "வீரபாண்டி" } }
+      ]
+    },
+    {
+      "id": "namakkal",
+      "names": { "en": "Namakkal", "ta": "நாமக்கல்" },
+      "constituencies": [
+        { "id": 92, "name": { "en": "Rasipuram", "ta": "ராசிபுரம்" } },
+        { "id": 93, "name": { "en": "Senthamangalam", "ta": "சேந்தமங்கலம்" } },
+        { "id": 94, "name": { "en": "Namakkal", "ta": "நாமக்கல்" } },
+        { "id": 95, "name": { "en": "Paramathi Velur", "ta": "பரமத்தி வேலூர்" } },
+        { "id": 96, "name": { "en": "Tiruchengodu", "ta": "திருச்செங்கோடு" } }
+      ]
+    },
+    {
+      "id": "erode",
+      "names": { "en": "Erode", "ta": "ஈரோடு" },
+      "constituencies": [
+        { "id": 97, "name": { "en": "Kumarapalayam", "ta": "குமாரபாளையம்" } },
+        { "id": 98, "name": { "en": "Erode East", "ta": "ஈரோடு கிழக்கு" } },
+        { "id": 99, "name": { "en": "Erode West", "ta": "ஈரோடு மேற்கு" } },
+        { "id": 100, "name": { "en": "Modakkurichi", "ta": "மொடக்குறிச்சி" } },
+        { "id": 103, "name": { "en": "Perundurai", "ta": "பெருந்துறை" } },
+        { "id": 104, "name": { "en": "Bhavani", "ta": "பவானி" } },
+        { "id": 105, "name": { "en": "Anthiyur", "ta": "ஆண்டியூர்" } },
+        { "id": 106, "name": { "en": "Gobichettipalayam", "ta": "கோபிச்செட்டிபாளையம்" } },
+        { "id": 107, "name": { "en": "Bhavanisagar", "ta": "பவானிசாகர்" } }
+      ]
+    },
+    {
+      "id": "tiruppur",
+      "names": { "en": "Tiruppur", "ta": "திருப்பூர்" },
+      "constituencies": [
+        { "id": 101, "name": { "en": "Dharapuram", "ta": "தாராபுரம்" } },
+        { "id": 102, "name": { "en": "Kangayam", "ta": "காங்கேயம்" } },
+        { "id": 112, "name": { "en": "Avanashi", "ta": "அவினாசி" } },
+        { "id": 113, "name": { "en": "Tiruppur North", "ta": "திருப்பூர் வடக்கு" } },
+        { "id": 114, "name": { "en": "Tiruppur South", "ta": "திருப்பூர் தெற்கு" } },
+        { "id": 125, "name": { "en": "Udumalaipettai", "ta": "உடுமலைப்பேட்டை" } },
+        { "id": 126, "name": { "en": "Madathukulam", "ta": "மடத்துக்குளம்" } }
+      ]
+    },
+    {
+      "id": "nilgiris",
+      "names": { "en": "Nilgiris", "ta": "நீலகிரி" },
+      "constituencies": [
+        { "id": 108, "name": { "en": "Udhagamandalam", "ta": "உதகமண்டலம்" } },
+        { "id": 109, "name": { "en": "Gudalur", "ta": "குடலூர்" } },
+        { "id": 110, "name": { "en": "Coonoor", "ta": "குன்னூர்" } }
+      ]
+    },
+    {
+      "id": "coimbatore",
+      "names": { "en": "Coimbatore", "ta": "கோயம்புத்தூர்" },
+      "constituencies": [
+        { "id": 111, "name": { "en": "Mettupalayam", "ta": "மேட்டுப்பாளையம்" } },
+        { "id": 115, "name": { "en": "Palladam", "ta": "பல்லடம்" } },
+        { "id": 116, "name": { "en": "Sulur", "ta": "சூலூர்" } },
+        { "id": 117, "name": { "en": "Kavundampalayam", "ta": "கவுண்டம்பாளையம்" } },
+        { "id": 118, "name": { "en": "Coimbatore North", "ta": "கோயம்புத்தூர் வடக்கு" } },
+        { "id": 119, "name": { "en": "Thondamuthur", "ta": "தொண்டாமுத்தூர்" } },
+        { "id": 120, "name": { "en": "Coimbatore South", "ta": "கோயம்புத்தூர் தெற்கு" } },
+        { "id": 121, "name": { "en": "Singanallur", "ta": "சிங்காநல்லூர்" } },
+        { "id": 122, "name": { "en": "Kinathukadavu", "ta": "கிணத்துக்கடவு" } },
+        { "id": 123, "name": { "en": "Pollachi", "ta": "பொள்ளாச்சி" } },
+        { "id": 124, "name": { "en": "Valparai", "ta": "வால்பாறை" } }
+      ]
+    },
+    {
+      "id": "dindigul",
+      "names": { "en": "Dindigul", "ta": "திண்டுக்கல்" },
+      "constituencies": [
+        { "id": 127, "name": { "en": "Palani", "ta": "பழனி" } },
+        { "id": 128, "name": { "en": "Oddanchatram", "ta": "ஒட்டன்சத்திரம்" } },
+        { "id": 129, "name": { "en": "Athoor", "ta": "ஆத்தூர்" } },
+        { "id": 130, "name": { "en": "Nilakottai", "ta": "நிலக்கோட்டை" } },
+        { "id": 131, "name": { "en": "Natham", "ta": "நாத்தம்" } },
+        { "id": 132, "name": { "en": "Dindigul", "ta": "திண்டுக்கல்" } },
+        { "id": 133, "name": { "en": "Vedasandur", "ta": "வேடசந்தூர்" } }
+      ]
+    },
+    {
+      "id": "karur",
+      "names": { "en": "Karur", "ta": "கரூர்" },
+      "constituencies": [
+        { "id": 134, "name": { "en": "Aravakurichi", "ta": "அரவக்குறிச்சி" } },
+        { "id": 135, "name": { "en": "Karur", "ta": "கரூர்" } },
+        { "id": 136, "name": { "en": "Krishnarayapuram", "ta": "கிருஷ்ணராயபுரம்" } },
+        { "id": 137, "name": { "en": "Kulithalai", "ta": "குளித்தலை" } }
+      ]
+    },
+    {
+      "id": "tiruchirappalli",
+      "names": { "en": "Tiruchirappalli", "ta": "திருச்சிராப்பள்ளி" },
+      "constituencies": [
+        { "id": 138, "name": { "en": "Manapaarai", "ta": "மணப்பாறை" } },
+        { "id": 139, "name": { "en": "Srirangam", "ta": "ஸ்ரீரங்கம்" } },
+        { "id": 140, "name": { "en": "Tiruchirappalli West", "ta": "திருச்சி மேற்கு" } },
+        { "id": 141, "name": { "en": "Tiruchirappalli East", "ta": "திருச்சி கிழக்கு" } },
+        { "id": 142, "name": { "en": "Thiruverumbur", "ta": "திருவெறும்பூர்" } },
+        { "id": 143, "name": { "en": "Lalgudi", "ta": "லால்குடி" } },
+        { "id": 144, "name": { "en": "Manachanallur", "ta": "மணச்சநல்லூர்" } },
+        { "id": 145, "name": { "en": "Musiri", "ta": "முசிறி" } },
+        { "id": 146, "name": { "en": "Thuraiyur", "ta": "துறையூர்" } }
+      ]
+    },
+    {
+      "id": "perambalur",
+      "names": { "en": "Perambalur", "ta": "பெரம்பலூர்" },
+      "constituencies": [
+        { "id": 147, "name": { "en": "Perambalur", "ta": "பெரம்பலூர்" } },
+        { "id": 148, "name": { "en": "Kunnam", "ta": "குன்னம்" } }
+      ]
+    },
+    {
+      "id": "ariyalur",
+      "names": { "en": "Ariyalur", "ta": "அரியலூர்" },
+      "constituencies": [
+        { "id": 149, "name": { "en": "Ariyalur", "ta": "அரியலூர்" } },
+        { "id": 150, "name": { "en": "Jayankondam", "ta": "ஜெயங்கொண்டம்" } }
+      ]
+    },
+    {
+      "id": "cuddalore",
+      "names": { "en": "Cuddalore", "ta": "கடலூர்" },
+      "constituencies": [
+        { "id": 151, "name": { "en": "Tittakudi", "ta": "திட்டக்குடி" } },
+        { "id": 152, "name": { "en": "Virudhachalam", "ta": "விருத்தாசலம்" } },
+        { "id": 153, "name": { "en": "Neyveli", "ta": "நெய்வேலி" } },
+        { "id": 154, "name": { "en": "Panruti", "ta": "பண்ருட்டி" } },
+        { "id": 155, "name": { "en": "Cuddalore", "ta": "கடலூர்" } },
+        { "id": 156, "name": { "en": "Kurinjipadi", "ta": "குறிஞ்சிப்பாடி" } },
+        { "id": 157, "name": { "en": "Bhuvanagiri", "ta": "புவனகிரி" } },
+        { "id": 158, "name": { "en": "Chidambaram", "ta": "சிதம்பரம்" } },
+        { "id": 159, "name": { "en": "Kattumannarkoil", "ta": "கட்டுமன்னார்கோவில்" } }
+      ]
+    },
+    {
+      "id": "mayiladuthurai",
+      "names": { "en": "Mayiladuthurai", "ta": "மயிலாடுதுறை" },
+      "constituencies": [
+        { "id": 160, "name": { "en": "Sirkazhi", "ta": "சீர்காழி" } },
+        { "id": 161, "name": { "en": "Mayiladuthurai", "ta": "மயிலாடுதுறை" } },
+        { "id": 162, "name": { "en": "Poompuhar", "ta": "பூம்புகார்" } }
+      ]
+    },
+    {
+      "id": "nagapattinam",
+      "names": { "en": "Nagapattinam", "ta": "நாகப்பட்டினம்" },
+      "constituencies": [
+        { "id": 163, "name": { "en": "Nagapattinam", "ta": "நாகப்பட்டினம்" } },
+        { "id": 164, "name": { "en": "Kilvelur", "ta": "கீழ்வேளூர்" } },
+        { "id": 165, "name": { "en": "Vedaranyam", "ta": "வேதாரண்யம்" } }
+      ]
+    },
+    {
+      "id": "thiruvarur",
+      "names": { "en": "Thiruvarur", "ta": "திருவாரூர்" },
+      "constituencies": [
+        { "id": 166, "name": { "en": "Thiruthuraipoondi", "ta": "திருத்துறைப்பூண்டி" } },
+        { "id": 167, "name": { "en": "Mannargudi", "ta": "மன்னார்குடி" } },
+        { "id": 168, "name": { "en": "Thiruvarur", "ta": "திருவாரூர்" } },
+        { "id": 169, "name": { "en": "Nannilam", "ta": "நன்னிலம்" } }
+      ]
+    },
+    {
+      "id": "thanjavur",
+      "names": { "en": "Thanjavur", "ta": "தஞ்சாவூர்" },
+      "constituencies": [
+        { "id": 170, "name": { "en": "Thiruvidaimarudur", "ta": "திருவிடைமருதூர்" } },
+        { "id": 171, "name": { "en": "Kumbakonam", "ta": "கும்பகோணம்" } },
+        { "id": 172, "name": { "en": "Papanasam", "ta": "பாபநாசம்" } },
+        { "id": 173, "name": { "en": "Thiruvaiyaru", "ta": "திருவையாறு" } },
+        { "id": 174, "name": { "en": "Thanjavur", "ta": "தஞ்சாவூர்" } },
+        { "id": 175, "name": { "en": "Orathanadu", "ta": "ஒரத்தநாடு" } },
+        { "id": 176, "name": { "en": "Pattukkottai", "ta": "பட்டுக்கோட்டை" } },
+        { "id": 177, "name": { "en": "Peravurani", "ta": "பேராவூரணி" } }
+      ]
+    }
+,
+    {
+      "id": "pudukkottai",
+      "names": { "en": "Pudukkottai", "ta": "புதுக்கோட்டை" },
+      "constituencies": [
+        { "id": 178, "name": { "en": "Gandarvakottai", "ta": "கந்தர்வக்கோட்டை" } },
+        { "id": 179, "name": { "en": "Viralimalai", "ta": "விராலிமலை" } },
+        { "id": 180, "name": { "en": "Pudukkottai", "ta": "புதுக்கோட்டை" } },
+        { "id": 181, "name": { "en": "Thirumayam", "ta": "திருமயம்" } },
+        { "id": 182, "name": { "en": "Alangudi", "ta": "ஆலங்குடி" } },
+        { "id": 183, "name": { "en": "Aranthangi", "ta": "அறந்தாங்கி" } }
+      ]
+    },
+    {
+      "id": "sivaganga",
+      "names": { "en": "Sivaganga", "ta": "சிவகங்கை" },
+      "constituencies": [
+        { "id": 184, "name": { "en": "Karaikudi", "ta": "காரைக்குடி" } },
+        { "id": 185, "name": { "en": "Tiruppattur", "ta": "திருப்பத்தூர்" } },
+        { "id": 186, "name": { "en": "Sivaganga", "ta": "சிவகங்கை" } },
+        { "id": 187, "name": { "en": "Manamadurai", "ta": "மானாமதுரை" } }
+      ]
+    },
+    {
+      "id": "madurai",
+      "names": { "en": "Madurai", "ta": "மதுரை" },
+      "constituencies": [
+        { "id": 188, "name": { "en": "Melur", "ta": "மேலூர்" } },
+        { "id": 189, "name": { "en": "Madurai East", "ta": "மதுரை கிழக்கு" } },
+        { "id": 190, "name": { "en": "Sholavandan", "ta": "சோழவந்தான்" } },
+        { "id": 191, "name": { "en": "Madurai North", "ta": "மதுரை வடக்கு" } },
+        { "id": 192, "name": { "en": "Madurai South", "ta": "மதுரை தெற்கு" } },
+        { "id": 193, "name": { "en": "Madurai Central", "ta": "மதுரை மத்தி" } },
+        { "id": 194, "name": { "en": "Madurai West", "ta": "மதுரை மேற்கு" } },
+        { "id": 195, "name": { "en": "Thiruparankundram", "ta": "திருப்பரங்குன்றம்" } },
+        { "id": 196, "name": { "en": "Thirumangalam", "ta": "திருமங்கலம்" } },
+        { "id": 197, "name": { "en": "Usilampatti", "ta": "உசிலம்பட்டி" } }
+      ]
+    },
+    {
+      "id": "theni",
+      "names": { "en": "Theni", "ta": "தேனி" },
+      "constituencies": [
+        { "id": 198, "name": { "en": "Andipatti", "ta": "ஆண்டிபட்டி" } },
+        { "id": 199, "name": { "en": "Periyakulam", "ta": "பெரியகுளம்" } },
+        { "id": 200, "name": { "en": "Bodinayakanur", "ta": "போடிநாயக்கனூர்" } },
+        { "id": 201, "name": { "en": "Cumbum", "ta": "கம்பம்" } }
+      ]
+    },
+    {
+      "id": "virudhunagar",
+      "names": { "en": "Virudhunagar", "ta": "விருதுநகர்" },
+      "constituencies": [
+        { "id": 202, "name": { "en": "Rajapalayam", "ta": "ராஜபாளையம்" } },
+        { "id": 203, "name": { "en": "Srivilliputhur", "ta": "ஸ்ரீவில்லிபுத்தூர்" } },
+        { "id": 204, "name": { "en": "Sattur", "ta": "சாத்தூர்" } },
+        { "id": 205, "name": { "en": "Sivakasi", "ta": "சிவகாசி" } },
+        { "id": 206, "name": { "en": "Virudhunagar", "ta": "விருதுநகர்" } },
+        { "id": 207, "name": { "en": "Aruppukkottai", "ta": "அருப்புக்கோட்டை" } },
+        { "id": 208, "name": { "en": "Tiruchuli", "ta": "திருச்சுழி" } }
+      ]
+    },
+    {
+      "id": "ramanathapuram",
+      "names": { "en": "Ramanathapuram", "ta": "ராமநாதபுரம்" },
+      "constituencies": [
+        { "id": 209, "name": { "en": "Paramakudi", "ta": "பரமக்குடி" } },
+        { "id": 210, "name": { "en": "Tiruvadanai", "ta": "திருவாடானை" } },
+        { "id": 211, "name": { "en": "Ramanathapuram", "ta": "ராமநாதபுரம்" } },
+        { "id": 212, "name": { "en": "Mudhukulathur", "ta": "முதுகுளத்தூர்" } }
+      ]
+    },
+    {
+      "id": "thoothukudi",
+      "names": { "en": "Thoothukudi", "ta": "தூத்துக்குடி" },
+      "constituencies": [
+        { "id": 213, "name": { "en": "Vilathikulam", "ta": "விளாத்திகுளம்" } },
+        { "id": 214, "name": { "en": "Thoothukkudi", "ta": "தூத்துக்குடி" } },
+        { "id": 215, "name": { "en": "Tiruchendur", "ta": "திருச்செந்தூர்" } },
+        { "id": 216, "name": { "en": "Srivaikuntam", "ta": "ஸ்ரீவைகுண்டம்" } },
+        { "id": 217, "name": { "en": "Ottapidaram", "ta": "ஓட்டப்பிடாரம்" } },
+        { "id": 218, "name": { "en": "Kovilpatti", "ta": "கோவில்பட்டி" } }
+      ]
+    },
+    {
+      "id": "tenkasi",
+      "names": { "en": "Tenkasi", "ta": "தென்காசி" },
+      "constituencies": [
+        { "id": 219, "name": { "en": "Sankarankovil", "ta": "சங்கரன்கோவில்" } },
+        { "id": 220, "name": { "en": "Vasudevanallur", "ta": "வாசுதேவநல்லூர்" } },
+        { "id": 221, "name": { "en": "Kadayanallur", "ta": "கடையநல்லூர்" } },
+        { "id": 222, "name": { "en": "Tenkasi", "ta": "தென்காசி" } }
+      ]
+    },
+    {
+      "id": "tirunelveli",
+      "names": { "en": "Tirunelveli", "ta": "திருநெல்வேலி" },
+      "constituencies": [
+        { "id": 223, "name": { "en": "Alangulam", "ta": "ஆலங்குளம்" } },
+        { "id": 224, "name": { "en": "Tirunelveli", "ta": "திருநெல்வேலி" } },
+        { "id": 225, "name": { "en": "Ambasamudram", "ta": "அம்பாசமுத்திரம்" } },
+        { "id": 226, "name": { "en": "Palayamkottai", "ta": "பாளையங்கோட்டை" } },
+        { "id": 227, "name": { "en": "Nanguneri", "ta": "நாங்குநேரி" } },
+        { "id": 228, "name": { "en": "Radhapuram", "ta": "ராதாபுரம்" } }
+      ]
+    },
+    {
+      "id": "kanniyakumari",
+      "names": { "en": "Kanniyakumari", "ta": "கன்னியாகுமரி" },
+      "constituencies": [
+        { "id": 229, "name": { "en": "Kanniyakumari", "ta": "கன்னியாகுமரி" } },
+        { "id": 230, "name": { "en": "Nagercoil", "ta": "நாகர்கோவில்" } },
+        { "id": 231, "name": { "en": "Colachal", "ta": "கொளச்சல்" } },
+        { "id": 232, "name": { "en": "Padmanabhapuram", "ta": "பத்மநாபபுரம்" } },
+        { "id": 233, "name": { "en": "Vilavancode", "ta": "விளவங்கோடு" } },
+        { "id": 234, "name": { "en": "Killiyoor", "ta": "கிள்ளியூர்" } }
+      ]
+    }
+  ]
+}
